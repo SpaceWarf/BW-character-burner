@@ -14,8 +14,12 @@
             width: calc(#{$sidebar-width} - 30px);
         }
 
-        .item.header {
+        .item {
             padding-bottom: 0;
+            
+            &.header {
+                padding-bottom: 0;
+            }
         }
     }
 }
