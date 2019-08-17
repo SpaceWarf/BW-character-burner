@@ -38,6 +38,13 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        test: /\.(jpe?g|png|webp)$/i,
+        loaders: [
+          'file-loader',
+          'webp-loader'
+        ]
       }
     ]
   },

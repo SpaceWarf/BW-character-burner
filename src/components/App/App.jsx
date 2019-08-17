@@ -1,16 +1,11 @@
 import React from "react";
-import { Header, Label } from "semantic-ui-react";
+import Header from '../Header/Header.jsx';
 import './App.scss';
 
 const App = () => {
     return (
         <div className="App">
-            <Header
-                as="h1"
-                textAlign="center"
-            >
-                Burning Wheel Character Creator
-            </Header>
+            <Header />
         </div>
     );
 };
