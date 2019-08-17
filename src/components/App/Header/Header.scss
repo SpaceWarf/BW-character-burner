@@ -1,12 +1,11 @@
 @import 'common';
 
 .Header {
-    .ui.menu {
+    .ui.inverted.menu {
         height: $header-height;
         border-radius: 0;
 
-        .item {
-
+        .item {            
             &:first-child {
                 font-weight: bold;
                 font-size: 15px;

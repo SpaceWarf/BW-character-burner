@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
 import store from './store.js';
 import App from '#Components/App/App.jsx';
 import './Index.scss';
@@ -8,7 +9,9 @@ import './Index.scss';
 const Index = () => {
   return (
     <Provider store={store}>
-      <App />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </Provider>
   );
 };
