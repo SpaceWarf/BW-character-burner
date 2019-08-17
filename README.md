@@ -1,8 +1,7 @@
-## React Webpack Boilerplate
+## Burning Wheel Character Burner
 
-This is a project boilerplate to kick-start your app development. Included in this project is the basic setup for a React
-app that uses Redux as a store manager, Sass as a style sheet language and Semantic as a UI framework, all bundled
-with Webpack and Babel.
+This is a Burning Wheel character burner to help you build your ideal character. The app includes a Compendium
+for quick references to lifepaths, skills and traits.
 
 ## Scripts
 
