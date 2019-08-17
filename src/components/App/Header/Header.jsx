@@ -1,6 +1,6 @@
 import React from "react";
 import { Menu, Image, Dropdown } from "semantic-ui-react";
-import logo from '../../assets/images/logo.webp';
+import logo from '#Assets/images/logo.webp';
 import './Header.scss';
 
 const Header = () => {
@@ -9,11 +9,10 @@ const Header = () => {
             <Menu inverted>
                 <Menu.Item>
                     <Image src={logo} size="mini" />
-                    <p>Character Burner</p>
+                    <p>Cynder</p>
                 </Menu.Item>
                 <Menu.Item
                     name="Editor"
-                    active
                 />
                 <Dropdown text="Compendium" item simple>
                     <Dropdown.Menu>

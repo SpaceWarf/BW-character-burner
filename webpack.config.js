@@ -3,6 +3,20 @@ const path = require('path');
 
 module.exports = {
   entry: './src/Index.jsx',
+  output: {
+    path: path.join(__dirname, 'dist'),
+    filename: 'bundle.js'
+  },
+  resolve: {
+    extensions: ['*', '.js', '.jsx', '.json', '.scss', '.css'],
+    alias: {
+      '#Actions': path.resolve(path.join(__dirname, './src/actions')),
+      '#Assets': path.resolve(path.join(__dirname, './src/assets')),
+      '#Components': path.resolve(path.join(__dirname, './src/components')),
+      '#Reducers': path.resolve(path.join(__dirname, './src/reducers')),
+      '#Resources': path.resolve(path.join(__dirname, './src/resources'))
+    }
+  },
   module: {
     rules: [
       {
@@ -50,8 +64,9 @@ module.exports = {
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template: "./public/index.html",
-      filename: "./index.html"
+      template: path.resolve(path.join(__dirname, "./public/index.html")),
+      favicon: path.resolve(path.join(__dirname, "./public/favicon.ico")),
+      filename: "index.html"
     })
   ]
 };
