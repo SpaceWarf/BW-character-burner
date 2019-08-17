@@ -1,0 +1,21 @@
+@import 'common';
+
+.Menu {
+    height: inherit;
+
+    .ui.vertical.menu {
+        height: inherit;
+        overflow-y: scroll;
+        border-radius: 0;
+        width: $sidebar-width;
+
+        .input {
+            margin: 10px;
+            width: calc(#{$sidebar-width} - 30px);
+        }
+
+        .item.header {
+            padding-bottom: 0;
+        }
+    }
+}

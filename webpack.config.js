@@ -15,7 +15,8 @@ module.exports = {
       '#Assets': path.resolve(path.join(__dirname, './src/assets')),
       '#Components': path.resolve(path.join(__dirname, './src/components')),
       '#Reducers': path.resolve(path.join(__dirname, './src/reducers')),
-      '#Resources': path.resolve(path.join(__dirname, './src/resources'))
+      '#Resources': path.resolve(path.join(__dirname, './src/resources')),
+      '#Utilities': path.resolve(path.join(__dirname, './src/utilities'))
     }
   },
   module: {

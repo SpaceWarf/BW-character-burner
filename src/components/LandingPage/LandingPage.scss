@@ -1,0 +1,10 @@
+@import 'common';
+
+.LandingPage {
+    padding: 15px 0 0 15px;
+
+    & > p {
+        padding-left: 5px;
+        font-size: $main-font-size;
+    }
+}
