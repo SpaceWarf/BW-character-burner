@@ -64,24 +64,26 @@ class SidebarContent extends React.Component {
                     />
                     {header}
                 </Menu.Header>
-                {!closedHeaders.includes(header) && filteredData.map(item => (
-                    as === 'sidebar' ?
-                        <SidebarContent
-                            key={item}
-                            header={item}
-                            subCategory={lifepathCategory}
-                            lifepaths={getLifepaths(lifepathCategory, item)}
-                            filter={filter}
-                        />
-                        : <Menu.Item
-                            key={item.name}
-                            className="sidebar child"
-                            as="a"
-                            onClick={() => { console.log('clicked ', item.name); }}
-                        >
-                            {item.name}
-                        </Menu.Item>
-                ))}
+                <div className="Content">
+                    {!closedHeaders.includes(header) && filteredData.map(item => (
+                        as === 'sidebar' ?
+                            <SidebarContent
+                                key={item}
+                                header={item}
+                                subCategory={lifepathCategory}
+                                lifepaths={getLifepaths(lifepathCategory, item)}
+                                filter={filter}
+                            />
+                            : <Menu.Item
+                                key={item.name}
+                                className="sidebar child"
+                                as="a"
+                                onClick={() => { console.log('clicked ', item.name); }}
+                            >
+                                {item.name}
+                            </Menu.Item>
+                    ))}
+                </div>
             </Menu.Item>
         );
     }

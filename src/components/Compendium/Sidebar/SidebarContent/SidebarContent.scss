@@ -1,15 +1,20 @@
 @import 'common';
 
 .ui.vertical.menu .item {
+
+    .Content {
+        margin-left: 8px;
+        border-left: 1px solid $sidebar-font-color;
+    }
+
     &:before {
         background: rgba(0, 0, 0, 0) !important;
-
     }
 
     & .sidebar.child {
         color: $sidebar-font-color;
         font-size: 12px;
-        padding: 7px 0 7px 20px;
+        padding: 7px 0 7px 12px;
     }
 
     & > .header:not(.ui) {
