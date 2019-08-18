@@ -3,31 +3,32 @@ import lifepaths_elves from '#Resources/lifepaths/lifepaths_elves.js';
 import lifepaths_dwarves from '#Resources/lifepaths/lifepaths_dwarves.js';
 import lifepaths_orcs from '#Resources/lifepaths/lifepaths_orcs.js';
 
-export const getSettings = lifepath => {
-    let lifepathSet;
+const getLifepathDataSet = (lifepath) => {
     switch (lifepath) {
         case 'men':
-            lifepathSet = lifepaths_men;
-            break;
+            return lifepaths_men;
         case 'elves':
-            lifepathSet = lifepaths_elves;
-            break;
+            return lifepaths_elves;
         case 'dwarves':
-            lifepathSet = lifepaths_dwarves;
-            break;
+            return lifepaths_dwarves;
         case 'orcs':
-            lifepathSet = lifepaths_orcs;
-            break;
+            return lifepaths_orcs;
         default:
-            lifepathSet = [];
+            return [];
     }
+};
+
+export const getLifepathSettings = lifepath => {
     return [...new Set(
-        lifepathSet.map(obj => obj.setting)
+        getLifepathDataSet(lifepath)
+            .map(obj => obj.setting)
     )];
 };
 
-export const getLifepaths = setting => {
+export const getLifepaths = (lifepath, setting) => {
+    console.log(lifepath, setting);
+    const lifepathDataSet = getLifepathDataSet(lifepath);
     return setting ?
-        lifepaths_men.filter(lifepath => lifepath.setting === setting)
-        : lifepaths_men;
+        lifepathDataSet.filter(lifepath => lifepath.setting === setting)
+        : lifepathDataSet;
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import { Menu, Input } from 'semantic-ui-react';
-import { getSettings } from '#Utilities/data.js';
+import { getLifepathSettings } from '#Utilities/data.js';
 import categories from '#Resources/config/categories.js';
 import skills from '#Resources/skills/skills.js';
 import traits from '#Resources/traits/traits.js';
@@ -25,7 +25,7 @@ class Sidebar extends React.Component {
     getDataFromCategory(category, subCategory) {
         switch (category) {
             case 'lifepaths':
-                return getSettings(subCategory);
+                return getLifepathSettings(subCategory);
             case 'skills':
                 return skills;
             case 'traits':
@@ -50,8 +50,10 @@ class Sidebar extends React.Component {
                     />
                     {categories.map(category => (
                         <SidebarContent
+                            key={category.name}
                             header={category.name}
-                            content={
+                            lifepathCategory={category.subCategory}
+                            lifepaths={
                                 this.getDataFromCategory(category.category, category.subCategory)
                             }
                             as={category.as}

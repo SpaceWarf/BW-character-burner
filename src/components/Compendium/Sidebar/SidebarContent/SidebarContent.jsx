@@ -42,14 +42,15 @@ class SidebarContent extends React.Component {
     render() {
         const {
             header,
-            content = [],
+            lifepathCategory,
+            lifepaths = [],
             as = 'item',
             filter = ""
         } = this.props;
         const {
             closedHeaders
         } = this.state;
-        const filteredData = this.getFilteredData(content);
+        const filteredData = this.getFilteredData(lifepaths);
 
         return filteredData.length > 0 && (
             <Menu.Item>
@@ -68,7 +69,8 @@ class SidebarContent extends React.Component {
                         <SidebarContent
                             key={item}
                             header={item}
-                            content={getLifepaths(item)}
+                            subCategory={lifepathCategory}
+                            lifepaths={getLifepaths(lifepathCategory, item)}
                             filter={filter}
                         />
                         : <Menu.Item
