@@ -26,7 +26,6 @@ export const getLifepathSettings = lifepath => {
 };
 
 export const getLifepaths = (lifepath, setting) => {
-    console.log(lifepath, setting);
     const lifepathDataSet = getLifepathDataSet(lifepath);
     return setting ?
         lifepathDataSet.filter(lifepath => lifepath.setting === setting)

@@ -1,284 +1,304 @@
 export default
     [
         {
-            "name": "Accounting",
-            "roots": [
-                "Perception"
+            name: 'Abbey-wise',
+            isWiseSkill: true
+        },
+        {
+            name: 'Accounting',
+            roots: [
+                'Perception'
             ],
-            "description": "",
-            "obstacles": {},
-            "FoRKs": [
-                "Research",
-                "Reading",
-                "Administration",
-                "Estate Management"
+            description: '',
+            obstacles: {},
+            FoRKs: [
+                'Research',
+                'Reading',
+                'Administration',
+                'Estate Management'
             ],
-            "skillType": "Academic",
-            "tools": {
-                "exists": true
+            skillType: 'Academic',
+            tools: {
+                'exists': true
             }
         },
         {
-            "name": "Acting",
-            "roots": [
-                "Perception"
+            name: 'Acting',
+            roots: [
+                'Perception'
             ],
-            "description": "",
-            "obstacles": {},
-            "FoRKs": [
-                "Conspicuous",
-                "Falsehood"
+            description: '',
+            obstacles: {},
+            FoRKs: [
+                'Conspicuous',
+                'Falsehood'
             ],
-            "skillType": "Special"
+            skillType: 'Special'
         },
         {
-            "name": "Administration",
-            "roots": [
-                "Perception"
+            name: 'Administration',
+            roots: [
+                'Perception'
             ],
-            "description": "",
-            "obstacles": {},
-            "skillType": "Special"
+            description: '',
+            obstacles: {},
+            skillType: 'Special'
         },
         {
-            "name": "Alchemy",
-            "roots": [
-                "Perception"
+            name: 'Alchemy',
+            roots: [
+                'Perception'
             ],
-            "description": "",
-            "obstacles": {},
-            "FoRKs": [
-                "Enchanting",
-                "Herbalism",
-                "Apothecary",
-                "Munitions",
-                "Poisons"
+            description: '',
+            obstacles: {},
+            FoRKs: [
+                'Enchanting',
+                'Herbalism',
+                'Apothecary',
+                'Munitions',
+                'Poisons'
             ],
-            "skillType": "Sorcerous",
-            "tools": {
-                "exists": true,
-                "expendable": true
+            skillType: 'Sorcerous',
+            tools: {
+                'exists': true,
+                'expendable': true
             }
         },
         {
-            "name": "Almamac",
-            "roots": [
-                "Perception"
-            ],
-            "description": "",
-            "obstacles": {},
-            "skillType": "Peasant"
+            name: 'Althing-wise',
+            isWiseSkill: true
         },
         {
-            "name": "Amercement",
-            "roots": [
-                "Perception"
-            ],
-            "description": "",
-            "obstacles": {},
-            "skillType": "School of Thought"
+            name: 'Ambition-wise',
+            isWiseSkill: true
         },
         {
-            "name": "Ancient Languages",
-            "roots": [
-                "Perception"
+            name: 'Almanac',
+            roots: [
+                'Perception'
             ],
-            "description": "",
-            "skillType": "Academic"
+            description: '',
+            obstacles: {},
+            skillType: 'Peasant'
         },
         {
-            "name": "Anatomy",
-            "roots": [
-                "Perception"
+            name: 'Amercement',
+            roots: [
+                'Perception'
             ],
-            "description": "",
-            "obstacles": {},
-            "FoRKs": [
-                "Surgery",
-                "Field Dressing"
-            ],
-            "skillType": "Academic"
+            description: '',
+            obstacles: {},
+            skillType: 'School of Thought'
         },
         {
-            "name": "Animal Husbandry",
-            "roots": [
-                "Will"
+            name: 'Ancient Languages',
+            roots: [
+                'Perception'
             ],
-            "description": "",
-            "obstacles": {},
-            "skillType": "Peasant",
-            "tools": {
-                "exists": true
+            description: '',
+            skillType: 'Academic'
+        },
+        {
+            name: 'Anatomy',
+            roots: [
+                'Perception'
+            ],
+            description: '',
+            obstacles: {},
+            FoRKs: [
+                'Surgery',
+                'Field Dressing'
+            ],
+            skillType: 'Academic'
+        },
+        {
+            name: 'Animal Husbandry',
+            roots: [
+                'Will'
+            ],
+            description: '',
+            obstacles: {},
+            skillType: 'Peasant',
+            tools: {
+                'exists': true
             }
         },
         {
-            "name": "Apothecary",
-            "roots": [
-                "Perception"
+            name: 'Apothecary',
+            roots: [
+                'Perception'
             ],
-            "description": "",
-            "obstacles": {},
-            "FoRKs": [
-                "Herbalism"
+            description: '',
+            obstacles: {},
+            FoRKs: [
+                'Herbalism'
             ],
-            "skillType": "Medicinal",
-            "tools": {
-                "exists": true,
-                "expendable": true
+            skillType: 'Medicinal',
+            tools: {
+                'exists': true,
+                'expendable': true
             }
         },
         {
-            "name": "Appraisal",
-            "roots": [
-                "Perception"
+            name: 'Appraisal',
+            roots: [
+                'Perception'
             ],
-            "description": "",
-            "obstacles": {},
-            "skillType": "Special"
+            description: '',
+            obstacles: {},
+            skillType: 'Special'
         },
         {
-            "name": "Appropriate Weapons",
-            "description": ""
+            name: 'Appropriate Weapons',
+            description: ''
         },
         {
-            "name": "Architect",
-            "roots": [
-                "Perception"
+            name: 'Architect',
+            roots: [
+                'Perception'
             ],
-            "description": "",
-            "obstacles": {},
-            "FoRKs": [
-                "Engineer",
-                "Mason",
-                "Carpenter"
+            description: '',
+            obstacles: {},
+            FoRKs: [
+                'Engineer',
+                'Mason',
+                'Carpenter'
             ],
-            "skillType": "Academic",
-            "tools": {
-                "exists": true,
-                "type": "Workshop"
+            skillType: 'Academic',
+            tools: {
+                'exists': true,
+                'type': 'Workshop'
             }
         },
         {
-            "name": "Armor Training",
-            "roots": [
-                "Power",
-                "Speed"
+            name: 'Armor Training',
+            roots: [
+                'Power',
+                'Speed'
             ],
-            "description": "",
-            "obstacles": {},
-            "skillType": "Martial Training"
+            description: '',
+            obstacles: {},
+            skillType: 'Martial Training'
         },
         {
-            "name": "Armorer",
-            "roots": [
-                "Perception",
-                "Agility"
+            name: 'Armorer',
+            roots: [
+                'Perception',
+                'Agility'
             ],
-            "description": "",
-            "obstacles": {},
-            "FoRKs": [
-                "Blacksmith",
-                "Sewing",
-                "Tanner"
+            description: '',
+            obstacles: {},
+            FoRKs: [
+                'Blacksmith',
+                'Sewing',
+                'Tanner'
             ],
-            "skillType": "Craftsman",
-            "tools": {
-                "exists": true,
-                "type": "Workshop"
+            skillType: 'Craftsman',
+            tools: {
+                'exists': true,
+                'type': 'Workshop'
             }
         },
         {
-            "name": "Arson",
-            "roots": [
-                "Perception",
-                "Agility"
+            name: 'Army-wise',
+            isWiseSkill: true
+        },
+        {
+            name: 'Arson',
+            roots: [
+                'Perception',
+                'Agility'
             ],
-            "description": "",
-            "obstacles": {},
-            "skillType": "Special",
-            "tools": {
-                "exists": true,
-                "expendable": true
+            description: '',
+            obstacles: {},
+            skillType: 'Special',
+            tools: {
+                'exists': true,
+                'expendable': true
             }
         },
         {
-            "name": "Artillerist",
-            "roots": [
-                "Perception"
+            name: 'Artificer-wise',
+            isWiseSkill: true
+        },
+        {
+            name: 'Artillerist',
+            roots: [
+                'Perception'
             ],
-            "description": "",
-            "obstacles": {},
-            "FoRKs": [
-                "Engineer",
-                "Architect"
+            description: '',
+            obstacles: {},
+            FoRKs: [
+                'Engineer',
+                'Architect'
             ],
-            "skillType": "Military",
-            "tools": {
-                "exists": true,
-                "type": "Workshop"
+            skillType: 'Military',
+            tools: {
+                'exists': true,
+                'type': 'Workshop'
             }
         },
         {
-            "name": "Astrology",
-            "roots": [
-                "Perception"
+            name: 'Astrology',
+            roots: [
+                'Perception'
             ],
-            "description": "",
-            "obstacles": {},
-            "FoRKs": [
-                "Doctrine",
-                "Symbology"
+            description: '',
+            obstacles: {},
+            FoRKs: [
+                'Doctrine',
+                'Symbology'
             ],
-            "skillType": "Academic",
-            "tools": {
-                "exists": true
+            skillType: 'Academic',
+            tools: {
+                'exists': true
             }
         },
         {
-            "name": "Atilliator",
-            "roots": [
-                "Perception",
-                "Agility"
+            name: 'Atilliator',
+            roots: [
+                'Perception',
+                'Agility'
             ],
-            "description": "",
-            "obstacles": {},
-            "FoRKs": [
-                "Bowyer",
-                "Blacksmith",
-                "Carpenter"
+            description: '',
+            obstacles: {},
+            FoRKs: [
+                'Bowyer',
+                'Blacksmith',
+                'Carpenter'
             ],
-            "skillType": "Craftsman",
-            "tools": {
-                "exists": true,
-                "type": "Workshop"
+            skillType: 'Craftsman',
+            tools: {
+                'exists': true,
+                'type': 'Workshop'
             }
         },
         {
-            "name": "Aura Reading",
-            "roots": [
-                "Will",
-                "Perception"
+            name: 'Aura Reading',
+            roots: [
+                'Will',
+                'Perception'
             ],
-            "description": "",
-            "obstacles": {},
-            "skillType": "Sorcerous"
+            description: '',
+            obstacles: {},
+            skillType: 'Sorcerous'
         },
         {
-            "name": "Axe",
-            "roots": [
-                "Power",
-                "Agility"
+            name: 'Axe',
+            roots: [
+                'Power',
+                'Agility'
             ],
-            "description": "",
-            "FoRKs": [
-                "Brawling",
-                "Martial Arts",
-                "Melee Weapon Skill"
+            description: '',
+            FoRKs: [
+                'Brawling',
+                'Martial Arts',
+                'Melee Weapon Skill'
             ],
-            "skillType": "Martial",
-            "tools": {
-                "exists": true,
-                "type": "Axe"
+            skillType: 'Martial',
+            tools: {
+                'exists': true,
+                'type': 'Axe'
             }
         }
     ]
