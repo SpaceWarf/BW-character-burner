@@ -1,0 +1,12 @@
+.Lifepath {
+    width: 700px;
+
+    .ui.card {
+        width: inherit;
+        
+        .content .header {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}

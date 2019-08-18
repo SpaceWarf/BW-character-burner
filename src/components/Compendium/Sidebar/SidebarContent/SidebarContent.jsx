@@ -4,7 +4,6 @@ import { getLifepaths } from '#Utilities/data.js';
 import './SidebarContent.scss';
 
 class SidebarContent extends React.Component {
-
     constructor(props) {
         super(props);
         this.state = {
@@ -31,7 +30,7 @@ class SidebarContent extends React.Component {
 
     getFilteredData(data) {
         const { as, filter } = this.props;
-        return as === 'sidebar' ?
+        return as === 'nested' ?
             data :
             data.filter(item =>
                 item.name.toLowerCase()
@@ -66,7 +65,7 @@ class SidebarContent extends React.Component {
                 </Menu.Header>
                 <div className="Content">
                     {!closedHeaders.includes(header) && filteredData.map(item => (
-                        as === 'sidebar' ?
+                        as === 'nested' ?
                             <SidebarContent
                                 key={item}
                                 header={item}

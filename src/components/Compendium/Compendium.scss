@@ -3,4 +3,17 @@
 .Compendium {
     height: 100%;
     display: flex;
+
+    & > .Content {
+        width: 100%;
+        overflow-y: scroll;
+        padding: 40px;
+
+        & > .ui.menu {
+            width: 100%;
+            border: none;
+            border-radius: 0;
+            box-shadow: none;
+        }
+    }
 }

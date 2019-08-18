@@ -306,7 +306,7 @@ export default
             res: 6,
             stat: {
                 bonus: 1,
-                attributes: 'Both'
+                attributes: 'M,P'
             },
             leads: [
                 'Villager',
@@ -335,7 +335,7 @@ export default
             res: 8,
             stat: {
                 bonus: 1,
-                attributes: 'Both'
+                attributes: 'M,P'
             },
             leads: [
                 'Villager',
@@ -535,7 +535,7 @@ export default
             res: 5,
             stat: {
                 bonus: 1,
-                attributes: 'Both'
+                attributes: 'M,P'
             },
             leads: [
                 'Religious'
@@ -1067,7 +1067,7 @@ export default
             res: 9,
             stat: {
                 bonus: 1,
-                attributes: 'Choose'
+                attributes: 'M/P'
             },
             leads: [
                 'Soldier',
@@ -1109,7 +1109,7 @@ export default
             res: 12,
             stat: {
                 bonus: 1,
-                attributes: 'Choose'
+                attributes: 'M/P'
             },
             leads: [
                 'Soldier',
@@ -1510,7 +1510,7 @@ export default
             res: 15,
             stat: {
                 bonus: 1,
-                attributes: 'Choose'
+                attributes: 'M/P'
             },
             leads: [
                 'City',
@@ -1609,7 +1609,7 @@ export default
             res: 30,
             stat: {
                 bonus: 1,
-                attributes: 'Both'
+                attributes: 'M,P'
             },
             leads: [
                 'Soldier',
@@ -1788,7 +1788,7 @@ export default
             res: 5,
             stat: {
                 bonus: 1,
-                attributes: 'Both'
+                attributes: 'M,P'
             },
             leads: [
                 'Religious',

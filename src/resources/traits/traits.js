@@ -34,17 +34,17 @@ export default
             name: 'Affinity for...',
             type: 'Dt',
             cost: 4,
-            description: ''
+            description: 'description'
         },
         {
             name: 'Affinity for Business',
             type: 'Dt',
-            description: ''
+            description: 'description'
         },
         {
             name: 'Affinity for Horses',
             type: 'Dt',
-            description: ''
+            description: 'description'
         },
         {
             name: 'Aggressive',
@@ -75,7 +75,7 @@ export default
             name: 'Alert',
             type: 'Dt',
             cost: 2,
-            description: ''
+            description: 'description'
         },
         {
             name: 'Alms-Taker',
@@ -116,7 +116,7 @@ export default
             name: 'Apostate',
             type: 'Dt',
             cost: 3,
-            description: ''
+            description: 'description'
         },
         {
             name: 'Appreciation for Beauty',
@@ -142,49 +142,49 @@ export default
             name: 'Artful Dodger',
             type: 'Dt',
             cost: 5,
-            description: ''
+            description: 'description'
         },
         {
             name: 'Atravieso',
             type: 'Dt',
             cost: 1,
-            description: ''
+            description: 'description'
         },
         {
             name: 'Aura of Innocence',
             type: 'C-O',
             cost: 2,
-            description: ''
+            description: 'description'
         },
         {
             name: 'Aura of Determination',
             type: 'C-O',
             cost: 5,
-            description: ''
+            description: 'description'
         },
         {
             name: 'Aura of Fear',
             type: 'Dt',
             cost: 5,
-            description: ''
+            description: 'description'
         },
         {
             name: 'Aura of Holiness',
             type: 'Dt',
             cost: 7,
-            description: ''
+            description: 'description'
         },
         {
             name: 'Aura of Malevolence',
             type: 'Dt',
             cost: 6,
-            description: ''
+            description: 'description'
         },
         {
             name: 'Aura of Martyrdom',
             type: 'Dt',
             cost: 3,
-            description: ''
+            description: 'description'
         },
         {
             name: 'Authoritative',
@@ -214,7 +214,7 @@ export default
             name: 'Bastard',
             type: 'Dt',
             cost: 4,
-            description: ''
+            description: 'description'
         },
         {
             name: 'Batshit',
@@ -229,12 +229,12 @@ export default
         {
             name: 'Beespeaker',
             type: 'Dt',
-            description: ''
+            description: 'description'
         },
         {
             name: 'Believer',
             type: 'Dt',
-            description: ''
+            description: 'description'
         },
         {
             name: 'Bellicose',
@@ -254,12 +254,12 @@ export default
         {
             name: 'Birdie Talk',
             type: 'Dt',
-            description: ''
+            description: 'description'
         },
         {
             name: 'A Bit Deaf',
             type: 'Dt',
-            description: ''
+            description: 'description'
         },
         {
             name: 'Bitter',
@@ -270,7 +270,7 @@ export default
             name: 'Blank Stare',
             type: 'Dt',
             cost: 3,
-            description: ''
+            description: 'description'
         },
         {
             name: 'Blasphemer',
@@ -281,7 +281,7 @@ export default
             name: 'Blind',
             type: 'Dt',
             cost: 1,
-            description: ''
+            description: 'description'
         },
         {
             name: 'Blisters',
@@ -302,13 +302,13 @@ export default
             name: 'Bookworm',
             type: 'Dt',
             cost: 2,
-            description: ''
+            description: 'description'
         },
         {
             name: 'Booming Voice',
             type: 'C-O',
             cost: 2,
-            description: ''
+            description: 'description'
         },
         {
             name: 'Bored',
@@ -319,13 +319,13 @@ export default
             name: 'Born to Be King',
             type: 'Char',
             cost: 5,
-            description: ''
+            description: 'description'
         },
         {
             name: 'Bottomless Stomach',
             type: 'Dt',
             cost: 2,
-            description: ''
+            description: 'description'
         },
         {
             name: 'Brash',
@@ -340,12 +340,12 @@ export default
         {
             name: 'Broken',
             type: 'Dt',
-            description: ''
+            description: 'description'
         },
         {
             name: 'Broken In',
             type: 'Dt',
-            description: ''
+            description: 'description'
         },
         {
             name: 'Broken Man',
@@ -355,7 +355,7 @@ export default
         {
             name: 'Bruiser',
             type: 'C-O',
-            description: ''
+            description: 'description'
         },
         {
             name: 'Brusque',
@@ -375,17 +375,17 @@ export default
         {
             name: 'Bull\'s-eye Spitter',
             type: 'Dt',
-            description: ''
+            description: 'description'
         },
         {
             name: 'Burial Rites',
             type: 'Dt',
-            description: ''
+            description: 'description'
         },
         {
             name: 'Burial at Sea',
             type: 'Dt',
-            description: ''
+            description: 'description'
         },
         {
             name: 'Buxom',
@@ -421,25 +421,25 @@ export default
             name: 'Catamite',
             type: 'Char',
             cost: 1,
-            description: ''
+            description: 'description'
         },
         {
             name: 'Charismatic',
             type: 'C-O',
             cost: 2,
-            description: ''
+            description: 'description'
         },
         {
             name: 'Charming',
             type: 'C-O',
             cost: 2,
-            description: ''
+            description: 'description'
         },
         {
             name: 'Child Prodigy',
             type: 'Dt',
             cost: 2,
-            description: ''
+            description: 'description'
         },
         {
             name: 'Chosen One',
@@ -450,7 +450,7 @@ export default
             name: 'Chronologue',
             type: 'Char',
             cost: 1,
-            description: ''
+            description: 'description'
         },
         {
             name: 'Chuffing',
@@ -466,7 +466,7 @@ export default
             name: 'Cipher',
             type: 'Dt',
             cost: 5,
-            description: ''
+            description: 'description'
         },
         {
             name: 'Circumspect',
@@ -477,24 +477,24 @@ export default
             name: 'Claustrophobic',
             type: 'Dt',
             cost: 1,
-            description: ''
+            description: 'description'
         },
         {
             name: 'Clumsy',
             type: 'Dt',
             cost: 1,
-            description: ''
+            description: 'description'
         },
         {
             name: 'Cold Blooded',
             type: 'Dt',
             cost: 2,
-            description: ''
+            description: 'description'
         },
         {
             name: 'Cold Hearted',
             type: 'Dt',
-            description: ''
+            description: 'description'
         },
         {
             name: 'Collector',
@@ -535,7 +535,7 @@ export default
             name: 'Compulsive Liar',
             type: 'Char',
             cost: 1,
-            description: ''
+            description: 'description'
         },
         {
             name: 'Condescending',
@@ -556,7 +556,7 @@ export default
             name: 'Contortionist',
             type: 'C-O',
             cost: 2,
-            description: ''
+            description: 'description'
         },
         {
             name: 'Cookie',
@@ -567,7 +567,7 @@ export default
             name: 'Cool Headed',
             type: 'Dt',
             cost: 2,
-            description: ''
+            description: 'description'
         },
         {
             name: 'Corrupt',
@@ -578,7 +578,7 @@ export default
             name: 'Cowardly',
             type: 'Dt',
             cost: 1,
-            description: ''
+            description: 'description'
         },
         {
             name: 'Cramped Hands',
@@ -588,7 +588,7 @@ export default
         {
             name: 'Crippled',
             type: 'Dt',
-            description: ''
+            description: 'description'
         },
         {
             name: 'Crochety',

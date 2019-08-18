@@ -9,7 +9,7 @@ export default
             roots: [
                 'Perception'
             ],
-            description: '',
+            description: 'description',
             obstacles: {},
             FoRKs: [
                 'Research',
@@ -19,7 +19,7 @@ export default
             ],
             skillType: 'Academic',
             tools: {
-                'exists': true
+                exists: true
             }
         },
         {
@@ -27,7 +27,7 @@ export default
             roots: [
                 'Perception'
             ],
-            description: '',
+            description: 'description',
             obstacles: {},
             FoRKs: [
                 'Conspicuous',
@@ -40,7 +40,7 @@ export default
             roots: [
                 'Perception'
             ],
-            description: '',
+            description: 'description',
             obstacles: {},
             skillType: 'Special'
         },
@@ -49,7 +49,7 @@ export default
             roots: [
                 'Perception'
             ],
-            description: '',
+            description: 'description',
             obstacles: {},
             FoRKs: [
                 'Enchanting',
@@ -60,8 +60,8 @@ export default
             ],
             skillType: 'Sorcerous',
             tools: {
-                'exists': true,
-                'expendable': true
+                exists: true,
+                expendable: true
             }
         },
         {
@@ -77,7 +77,7 @@ export default
             roots: [
                 'Perception'
             ],
-            description: '',
+            description: 'description',
             obstacles: {},
             skillType: 'Peasant'
         },
@@ -86,7 +86,7 @@ export default
             roots: [
                 'Perception'
             ],
-            description: '',
+            description: 'description',
             obstacles: {},
             skillType: 'School of Thought'
         },
@@ -95,7 +95,7 @@ export default
             roots: [
                 'Perception'
             ],
-            description: '',
+            description: 'description',
             skillType: 'Academic'
         },
         {
@@ -103,7 +103,7 @@ export default
             roots: [
                 'Perception'
             ],
-            description: '',
+            description: 'description',
             obstacles: {},
             FoRKs: [
                 'Surgery',
@@ -116,11 +116,11 @@ export default
             roots: [
                 'Will'
             ],
-            description: '',
+            description: 'description',
             obstacles: {},
             skillType: 'Peasant',
             tools: {
-                'exists': true
+                exists: true
             }
         },
         {
@@ -128,15 +128,15 @@ export default
             roots: [
                 'Perception'
             ],
-            description: '',
+            description: 'description',
             obstacles: {},
             FoRKs: [
                 'Herbalism'
             ],
             skillType: 'Medicinal',
             tools: {
-                'exists': true,
-                'expendable': true
+                exists: true,
+                expendable: true
             }
         },
         {
@@ -144,20 +144,20 @@ export default
             roots: [
                 'Perception'
             ],
-            description: '',
+            description: 'description',
             obstacles: {},
             skillType: 'Special'
         },
         {
             name: 'Appropriate Weapons',
-            description: ''
+            description: 'description'
         },
         {
             name: 'Architect',
             roots: [
                 'Perception'
             ],
-            description: '',
+            description: 'description',
             obstacles: {},
             FoRKs: [
                 'Engineer',
@@ -166,8 +166,8 @@ export default
             ],
             skillType: 'Academic',
             tools: {
-                'exists': true,
-                'type': 'Workshop'
+                exists: true,
+                type: 'Workshop'
             }
         },
         {
@@ -176,7 +176,7 @@ export default
                 'Power',
                 'Speed'
             ],
-            description: '',
+            description: 'description',
             obstacles: {},
             skillType: 'Martial Training'
         },
@@ -186,7 +186,7 @@ export default
                 'Perception',
                 'Agility'
             ],
-            description: '',
+            description: 'description',
             obstacles: {},
             FoRKs: [
                 'Blacksmith',
@@ -195,8 +195,8 @@ export default
             ],
             skillType: 'Craftsman',
             tools: {
-                'exists': true,
-                'type': 'Workshop'
+                exists: true,
+                type: 'Workshop'
             }
         },
         {
@@ -209,12 +209,12 @@ export default
                 'Perception',
                 'Agility'
             ],
-            description: '',
+            description: 'description',
             obstacles: {},
             skillType: 'Special',
             tools: {
-                'exists': true,
-                'expendable': true
+                exists: true,
+                expendable: true
             }
         },
         {
@@ -226,7 +226,7 @@ export default
             roots: [
                 'Perception'
             ],
-            description: '',
+            description: 'description',
             obstacles: {},
             FoRKs: [
                 'Engineer',
@@ -234,8 +234,8 @@ export default
             ],
             skillType: 'Military',
             tools: {
-                'exists': true,
-                'type': 'Workshop'
+                exists: true,
+                type: 'Workshop'
             }
         },
         {
@@ -243,7 +243,7 @@ export default
             roots: [
                 'Perception'
             ],
-            description: '',
+            description: 'description',
             obstacles: {},
             FoRKs: [
                 'Doctrine',
@@ -251,7 +251,7 @@ export default
             ],
             skillType: 'Academic',
             tools: {
-                'exists': true
+                exists: true
             }
         },
         {
@@ -260,7 +260,7 @@ export default
                 'Perception',
                 'Agility'
             ],
-            description: '',
+            description: 'description',
             obstacles: {},
             FoRKs: [
                 'Bowyer',
@@ -269,8 +269,8 @@ export default
             ],
             skillType: 'Craftsman',
             tools: {
-                'exists': true,
-                'type': 'Workshop'
+                exists: true,
+                type: 'Workshop'
             }
         },
         {
@@ -279,7 +279,7 @@ export default
                 'Will',
                 'Perception'
             ],
-            description: '',
+            description: 'description',
             obstacles: {},
             skillType: 'Sorcerous'
         },
@@ -289,7 +289,7 @@ export default
                 'Power',
                 'Agility'
             ],
-            description: '',
+            description: 'description',
             FoRKs: [
                 'Brawling',
                 'Martial Arts',
@@ -297,8 +297,8 @@ export default
             ],
             skillType: 'Martial',
             tools: {
-                'exists': true,
-                'type': 'Axe'
+                exists: true,
+                type: 'Axe'
             }
         }
     ]

@@ -1,6 +1,9 @@
 import React from "react";
-import { Header, Image } from 'semantic-ui-react';
+import { Menu } from 'semantic-ui-react';
 import Sidebar from './Sidebar/Sidebar.jsx';
+import CompendiumContent from './CompendiumContent/CompendiumContent.jsx';
+import { getDataSetFromCategory } from '#Utilities/data.js';
+import categories from '#Resources/config/categories.js';
 import './Compendium.scss';
 
 const Compendium = () => {
@@ -8,7 +11,20 @@ const Compendium = () => {
         <div className="Compendium">
             <Sidebar />
             <div className="Content">
-                <Header as='h3'>Compendium</Header>
+                <Menu vertical>
+                    {categories.map(category => (
+                        <CompendiumContent
+                            key={category.name}
+                            header={category.name}
+                            categoryType={category.type}
+                            categorySubType={category.subType}
+                            lifepaths={
+                                getDataSetFromCategory(category.type, category.subType)
+                            }
+                            as={category.as}
+                        />
+                    ))}
+                </Menu>
             </div>
         </div>
     );

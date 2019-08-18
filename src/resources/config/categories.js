@@ -2,36 +2,36 @@ export default
     [
         {
             name: "Lifepaths of Men",
-            category: "lifepaths",
-            subCategory: "men",
-            as: "sidebar"
+            type: "lifepaths",
+            subType: "men",
+            as: "nested"
         },
         {
             name: "Lifepaths of Elves",
-            category: "lifepaths",
-            subCategory: "elves",
-            as: "sidebar"
+            type: "lifepaths",
+            subType: "elves",
+            as: "nested"
         },
         {
             name: "Lifepaths of Dwarves",
-            category: "lifepaths",
-            subCategory: "dwarves",
-            as: "sidebar"
+            type: "lifepaths",
+            subType: "dwarves",
+            as: "nested"
         },
         {
             name: "Lifepaths of Orcs",
-            category: "lifepaths",
-            subCategory: "orcs",
-            as: "sidebar"
+            type: "lifepaths",
+            subType: "orcs",
+            as: "nested"
         },
         {
             name: "Skills",
-            category: "skills",
-            as: "item"
+            type: "skills",
+            as: "simple"
         },
         {
             name: "Traits",
-            category: "traits",
-            as: "item"
+            type: "traits",
+            as: "simple"
         }
     ]
