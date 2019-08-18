@@ -1,5 +1,7 @@
+@import 'common';
+
 .Trait {
-    width: 700px;
+    width: $compendium-card-width;
 
     .ui.card {
         width: inherit;

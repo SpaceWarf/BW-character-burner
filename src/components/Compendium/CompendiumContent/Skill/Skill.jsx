@@ -4,7 +4,6 @@ import './Skill.scss';
 import { Menu } from "semantic-ui-react";
 
 const Skill = ({ skill }) => {
-    console.log(skill.description)
     return (
         <Menu.Item className="Skill">
             <Card>
