@@ -4,34 +4,32 @@ export default
             name: "Lifepaths of Men",
             type: "lifepaths",
             subType: "men",
-            as: "nested"
+            nested: true
         },
         {
             name: "Lifepaths of Elves",
             type: "lifepaths",
             subType: "elves",
-            as: "nested"
+            nested: true
         },
         {
             name: "Lifepaths of Dwarves",
             type: "lifepaths",
             subType: "dwarves",
-            as: "nested"
+            nested: true
         },
         {
             name: "Lifepaths of Orcs",
             type: "lifepaths",
             subType: "orcs",
-            as: "nested"
+            nested: true
         },
         {
             name: "Skills",
-            type: "skills",
-            as: "simple"
+            type: "skills"
         },
         {
             name: "Traits",
-            type: "traits",
-            as: "simple"
+            type: "traits"
         }
     ]

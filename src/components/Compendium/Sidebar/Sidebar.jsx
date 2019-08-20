@@ -41,7 +41,7 @@ class Sidebar extends React.Component {
                             lifepaths={
                                 getDataSetFromCategory(category.type, category.subType)
                             }
-                            as={category.as}
+                            nested={category.nested}
                             filter={filter}
                         />
                     ))}

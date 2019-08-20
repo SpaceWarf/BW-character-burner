@@ -1,22 +1,29 @@
 import React from "react";
-import { Card } from 'semantic-ui-react';
+import { Card, Icon } from 'semantic-ui-react';
 import './Lifepath.scss';
 import { Menu } from "semantic-ui-react";
 
 const Lifepath = ({ lifepath }) => {
     return (
-        <Menu.Item className="Lifepath">
+        <Menu.Item className="Card Lifepath" id={lifepath.name.replace(/\s/g, '')}>
             <Card>
                 <Card.Content>
-                    <Card.Header>
-                        <p>{lifepath.name}</p>
-                        <p>{lifepath.time} yrs</p>
-                        <p>{lifepath.res}</p>
-                        <p>{lifepath.stat ?
-                            `+ ${lifepath.stat.bonus} ${lifepath.stat.attributes}`
-                            : '—'
-                        }</p>
-                        <p>{lifepath.leads.join(', ')}</p>
+                    <Card.Header className='with-description'>
+                        <Icon
+                            name='linkify'
+                            onClick={() => window.location.href = `#${lifepath.name.replace(/\s/g, '')}`}
+                            link
+                        />
+                        <div className='header-content'>
+                            <p className='thirds'>{lifepath.name}</p>
+                            <p className='fifths centered'>{lifepath.time} yrs</p>
+                            <p className='fifths centered'>{lifepath.res}</p>
+                            <p className='fifths centered'>{lifepath.stat ?
+                                `+ ${lifepath.stat.bonus} ${lifepath.stat.attributes}`
+                                : '—'
+                            }</p>
+                        </div>
+                        <p className='left content'>{lifepath.leads.join(', ')}</p>
                     </Card.Header>
                     <Card.Description>
                         {lifepath.skills.generalPoints &&
