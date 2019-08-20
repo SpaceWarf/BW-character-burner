@@ -16,6 +16,10 @@ const Compendium = () => {
                         const dataSet = getDataSetFromCategory(category.type, category.subType);
                         return dataSet.length > 0 && <CompendiumContent
                             key={category.name}
+                            id={category.subType
+                                ? `${category.type}-${category.subType}`
+                                : category.type
+                            }
                             header={category.name}
                             categoryType={category.type}
                             categorySubType={category.subType}

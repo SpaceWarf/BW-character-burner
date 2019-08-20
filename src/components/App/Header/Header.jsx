@@ -32,21 +32,21 @@ const Header = () => {
                         <Dropdown.Header>Lifepaths</Dropdown.Header>
                         <Dropdown.Item
                             text="Men"
-                            onClick={e => handleClick(e, '/compendium#lifepaths')}
+                            onClick={e => handleClick(e, '/compendium#lifepaths-men')}
                         />
                         <Dropdown.Item
                             text="Elves"
-                            onClick={e => handleClick(e, '/compendium#lifepaths')}
+                            onClick={e => handleClick(e, '/compendium#lifepaths-elves')}
                             disabled
                         />
                         <Dropdown.Item
                             text="Dwarves"
-                            onClick={e => handleClick(e, '/compendium#lifepaths')}
+                            onClick={e => handleClick(e, '/compendium#lifepaths-dwarves')}
                             disabled
                         />
                         <Dropdown.Item
                             text="Orcs"
-                            onClick={e => handleClick(e, '/compendium#lifepaths')}
+                            onClick={e => handleClick(e, '/compendium#lifepaths-orcs')}
                             disabled
                         />
                         <Dropdown.Divider />
