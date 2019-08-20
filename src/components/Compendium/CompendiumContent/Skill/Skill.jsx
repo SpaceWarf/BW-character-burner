@@ -8,7 +8,7 @@ const Skill = ({ skill }) => {
         <Menu.Item className="Card Skill" id={skill.name.replace(/\s/g, '')}>
             <Card>
                 <Card.Content>
-                    <Card.Header>
+                    <Card.Header className={!skill.isWiseSkill ? 'with-description' : ''}>
                         <Icon
                             name='linkify'
                             onClick={() => window.location.href = `#${skill.name.replace(/\s/g, '')}`}

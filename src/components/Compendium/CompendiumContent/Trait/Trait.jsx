@@ -8,7 +8,7 @@ const Trait = ({ trait }) => {
         <Menu.Item className="Card Trait" id={trait.name.replace(/\s/g, '')}>
             <Card>
                 <Card.Content>
-                    <Card.Header>
+                    <Card.Header className={trait.description ? 'with-description' : ''}>
                         <Icon
                             name='linkify'
                             onClick={() => window.location.href = `#${trait.name.replace(/\s/g, '')}`}

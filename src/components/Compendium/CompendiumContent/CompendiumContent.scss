@@ -8,17 +8,20 @@
         border-bottom: 2px solid $main-font-color;
     }
 
-    & >.Card {
+    & > .Card {
         padding: 15px $compendium-card-padding 15px $compendium-card-padding;
     
         & > .ui.card {
             width: inherit;
             
             & > .content .header {
-                border-bottom: 1px solid $secondary-font-color;
                 display: flex;
                 justify-content: space-between;
                 
+                &.with-description {
+                    border-bottom: 1px solid $secondary-font-color;
+                }
+
                 & > .link.icon {
                     text-align: start;
                     width: 3%;

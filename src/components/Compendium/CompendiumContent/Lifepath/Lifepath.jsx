@@ -8,7 +8,7 @@ const Lifepath = ({ lifepath }) => {
         <Menu.Item className="Card Lifepath" id={lifepath.name.replace(/\s/g, '')}>
             <Card>
                 <Card.Content>
-                    <Card.Header>
+                    <Card.Header className='with-description'>
                         <Icon
                             name='linkify'
                             onClick={() => window.location.href = `#${lifepath.name.replace(/\s/g, '')}`}
