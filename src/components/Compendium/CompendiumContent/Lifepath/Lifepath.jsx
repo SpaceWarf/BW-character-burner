@@ -5,7 +5,7 @@ import { Menu } from "semantic-ui-react";
 
 const Lifepath = ({ lifepath }) => {
     return (
-        <Menu.Item className="Lifepath" id={lifepath.name.replace(/\s/g, '')}>
+        <Menu.Item className="Card Lifepath" id={lifepath.name.replace(/\s/g, '')}>
             <Card>
                 <Card.Content>
                     <Card.Header>

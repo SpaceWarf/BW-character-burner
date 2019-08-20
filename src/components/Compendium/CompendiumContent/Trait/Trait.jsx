@@ -5,7 +5,7 @@ import { Menu } from "semantic-ui-react";
 
 const Trait = ({ trait }) => {
     return (
-        <Menu.Item className="Trait" id={trait.name.replace(/\s/g, '')}>
+        <Menu.Item className="Card Trait" id={trait.name.replace(/\s/g, '')}>
             <Card>
                 <Card.Content>
                     <Card.Header>
