@@ -5590,7 +5590,7 @@ export default
             traits: {
                 points: 1,
                 from: [
-                    'Professionnally Diligent'
+                    'Professionally Diligent'
                 ]
             },
             'requires': [
@@ -6806,6 +6806,710 @@ export default
 				'Duke',
 				'Noble Prince', //TODO: and 'Your Grace' trait
 				'Prince of the Blood'
+            ]
+        },
+		{
+            name: 'Runner',
+            setting: 'Professional Soldier',
+            time: 3,
+            res: 5,
+            stat: {
+                bonus: 1,
+                attributes: 'P'
+            },
+            leads: [
+                'Peasant',
+                'Villager',
+				'Servitude',
+				'Outcast'
+            ],
+            skills: {
+                points: 4,
+                from: [
+                    'Inconspicuous',
+                    'Stealthy',
+					'Sing'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Skinny',
+					'Fleet of Foot',
+					'Sprinter'
+                ]
+            }
+        },
+		{
+            name: 'Apprentice',
+            setting: 'Professional Soldier',
+            time: 4,
+            res: 6,
+            stat: {
+                bonus: 1,
+                attributes: 'P'
+            },
+            leads: [
+                'Peasant',
+                'Villager',
+				'City Dweller'
+            ],
+            skills: {
+                points: 6,
+                from: [
+                    'Mending',
+                    'Write',
+					'Read',
+					'Hauling',
+					'Driving',
+					'Ditch Digging'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Exhausted',
+					'Back-Breaking Labor'
+                ]
+            }
+        },
+		{
+            name: 'Musician',
+            setting: 'Professional Soldier',
+            time: 3,
+            res: 5,
+            stat: {
+                bonus: 1,
+                attributes: 'M'
+            },
+            leads: [
+                'Peasant',
+                'Villager',
+				'Servitude'
+            ],
+            skills: {
+                points: 4,
+                from: [
+                    'Musical Instrument',
+                    'Conspicuous',
+					'Riding'
+                ]
+            },
+            traits: {
+                points: 1
+            }
+        },
+		{
+            name: 'Foot Soldier',
+            setting: 'Professional Soldier',
+            time: 3,
+            res: 6,
+            stat: {
+                bonus: 1,
+                attributes: 'P'
+            },
+            leads: [
+                'Villager',
+				'Servitude',
+				'Outcast'
+            ],
+            skills: {
+                points: 6,
+                from: [
+                    'Soldiering',
+                    'Appropriate Weapons',
+					'Shield Training',
+					'Brawling',
+					'Foraging',
+					'Firebuilding'
+                ]
+            },
+            traits: {
+                points: 1
+            }
+        },
+		{
+            name: 'Archer',
+            setting: 'Professional Soldier',
+            time: 3,
+            res: 5,
+            stat: {
+                bonus: 1,
+                attributes: 'P'
+            },
+            leads: [
+                'Villager',
+				'Servitude',
+				'Outcast'
+            ],
+            skills: {
+                points: 5,
+                from: [
+                    'Bow',
+                    'Fletcher',
+					'Brawling',
+					'Foraging',
+					'Firebuilding'
+                ]
+            },
+            traits: {
+                points: 1
+            }
+        },
+		{
+            name: 'Crossbowman',
+            setting: 'Professional Soldier',
+            time: 3,
+            res: 7,
+            stat: {
+                bonus: 1,
+                attributes: 'P'
+            },
+            leads: [
+                'Villager',
+				'Servitude',
+				'Outcast'
+            ],
+            skills: {
+                points: 5,
+                from: [
+                    'Crossbow',
+                    'Fletcher',
+					'Brawling',
+					'Foraging',
+					'Firebuilding'
+                ]
+            },
+            traits: {
+                points: 1
+            }
+        },
+		{
+            name: 'Sailor',
+            setting: 'Professional Soldier',
+            time: 5,
+            res: 5,
+            stat: {
+                bonus: 1,
+                attributes: 'P'
+            },
+            leads: [
+                'Villager',
+				'Seafaring',
+				'Servitude',
+				'Outcast'
+            ],
+            skills: {
+                points: 6,
+                from: [
+                    'Seamanship',
+                    'Rigging',
+					'Knots',
+					'Mending',
+					'Navigation',
+					'Knives',
+					'Sword'
+                ]
+            },
+            traits: {
+                points: 1,
+                from: [
+                    'Iron Stomach',
+					'Sea Legs',
+					'Affinity for Rope'
+                ]
+            }
+        },
+		{
+            name: 'Herald',
+            setting: 'Professional Soldier',
+            time: 3,
+            res: 7,
+            stat: {
+                bonus: 1,
+                attributes: 'M'
+            },
+            leads: [
+                'Villager',
+				'Noble Court',
+				'Servitude'
+            ],
+            skills: {
+                points: 4,
+                from: [
+                    'Oratory',
+                    'Conspicuous',
+					'Riding',
+					'Heraldry',
+					'Bannerman-wise'
+                ]
+            },
+            traits: {
+                points: 1
+            }
+        },
+		{
+            name: 'Bannerman',
+            setting: 'Professional Soldier',
+            time: 3,
+            res: 7,
+            stat: {
+                bonus: 1,
+                attributes: 'P'
+            },
+            leads: [
+                'Villager',
+				'Noble Court',
+				'Servitude'
+            ],
+            skills: {
+                points: 5,
+                from: [
+                    'Conspicuous',
+                    'Riding',
+					'Appropriate Weapons',
+					'Armor Training'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Honored',
+					'Brutal',
+					'Aggressive'
+                ]
+            }
+        },
+		{
+            name: 'Scout',
+            setting: 'Professional Soldier',
+            time: 3,
+            res: 4,
+            stat: {
+                bonus: 1,
+                attributes: 'P'
+            },
+            leads: [
+                'Peasant',
+				'Servitude',
+				'Outcast'
+            ],
+            skills: {
+                points: 5,
+                from: [
+                    'Stealthy',
+                    'Foraging',
+					'Orienteering',
+					'Appropriate Weapons',
+					'Observation'
+                ]
+            },
+            traits: {
+                points: 1
+            }
+        },
+		{
+            name: 'Sergeant',
+            setting: 'Professional Soldier',
+            time: 5,
+            res: 8,
+            stat: {
+                bonus: 1,
+                attributes: 'M/P'
+            },
+            leads: [
+                'Villager',
+				'Noble Court',
+				'Servitude'
+            ],
+            skills: {
+                points: 6,
+                from: [
+                    'Intimidation',
+                    'Command',
+					'Field Dressing',
+					'Appropriate Weapons'
+                ]
+            },
+            traits: {
+                points: 1
+            },
+            'requires': [
+                'Squire',
+                'Village Guard',
+				'City Guard',
+				'Foot Soldier'
+            ]
+        },
+		{
+            name: 'Veteran',
+            setting: 'Professional Soldier',
+            time: 8,
+            res: 20,
+            leads: [
+				'Noble Court',
+				'Outcast'
+            ],
+            skills: {
+                points: 5,
+                from: [
+                    'Soldier-wise',
+                    'Soldiering',
+					'Campaign History',
+					'Tactics'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Stubborn',
+					'Maimed'
+                ]
+            },
+            'requires': [
+                'Sergeant',
+                'Sergeant-at-Arms',
+				'Knight',
+				'Military Order',
+				'Freebooter'
+            ]
+        },
+		{
+            name: 'Cavalryman',
+            setting: 'Professional Soldier',
+            time: 4,
+            res: 9,
+            stat: {
+                bonus: 1,
+                attributes: 'P'
+            },
+            leads: [
+                'Villager',
+				'Noble Court',
+				'Servitude'
+            ],
+            skills: {
+                points: 10,
+                from: [
+                    'Riding',
+                    'Mounted Combat Training',
+					'Armor Training',
+					'Shield Training',
+					'Appropriate Weapons',
+					'Horse-wise',
+					'Haggling'
+                ]
+            },
+            traits: {
+                points: 1
+            },
+            'requires': [
+                'Knight',
+                'Squire',
+				'Groom',
+				'Master of Horses'
+				//OTHER LPs HAVING TO DO WITH HORSES
+            ]
+        },
+		{
+            name: 'Journeyman',
+            setting: 'Professional Soldier',
+            time: 5,
+            res: 15,
+            stat: {
+                bonus: 1,
+                attributes: 'M/P'
+            },
+            leads: [
+                'Peasant',
+                'Villager',
+				'Outcast'
+            ],
+            skills: {
+                points: 5,
+                from: [
+                    'Blacksmith',
+                    'Appraisal',
+					'Haggling',
+					'Ridiculous Request-wise'
+                ]
+            },
+            traits: {
+                points: 1
+            },
+            'requires': [
+                'Apprentice'
+            ]
+        },
+		{
+            name: 'Armorer',
+            setting: 'Professional Soldier',
+            time: 8,
+            res: 20,
+            stat: {
+                bonus: 1,
+                attributes: 'M'
+            },
+            leads: [
+                'Villager',
+				'City Dweller',
+				'Outcast'
+            ],
+            skills: {
+                points: 9,
+                from: [
+                    'Mending',
+                    'Blacksmith',
+					'Armorer',
+					'Weaponsmith',
+					'Etching',
+					'Tanner'
+                ]
+            },
+            traits: {
+                points: 1
+            },
+            'requires': [
+                'Journeyman'
+            ]
+        },
+		{
+            name: 'Atilliator',
+            setting: 'Professional Soldier',
+            time: 10,
+            res: 22,
+            stat: {
+                bonus: 1,
+                attributes: 'P'
+            },
+            leads: [
+				'City Dweller',
+				'Noble Court',
+				'Outcast'
+            ],
+            skills: {
+                points: 6,
+                from: [
+                    'Atilliator',
+                    'Carpentry',
+					'Carving',
+					'Blacksmith',
+					'Tanner'
+                ]
+            },
+            traits: {
+                points: 1
+            },
+            'requires': [
+                'Journeyman'
+            ]
+        },
+		{
+            name: 'Chaplain',
+            setting: 'Professional Soldier',
+            time: 5,
+            res: 15,
+            stat: {
+                bonus: 1,
+                attributes: 'M/P'
+            },
+            leads: [
+				'City Dweller',
+				'Noble Court',
+				'Religious',
+				'Seafaring',
+				'Outcast'
+            ],
+            skills: {
+                points: 6,
+                from: [
+                    'Oratory',
+                    'Riding',
+					'Armor Training',
+					'Mounted Combat Training',
+					'Appropriate Weapons'
+                ]
+            },
+            traits: {
+                points: 1,
+                from: [
+                    'Ideologue',
+					'Psychotic'
+                ]
+            },
+            'requires': [
+                'Priest',
+				'Itinerant Priest',
+				'Village Priest',
+				'Venal Priest',
+				'Temple Priest',
+				'Archpriest',
+				'Court Priest',
+				'Heretic Priest',
+				'Military Order'
+            ]
+        },
+		{
+            name: 'Engineer',
+            setting: 'Professional Soldier',
+            time: 5,
+            res: 18,
+            stat: {
+                bonus: 1,
+                attributes: 'M'
+            },
+            leads: [
+				'City Dweller',
+				'Noble Court',
+				'Outcast'
+            ],
+            skills: {
+                points: 6,
+                from: [
+                    'Artillerist',
+                    'Engineer',
+					'Fortifications'
+                ]
+            },
+            traits: {
+                points: 1,
+                from: [
+                    'Smart',
+					'Sense of Distance'
+                ]
+            },
+            'requires': [
+                'Student',
+                'Engineer',
+				'Mining Engineer',
+				'Artillerist\'s Hand'
+            ]
+        },
+		{
+            name: 'Wizard of War',
+            setting: 'Professional Soldier',
+            time: 4,
+            res: 20,
+            stat: {
+                bonus: 1,
+                attributes: 'M'
+            },
+            leads: [
+				'City Dweller',
+				'Noble Court',
+				'Outcast'
+            ],
+            skills: {
+                points: 7,
+                from: [
+                    'Sorcery',
+                    'Strategy Games',
+					'Soldier-wise',
+					'War-wise',
+					'Haggling',
+					'Cartography'
+                ]
+            },
+            traits: {
+                points: 1,
+                from: [
+                    'Arrogant'
+                ]
+            },
+            'requires': [
+                'Neophyte Sorcerer',
+                'Arcane Devotee',
+				'Weather Witch',
+				'Rogue Wizard',
+				'Mad Summoner'
+            ]
+        },
+		{
+            name: 'Quartermaster',
+            setting: 'Professional Soldier',
+            time: 5,
+            res: 17,
+            stat: {
+                bonus: 1,
+                attributes: 'M'
+            },
+            leads: [
+                'Villager',
+				'City Dweller',
+				'Noble Court'
+            ],
+            skills: {
+                points: 7,
+                from: [
+                    'Administration',
+					'Accounting',
+					'Haggling',
+					'Logistics'
+                ]
+            },
+            traits: {
+                points: 1,
+                from: [
+                    'Light Sleeper'
+                ]
+            },
+            'requires': [
+                'Sergeant',
+                'Veteran',
+				'Steward',
+				'Ship\'s Captain',
+				'Guard Captain',
+				'Merchant',
+				'Man-at-Arms',
+				'Smuggler',
+				'Constable',
+				'Lord'
+            ]
+        },
+		{
+            name: 'Captain',
+            setting: 'Professional Soldier',
+            time: 6,
+            res: 35,
+            stat: {
+                bonus: 1,
+                attributes: 'M,P'
+            },
+            leads: [
+                'Peasant',
+                'Villager',
+				'City Dweller',
+				'Noble Court',
+				'Religious',
+				'Seafaring',
+				'Servitude',
+				'Outcast'
+            ],
+            skills: {
+                points: 9,
+                from: [
+                    'Command',
+                    'Contract-wise',
+					'Haggling',
+					'Oratory',
+					'Appropriate Weapons',
+					'Field Dressing',
+					'Riding',
+					'Strategy'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Savvy'
+                ]
+            },
+            'requires': [
+                'Guard Captain',
+                'Knight',
+				'Lord',
+				'Constable',
+				'Freebooter' //TODO: Taken twice!
             ]
         }
     ]
