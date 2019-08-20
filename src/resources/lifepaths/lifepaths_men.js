@@ -1882,10 +1882,6 @@ export default
             setting: 'City Dweller',
             time: 5,
             res: 4,
-            stat: {
-                bonus: ,
-                attributes: ''
-            },
             leads: [
                 'Outcast',
                 'Servitude',
@@ -2064,7 +2060,7 @@ export default
 					'Cold-Blooded',
 					'Fearless'
                 ]
-            }
+            },
             'requires': [
                 'Squire',
                 'Outcast',
@@ -2516,7 +2512,7 @@ export default
                 points: 2,
                 from: [
                     'Odd',
-					'Perspective'
+					'Perspective',
 					'Greater Muse'
                 ]
             }
@@ -2882,7 +2878,7 @@ export default
                     'Near-Sighted',
 					'Cramped Hands'
                 ]
-            }
+            },
             'requires': [
                 'Student',
                 'Acolyte',
@@ -2917,7 +2913,7 @@ export default
                 from: [
                     'Bored'
                 ]
-            }
+            },
             'requires': [
                 'Clerk',
                 'Young Lady',
@@ -2958,7 +2954,7 @@ export default
                     'Know It All',
 					'Bookworm'
                 ]
-            }
+            },
             'requires': [
                 'Scribe',
                 'Thinker',
@@ -3095,7 +3091,7 @@ export default
                 from: [
                     'Predatory'
                 ]
-            }
+            },
             'requires': [
                 'Sailor',
                 'Pirate',
@@ -3159,7 +3155,7 @@ export default
                 from: [
                     'Overworked'
                 ]
-            }
+            },
             'requires': [
                 'Village Guard',
 				'City Guard',
@@ -3204,7 +3200,7 @@ export default
                 from: [
                     'Exasperated'
                 ]
-            }
+            },
             'requires': [
                 'Knight',
                 'Captain',
@@ -3270,7 +3266,7 @@ export default
 					'Coppersmith',
 					'Locksmith',
 					'Weaponsmith',
-					'Whitesmith'
+					'Whitesmith',
 					'Carpentry',
 					'Write',
 					'Read',
@@ -3314,7 +3310,7 @@ export default
                     'Made Man',
 					'Geometric'
                 ]
-            }
+            },
             'requires': [
                 'Apprentice'
             ]
@@ -3345,7 +3341,7 @@ export default
                 from: [
                     'Gentle but Firm'
                 ]
-            }
+            },
             'requires': [
                 'Journeyman'
             ]
@@ -3377,7 +3373,7 @@ export default
             },
             traits: {
                 points: 1
-            }
+            },
             'requires': [
                 'Journeyman'
             ]
@@ -3407,7 +3403,7 @@ export default
                 from: [
                     'Diligent'
                 ]
-            }
+            },
             'requires': [
                 'Journeyman'
             ]
@@ -3439,7 +3435,7 @@ export default
                 from: [
                     'A Touch of Madness'
                 ]
-            }
+            },
             'requires': [
                 'Journeyman'
             ]
@@ -3470,7 +3466,7 @@ export default
                 from: [
                     'Steady Hands'
                 ]
-            }
+            },
             'requires': [
                 'Journeyman'
             ]
@@ -3499,7 +3495,7 @@ export default
                 from: [
                     'Guarded'
                 ]
-            }
+            },
             'requires': [
                 'Journeyman'
             ]
@@ -3526,7 +3522,7 @@ export default
             },
             traits: {
                 points: 1
-            }
+            },
             'requires': [
                 'Born Noble',
                 'Merchant',
@@ -3564,7 +3560,7 @@ export default
                 from: [
                     'Shrewd'
                 ]
-            }
+            },
             'requires': [
                 'Student',
                 'Young Lady'
@@ -3599,7 +3595,7 @@ export default
                 from: [
                     'Frustrated'
                 ]
-            }
+            },
             'requires': [
                 'Student',
                 'Young Lady'
@@ -3630,7 +3626,7 @@ export default
             },
             traits: {
                 points: 1
-            }
+            },
             'requires': [
                 'Midwife',
                 'Young Lady',
@@ -3664,7 +3660,7 @@ export default
 					'Venal',
 					'Hypochondriac'
                 ]
-            }
+            },
             'requires': [
                 'lifepath:Noble',
                 'lifepath:Noble Court',
@@ -3694,7 +3690,7 @@ export default
                 from: [
                     'Intense'
                 ]
-            }
+            },
             'requires': [
                 'Merchant',
                 'Moneylender',
@@ -3765,7 +3761,7 @@ export default
             },
             traits: {
                 points: 1
-            }
+            },
             'requires': [
                 'Neophyte Sorcerer',
                 'Arcane Devotee',
@@ -3805,7 +3801,7 @@ export default
 					'Imperious',
 					'Strong-Willed'
                 ]
-            }
+            },
             'requires': [
                 'Religious Acolyte',
                 'Temple Acolyte',
@@ -3840,7 +3836,7 @@ export default
                     'Ornery',
 					'Quick-Witted'
                 ]
-            }
+            },
             'requires': [
                 'Town Official',
                 'Tax Collector',
@@ -3910,11 +3906,11 @@ export default
                 ]
             },
             traits: {
-                points: ,
+                points: 1,
                 from: [
                     'Self-Confident'
                 ]
-            }
+            },
             'requires': [
                 'Apprentice Artisan',
                 'Engineer',
@@ -3942,7 +3938,7 @@ export default
                     'Artisan-wise',
 					'Materials-wise',
 					'Tools-wise'
-                ]
+                ],
 				generalPoints: 3
             },
             traits: {
@@ -3951,7 +3947,7 @@ export default
                     'Ambitious',
 					'Charismatic'
                 ]
-            }
+            },
             'requires': [
 				//TODO: Requires Journeyman AND one of the following:
                 'Locksmith',
@@ -3994,7 +3990,7 @@ export default
                 from: [
                     'Holier'
                 ]
-            }
+            },
             'requires': [
                 'Archpriest',
                 'Canon',
@@ -4042,7 +4038,7 @@ export default
 					'Greedy',
 					'Affinity for Business'
                 ]
-            }
+            },
             'requires': [
                 'Merchant',
                 'Master of Horses'
@@ -4076,4 +4072,594 @@ export default
 			//skill points, rounded down -- and she gets one quarter of her
 			//husband's Resources.
         },
+		{
+            name: 'Born Noble',
+            isBornLifepath: true,
+            setting: 'Noble',
+            time: 8,
+            res: 15,
+            leads: [
+                'Peasant',
+                'Villager',
+				'City Dweller',
+				'Noble',
+				'Noble Court',
+				'Religious',
+				'Soldier',
+				'Seafaring',
+				'Servitude',
+				'Outcast'
+            ],
+            skills: {
+                generalPoints: 5
+            },
+            traits: {
+                points: 1,
+				from: [
+                    'Mark of Privilege',
+					'Your Lordship',
+					'Your Eminence',
+					'Your Grace'
+                ]
+            }
+        },
+		{
+            name: 'Bastard',
+            setting: 'Noble',
+            time: 6,
+            res: 15,
+            stat: {
+                bonus: 1,
+                attributes: 'M/P'
+            },
+            leads: [
+				'City Dweller',
+				'Religious',
+				'Soldier',
+				'Outcast'
+            ],
+            skills: {
+                points: 4,
+                from: [
+                    'Family Secrets-wise',
+                    'Etiquette',
+					'Extortion'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Bastard',
+					'Bitter',
+					'Cynical',
+					'Happy-Go-Lucky'
+                ]
+            }
+			//TODO: Must be 2nd lifepath.
+        },
+		{
+            name: 'Page',
+            setting: 'Noble',
+            time: 6,
+            res: 15,
+            stat: {
+                bonus: 1,
+                attributes: 'P'
+            },
+            leads: [
+				'City Dweller',
+				'Soldier',
+				'Servitude'
+            ],
+            skills: {
+                points: 7,
+                from: [
+                    'Riding',
+                    'Brawling',
+					'Write',
+					'Read',
+					'Sword',
+					'Etiquette'
+                ]
+            },
+            traits: {
+                points: 1
+            }
+            //TODO: Must be 2nd lifepath
+        },
+		{
+            name: 'Student',
+            setting: 'Noble',
+            time: 4,
+            res: 10,
+            stat: {
+                bonus: 1,
+                attributes: 'M'
+            },
+            leads: [
+				'City Dweller',
+				'Noble Court'
+            ],
+            skills: {
+                points: 8,
+                from: [
+                    'Write',
+                    'Read',
+					'Rule of Law',
+					'Oratory',
+					'Doctrine',
+					'Etiquette'
+                ]
+            },
+            traits: {
+                points: 1
+            }
+        },
+		{
+            name: 'Squire',
+            setting: 'Noble',
+            time: 6,
+            res: 15,
+            stat: {
+                bonus: 1,
+                attributes: 'M,P'
+            },
+            leads: [
+				'City Dweller',
+				'Soldier',
+				'Servitude',
+				'Outcast'
+            ],
+            skills: {
+                points: 9,
+                from: [
+                    'Sword',
+                    'Mounted Combat Training',
+					'Shield Training',
+					'Armor Training',
+					'Lance',
+					'Knives',
+					'Crossbow'
+                ]
+            },
+            traits: {
+                points: 1
+            },
+            'requires': [
+                'Page',
+                'lifepath:Soldier'
+            ]
+        },
+		{
+            name: 'Arcane Devotee',
+            setting: 'Noble',
+            time: 6,
+            res: 10,
+            stat: {
+                bonus: 1,
+                attributes: 'M'
+            },
+            leads: [
+				'City Dweller',
+				'Noble Court',
+				'Outcast'
+            ],
+            skills: {
+                points: 6,
+                from: [
+                    'Calligraphy',
+                    'Write',
+					'Read',
+					'Research',
+					'Symbology'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Base Humility',
+					'Gifted'
+                ]
+            }
+        },
+		{
+            name: 'Religious Acolyte',
+            setting: 'Noble',
+            time: 5,
+            res: 10,
+            stat: {
+                bonus: 1,
+                attributes: 'M'
+            },
+            leads: [
+				'City Dweller',
+				'Noble Court',
+				'Religious'
+            ],
+            skills: {
+                points: 6,
+                from: [
+                    'Doctrine',
+                    'Bureaucracy',
+					'Write',
+					'Read',
+					'Etiquette'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Tonsured',
+					'Faithful'
+                ]
+            }
+        },
+		{
+            name: 'Young Lady',
+            setting: 'Noble',
+            time: 10,
+            res: 20,
+            stat: {
+                bonus: 1,
+                attributes: 'M'
+            },
+            leads: [
+				'City Dweller',
+				'Noble Court',
+				'Religious'
+            ],
+            skills: {
+                points: 11,
+                from: [
+                    'Write',
+                    'Read',
+					'Etiquette',
+					'Astrology',
+					'Musical Instument',
+					'Composition',
+					'Field Dressing',
+					'Apothecary',
+					'Doctrine'
+                ]
+            },
+            traits: {
+                points: 2
+            }
+			//TODO: Can only be 2nd or 3rd lifepath. Can only be taken once.
+        },
+		{
+            name: 'Knight',
+            setting: 'Noble',
+            time: 5,
+            res: 20,
+            stat: {
+                bonus: 1,
+                attributes: 'P'
+            },
+            leads: [
+				'City Dweller',
+				'Religious',
+				'Soldier',
+				'Outcast'
+            ],
+            skills: {
+                points: 10,
+                from: [
+                    'Mounted Combat Training',
+                    'Shield Training',
+					'Armor Training',
+					'Appropriate Weapons',
+					'Intimidation',
+					'Hunting',
+					'Conspicuous'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Sworn Homage'
+                ]
+            },
+            'requires': [
+                'Squire',
+                'Cavalryman'
+            ]
+        },
+		{
+            name: 'Lady',
+            setting: 'Noble',
+            time: 5,
+            res: 25,
+            stat: {
+                bonus: 1,
+                attributes: 'M'
+            },
+            leads: [
+				'City Dweller',
+				'Noble Court',
+				'Religious',
+				'Outcast'
+            ],
+            skills: {
+                points: 11,
+                from: [
+                    'Etiquette',
+                    'Estate Management',
+					'Persuasion',
+					'Seduction',
+					'Inconspicuous',
+					'Doctrine',
+					'Husband-wise',
+					'Estate-wise',
+					'Staff-wise',
+					'Court-wise'
+                ]
+            },
+            traits: {
+                points: 1
+            },
+            'requires': [
+                'Young Lady',
+                'Courtier',
+				'Knight'
+				//TODO: or City Wife w/ Magnate or Bishop chosen as husband LP
+            ]
+        },
+		{
+            name: 'Lord',
+            setting: 'Noble',
+            time: 7,
+            res: 50,
+            stat: {
+                bonus: 1,
+                attributes: 'M'
+            },
+            leads: [
+				'City Dweller',
+				'Noble Court',
+				'Soldier'
+            ],
+            skills: {
+                points: 6,
+                from: [
+                    'Hunting',
+                    'Dance',
+					'Sing',
+					'Falconry',
+					'Estate Management'
+                ],
+				generalPoints: 1
+            },
+            traits: {
+                points: 1
+            },
+            'requires': [
+                'Knight'
+				//TODO: or 'Your Lordship' trait
+            ]
+        },
+		{
+            name: 'Dame',
+            setting: 'Noble',
+            time: 7,
+            res: 40,
+            stat: {
+                bonus: 1,
+                attributes: 'M'
+            },
+            leads: [
+				'City Dweller',
+				'Noble Court',
+				'Religious',
+				'Outcast'
+            ],
+            skills: {
+                points: 3,
+                from: [
+                    'Estate Management',
+                    'Noble-wise'
+                ],
+				generalPoints: 2
+            },
+            traits: {
+                points: 1
+            },
+            'requires': [
+                'Lady'
+				//TODO: or City Wife w/ Bishop or Magnate as husband's LP
+				//or 'Your Lordship' trait
+            ]
+        },
+		{
+            name: 'Baron',
+            setting: 'Noble',
+            time: 8,
+            res: 60,
+            stat: {
+                bonus: 1,
+                attributes: 'M/P'
+            },
+            leads: [
+				'Noble Court',
+				'Soldier'
+            ],
+            skills: {
+                generalPoints: 1
+            },
+            traits: {
+                points: 1,
+                from: [
+                    'Noblesse Oblige',
+					'Regal Bearing',
+					'Pompous',
+					'Sharp Dresser',
+					'Callous'
+                ]
+            },
+            'requires': [
+                'Knight', //TODO: and 'Your Lordship' trait
+                'Magnate',
+				'Master of Horses',
+				'Steward',
+				'Lord',
+				'Constable',
+				'Justiciar'
+            ]
+        },
+		{
+            name: 'Viscount',
+            setting: 'Noble',
+            time: 9,
+            res: 65,
+            stat: {
+                bonus: 1,
+                attributes: 'M/P'
+            },
+            leads: [
+				'Noble Court',
+				'Soldier'
+            ],
+            skills: {
+				generalPoints: 2
+            },
+            traits: {
+                points: 1,
+                from: [
+                    'Noblesse Oblige',
+					'Regal Bearing',
+					'Pompous',
+					'Sharp Dresser',
+					'Callous'
+                ]
+            },
+            'requires': [
+                'Knight', //TODO: and 'Your Eminence' trait
+                'Magnate',
+				'Baron',
+				'Constable',
+				'Justiciar'
+            ]
+        },
+		{
+            name: 'Count',
+            setting: 'Noble',
+            time: 10,
+            res: 70,
+            stat: {
+                bonus: 1,
+                attributes: 'M/P'
+            },
+            leads: [
+				'Noble Court',
+				'Soldier'
+            ],
+            skills: {
+				generalPoints: 3
+            },
+            traits: {
+                points: 1,
+                from: [
+                    'Noblesse Oblige',
+					'Regal Bearing',
+					'Pompous',
+					'Sharp Dresser',
+					'Callous'
+                ]
+            },
+            'requires': [
+                'Knight', //TODO: and 'Your Eminence' trait
+                'Magnate',
+				'Constable',
+				'Justiciar'
+            ]
+        },
+		{
+            name: 'Duke',
+            setting: 'Noble',
+            time: 10,
+            res: 90,
+            stat: {
+                bonus: 1,
+                attributes: 'M/P'
+            },
+            leads: [
+				'Noble Court',
+				'Soldier'
+            ],
+            skills: {
+				generalPoints: 3
+            },
+            traits: {
+                points: 1,
+                from: [
+                    'Noblesse Oblige',
+					'Regal Bearing',
+					'Pompous',
+					'Sharp Dresser',
+					'Callous'
+                ]
+            },
+            'requires': [
+                'Knight' //TODO: and 'Your Grace' trait
+            ]
+        },
+		{
+            name: 'Noble Prince',
+            setting: 'Noble',
+            time: 10,
+            res: 100,
+            stat: {
+                bonus: 1,
+                attributes: 'M/P'
+            },
+            leads: [
+				'Noble Court',
+				'Soldier'
+            ],
+            skills: {
+				generalPoints: 4
+            },
+            traits: {
+                points: 1,
+                from: [
+                    'Noblesse Oblige',
+					'Regal Bearing',
+					'Pompous',
+					'Sharp Dresser',
+					'Callous'
+                ]
+            },
+            'requires': [
+                'Duke',
+                'Knight' //TODO: and 'Your Grace' trait
+            ]
+        },
+		{
+            name: 'Prince of the Blood',
+            setting: 'Noble',
+            //TODO: time: 2 to 20
+            res: 60,
+            leads: [
+				'Noble Court',
+				'Religious',
+				'Soldier'
+            ],
+            skills: {
+				generalPoints: 2
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Born to be King',
+					'Noblesse Oblige',
+					'Regal Bearing',
+					'Pompous',
+					'Sharp Dresser',
+					'Callous'
+                ]
+            },
+            'requires': [
+                //TODO: 'Your Grace' trait and permission from GM and players
+            ]
+        }
     ]
