@@ -14,33 +14,46 @@
         & > .ui.card {
             width: inherit;
             
-            & > .content .header {
-                display: flex;
-                justify-content: space-between;
-                
-                &.with-description {
-                    border-bottom: 1px solid $secondary-font-color;
-                }
+            & > .content {
 
-                & > .link.icon {
-                    text-align: start;
-                    width: 3%;
-                    color: $secondary-font-color;
-    
-                    &:hover {
-                        color: $main-font-color;
-                    }
-                }
-    
-                & > .header-content {
-                    width: 67%;
+                & > .header {
                     display: flex;
                     justify-content: space-between;
-                }
+                    
+                    &.with-description {
+                        border-bottom: 1px solid $secondary-font-color;
+                    }
     
-                & > .left.content {
-                    text-align: end;
-                    width: 30%;
+                    & > .link.icon {
+                        text-align: start;
+                        width: 3%;
+                        color: $secondary-font-color;
+        
+                        &:hover {
+                            color: $main-font-color;
+                        }
+                    }
+        
+                    & > .header-content {
+                        width: 67%;
+                        display: flex;
+                        justify-content: space-between;
+                    }
+        
+                    & > .left.content {
+                        text-align: end;
+                        width: 30%;
+                    }
+                }
+
+                & > .description {
+                    & > p {
+                        color: $secondary-font-color;
+
+                        & > b {
+                            color: $main-font-color;   
+                        }
+                    }
                 }
             }
         }
