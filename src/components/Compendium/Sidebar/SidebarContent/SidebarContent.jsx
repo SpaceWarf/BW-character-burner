@@ -1,6 +1,5 @@
 import React from "react";
 import { Menu, Icon } from 'semantic-ui-react';
-import { HashLink } from 'react-router-hash-link';
 import { getLifepaths } from '#Utilities/data.js';
 import './SidebarContent.scss';
 

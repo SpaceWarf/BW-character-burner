@@ -1,15 +1,19 @@
 import React from "react";
-import { Card } from 'semantic-ui-react';
-import { HashLink } from 'react-router-hash-link';
+import { Card, Icon } from 'semantic-ui-react';
 import './Skill.scss';
 import { Menu } from "semantic-ui-react";
 
 const Skill = ({ skill }) => {
     return (
-        <Menu.Item className="Skill">
+        <Menu.Item className="Skill" id={skill.name.replace(/\s/g, '')}>
             <Card>
                 <Card.Content>
                     <Card.Header>
+                        <Icon
+                            name='linkify'
+                            onClick={() => window.location.href = `#${skill.name.replace(/\s/g, '')}`}
+                            link
+                        />
                         <p>{skill.name}</p>
                         {skill.skillType && <p>{skill.skillType}</p>}
                         {skill.roots && <p>{skill.roots.join(', ')}</p>}

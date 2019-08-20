@@ -1,6 +1,5 @@
 import React from "react";
-import { Card } from 'semantic-ui-react';
-import { NavHashLink } from 'react-router-hash-link';
+import { Card, Icon } from 'semantic-ui-react';
 import './Lifepath.scss';
 import { Menu } from "semantic-ui-react";
 
@@ -10,6 +9,11 @@ const Lifepath = ({ lifepath }) => {
             <Card>
                 <Card.Content>
                     <Card.Header>
+                        <Icon
+                            name='linkify'
+                            onClick={() => window.location.href = `#${lifepath.name.replace(/\s/g, '')}`}
+                            link
+                        />
                         <p>{lifepath.name}</p>
                         <p>{lifepath.time} yrs</p>
                         <p>{lifepath.res}</p>
