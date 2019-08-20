@@ -21,7 +21,7 @@ const Compendium = () => {
                             lifepaths={
                                 getDataSetFromCategory(category.type, category.subType)
                             }
-                            as={category.as}
+                            nested={category.nested}
                         />
                     ))}
                 </Menu>

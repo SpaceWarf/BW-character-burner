@@ -17,15 +17,14 @@ const getComponentForCategory = (type, data) => {
         default:
             return null;
     }
-    return
 };
 
-const CompendiumContent = ({ header, categoryType, categorySubType, lifepaths, as }) => {
+const CompendiumContent = ({ header, categoryType, categorySubType, lifepaths, nested }) => {
     return (
         <Menu.Item>
             <Header as="h1">{header}</Header>
             {lifepaths.map(lifepath => (
-                as === 'nested' ?
+                nested ?
                     <CompendiumContent
                         key={lifepath}
                         header={lifepath}
