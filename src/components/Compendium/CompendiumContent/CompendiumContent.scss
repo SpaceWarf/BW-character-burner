@@ -1,44 +1,46 @@
 @import 'common';
 
-.ui.vertical.menu .item {
+.Content .ui.vertical.menu .item {
     padding: 15px 0 15px 15px;
 
     & > .ui.header {
         color: $main-font-color;
         border-bottom: 2px solid $main-font-color;
     }
-}
 
-.Card {
-    width: $compendium-card-width;
-
-    & > .ui.card {
-        width: inherit;
-        
-        & > .content .header {
-            display: flex;
-            justify-content: space-between;
+    & >.Card {
+        padding: 15px $compendium-card-padding 15px $compendium-card-padding;
+    
+        & > .ui.card {
+            width: inherit;
             
-            & > .link.icon {
-                text-align: start;
-                width: 3%;
-                color: $secondary-font-color;
-
-                &:hover {
-                    color: $main-font-color;
-                }
-            }
-
-            & > .header.content {
-                width: 67%;
+            & > .content .header {
+                border-bottom: 1px solid $secondary-font-color;
                 display: flex;
                 justify-content: space-between;
-            }
-
-            & > .left.content {
-                text-align: end;
-                width: 30%;
+                
+                & > .link.icon {
+                    text-align: start;
+                    width: 3%;
+                    color: $secondary-font-color;
+    
+                    &:hover {
+                        color: $main-font-color;
+                    }
+                }
+    
+                & > .header-content {
+                    width: 67%;
+                    display: flex;
+                    justify-content: space-between;
+                }
+    
+                & > .left.content {
+                    text-align: end;
+                    width: 30%;
+                }
             }
         }
     }
 }
+

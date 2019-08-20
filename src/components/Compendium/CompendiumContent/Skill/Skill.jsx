@@ -14,7 +14,7 @@ const Skill = ({ skill }) => {
                             onClick={() => window.location.href = `#${skill.name.replace(/\s/g, '')}`}
                             link
                         />
-                        <div className='header content'>
+                        <div className='header-content'>
                             <p className='halfs'>{skill.name}</p>
                             {skill.skillType && <p className='halfs centered'>{skill.skillType}</p>}
                         </div>

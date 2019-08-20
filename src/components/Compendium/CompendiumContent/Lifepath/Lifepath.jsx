@@ -14,7 +14,7 @@ const Lifepath = ({ lifepath }) => {
                             onClick={() => window.location.href = `#${lifepath.name.replace(/\s/g, '')}`}
                             link
                         />
-                        <div className='header content'>
+                        <div className='header-content'>
                             <p className='thirds'>{lifepath.name}</p>
                             <p className='fifths centered'>{lifepath.time} yrs</p>
                             <p className='fifths centered'>{lifepath.res}</p>

@@ -14,7 +14,7 @@ const Trait = ({ trait }) => {
                             onClick={() => window.location.href = `#${trait.name.replace(/\s/g, '')}`}
                             link
                         />
-                        <div className='header content'>
+                        <div className='header-content'>
                             <p className='halfs'>{trait.name}</p>
                             <p className='halfs centered'>{trait.type}</p>
                         </div>
