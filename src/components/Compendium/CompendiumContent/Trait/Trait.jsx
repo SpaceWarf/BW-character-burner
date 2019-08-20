@@ -14,9 +14,11 @@ const Trait = ({ trait }) => {
                             onClick={() => window.location.href = `#${trait.name.replace(/\s/g, '')}`}
                             link
                         />
-                        <p>{trait.name}</p>
-                        <p>{trait.type}</p>
-                        <p>{trait.cost ? `${trait.cost} pts` : ''}</p>
+                        <div className='header content'>
+                            <p className='halfs'>{trait.name}</p>
+                            <p className='halfs centered'>{trait.type}</p>
+                        </div>
+                        <p className='left content'>{trait.cost ? `${trait.cost} pts` : ''}</p>
                     </Card.Header>
                     {trait.description && <Card.Description>
                         <p>{trait.description}</p>

@@ -12,18 +12,17 @@ const Compendium = () => {
             <Sidebar />
             <div className="Content">
                 <Menu vertical>
-                    {categories.map(category => (
-                        <CompendiumContent
+                    {categories.map(category => {
+                        const dataSet = getDataSetFromCategory(category.type, category.subType);
+                        return dataSet.length > 0 && <CompendiumContent
                             key={category.name}
                             header={category.name}
                             categoryType={category.type}
                             categorySubType={category.subType}
-                            lifepaths={
-                                getDataSetFromCategory(category.type, category.subType)
-                            }
+                            lifepaths={dataSet}
                             nested={category.nested}
                         />
-                    ))}
+                    })}
                 </Menu>
             </div>
         </div>

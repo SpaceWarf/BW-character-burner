@@ -14,9 +14,11 @@ const Skill = ({ skill }) => {
                             onClick={() => window.location.href = `#${skill.name.replace(/\s/g, '')}`}
                             link
                         />
-                        <p>{skill.name}</p>
-                        {skill.skillType && <p>{skill.skillType}</p>}
-                        {skill.roots && <p>{skill.roots.join(', ')}</p>}
+                        <div className='header content'>
+                            <p className='halfs'>{skill.name}</p>
+                            {skill.skillType && <p className='halfs centered'>{skill.skillType}</p>}
+                        </div>
+                        <p className='left content'>{(skill.roots || []).join(', ')}</p>
                     </Card.Header>
                     {!skill.isWiseSkill && <Card.Description>
                         {skill.description &&

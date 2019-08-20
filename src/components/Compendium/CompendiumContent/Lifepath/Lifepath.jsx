@@ -14,14 +14,16 @@ const Lifepath = ({ lifepath }) => {
                             onClick={() => window.location.href = `#${lifepath.name.replace(/\s/g, '')}`}
                             link
                         />
-                        <p>{lifepath.name}</p>
-                        <p>{lifepath.time} yrs</p>
-                        <p>{lifepath.res}</p>
-                        <p>{lifepath.stat ?
-                            `+ ${lifepath.stat.bonus} ${lifepath.stat.attributes}`
-                            : '—'
-                        }</p>
-                        <p>{lifepath.leads.join(', ')}</p>
+                        <div className='header content'>
+                            <p className='thirds'>{lifepath.name}</p>
+                            <p className='fifths centered'>{lifepath.time} yrs</p>
+                            <p className='fifths centered'>{lifepath.res}</p>
+                            <p className='fifths centered'>{lifepath.stat ?
+                                `+ ${lifepath.stat.bonus} ${lifepath.stat.attributes}`
+                                : '—'
+                            }</p>
+                        </div>
+                        <p className='left content'>{lifepath.leads.join(', ')}</p>
                     </Card.Header>
                     <Card.Description>
                         {lifepath.skills.generalPoints &&
