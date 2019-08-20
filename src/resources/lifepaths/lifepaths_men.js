@@ -7511,5 +7511,902 @@ export default
 				'Constable',
 				'Freebooter' //TODO: Taken twice!
             ]
+        },
+		{
+            name: 'Son of a Gun',
+            isBornLifepath: true,
+            setting: 'Seafaring',
+            time: 8,
+            res: 3,
+            leads: [
+                'Soldier',
+				'Servitude',
+				'Outcast'
+            ],
+            skills: {
+                generalPoints: 3 
+            },
+            traits: {
+                points: 2,
+				from: [
+					'Sea Legs'
+				]
+            }
+        },
+		{
+            name: 'Boy',
+            setting: 'Seafaring',
+            time: 4,
+            res: 8,
+            leads: [
+				'City Dweller',
+				'Soldier',
+				'Servitude',
+				'Outcast'
+            ],
+            skills: {
+                points: 4,
+                from: [
+                    'Sailor-wise',
+                    'Ship-wise',
+					'Captain-wise'
+                ]
+            },
+            traits: {
+                points: 1,
+                from: [
+                    'Veneer of Obedience',
+					'Curses like a Sailor',
+					'Sprinter'
+                ]
+            }
+			//TODO: Must be 2nd LP. May only be taken once.
+        },
+		{
+            name: 'Galley Slave',
+            setting: 'Seafaring',
+            time: 6,
+            res: 3,
+            leads: [
+                'Soldier',
+				'Servitude',
+				'Outcast'
+            ],
+            skills: {
+                points: 3,
+                from: [
+                    'Slave Deck-wise',
+                    'Taskmaster-wise',
+					'Sing',
+					'Seamanship',
+					'Knots'
+                ]
+            },
+            traits: {
+                points: 3,
+                from: [
+                    'Tasting the Lash',
+					'Eating Maggots',
+					'Following the Beat',
+					'Iron Stomach',
+					'Bottomless Stomach',
+					'Gnawing Hunger'
+                ]
+            }
+        },
+		{
+            name: 'Ratcatcher',
+            setting: 'Seafaring',
+            time: 6,
+            res: 4,
+            leads: [
+				'City Dweller',
+				'Servitude',
+				'Outcast'
+            ],
+            skills: {
+                points: 5,
+                from: [
+                    'Trapper',
+                    'Poisons',
+					'Ratiquette'
+                ]
+            },
+            traits: {
+                points: 3,
+                from: [
+                    'Bilge-Drinker',
+					'Rat-Speak',
+					'Feral'
+                ]
+            }
+        },
+		{
+            name: 'Landsman',
+            setting: 'Seafaring',
+            time: 4,
+            res: 5,
+            leads: [
+				'Soldier',
+				'Servitude',
+				'Outcast'
+            ],
+            skills: {
+                points: 3,
+                from: [
+                    'Seamanship',
+                    'Knots',
+					'Brawling',
+					'Rope-wise'
+                ]
+            },
+            traits: {
+                points: 1,
+                from: [
+                    'Cursing',
+					'Aches and Pains'
+                ]
+            }
+        },
+		{
+            name: 'Drummer',
+            setting: 'Seafaring',
+            time: 5,
+            res: 6,
+            leads: [
+                'Villager',
+				'City Dweller',
+				'Soldier',
+				'Outcast'
+            ],
+            skills: {
+                points: 3,
+                from: [
+                    'Drum',
+                    'Sing',
+					'Drum Maker'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Incessant Tapping'
+                ]
+            }
+        },
+		{
+            name: 'Sailor',
+            setting: 'Seafaring',
+            time: 5,
+            res: 7,
+            stat: {
+                bonus: 1,
+                attributes: 'P'
+            },
+            leads: [
+				'City Dweller',
+				'Soldier',
+				'Servitude',
+				'Outcast'
+            ],
+            skills: {
+                points: 6,
+                from: [
+                    'Seamanship',
+                    'Rigging',
+					'Knots',
+					'Brawling',
+					'Sing',
+					'Sea-wise',
+					'Gambling'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Drunk'
+                ]
+            }
+        },
+		{
+            name: 'Crazy Old Sailor',
+            setting: 'Seafaring',
+            time: 10,
+            res: 8,
+            stat: {
+                bonus: 1,
+                attributes: 'M'
+            },
+            leads: [
+				'Servitude',
+				'Outcast'
+            ],
+            skills: {
+                points: 3,
+                from: [
+                    'Ugly Truth',
+                    'Intimidation',
+					'Omen-wise'
+                ]
+            },
+            traits: {
+                points: 3,
+                from: [
+                    'Superstitious',
+					'Metal Plate in the Skull',
+					'"He\'s a Jonah, that one."'
+                ]
+            },
+            'requires': [
+                'Sailor',
+                'Pirate',
+				'Mercenary Captain'
+				//TODO: The character must take this path sometime in his 40s.
+            ]
+        },
+		{
+            name: 'Purser',
+            setting: 'Seafaring',
+            time: 4,
+            res: 9,
+            leads: [
+				'Soldier',
+				'Servitude'
+            ],
+            skills: {
+                points: 4,
+                from: [
+                    'Accounting',
+                    'Crew-wise',
+					'Supply-wise',
+					'Ship-wise'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Gnawing Hunger',
+					'Bitter'
+                ]
+            },
+            'requires': [
+                'Clerk',
+                'Student',
+				'Sailor'
+            ]
+        },
+		{
+            name: 'Signalman',
+            setting: 'Seafaring',
+            time: 5,
+            res: 8,
+            stat: {
+                bonus: 1,
+                attributes: 'M'
+            },
+            leads: [
+				'Soldier',
+				'Servitude'
+            ],
+            skills: {
+                points: 5,
+                from: [
+                    'Signaling',
+                    'Observation',
+					'Cryptography'
+                ]
+            },
+            traits: {
+                points: 1,
+                from: [
+                    'Cryptic'
+                ]
+            }
+        },
+		{
+            name: 'Pilot',
+            setting: 'Seafaring',
+            time: 4,
+            res: 8,
+            leads: [
+                'Villager',
+				'City Dweller',
+				'Soldier',
+				'Outcast'
+            ],
+            skills: {
+                points: 5,
+                from: [
+                    'Pilot',
+                    'Ship-wise',
+					'Observation',
+					'Shoal-wise'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Blisters',
+					'Light Sleeper',
+					'Bored',
+					'Paranoid about the Ship'
+                ]
+            },
+            'requires': [
+                'Sailor',
+                'Pirate',
+				'Mercenary Captain'
+            ]
+        },
+		{
+            name: 'Marine',
+            setting: 'Seafaring',
+            time: 4,
+            res: 10,
+            stat: {
+                bonus: 1,
+                attributes: 'P'
+            },
+            leads: [
+                'Villager',
+				'City Dweller',
+				'Soldier',
+				'Outcast'
+            ],
+            skills: {
+                points: 4,
+                from: [
+                    'Appropriate Weapons',
+                    'Knots',
+					'Intimidation'
+                ]
+            },
+            traits: {
+                points: 1,
+                from: [
+                    'Bruiser',
+					'Sea Legs'
+                ]
+            },
+            'requires': [
+                'Sailor',
+                'Pirate',
+				'Mercenary Captain'
+            ]
+        },
+		{
+            name: 'Bosun',
+            setting: 'Seafaring',
+            time: 5,
+            res: 8,
+            leads: [
+                'Villager',
+				'City Dweller',
+				'Soldier',
+				'Outcast'
+            ],
+            skills: {
+                points: 3,
+                from: [
+                    'Intimidation',
+                    'Brawling',
+					'Sailor-wise'
+                ]
+            },
+            traits: {
+                points: 1,
+                from: [
+                    'Mean',
+					'Obedient'
+                ]
+            },
+            'requires': [
+                'Sailor',
+                'Pirate',
+				'Mercenary Captain'
+            ]
+        },
+		{
+            name: 'Sailmaker',
+            setting: 'Seafaring',
+            time: 5,
+            res: 9,
+            stat: {
+                bonus: 1,
+                attributes: 'P'
+            },
+            leads: [
+                'Villager',
+				'City Dweller',
+				'Soldier',
+				'Outcast'
+            ],
+            skills: {
+                points: 5,
+                from: [
+                    'Sewing',
+                    'Weaving',
+					'Mending',
+					'Sail-wise'
+                ]
+            },
+            traits: {
+                points: 1
+            },
+            'requires': [
+                'Sailor',
+                'Pirate',
+				'Seamstress'
+            ]
+        },
+		{
+            name: 'Ship\'s Doctor',
+            setting: 'Seafaring',
+            time: 6,
+            res: 15,
+            stat: {
+                bonus: 1,
+                attributes: 'M'
+            },
+            leads: [
+                'Villager',
+				'City Dweller',
+				'Soldier',
+				'Outcast'
+            ],
+            skills: {
+                points: 8,
+                from: [
+                    'Apothecary',
+                    'Bloodletting',
+					'Surgery',
+					'Anatomy',
+					'Astrology',
+					'Falsehood',
+					'Tar-wise',
+					'Scurvy-wise'
+                ]
+            },
+            traits: {
+                points: 3,
+                from: [
+                    'Incomprehensible Diagnosis',
+					'Ugly Reputation'
+                ]
+            },
+            'requires': [
+                'Doctor',
+                'Court Doctor',
+				'Physician',
+				'Barber',
+				'Student'
+            ]
+        },
+		{
+            name: 'Ship\'s Cook',
+            setting: 'Seafaring',
+            time: 5,
+            res: 10,
+            stat: {
+                bonus: 1,
+                attributes: 'M'
+            },
+            leads: [
+                'Villager',
+				'City Dweller',
+				'Soldier',
+				'Outcast'
+            ],
+            skills: {
+                points: 6,
+                from: [
+                    'Cooking',
+                    'Firebuilding',
+					'Sing',
+					'Falsehood',
+					'Mystery Meat-wise'
+                ]
+            },
+            traits: {
+                points: 3,
+                from: [
+                    'Crippled',
+					'Cookie',
+					'Maggot Connoisseur'
+                ]
+            },
+            'requires': [
+                'Sailor',
+                'Pirate'
+            ]
+        },
+		{
+            name: 'Ship\'s Chaplain',
+            setting: 'Seafaring',
+            time: 5,
+            res: 15,
+            leads: [
+                'Villager',
+				'City Dweller',
+				'Religious',
+				'Soldier'
+            ],
+            skills: {
+                points: 4,
+                from: [
+                    'Oratory',
+                    'Doctrine',
+					'Ship-wise'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'World Weary',
+					'Burial at Sea',
+					'Secretly Worships the Black Sea God'
+                ]
+            },
+            'requires': [
+                'Chaplain',
+                'Military Order',
+				'Temple Acolyte',
+				'Religious Acolyte'
+            ]
+        },
+		{
+            name: 'Weather Witch',
+            setting: 'Seafaring',
+            time: 5,
+            res: 20,
+            stat: {
+                bonus: 1,
+                attributes: 'M/P'
+            },
+            leads: [
+                'Villager',
+				'City Dweller',
+				'Servitude',
+				'Outcast'
+            ],
+            skills: {
+                points: 6,
+                from: [
+                    'Sea-wise',
+                    'Summoning',
+					'Spirit Binding',
+					'Superstition-wise',
+					'Navigation',
+					'Astrology'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Weather Sense'
+                ]
+            },
+            'requires': [
+                'Augur',
+                'Neophyte Sorcerer',
+				'Arcane Devotee',
+				'Rogue Wizard'
+            ]
+        },
+		{
+            name: 'Navigator',
+            setting: 'Seafaring',
+            time: 6,
+            res: 15,
+            stat: {
+                bonus: 1,
+                attributes: 'M'
+            },
+            leads: [
+				'City Dweller',
+				'Soldier',
+				'Servitude',
+				'Outcast'
+            ],
+            skills: {
+                points: 6,
+                from: [
+                    'Navigation',
+                    'Sea-wise',
+					'Cartography',
+					'Astrology',
+					'Current-wise'
+                ]
+            },
+            traits: {
+                points: 1
+            },
+            'requires': [
+                'Pilot',
+                'Mercenary Captain',
+				'Sailor',
+				'Student'
+            ]
+        },
+		{
+            name: 'Carpenter\'s Mate',
+            setting: 'Seafaring',
+            time: 6,
+            res: 8,
+            stat: {
+                bonus: 1,
+                attributes: 'P'
+            },
+            leads: [
+                'Villager',
+				'Soldier',
+				'Servitude',
+				'Outcast'
+            ],
+            skills: {
+                points: 3,
+                from: [
+                    'Mending',
+                    'Gambling',
+					'Wood-wise'
+                ]
+            },
+            traits: {
+                points: 1,
+                from: [
+                    'Cursing',
+					'Bull\'s-eye Spitter'
+                ]
+            }
+        },
+		{
+            name: 'Ship\'s Carpenter',
+            setting: 'Seafaring',
+            time: 4,
+            res: 16,
+            stat: {
+                bonus: 1,
+                attributes: 'P'
+            },
+            leads: [
+				'City Dweller',
+				'Soldier',
+				'Servitude',
+				'Outcast'
+            ],
+            skills: {
+                points: 5,
+                from: [
+                    'Carpentry',
+                    'Shipwright',
+					'Boatwright',
+					'Ship-wise'
+                ]
+            },
+            traits: {
+                points: 1,
+                from: [
+                    'I Know This Ship Like My Own Hands'
+                ]
+            },
+            'requires': [
+                'Apprentice',
+                'Carpenter\'s Mate'
+            ]
+        },
+		{
+            name: 'Artillerist\'s Mate',
+            setting: 'Seafaring',
+            time: 4,
+            res: 8,
+            stat: {
+                bonus: 1,
+                attributes: 'M'
+            },
+            leads: [
+				'City Dweller',
+				'Soldier',
+				'Servitude',
+				'Outcast'
+            ],
+            skills: {
+                points: 4,
+                from: [
+                    'Mending',
+                    'Carpentry',
+					'Artillerist'
+                ]
+            },
+            traits: {
+                points: 1,
+                from: [
+                    'Disturbingly Confident'
+                ]
+            }
+        },
+		{
+            name: 'Engineer',
+            setting: 'Seafaring',
+            time: 4,
+            res: 25,
+            stat: {
+                bonus: 1,
+                attributes: 'M'
+            },
+            leads: [
+				'City Dweller',
+				'Soldier',
+				'Servitude',
+				'Outcast'
+            ],
+            skills: {
+                points: 6,
+                from: [
+                    'Engineer',
+                    'Munitions',
+					'Artillerist',
+					'Carpentry',
+					'Mending'
+                ]
+            },
+            traits: {
+                points: 1,
+                from: [
+                    'It Just Might Work!'
+                ]
+            },
+            'requires': [
+                'Artillerist\'s Mate',
+                'Student',
+				'Ship\'s Carpenter',
+				'Engineer',
+				'Journeyman'
+            ]
+        },
+		{
+            name: 'Officer\'s Mate',
+            setting: 'Seafaring',
+            time: 4,
+            res: 10,
+            stat: {
+                bonus: 1,
+                attributes: 'M/P'
+            },
+            leads: [
+				'City Dweller',
+				'Soldier',
+				'Servitude',
+				'Outcast'
+            ],
+            skills: {
+                points: 4,
+                from: [
+                    'Etiquette',
+                    'Captain-wise',
+					'Seamanship'
+                ]
+            },
+            traits: {
+                points: 3,
+                from: [
+                    'Pegboy'
+                ]
+            },
+            'requires': [
+                'Born Noble',
+                'Page',
+				'Son of a Gun'
+            ]
+			//TODO: Must be 2nd lifepath, or 3rd if Page is 2nd
+        },
+		{
+            name: 'Steward',
+            setting: 'Seafaring',
+            time: 6,
+            res: 20,
+            stat: {
+                bonus: 1,
+                attributes: 'M'
+            },
+            leads: [
+				'City Dweller',
+				'Soldier',
+				'Servitude',
+				'Outcast'
+            ],
+            skills: {
+                points: 5,
+                from: [
+                    'Accounting',
+                    'Ship Management',
+					'Haggling',
+					'Merchant-wise',
+					'Appraisal'
+                ]
+            },
+            traits: {
+                points: 1
+            },
+            'requires': [
+                'Purser',
+                'Merchant',
+				'Steward',
+				'Accountant'
+            ]
+        },
+		{
+            name: 'First Mate',
+            setting: 'Seafaring',
+            time: 6,
+            res: 18,
+            stat: {
+                bonus: 1,
+                attributes: 'M'
+            },
+            leads: [
+				'City Dweller',
+				'Soldier',
+				'Servitude',
+				'Outcast'
+            ],
+            skills: {
+                points: 6,
+                from: [
+                    'Intimidation',
+                    'Command',
+					'Conspicuous',
+					'Seaman-wise',
+					'Sword'
+                ]
+            },
+            traits: {
+                points: 1
+            },
+            'requires': [
+                'Knight'
+                //TODO: Any 2 sailor/seafaring lifepaths
+            ]
+        },
+		{
+            name: 'Ship\'s Captain',
+            setting: 'Seafaring',
+            time: 7,
+            res: 30,
+            stat: {
+                bonus: 1,
+                attributes: 'M'
+            },
+            leads: [
+                'Peasant',
+                'Villager',
+				'City Dweller',
+				'Noble Court',
+				'Religious',
+				'Soldier',
+				'Servitude',
+				'Outcast'
+            ],
+            skills: {
+                points: 6,
+                from: [
+                    'Command',
+                    'Oratory',
+					'Ship-wise',
+					'Sea-wise'
+                ],
+				generalPoints: 2
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Stern Demeanor'
+                ]
+            },
+            'requires': [
+                'First Mate',
+                'Knight',
+				'Military Order',
+				'Mercenary Captain' //TODO: Twice!
+            ]
         }
     ]
