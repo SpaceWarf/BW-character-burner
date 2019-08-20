@@ -4670,5 +4670,1392 @@ export default
             'requires': [
                 //TODO: 'Your Grace' trait and permission from GM and players
             ]
+        },
+		{
+            name: 'Minstrel',
+            setting: 'Noble Court',
+            time: 4,
+            res: 10,
+            stat: {
+                bonus: 1,
+                attributes: 'M'
+            },
+            leads: [
+                'Villager',
+				'City Dweller',
+				'Outcast'
+            ],
+            skills: {
+                points: 5,
+                from: [
+                    'Poetry',
+                    'Sing',
+					'Musical Instrument'
+                ]
+            },
+            traits: {
+                points: 1,
+                from: [
+                    'Recondite'
+                ]
+            }
+        },
+		{
+            name: 'Court Jester',
+            setting: 'Noble Court',
+            time: 5,
+            res: 10,
+            leads: [
+				'Servitude',
+				'Outcast'
+            ],
+            skills: {
+                points: 7,
+                from: [
+                    'Sing',
+                    'Sleight of Hand',
+					'Climbing',
+					'Conspicuous',
+					'Throwing',
+					'Ugly Truth'
+                ]
+            },
+            traits: {
+                points: 3,
+                from: [
+                    'Scapegoat',
+					'Aura of Innocence'
+                ]
+            }
+		},
+		{
+            name: 'Court Artist',
+            setting: 'Noble Court',
+            time: 6,
+            res: 15,
+            leads: [
+				'City Dweller',
+				'Outcast'
+            ],
+            skills: {
+                points: 5,
+                from: [
+                    'Sculpture',
+                    'Painting',
+					'Engraving',
+					'Seduction',
+					'Genius-wise'
+                ]
+            },
+            traits: {
+                points: 1,
+                from: [
+                    'Romantic'
+                ]
+            },
+            'requires': [
+                'Court Jester',
+                'Painter',
+				'Thinker',
+				'Scholar',
+				'Sculptor'
+            ]
+        },
+		{
+            name: 'Servant',
+            setting: 'Noble Court',
+            time: 6,
+            res: 7,
+            leads: [
+				'Servitude',
+				'Outcast'
+            ],
+            skills: {
+                points: 4,
+                from: [
+                    'Inconspicuous',
+                    'Etiquette',
+					'Court Gossip-wise'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Veneer of Obedience',
+					'Lifting Heavy Things',
+					'Bored'
+                ]
+            }
+        },
+		{
+            name: 'Nurse',
+            setting: 'Noble Court',
+            time: 6,
+            res: 7,
+            leads: [
+                'Villager',
+				'Servitude',
+				'Outcast'
+            ],
+            skills: {
+                points: 5,
+                from: [
+                    'Child-Rearing',
+                    'Etiquette',
+					'Court Gossip-wise',
+					'Field Dressing',
+					'Child-wise'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Maternal'
+                ]
+            }
+        },
+		{
+            name: 'Groom',
+            setting: 'Noble Court',
+            time: 4,
+            res: 5,
+            leads: [
+                'Villager',
+				'City Dweller',
+				'Soldier'
+            ],
+            skills: {
+                points: 5,
+                from: [
+                    'Animal Husbandry',
+                    'Riding',
+					'Mending',
+					'Border-wise',
+					'Road-wise'
+                ]
+            },
+            traits: {
+                points: 1
+            }
+        },
+		{
+            name: 'Gardener',
+            setting: 'Noble Court',
+            time: 10,
+            res: 10,
+            stat: {
+                bonus: 1,
+                attributes: 'P'
+            },
+            leads: [
+				'City Dweller',
+				'Servitude'
+            ],
+            skills: {
+                points: 7,
+                from: [
+                    'Plant-wise',
+                    'Flower-wise',
+					'Tree-wise',
+					'Pest-wise',
+					'Herbalism',
+					'Farming',
+					'Almanac'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Earthly Smell',
+					'Salt of the Earth',
+					'Down to Earth',
+					'Affinity for Plants'
+                ]
+            }
+        },
+		{
+            name: 'Torturer',
+            setting: 'Noble Court',
+            time: 5,
+            res: 10,
+            stat: {
+                bonus: 1,
+                attributes: 'M'
+            },
+            leads: [
+				'Soldier',
+				'Servitude',
+				'Outcast'
+            ],
+            skills: {
+                points: 5,
+                from: [
+                    'Interrogation',
+                    'Torture',
+					'Anatomy',
+					'Torture Devices-wise'
+                ]
+            },
+            traits: {
+                points: 1,
+                from: [
+                    'Unsavory Madman'
+                ]
+            }
+        },
+		{
+            name: 'Forester',
+            setting: 'Noble Court',
+            time: 7,
+            res: 9,
+            stat: {
+                bonus: 1,
+                attributes: 'M/P'
+            },
+            leads: [
+                'Peasant',
+                'Villager',
+				'Soldier',
+				'Outcast'
+            ],
+            skills: {
+                points: 8,
+                from: [
+                    'Observation',
+                    'Orienteering',
+					'Foraging',
+					'Survival',
+					'Tracking',
+					'Trapper',
+					'Cudgel',
+					'Staff',
+					'Bow',
+					'Poacher-wise',
+					'Park-wise'
+                ]
+            },
+            traits: {
+                points: 1
+            }
+        },
+		{
+            name: 'Student',
+            setting: 'Noble Court',
+            time: 4,
+            res: 10,
+            stat: {
+                bonus: 1,
+                attributes: 'M'
+            },
+            leads: [
+				'City Dweller',
+				'Noble',
+				'Religious'
+            ],
+            skills: {
+                points: 9,
+                from: [
+                    'Write',
+                    'Read',
+					'Rule of Law',
+					'Oratory',
+					'Doctrine',
+					'Etiquette'
+                ]
+            },
+            traits: {
+                points: 1,
+                from: [
+                    'Dangerous',
+					'Geometric'
+                ]
+            }
+        },
+		{
+            name: 'Page',
+            setting: 'Noble Court',
+            time: 6,
+            res: 15,
+            stat: {
+                bonus: 1,
+                attributes: 'P'
+            },
+            leads: [
+				'City Dweller',
+				'Noble',
+				'Soldier',
+				'Servitude'
+            ],
+            skills: {
+                points: 6,
+                from: [
+                    'Riding',
+                    'Brawling',
+					'Write',
+					'Read',
+					'Sword'
+                ]
+            },
+            traits: {
+                points: 1
+            }
+			//TODO: Must be 2nd LP. Can only be taken once.
+        },
+		{
+            name: 'Man-at-Arms',
+            setting: 'Noble Court',
+            time: 6,
+            res: 12,
+            stat: {
+                bonus: 1,
+                attributes: 'P'
+            },
+            leads: [
+				'City Dweller',
+				'Soldier',
+				'Outcast'
+            ],
+            skills: {
+                points: 8,
+                from: [
+                    'Mounted Combat Training',
+                    'Shield Training',
+					'Armor Training',
+					'Brawling',
+					'Intimidation',
+					'Etiquette',
+					'Appropriate Weapons'
+                ]
+            },
+            traits: {
+                points: 1
+            },
+            'requires': [
+                'Page',
+                'Squire',
+				'lifepath:Soldier'
+            ]
+        },
+		{
+            name: 'Falconer',
+            setting: 'Noble Court',
+            time: 5,
+            res: 10,
+            stat: {
+                bonus: 1,
+                attributes: 'M/P'
+            },
+            leads: [
+                'Peasant',
+				'City Dweller',
+				'Soldier'
+            ],
+            skills: {
+                points: 4,
+                from: [
+                    'Falconry',
+                    'Animal Husbandry',
+					'Hunting'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Boaster',
+					'Weird',
+					'Birdie Talk'
+                ]
+            }
+        },
+		{
+            name: 'Huntsman',
+            setting: 'Noble Court',
+            time: 5,
+            res: 12,
+            stat: {
+                bonus: 1,
+                attributes: 'M/P'
+            },
+            leads: [
+                'Peasant',
+				'Soldier'
+            ],
+            skills: {
+                points: 8,
+                from: [
+                    'Hunting',
+                    'Animal Husbandry',
+					'Forest-wise',
+					'Stealthy',
+					'Cooking',
+					'Tracking',
+					'Orienteering',
+					'Crossbow'
+                ]
+            },
+            traits: {
+                points: 1
+            }
+        },
+		{
+            name: 'Herald',
+            setting: 'Noble Court',
+            time: 4,
+            res: 10,
+            leads: [
+				'City Dweller',
+				'Soldier',
+				'Servitude'
+            ],
+            skills: {
+                points: 4,
+                from: [
+                    'Heraldry',
+                    'Noble-wise'
+                ]
+            },
+            traits: {
+                points: 1,
+                from: [
+                    'Formalist',
+					'Rainman',
+					'Eidetic Memory'
+                ]
+            }
+        },
+		{
+            name: 'Court Chef',
+            setting: 'Noble Court',
+            time: 5,
+            res: 14,
+            stat: {
+                bonus: 1,
+                attributes: 'M'
+            },
+            leads: [
+				'City Dweller',
+				'Outcast'
+            ],
+            skills: {
+                points: 5,
+                from: [
+                    'Cooking',
+                    'Sing',
+					'Herbalism',
+					'Falsehood'
+                ]
+            },
+            traits: {
+                points: 1
+            }
+        },
+		{
+            name: 'Squire',
+            setting: 'Noble Court',
+            time: 5,
+            res: 14,
+            stat: {
+                bonus: 1,
+                attributes: 'M,P'
+            },
+            leads: [
+				'City Dweller',
+				'Noble',
+				'Soldier',
+				'Servitude',
+				'Outcast'
+            ],
+            skills: {
+                points: 9,
+                from: [
+                    'Sword',
+                    'Armor Training',
+					'Shield Training',
+					'Lance',
+					'Brawling',
+					'Mounted Combat',
+					'Etiquette'
+                ]
+            },
+            traits: {
+                points: 1,
+                from: [
+                    'Pragmatic',
+					'Tough',
+					'Determined'
+                ]
+            },
+            'requires': [
+                'Corrupt Sergeant',
+                'Village Sergeant',
+				'Sergeant',
+				'Veteran',
+				'Page',
+				'Man-at-Arms'
+            ]
+        },
+		{
+            name: 'Young Lady',
+            setting: 'Noble Court',
+            time: 9,
+            res: 25,
+            stat: {
+                bonus: 1,
+                attributes: 'M'
+            },
+            leads: [
+				'City Dweller',
+				'Noble',
+				'Religious'
+            ],
+            skills: {
+                points: 10,
+                from: [
+                    'Write',
+                    'Read',
+					'Etiquette',
+					'Poetry',
+					'Astrology',
+					'Musical Instrument',
+					'Composition',
+					'Field Dressing',
+					'Apothecary',
+					'Court Gossip-wise'
+                ]
+            },
+            traits: {
+                points: 1
+            }
+			//TODO: Must be 2nd or 3rd LP. Can only be taken once.
+        },
+		{
+            name: 'Knight',
+            setting: 'Noble Court',
+            time: 6,
+            res: 20,
+            stat: {
+                bonus: 1,
+                attributes: 'P'
+            },
+            leads: [
+				'Noble',
+				'Soldier',
+				'Outcast'
+            ],
+            skills: {
+                points: 11,
+                from: [
+                    'Conspicuous',
+                    'Intimidation',
+					'Falconry',
+					'Mounted Combat Training',
+					'Shield Training',
+					'Armor Training',
+					'Appropriate Weapons'
+                ]
+            },
+            traits: {
+                points: 1,
+                from: [
+                    'Sworn Homage',
+					'Sense of Entitlement'
+                ]
+            },
+            'requires': [
+                'Squire',
+                'Cavalryman'
+            ]
+        },
+		{
+            name: 'Courtier',
+            setting: 'Noble Court',
+            time: 5,
+            res: 15,
+            stat: {
+                bonus: 1,
+                attributes: 'M'
+            },
+            leads: [
+                'City Dweller',
+				'Noble',
+				'Outcast'
+            ],
+            skills: {
+                points: 8,
+                from: [
+                    'Etiquette',
+                    'Observation',
+					'Persuasion',
+					'Seduction',
+					'Inconspicuous',
+					'Court Gossip-wise',
+					'Noble-wise'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Rapier Wit'
+                ]
+            }
+        },
+		{
+            name: 'Governess',
+            setting: 'Noble Court',
+            time: 8,
+            res: 12,
+            leads: [
+                'Villager',
+				'Servitude',
+				'Outcast'
+            ],
+            skills: {
+                points: 7,
+                from: [
+                    'Family-wise',
+                    'Administration',
+					'Intimidation',
+					'Etiquette',
+					'Persuasion',
+					'Ugly Truth'
+                ]
+            },
+            traits: {
+                points: 1,
+                from: [
+                    'Dismissive',
+					'You Should Know Better than That!',
+					'Bitter'
+                ]
+            },
+            'requires': [
+                'Nurse',
+                'Midwife',
+				'Lady',
+				'Country Wife',
+				'City Wife',
+				'Village Wife'
+            ]
+        },
+		{
+            name: 'Chaplain',
+            setting: 'Noble Court',
+            time: 5,
+            res: 18,
+            stat: {
+                bonus: 1,
+                attributes: 'M/P'
+            },
+            leads: [
+				'City Dweller',
+				'Religious',
+				'Soldier',
+				'Servitude'
+            ],
+            skills: {
+                points: 8,
+                from: [
+                    'Oratory',
+                    'Doctrine',
+					'Riding',
+					'Armor Training',
+					'Mounted Combat Training',
+					'Shield Training',
+					'Appropriate Weapons'
+                ]
+            },
+            traits: {
+                points: 1
+            },
+            'requires': [
+                'Military Order',
+                'Priest',
+				'Itinerant Priest',
+				'Village Priest',
+				'Venal Priest',
+				'Temple Priest',
+				'Archpriest',
+				'Court Priest',
+				'Heretic Priest'
+            ]
+        },
+		{
+            name: 'Court Sorcerer',
+            setting: 'Noble Court',
+            time: 8,
+            res: 32,
+            stat: {
+                bonus: 1,
+                attributes: 'M'
+            },
+            leads: [
+				'City Dweller',
+				'Outcast'
+            ],
+            skills: {
+                points: 7,
+                from: [
+                    'Etiquette',
+                    'Falsehood',
+					'Astrology',
+					'Alchemy',
+					'Sorcery'
+                ]
+            },
+            traits: {
+                points: 1,
+                from: [
+                    'Inscrutable',
+					'Gifted',
+					'Second Sight'
+                ]
+            },
+            'requires': [
+                'Arcane Devotee',
+                'Rogue Wizard',
+				'Sorcerer'
+            ]
+        },
+		{
+            name: 'Court Lawyer',
+            setting: 'Noble Court',
+            time: 8,
+            res: 25,
+            stat: {
+                bonus: 1,
+                attributes: 'M'
+            },
+            leads: [
+				'City Dweller',
+				'Religious',
+				'Outcast'
+            ],
+            skills: {
+                points: 6,
+                from: [
+                    'Etiquette',
+                    'Oratory',
+					'Persuasion',
+					'Rule of Law',
+					'History'
+                ]
+            },
+            traits: {
+                points: 1,
+                from: [
+                    'Rhetorical',
+					'Evasive'
+                ]
+            },
+            'requires': [
+                'Student',
+                'Advocate'
+            ]
+        },
+		{
+            name: 'Court Doctor',
+            setting: 'Noble Court',
+            time: 8,
+            res: 20,
+            stat: {
+                bonus: 1,
+                attributes: 'M'
+            },
+            leads: [
+				'City Dweller',
+				'Outcast'
+            ],
+            skills: {
+                points: 7,
+                from: [
+                    'Etiquette',
+                    'Apothecary',
+					'Bloodletting',
+					'Surgery',
+					'Anatomy',
+					'Astrology',
+					'Falsehood'
+                ]
+            },
+            traits: {
+                points: 1,
+                from: [
+                    'Incomprehensible Diagnosis'
+                ]
+            },
+            'requires': [
+                'Student',
+                'Itinerant Monk',
+				'Cloistered Nun',
+				'Priest'
+            ]
+        },
+		{
+            name: 'Chronicler',
+            setting: 'Noble Court',
+            time: 10,
+            res: 15,
+            stat: {
+                bonus: 1,
+                attributes: 'M'
+            },
+            leads: [
+                'Villager',
+				'City Dweller',
+				'Outcast'
+            ],
+            skills: {
+                points: 6,
+                from: [
+                    'Composition',
+                    'History',
+					'Etiquette',
+					'Illuminations',
+					'Obscure History'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Prone to Exaggeration',
+					'Flatterer',
+					'Denouncer',
+					'Cynical',
+					'Righteous'
+                ]
+            },
+            'requires': [
+                'Student',
+                'Custodian',
+				'Interpreter',
+				'Archivist',
+				'Young Lady'
+            ]
+        },
+		{
+            name: 'Armorer',
+            setting: 'Noble Court',
+            time: 7,
+            res: 25,
+            stat: {
+                bonus: 1,
+                attributes: 'P'
+            },
+            leads: [
+				'City Dweller',
+				'Soldier'
+            ],
+            skills: {
+                points: 9,
+                from: [
+                    'Etching',
+                    'Armorer',
+					'Blacksmith',
+					'Tanner',
+					'Sewing',
+					'Weaponsmith'
+                ]
+            },
+            traits: {
+                points: 1,
+                from: [
+                    'Proud'
+                ]
+            },
+            'requires': [
+                'Journeyman'
+            ]
+        },
+		{
+            name: 'Atilliator',
+            setting: 'Noble Court',
+            time: 10,
+            res: 30,
+            stat: {
+                bonus: 1,
+                attributes: 'P'
+            },
+            leads: [
+				'City Dweller',
+				'Soldier'
+            ],
+            skills: {
+                points: 6,
+                from: [
+                    'Atilliator',
+                    'Carpentry',
+					'Carving'
+                ]
+            },
+            traits: {
+                points: 1,
+                from: [
+                    'Professionnally Diligent'
+                ]
+            },
+            'requires': [
+                'Journeyman'
+            ]
+        },
+		{
+            name: 'Court Priest',
+            setting: 'Noble Court',
+            time: 6,
+            res: 20,
+            stat: {
+                bonus: 1,
+                attributes: 'M'
+            },
+            leads: [
+				'City Dweller',
+				'Religious',
+				'Outcast'
+            ],
+            skills: {
+                points: 5,
+                from: [
+                    'Etiquette',
+                    'History',
+					'Symbology',
+					'Doctrine',
+					'Persuasion'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Royal Favorite',
+					'Faithful'
+                ]
+            },
+            'requires': [
+                'Chaplain',
+                'Priest',
+				'Religious Acolyte'
+            ]
+        },
+		{
+            name: 'Steward',
+            setting: 'Noble Court',
+            time: 7,
+            res: 15,
+            stat: {
+                bonus: 1,
+                attributes: 'M'
+            },
+            leads: [
+				'City Dweller',
+				'Noble',
+				'Religious',
+				'Outcast'
+            ],
+            skills: {
+                points: 6,
+                from: [
+                    'Estate Management',
+                    'Accounting',
+					'Observation',
+					'Manor-wise'
+                ]
+            },
+            traits: {
+                points: 1
+            },
+            'requires': [
+                'Town Official',
+                'Municipal Minister',
+				'Judge',
+				'Court Lawyer',
+				'Court Doctor',
+				'Governess',
+				'Young Lady',
+				'Magnate',
+				'Lord'
+            ]
+        },
+		{
+            name: 'Master of Horses',
+            setting: 'Noble Court',
+            time: 8,
+            res: 40,
+            leads: [
+				'City Dweller',
+				'Soldier'
+            ],
+            skills: {
+                points: 4,
+                from: [
+                    'Horse Husbandry',
+                    'Appraisal',
+					'Horse-wise'
+                ]
+            },
+            traits: {
+                points: 1,
+                from: [
+                    'Love of the Horse',
+					'Low Speech',
+					'Affinity for Horses'
+                ]
+            },
+            'requires': [
+                'Captain',
+                'Baron',
+				'Saddler',
+				'Merchant',
+				'Magnate'
+            ]
+        },
+		{
+            name: 'Master of Hounds',
+            setting: 'Noble Court',
+            time: 7,
+            res: 20,
+            leads: [
+				'City Dweller',
+				'Soldier'
+            ],
+            skills: {
+                points: 7,
+                from: [
+                    'Dog Husbandry',
+                    'Dog-wise',
+					'Hunting',
+					'Instruction',
+					'Mimicry'
+                ]
+            },
+            traits: {
+                points: 1,
+                from: [
+                    'Dog Lover',
+					'Pigpen',
+					'Emotional',
+					'Iron Stomach'
+                ]
+            },
+            'requires': [
+                'Captain',
+                'Baron',
+				'Saddler',
+				'Merchant',
+				'Magnate'
+            ]
+        },
+		{
+            name: 'Hostage',
+            setting: 'Noble Court',
+            time: 6,
+            res: /*TODO:*/ 'Half of previous LP',
+            leads: [
+				'City Dweller',
+				'Noble',
+				'Religious',
+				'Soldier'
+            ],
+            skills: {
+                points: 4,
+                from: [
+                    'Etiquette',
+                    'Court-wise',
+					'Foreign Languages',
+					'Foreign History'
+                ]
+            },
+            traits: {
+                points: 1,
+                from: [
+                    'Homesick',
+					'Bored',
+					'Darling of the Court'
+                ]
+            },
+            'requires': [
+                'lifepath:Noble'
+            ]
+        },
+		{
+            name: 'Bailiff',
+            setting: 'Noble Court',
+            time: 4,
+            res: 15,
+            stat: {
+                bonus: 1,
+                attributes: 'M/P'
+            },
+            leads: [
+				'City Dweller',
+				'Soldier',
+				'Outcast'
+            ],
+            skills: {
+                points: 7,
+                from: [
+                    'Intimidation',
+                    'Interrogation',
+					'Rule of Law',
+					'Outlaw-wise',
+					'Village-wise',
+					'City-wise',
+					'Tax-wise'
+                ]
+            },
+            traits: {
+                points: 1,
+                from: [
+                    'Nose for Trouble'
+                ]
+            },
+            'requires': [
+                'Knight'
+                //TODO: or the 'Your Lordship' trait
+            ]
+        },
+		{
+            name: 'Justiciar',
+            setting: 'Noble Court',
+            time: 5,
+            res: 15,
+            stat: {
+                bonus: 1,
+                attributes: 'M/P'
+            },
+            leads: [
+				'City Dweller',
+				'Religious',
+				'Soldier',
+				'Outcast'
+            ],
+            skills: {
+                points: 6,
+                from: [
+                    'Rule of Law',
+                    'Amercement',
+					'Interrogation',
+					'Criminal-wise',
+					'Circuit-wise'
+                ]
+            },
+            traits: {
+                points: 1,
+                from: [
+                    'Stern Demeanor',
+					'Amenable to Other Options'
+                ]
+            },
+            'requires': [
+                'Judge',
+                'Captain',
+				'Bailiff',
+				'Lord'
+            ]
+        },
+		{
+            name: 'Coroner',
+            setting: 'Noble Court',
+            time: 6,
+            res: 15,
+            leads: [
+				'City Dweller',
+				'Soldier'
+            ],
+            skills: {
+                points: 5,
+                from: [
+                    'Rule of Law',
+                    'Anatomy',
+					'Writ-wise',
+					'Observation'
+                ]
+            },
+            traits: {
+                points: 1,
+                from: [
+                    'Hard Hearted',
+					'Seen It All'
+                ]
+            },
+            'requires': [
+                'Steward',
+                'Town Official',
+				'Municipal Minister',
+				'Judge',
+				'Court Lawyer',
+				'Court Doctor',
+				'Magnate',
+				'Lord'
+            ]
+        },
+		{
+            name: 'Constable',
+            setting: 'Noble Court',
+            time: 6,
+            res: 50,
+            stat: {
+                bonus: 1,
+                attributes: 'M'
+            },
+            leads: [
+				'City Dweller',
+				'Soldier',
+				'Outcast'
+            ],
+            skills: {
+                points: 5,
+                from: [
+                    'Command',
+                    'Heraldry',
+					'Logistics',
+					'Kingdom-wise',
+					'Obligation-wise',
+					'Soldier-wise',
+					'Cavalry-wise'
+                ]
+            },
+            traits: {
+                points: 1,
+                from: [
+                    'Weight of the World'
+                ]
+            },
+            'requires': [
+                'Captain',
+                'Baron',
+				'Viscount',
+				'Count',
+				'Duke',
+				'Prince'
+            ]
+        },
+		{
+            name: 'Treasurer',
+            setting: 'Noble Court',
+            time: 7,
+            res: 45,
+            leads: [
+				'City Dweller',
+				'Religious',
+				'Soldier'
+            ],
+            skills: {
+                points: 5,
+                from: [
+                    'Accounting',
+                    'Estate Management',
+					'Tax-wise',
+					'Debt-wise'
+                ]
+            },
+            traits: {
+                points: 1,
+                from: [
+                    'Pecunious',
+					'Lavish Taste'
+                ]
+            },
+            'requires': [
+                'Steward',
+                'Town Official',
+				'Municipal Minister',
+				'Judge',
+				'Court Lawyer',
+				'Court Doctor',
+				'Magnate',
+				'Baron',
+				'Bishop',
+				'Viscount',
+				'Count',
+				'Duke'
+            ]
+        },
+		{
+            name: 'Chamberlain',
+            setting: 'Noble Court',
+            time: 7,
+            res: 30,
+            stat: {
+                bonus: 1,
+                attributes: 'M'
+            },
+            leads: [
+				'City Dweller',
+				'Religious',
+				'Soldier'
+            ],
+            skills: {
+                points: 5,
+                from: [
+                    'Soothing Platitudes',
+                    'Persuasion',
+					'Ugly Truth'
+                ],
+				generalPoints: 1
+            },
+            traits: {
+                points: 1
+            },
+            'requires': [
+                'Scholar',
+                'Steward',
+				'Town Official',
+				'Municipal Minister',
+				'Judge',
+				'Court Lawyer',
+				'Court Doctor',
+				'Magnate',
+				'Baron',
+				'Bishop',
+				'Viscount',
+				'Count',
+				'Duke'
+            ]
+        },
+		{
+            name: 'Advisor to the Court',
+            setting: 'Noble Court',
+			//TODO: This LP can be 1-3 yrs long. Player's choice.
+			//Character earns 10 res and 1 gen. skill point per year.
+			//The stat and trait points are earned once.
+            time: '1 to 3',
+            res: '10/yr',
+            stat: {
+                bonus: 1,
+                attributes: 'M/P'
+            },
+            leads: [
+                'Peasant',
+                'Villager',
+				'City Dweller',
+				'Noble',
+				'Religious',
+				'Soldier',
+				'Seafaring',
+				'Servitude',
+				'Outcast'
+            ],
+            skills: {
+				generalPoints: '1/yr'
+            },
+            traits: {
+                points: 1
+            },
+            'requires': [
+                'Thinker',
+                'Captain',
+				'Sea Captain',
+				'Magnate',
+				'Master Craftsman',
+				'Artisan',
+				'Bishop',
+				'Rogue Wizard',
+				'Mad Summoner',
+				'Heretic Priest',
+				'Dame',
+				'Baron',
+				'Viscount',
+				'Count',
+				'Duke',
+				'Prince'
+            ]
         }
     ]
