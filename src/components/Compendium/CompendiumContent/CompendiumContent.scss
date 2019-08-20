@@ -12,11 +12,16 @@
             
             .link.icon {
                 text-align: start;
-                width: 5%;
+                width: 3%;
+                color: $secondary-font-color;
+
+                &:hover {
+                    color: $main-font-color;
+                }
             }
 
             .header.content {
-                width: 65%;
+                width: 67%;
                 display: flex;
                 justify-content: space-between;
 
