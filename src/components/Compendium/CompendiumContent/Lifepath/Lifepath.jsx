@@ -1,11 +1,12 @@
 import React from "react";
 import { Card } from 'semantic-ui-react';
+import { NavHashLink } from 'react-router-hash-link';
 import './Lifepath.scss';
 import { Menu } from "semantic-ui-react";
 
 const Lifepath = ({ lifepath }) => {
     return (
-        <Menu.Item className="Lifepath">
+        <Menu.Item className="Lifepath" id={lifepath.name.replace(/\s/g, '')}>
             <Card>
                 <Card.Content>
                     <Card.Header>

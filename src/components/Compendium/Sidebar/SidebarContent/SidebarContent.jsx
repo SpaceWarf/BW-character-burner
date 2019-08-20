@@ -1,5 +1,6 @@
 import React from "react";
 import { Menu, Icon } from 'semantic-ui-react';
+import { HashLink } from 'react-router-hash-link';
 import { getLifepaths } from '#Utilities/data.js';
 import './SidebarContent.scss';
 
@@ -30,7 +31,7 @@ class SidebarContent extends React.Component {
 
     getFilteredData(data) {
         const { nested, filter } = this.props;
-        console.log(nested, data)
+        
         return nested ?
             data :
             data.filter(item =>
@@ -78,7 +79,7 @@ class SidebarContent extends React.Component {
                                 key={item.name}
                                 className="sidebar child"
                                 as="a"
-                                onClick={() => { console.log('clicked ', item.name); }}
+                                href={`#${item.name.replace(/\s/g, '')}`}
                             >
                                 {item.name}
                             </Menu.Item>

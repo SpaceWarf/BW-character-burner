@@ -1,5 +1,6 @@
 import React from "react";
 import { Card } from 'semantic-ui-react';
+import { HashLink } from 'react-router-hash-link';
 import './Trait.scss';
 import { Menu } from "semantic-ui-react";
 
