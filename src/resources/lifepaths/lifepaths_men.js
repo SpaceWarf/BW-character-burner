@@ -2736,6 +2736,9 @@ export default
 					'Observation'
                 ]
             },
+			traits: {
+				
+			}
         },
 		{
             name: 'Baker',
@@ -3723,6 +3726,9 @@ export default
 					'Peasant-wise'
                 ]
             },
+			traits: {
+				
+			},
             'requires': [
                 'Master Craftsman',
                 'Master of Horses',
@@ -3869,6 +3875,9 @@ export default
 					'Minister-wise'
                 ]
             },
+			traits: {
+				
+			},
             'requires': [
                 'Town Official',
                 'Scholar',
