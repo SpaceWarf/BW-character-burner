@@ -1,16 +1,25 @@
 @import 'common';
 
+.ui.vertical.menu .item {
+    padding: 15px 0 15px 15px;
+
+    & > .ui.header {
+        color: $main-font-color;
+        border-bottom: 2px solid $main-font-color;
+    }
+}
+
 .Card {
     width: $compendium-card-width;
 
-    .ui.card {
+    & > .ui.card {
         width: inherit;
         
-        .content .header {
+        & > .content .header {
             display: flex;
             justify-content: space-between;
             
-            .link.icon {
+            & > .link.icon {
                 text-align: start;
                 width: 3%;
                 color: $secondary-font-color;
@@ -20,29 +29,13 @@
                 }
             }
 
-            .header.content {
+            & > .header.content {
                 width: 67%;
                 display: flex;
                 justify-content: space-between;
-
-                .centered {
-                    text-align: center;
-                }
-
-                .thirds {
-                    width: 33%;
-                }
-
-                .fifths {
-                    width: 20%;
-                }
-
-                .halfs {
-                    width: 50%;
-                }
             }
 
-            .left.content {
+            & > .left.content {
                 text-align: end;
                 width: 30%;
             }
