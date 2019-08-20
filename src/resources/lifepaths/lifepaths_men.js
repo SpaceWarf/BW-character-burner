@@ -5924,7 +5924,8 @@ export default
 				'Viscount',
 				'Count',
 				'Duke',
-				'Prince'
+				'Noble Prince',
+				'Prince of the Blood'
             ]
         },
 		{
@@ -6055,7 +6056,756 @@ export default
 				'Viscount',
 				'Count',
 				'Duke',
-				'Prince'
+				'Noble Prince',
+				'Prince of the Blood'
+            ]
+        },
+		{
+            name: 'Castrati',
+            setting: 'Religious',
+            time: 7,
+            res: 15,
+            stat: {
+                bonus: 1,
+                attributes: 'M'
+            },
+            leads: [
+				'Noble Court',
+				'Outcast'
+            ],
+            skills: {
+                points: 7,
+                from: [
+                    'Sing',
+                    'Persuasion',
+					'Falsehood',
+					'Etiquette',
+					'Administration',
+					'Rule of Law'
+                ]
+            },
+            traits: {
+                points: 3,
+                from: [
+                    'Eunuch',
+					'Scheming'
+                ]
+            }
+        },
+		{
+            name: 'Pardoner',
+            setting: 'Religious',
+            time: 5,
+            res: 12,
+            leads: [
+                'Peasant',
+                'Villager',
+				'City Dweller',
+				'Outcast'
+            ],
+            skills: {
+                points: 5,
+                from: [
+                    'Persuasion',
+                    'Falsehood',
+					'Intimidation',
+					'Doctrine'
+                ]
+            },
+            traits: {
+                points: 1,
+                from: [
+                    'Pardoner',
+					'Corrupt'
+                ]
+            }
+        },
+		{
+            name: 'Zealous Convert',
+            setting: 'Religious',
+            time: 4,
+            res: 10,
+            leads: [
+                'Peasant',
+				'Noble Court',
+				'Servitude',
+				'Outcast'
+            ],
+            skills: {
+                points: 4,
+                from: [
+                    'Religious Diatribe',
+                    'Doctrine',
+					'Rhetoric'
+                ]
+            },
+            traits: {
+                points: 3,
+                from: [
+                    'Infallible',
+					'Religious Logic',
+					'Righteous',
+					'Firm',
+					'Demagogue'
+                ]
+            }
+        },
+		{
+            name: 'Military Order',
+            setting: 'Religious',
+            time: 3,
+            res: 7,
+            stat: {
+                bonus: 1,
+                attributes: 'M,P'
+            },
+            leads: [
+                'Villager',
+				'City Dweller',
+				'Noble',
+				'Noble Court',
+				'Soldier',
+				'Seafaring',
+				'Servitude',
+				'Outcast'
+            ],
+            skills: {
+                points: 5,
+                from: [
+                    'Doctrine',
+                    'Riding',
+					'Armor Training',
+					'Appropriate Weapons'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Disciplined',
+					'Fanatical Devotion',
+					'Sworn to the Order'
+                ]
+            },
+            'requires': [
+                'Squire',
+                'Knight',
+				'lifepath:Soldier'
+            ]
+        },
+		{
+            name: 'Grave Digger',
+            setting: 'Religious',
+            time: 4,
+            res: 6,
+            leads: [
+                'Villager',
+				'City Dweller',
+				'Servitude',
+				'Outcast'
+            ],
+            skills: {
+                points: 4,
+                from: [
+                    'Digging',
+                    'Grave-wise',
+					'Cemetery-wise'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Superstitious',
+					'Burial Rites'
+                ]
+            }
+        },
+		{
+            name: 'Porter',
+            setting: 'Religious',
+            time: 3,
+            res: 5,
+            leads: [
+                'Peasant',
+                'Villager',
+				'Outcast'
+            ],
+            skills: {
+                points: 4,
+                from: [
+                    'Temple-wise',
+                    'Priest-wise',
+					'Worshipper-wise',
+					'Church Treasure-wise'
+                ]
+            },
+            traits: {
+                points: 1,
+                from: [
+                    'Keys to the Church',
+					'Familiar Face'
+                ]
+            }
+        },
+		{
+            name: 'Notary',
+            setting: 'Religious',
+            time: 4,
+            res: 15,
+            leads: [
+				'City Dweller',
+				'Noble Court',
+				'Outcast'
+            ],
+            skills: {
+                points: 4,
+                from: [
+                    'Rule of Law',
+                    'Bureaucracy',
+					'Church Law',
+					'Bribe-wise'
+                ]
+            },
+            traits: {
+                points: 1
+            },
+            'requires': [
+                'Clerk',
+                'Young Lady',
+				'Student'
+            ]
+        },
+		{
+            name: 'Custodian',
+            setting: 'Religious',
+            time: 5,
+            res: 10,
+            stat: {
+                bonus: 1,
+                attributes: 'M'
+            },
+            leads: [
+				'City Dweller',
+				'Outcast'
+            ],
+            skills: {
+                points: 7,
+                from: [
+                    'Relic-wise',
+                    'Observation',
+					'Obscure History',
+					'Religious History',
+					'Folklore',
+					'Saint-wise'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Strange',
+					'Erudite',
+					'Obsessed',
+					'Arcane'
+                ]
+            },
+            'requires': [
+                'Student',
+                'Young Lady',
+				'Cloistered Monk',
+				'Cloistered Nun',
+				'Temple Acolyte',
+				'Inquisitor',
+				'Exorcist',
+				'Theologian'
+            ]
+        },
+		{
+            name: 'Interpreter',
+            setting: 'Religious',
+            time: 5,
+            res: 10,
+            leads: [
+                'Villager',
+				'City Dweller',
+				'Noble Court'
+            ],
+            skills: {
+                points: 7,
+                from: [
+                    'Read',
+                    'Ancient Languages',
+					'Instruction',
+					'Write',
+					'Doctrine',
+					'Foreign Languages'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Ink-Stained Hands',
+					'Condescending'
+                ]
+            },
+            'requires': [
+                'Student',
+                'Young Lady',
+				'Temple Acolyte',
+				'Exorcist',
+				'Theologian'
+            ]
+        },
+		{
+            name: 'Archivist',
+            setting: 'Religious',
+            time: 7,
+            res: 8,
+            stat: {
+                bonus: 1,
+                attributes: 'M'
+            },
+            leads: [
+                'Villager',
+				'City Dweller',
+				'Noble Court'
+            ],
+            skills: {
+                points: 5,
+                from: [
+                    'Research',
+                    'Library-wise',
+					'Ancient History',
+					'Symbology'
+                ]
+            },
+            traits: {
+                points: 1,
+                from: [
+                    'Myopic',
+					'Affinity for Books and Scrolls'
+                ]
+            },
+            'requires': [
+                'Student',
+                'Cloistered Nun',
+				'Cloistered Monk',
+				'Exorcist',
+				'Theologian'
+            ]
+        },
+		{
+            name: 'Itinerant Monk',
+            setting: 'Religious',
+            time: 6,
+            res: 6,
+            leads: [
+                'Peasant',
+                'Villager',
+				'Outcast'
+            ],
+            skills: {
+                points: 7,
+                from: [
+                    'Doctrine',
+                    'Suasion',
+					'Meditation',
+					'Begging',
+					'Alms-wise'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Tonsured'
+                ]
+            }
+        },
+		{
+            name: 'Cloistered Nun',
+            setting: 'Religious',
+            time: 10,
+            res: 12,
+            leads: [
+                'Peasant',
+				'Noble Court',
+				'Outcast'
+            ],
+            skills: {
+                points: 6,
+                from: [
+                    'Research',
+                    'History',
+					'Meditation',
+					'Monastic Ritual',
+					'Vintner',
+					'Symbology'
+                ]
+            },
+            traits: {
+                points: 1,
+                from: [
+                    'Tonsured',
+					'Restless',
+					'Bored'
+                ]
+            }
+        },
+		{
+            name: 'Temple Acolyte',
+            setting: 'Religious',
+            time: 6,
+            res: 5,
+            stat: {
+                bonus: 1,
+                attributes: 'M'
+            },
+            leads: [
+				'City Dweller',
+				'Soldier',
+				'Outcast'
+            ],
+            skills: {
+                points: 4,
+                from: [
+                    'Write',
+                    'Read',
+					'Doctrine',
+					'Temple-wise'
+                ]
+            },
+            traits: {
+                points: 1,
+                from: [
+                    'Tonsured',
+					'Obedient',
+					'Faithful'
+                ]
+            }
+        },
+		{
+            name: 'Priest',
+            setting: 'Religious',
+            time: 5,
+            res: 18,
+            stat: {
+                bonus: 1,
+                attributes: 'M'
+            },
+            leads: [
+                'Villager',
+				'Noble Court',
+				'Soldier',
+				'Outcast'
+            ],
+            skills: {
+                points: 7,
+                from: [
+                    'Oratory',
+                    'Suasion',
+					'Write',
+					'Read',
+					'Doctrine',
+					'Ritual',
+					'Symbology',
+					'Religious History'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Vested'
+                ]
+            },
+            'requires': [
+                'Temple Acolyte',
+                'Religious Acolyte'
+            ]
+        },
+		{
+            name: 'Exorcist',
+            setting: 'Religious',
+            time: 6,
+            res: 10,
+            stat: {
+                bonus: 1,
+                attributes: 'M'
+            },
+            leads: [
+				'City Dweller',
+				'Noble Court',
+				'Outcast'
+            ],
+            skills: {
+                points: 8,
+                from: [
+                    'Doctrine',
+                    'Obscure History',
+					'Observation',
+					'Church Law',
+					'Symbology',
+					'Demonology',
+					'Ancient Languages'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Skeptical',
+					'Haunted',
+					'Possessed',
+					'Exorcist',
+					'Lost Faith',
+					'Faithful'
+                ]
+            },
+            'requires': [
+                'Temple Priest',
+                'Itinerant Priest',
+				'Priest',
+				'Court Priest',
+				'Archivist'
+            ]
+        },
+		{
+            name: 'Inquisitor',
+            setting: 'Religious',
+            time: 6,
+            res: 15,
+            stat: {
+                bonus: 1,
+                attributes: 'M/P'
+            },
+            leads: [
+				'City Dweller',
+				'Noble Court',
+				'Soldier',
+				'Outcast'
+            ],
+            skills: {
+                points: 6,
+                from: [
+                    'Doctrine',
+                    'Interrogation',
+					'Torture',
+					'Heresy-wise'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Suspicious',
+					'Merciless',
+					'Cold-Blooded',
+					'Righteous'
+                ]
+            },
+            'requires': [
+                'Temple Priest',
+                'Itinerant Priest',
+				'Priest',
+				'Court Priest',
+				'Judge',
+				'Justiciar'
+            ]
+        },
+		{
+            name: 'Theologian',
+            setting: 'Religious',
+            time: 10,
+            res: 9,
+            stat: {
+                bonus: 1,
+                attributes: 'M'
+            },
+            leads: [
+                'Villager',
+				'City Dweller',
+				'Noble Court'
+            ],
+            skills: {
+                points: 10,
+                from: [
+                    'Doctrine',
+                    'Rhetoric',
+					'Philosophy',
+					'History',
+					'Religious History',
+					'Church Law',
+					'Obscure History',
+					'Read',
+					'Write'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Learned',
+					'Insightful',
+					'Bookworm',
+					'Academic'
+                ]
+            },
+            'requires': [
+                'Scribe',
+                'Archivist',
+				'Court Lawyer',
+				'Advocate',
+				'Custodian',
+				'Interpreter',
+				'Priest',
+				'Bishop'
+            ]
+        },
+		{
+            name: 'Archpriest',
+            setting: 'Religious',
+            time: 5,
+            res: 25,
+            stat: {
+                bonus: 1,
+                attributes: 'M/P'
+            },
+            leads: [
+				'City Dweller',
+				'Noble Court',
+				'Outcast'
+            ],
+            skills: {
+                points: 10,
+                from: [
+                    'Oratory',
+                    'Suasion',
+					'Write',
+					'Read',
+					'Doctrine',
+					'History',
+					'Religious History',
+					'Ritual',
+					'Church-wise',
+					'Parish-wise',
+					'Tithe-wise'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Imperious Demeanor'
+                ]
+            },
+            'requires': [
+                'Temple Priest',
+                'Itinerant Priest',
+				'Priest',
+				'Court Priest',
+				'Chaplain'
+            ]
+        },
+		{
+            name: 'Canon',
+            setting: 'Religious',
+            time: 10,
+            res: 45,
+            stat: {
+                bonus: 1,
+                attributes: 'M/P'
+            },
+            leads: [
+				'City Dweller',
+				'Noble Court',
+				'Outcast'
+            ],
+            skills: {
+                points: 6,
+                from: [
+                    'Rule of Law',
+                    'Church Law',
+					'Administration',
+					'Doctrine',
+					'Church-wise'
+                ]
+            },
+            traits: {
+                points: 1,
+                from: [
+                    'Authoritative'
+                ]
+            },
+            'requires': [
+                'Archpriest',
+                'Theologian',
+				'Abbot'
+            ]
+        },
+		{
+            name: 'Abbot/Abbess',
+            setting: 'Religious',
+            time: 10,
+            res: 45,
+            stat: {
+                bonus: 1,
+                attributes: 'M'
+            },
+            leads: [
+				'City Dweller',
+				'Noble Court',
+				'Outcast'
+            ],
+            skills: {
+                points: 6,
+                from: [
+                    'Administration',
+                    'Accounting',
+					'Vintner',
+					'Wine Tasting',
+					'Royal Secret-wise',
+					'Abbey-wise'
+                ],
+				generalPoints: 2
+            },
+            traits: {
+                points: 1
+            },
+            'requires': [
+                'Itinerant Monk',
+                'Cloistered Nun',
+				'Theologian',
+				'Vintner'
+            ]
+        },
+		{
+            name: 'Bishop',
+            setting: 'Religious',
+            time: 8,
+            res: 45,
+            leads: [
+				'City Dweller',
+				'Noble Court',
+				'Outcast'
+            ],
+            skills: {
+                points: 7,
+                from: [
+                    'Religious History',
+                    'Intimidation',
+					'Ritual',
+					'Symbology',
+					'History',
+					'Obscure History'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Domineering Presence'
+                ]
+            },
+            'requires': [
+                'Archpriest',
+                'Baron',
+				'Viscount',
+				'Count',
+				'Duke',
+				'Noble Prince', //TODO: and 'Your Grace' trait
+				'Prince of the Blood'
             ]
         }
     ]
