@@ -4,7 +4,7 @@
 
     .Content {
         margin-left: 8px;
-        border-left: 1px solid $sidebar-font-color;
+        border-left: 1px solid $secondary-font-color;
     }
 
     &:before {
@@ -12,7 +12,7 @@
     }
 
     & .sidebar.child {
-        color: $sidebar-font-color;
+        color: $secondary-font-color;
         font-size: 12px;
         padding: 7px 0 7px 12px;
     }

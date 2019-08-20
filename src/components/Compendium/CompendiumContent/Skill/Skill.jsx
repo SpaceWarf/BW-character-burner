@@ -1,17 +1,24 @@
 import React from "react";
-import { Card } from 'semantic-ui-react';
+import { Card, Icon } from 'semantic-ui-react';
 import './Skill.scss';
 import { Menu } from "semantic-ui-react";
 
 const Skill = ({ skill }) => {
     return (
-        <Menu.Item className="Skill">
+        <Menu.Item className="Card Skill" id={skill.name.replace(/\s/g, '')}>
             <Card>
                 <Card.Content>
-                    <Card.Header>
-                        <p>{skill.name}</p>
-                        {skill.skillType && <p>{skill.skillType}</p>}
-                        {skill.roots && <p>{skill.roots.join(', ')}</p>}
+                    <Card.Header className={!skill.isWiseSkill ? 'with-description' : ''}>
+                        <Icon
+                            name='linkify'
+                            onClick={() => window.location.href = `#${skill.name.replace(/\s/g, '')}`}
+                            link
+                        />
+                        <div className='header-content'>
+                            <p className='halfs'>{skill.name}</p>
+                            {skill.skillType && <p className='halfs centered'>{skill.skillType}</p>}
+                        </div>
+                        <p className='left content'>{(skill.roots || []).join(', ')}</p>
                     </Card.Header>
                     {!skill.isWiseSkill && <Card.Description>
                         {skill.description &&

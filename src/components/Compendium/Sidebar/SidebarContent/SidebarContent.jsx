@@ -29,8 +29,9 @@ class SidebarContent extends React.Component {
     }
 
     getFilteredData(data) {
-        const { as, filter } = this.props;
-        return as === 'nested' ?
+        const { nested, filter } = this.props;
+        
+        return nested ?
             data :
             data.filter(item =>
                 item.name.toLowerCase()
@@ -43,7 +44,7 @@ class SidebarContent extends React.Component {
             header,
             lifepathCategory,
             lifepaths = [],
-            as = 'item',
+            nested = false,
             filter = ""
         } = this.props;
         const {
@@ -65,7 +66,7 @@ class SidebarContent extends React.Component {
                 </Menu.Header>
                 <div className="Content">
                     {!closedHeaders.includes(header) && filteredData.map(item => (
-                        as === 'nested' ?
+                        nested ?
                             <SidebarContent
                                 key={item}
                                 header={item}
@@ -77,7 +78,7 @@ class SidebarContent extends React.Component {
                                 key={item.name}
                                 className="sidebar child"
                                 as="a"
-                                onClick={() => { console.log('clicked ', item.name); }}
+                                href={`#${item.name.replace(/\s/g, '')}`}
                             >
                                 {item.name}
                             </Menu.Item>
