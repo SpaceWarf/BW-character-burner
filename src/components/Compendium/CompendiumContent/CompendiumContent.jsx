@@ -3,7 +3,7 @@ import { Header, Menu } from 'semantic-ui-react';
 import Lifepath from './Lifepath/Lifepath.jsx';
 import Skill from './Skill/Skill.jsx';
 import Trait from './Trait/Trait.jsx';
-import { getLifepaths } from '#Utilities/data.js';
+import { getLifepaths } from '#Utilities/data-selectors.js';
 import './CompendiumContent.scss';
 
 const getComponentForCategory = (type, data) => {

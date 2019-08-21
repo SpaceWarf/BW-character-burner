@@ -8,6 +8,25 @@ const EditorSidebarSummary = () => {
             <Menu.Header>
                 Character Summary
             </Menu.Header>
+            <br />
+            lifepath count
+            <br />
+            age
+            <br />
+            mental/physical pool
+            <br />
+            <br />
+            skill count
+            <br />
+            skill points left
+            <br />
+            <br />
+            trait count
+            <br />
+            trait points left
+            <br />
+            <br />
+            resource points left
         </Menu.Item>
     );
 };

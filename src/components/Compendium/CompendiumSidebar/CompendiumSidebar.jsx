@@ -1,6 +1,6 @@
 import React from "react";
 import { Menu, Input } from 'semantic-ui-react';
-import { getDataSetFromCategory } from '#Utilities/data.js';
+import { getDataSetForSection } from '#Utilities/data-selectors.js';
 import sections from '#Resources/config/compendium-sections.config.js';
 import CompendiumSidebarContent from './CompendiumSidebarContent/CompendiumSidebarContent.jsx';
 import './CompendiumSidebar.scss';
@@ -39,7 +39,7 @@ class CompendiumSidebar extends React.Component {
                             header={section.name}
                             lifepathCategory={section.subType}
                             lifepaths={
-                                getDataSetFromCategory(section.type, section.subType)
+                                getDataSetForSection(section.type, section.subType)
                             }
                             nested={section.nested}
                             filter={filter}

@@ -5,6 +5,10 @@ export default
             link: 'lifepaths'
         },
         {
+            name: 'Stats',
+            link: 'stats'
+        },
+        {
             name: 'Skills',
             link: 'skills'
         },
