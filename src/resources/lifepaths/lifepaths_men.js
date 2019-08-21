@@ -8,7 +8,7 @@ export default
             res: 3,
             leads: [
                 'Servitude',
-                'Soldier',
+                'Professional Soldier',
                 'Seafaring',
                 'Religious'
             ],
@@ -30,7 +30,7 @@ export default
             },
             leads: [
                 'Servitude',
-                'Soldier',
+                'Professional Soldier',
                 'Villager'
             ],
             skills: {
@@ -63,7 +63,7 @@ export default
                 attributes: 'M'
             },
             leads: [
-                'Soldier',
+                'Professional Soldier',
                 'Villager'
             ],
             skills: {
@@ -115,7 +115,7 @@ export default
             res: 3,
             leads: [
                 'Servitude',
-                'Soldier',
+                'Professional Soldier',
                 'Outcast'
             ],
             skills: {
@@ -141,7 +141,7 @@ export default
             res: 4,
             leads: [
                 'Servitude',
-                'Soldier',
+                'Professional Soldier',
                 'Outcast'
             ],
             skills: {
@@ -311,7 +311,7 @@ export default
             leads: [
                 'Villager',
                 'Outcast',
-                'Soldier'
+                'Professional Soldier'
             ],
             skills: {
                 points: 7,
@@ -340,7 +340,7 @@ export default
             leads: [
                 'Villager',
                 'Outcast',
-                'Soldier'
+                'Professional Soldier'
             ],
             skills: {
                 points: 6,
@@ -373,7 +373,7 @@ export default
                 'Villager',
                 'Outcast',
                 'Servitude',
-                'City'
+                'City Dweller'
             ],
             skills: {
                 points: 7,
@@ -471,7 +471,7 @@ export default
             leads: [
                 'Villager',
                 'Outcast',
-                'City',
+                'City Dweller',
                 'Religious'
             ],
             skills: {
@@ -506,7 +506,7 @@ export default
             leads: [
                 'Villager',
                 'Outcast',
-                'City',
+                'City Dweller',
                 'Religious'
             ],
             skills: {
@@ -580,13 +580,13 @@ export default
                 attributes: 'P'
             },
             leads: [
-                'City',
+                'City Dweller',
                 'Outcast',
                 'Peasant',
                 'Religious',
                 'Seafaring',
                 'Servitude',
-                'Soldier',
+                'Professional Soldier',
                 'Villager'
             ],
             skills: {
@@ -642,7 +642,7 @@ export default
             leads: [
                 'Religious',
                 'Servitude',
-                'City'
+                'City Dweller'
             ],
             skills: {
                 points: 5,
@@ -669,7 +669,7 @@ export default
             res: 5,
             leads: [
                 'Servitude',
-                'Soldier',
+                'Professional Soldier',
                 'Outcast'
             ],
             skills: {
@@ -693,8 +693,8 @@ export default
             res: 7,
             leads: [
                 'Peasant',
-                'City',
-                'Soldier'
+                'City Dweller',
+                'Professional Soldier'
             ],
             skills: {
                 points: 4,
@@ -720,9 +720,9 @@ export default
                 attributes: 'P'
             },
             leads: [
-                'City',
+                'City Dweller',
                 'Peasant',
-                'Soldier'
+                'Professional Soldier'
             ],
             skills: {
                 points: 3,
@@ -752,7 +752,7 @@ export default
             leads: [
                 'Peasant',
                 'Servitude',
-                'City',
+                'City Dweller',
                 'Outcast'
             ],
             skills: {
@@ -780,9 +780,9 @@ export default
             time: 6,
             res: 15,
             leads: [
-                'City',
+                'City Dweller',
                 'Outcast',
-                'Soldier'
+                'Professional Soldier'
             ],
             skills: {
                 points: 5,
@@ -803,9 +803,9 @@ export default
             time: 4,
             res: 9,
             leads: [
-                'City',
+                'City Dweller',
                 'Outcast',
-                'Soldier'
+                'Professional Soldier'
             ],
             skills: {
                 points: 4,
@@ -834,7 +834,7 @@ export default
                 attributes: 'P'
             },
             leads: [
-                'Soldier',
+                'Professional Soldier',
                 'Outcast',
                 'Servitude',
                 'Peasant'
@@ -868,7 +868,7 @@ export default
                 attributes: 'P'
             },
             leads: [
-                'Soldier',
+                'Professional Soldier',
                 'Outcast',
                 'Servitude',
                 'Peasant'
@@ -901,7 +901,7 @@ export default
                 attributes: 'P'
             },
             leads: [
-                'Soldier',
+                'Professional Soldier',
                 'Outcast',
                 'Servitude',
                 'Peasant'
@@ -934,9 +934,9 @@ export default
             time: 6,
             res: 15,
             leads: [
-                'City',
+                'City Dweller',
                 'Outcast',
-                'Soldier'
+                'Professional Soldier'
             ],
             skills: {
                 points: 5,
@@ -959,7 +959,7 @@ export default
             },
             'requires': [
                 'Village Sergeant',
-                'lifepath:Soldier'
+                'lifepath:Professional Soldier'
             ]
         },
         {
@@ -972,13 +972,13 @@ export default
                 attributes: 'M'
             },
             leads: [
-                'City',
+                'City Dweller',
                 'Outcast',
                 'Peasant',
                 'Religious',
                 'Seafaring',
                 'Servitude',
-                'Soldier',
+                'Professional Soldier',
                 'Villager'
             ],
             skills: {
@@ -1006,7 +1006,7 @@ export default
             time: 6,
             res: 15,
             leads: [
-                'City',
+                'City Dweller',
                 'Peasant'
             ],
             skills: {
@@ -1037,8 +1037,8 @@ export default
                 attributes: 'P'
             },
             leads: [
-                'Soldier',
-                'City',
+                'Professional Soldier',
+                'City Dweller',
                 'Peasant',
                 'Servitude'
             ],
@@ -1070,7 +1070,7 @@ export default
                 attributes: 'M/P'
             },
             leads: [
-                'Soldier',
+                'Professional Soldier',
                 'Servitude',
                 'Noble'
             ],
@@ -1112,7 +1112,7 @@ export default
                 attributes: 'M/P'
             },
             leads: [
-                'Soldier',
+                'Professional Soldier',
                 'Servitude',
                 'Noble'
             ],
@@ -1148,7 +1148,7 @@ export default
             time: 5,
             res: 12,
             leads: [
-                'City',
+                'City Dweller',
                 'Peasant'
             ],
             skills: {
@@ -1199,9 +1199,9 @@ export default
             time: 8,
             res: 20,
             leads: [
-                'City',
+                'City Dweller',
                 'Peasant',
-                'Soldier'
+                'Professional Soldier'
             ],
             skills: {
                 points: 4,
@@ -1230,8 +1230,8 @@ export default
             res: 12,
             leads: [
                 'Peasant',
-                'Soldier',
-                'City'
+                'Professional Soldier',
+                'City Dweller'
             ],
             skills: {
                 points: 4,
@@ -1258,7 +1258,7 @@ export default
             time: 6,
             res: 15,
             leads: [
-                'City',
+                'City Dweller',
                 'Peasant',
                 'Outcast'
             ],
@@ -1287,7 +1287,7 @@ export default
             time: 7,
             res: 16,
             leads: [
-                'City',
+                'City Dweller',
                 'Peasant',
                 'Outcast'
             ],
@@ -1315,7 +1315,7 @@ export default
             time: 8,
             res: 15,
             leads: [
-                'City',
+                'City Dweller',
                 'Peasant',
                 'Noble'
             ],
@@ -1348,7 +1348,7 @@ export default
             leads: [
                 'Peasant',
                 'Servitude',
-                'City',
+                'City Dweller',
                 'Religious'
             ],
             skills: {
@@ -1379,7 +1379,7 @@ export default
             res: 10,
             leads: [
                 'Outcast',
-                'Soldier',
+                'Professional Soldier',
                 'Peasant'
             ],
             skills: {
@@ -1408,13 +1408,13 @@ export default
                 attributes: 'M'
             },
             leads: [
-                'City',
+                'City Dweller',
                 'Outcast',
                 'Peasant',
                 'Religious',
                 'Seafaring',
                 'Servitude',
-                'Soldier',
+                'Professional Soldier',
                 'Villager'
             ],
             skills: {
@@ -1444,13 +1444,13 @@ export default
                 attributes: 'M'
             },
             leads: [
-                'City',
+                'City Dweller',
                 'Outcast',
                 'Peasant',
                 'Religious',
                 'Seafaring',
                 'Servitude',
-                'Soldier',
+                'Professional Soldier',
                 'Villager'
             ],
             skills: {
@@ -1479,9 +1479,9 @@ export default
                 attributes: 'P'
             },
             leads: [
-                'City',
+                'City Dweller',
                 'Peasant',
-                'Soldier',
+                'Professional Soldier',
                 'Seafaring'
             ],
             skills: {
@@ -1513,9 +1513,9 @@ export default
                 attributes: 'M/P'
             },
             leads: [
-                'City',
+                'City Dweller',
                 'Peasant',
-                'Soldier',
+                'Professional Soldier',
                 'Seafaring'
             ],
             skills: {
@@ -1548,7 +1548,7 @@ export default
                 attributes: 'M'
             },
             leads: [
-                'City',
+                'City Dweller',
                 'Peasant'
             ],
             skills: {
@@ -1578,7 +1578,7 @@ export default
             time: 6,
             res: 15,
             leads: [
-                'Soldier',
+                'Professional Soldier',
                 'Outcast',
                 'Peasant'
             ],
@@ -1612,7 +1612,7 @@ export default
                 attributes: 'M,P'
             },
             leads: [
-                'Soldier',
+                'Professional Soldier',
                 'Outcast',
                 'Peasant'
             ],
@@ -1680,7 +1680,7 @@ export default
                 attributes: 'M'
             },
             leads: [
-                'City',
+                'City Dweller',
                 'Peasant',
                 'Noble'
             ],
@@ -1711,9 +1711,9 @@ export default
                 attributes: 'M'
             },
             leads: [
-                'City',
+                'City Dweller',
                 'Noble',
-                'Soldier'
+                'Professional Soldier'
             ],
             skills: {
                 points: 5,
@@ -1750,9 +1750,9 @@ export default
                 attributes: 'M'
             },
             leads: [
-                'City',
+                'City Dweller',
                 'Outcast',
-                'Soldier'
+                'Professional Soldier'
             ],
             skills: {
                 points: 8,
@@ -1792,7 +1792,7 @@ export default
             },
             leads: [
                 'Religious',
-                'City',
+                'City Dweller',
                 'Servitude'
             ],
             skills: {
@@ -1814,7 +1814,7 @@ export default
             res: 10,
             leads: [
                 'Servitude',
-                'Court',
+                'Noble Court',
                 'Noble',
                 'Outcast'
             ],
@@ -1836,7 +1836,7 @@ export default
             },
             leads: [
                 'Villager',
-                'Soldier'
+                'Professional Soldier'
             ],
             skills: {
                 points: 3,
@@ -1857,7 +1857,7 @@ export default
             leads: [
                 'Outcast',
                 'Servitude',
-                'Village'
+                'Villager'
             ],
             skills: {
                 points: 5,
@@ -1885,7 +1885,7 @@ export default
             leads: [
                 'Outcast',
                 'Servitude',
-				'Village'
+				'Villager'
             ],
             skills: {
                 points: 6,
@@ -1919,7 +1919,7 @@ export default
             },
             leads: [
                 'Villager',
-                'Soldier'
+                'Professional Soldier'
             ],
             skills: {
                 points: 4,
@@ -1943,7 +1943,7 @@ export default
                 attributes: 'P'
             },
             leads: [
-                'Soldier',
+                'Professional Soldier',
                 'Outcast',
 				'Servitude',
 				'Peasant'
@@ -2006,7 +2006,7 @@ export default
             leads: [
                 'Peasant',
                 'Villager',
-				'Soldier'
+				'Professional Soldier'
             ],
             skills: {
                 points: 4,
@@ -2037,7 +2037,7 @@ export default
                 attributes: 'P'
             },
             leads: [
-                'Soldier',
+                'Professional Soldier',
                 'Outcast',
 				'Servitude'
             ],
@@ -2064,7 +2064,7 @@ export default
             'requires': [
                 'Squire',
                 'Outcast',
-				'Soldier',
+				'Professional Soldier',
 				'Village Guard',
 				'City Guard'
             ]
@@ -2142,7 +2142,7 @@ export default
             leads: [
                 'Outcast',
                 'Servitude',
-				'Soldier'
+				'Professional Soldier'
             ],
             skills: {
                 points: 5,
@@ -2173,7 +2173,7 @@ export default
             leads: [
                 'Outcast',
                 'Villager',
-				'Soldier'
+				'Professional Soldier'
             ],
             skills: {
                 points: 6,
@@ -2202,7 +2202,7 @@ export default
             res: 12,
             leads: [
                 'Outcast',
-                'Soldier',
+                'Professional Soldier',
 				'Villager'
             ],
             skills: {
@@ -2257,7 +2257,7 @@ export default
                 attributes: 'P'
             },
             leads: [
-                'Soldier',
+                'Professional Soldier',
                 'Seafaring',
 				'Peasant',
 				'Servitude'
@@ -2296,7 +2296,7 @@ export default
 				'City Dweller',
 				'Noble Court',
 				'Religious',
-				'Soldier',
+				'Professional Soldier',
 				'Seafaring',
 				'Servitude',
 				'Outcast'
@@ -2589,7 +2589,7 @@ export default
             },
             leads: [
                 'Villager',
-				'Soldier',
+				'Professional Soldier',
 				'Outcast'
             ],
             skills: {
@@ -2644,7 +2644,7 @@ export default
             res: 5,
             leads: [
                 'Peasant',
-				'Soldier',
+				'Professional Soldier',
 				'Servitude',
 				'Outcast'
             ],
@@ -2835,7 +2835,7 @@ export default
             },
             leads: [
                 'Villager',
-				'Soldier',
+				'Professional Soldier',
 				'Outcast'
             ],
             skills: {
@@ -3045,7 +3045,7 @@ export default
             leads: [
                 'Peasant',
                 'Villager',
-				'Soldier'
+				'Professional Soldier'
             ],
             skills: {
                 points: 5,
@@ -3075,7 +3075,7 @@ export default
                 attributes: 'M/P'
             },
             leads: [
-				'Soldier',
+				'Professional Soldier',
 				'Seafaring',
 				'Outcast'
             ],
@@ -3111,7 +3111,7 @@ export default
                 attributes: 'P'
             },
             leads: [
-				'Soldier',
+				'Professional Soldier',
 				'Outcast'
             ],
             skills: {
@@ -3141,7 +3141,7 @@ export default
                 attributes: 'P'
             },
             leads: [
-				'Soldier',
+				'Professional Soldier',
 				'Outcast'
             ],
             skills: {
@@ -3185,7 +3185,7 @@ export default
             },
             leads: [
 				'Noble Court',
-				'Soldier',
+				'Professional Soldier',
 				'Outcast'
             ],
             skills: {
@@ -3225,7 +3225,7 @@ export default
             leads: [
                 'Peasant',
                 'Villager',
-				'Soldier',
+				'Professional Soldier',
 				'Seafaring'
             ],
             skills: {
@@ -3258,7 +3258,7 @@ export default
             },
             leads: [
                 'Villager',
-				'Soldier'
+				'Professional Soldier'
             ],
             skills: {
                 points: 8,
@@ -3292,7 +3292,7 @@ export default
             leads: [
                 'Peasant',
                 'Villager',
-				'Soldier',
+				'Professional Soldier',
 				'Seafaring'
             ],
             skills: {
@@ -3329,7 +3329,7 @@ export default
             },
             leads: [
 				'Noble Court',
-				'Soldier'
+				'Professional Soldier'
             ],
             skills: {
                 points: 4,
@@ -3361,7 +3361,7 @@ export default
             leads: [
                 'Villager',
 				'Noble Court',
-				'Soldier'
+				'Professional Soldier'
             ],
             skills: {
                 points: 6,
@@ -3388,7 +3388,7 @@ export default
             res: 25,
             leads: [
 				'Noble Court',
-				'Soldier',
+				'Professional Soldier',
 				'Outcast'
             ],
             skills: {
@@ -3511,7 +3511,7 @@ export default
             leads: [
                 'Villager',
 				'Noble Court',
-				'Soldier',
+				'Professional Soldier',
 				'Outcast'
             ],
             skills: {
@@ -3615,7 +3615,7 @@ export default
             },
             leads: [
 				'Noble Court',
-				'Soldier'
+				'Professional Soldier'
             ],
             skills: {
                 points: 6,
@@ -3784,7 +3784,7 @@ export default
                 'Villager',
 				'Noble Court',
 				'Religious',
-				'Soldier',
+				'Professional Soldier',
 				'Seafaring',
 				'Servitude',
 				'Outcast'
@@ -3903,7 +3903,7 @@ export default
             },
             leads: [
 				'Noble Court',
-				'Soldier'
+				'Professional Soldier'
             ],
             skills: {
                 points: 9,
@@ -3938,7 +3938,7 @@ export default
             leads: [
                 'Villager',
 				'Noble Court',
-				'Soldier'
+				'Professional Soldier'
             ],
             skills: {
                 points: 6,
@@ -4023,7 +4023,7 @@ export default
 				'Noble',
 				'Noble Court',
 				'Religious',
-				'Soldier',
+				'Professional Soldier',
 				'Seafaring',
 				'Servitude',
 				'Outcast'
@@ -4094,7 +4094,7 @@ export default
 				'Noble',
 				'Noble Court',
 				'Religious',
-				'Soldier',
+				'Professional Soldier',
 				'Seafaring',
 				'Servitude',
 				'Outcast'
@@ -4124,7 +4124,7 @@ export default
             leads: [
 				'City Dweller',
 				'Religious',
-				'Soldier',
+				'Professional Soldier',
 				'Outcast'
             ],
             skills: {
@@ -4157,7 +4157,7 @@ export default
             },
             leads: [
 				'City Dweller',
-				'Soldier',
+				'Professional Soldier',
 				'Servitude'
             ],
             skills: {
@@ -4215,7 +4215,7 @@ export default
             },
             leads: [
 				'City Dweller',
-				'Soldier',
+				'Professional Soldier',
 				'Servitude',
 				'Outcast'
             ],
@@ -4236,7 +4236,7 @@ export default
             },
             'requires': [
                 'Page',
-                'lifepath:Soldier'
+                'lifepath:Professional Soldier'
             ]
         },
 		{
@@ -4348,7 +4348,7 @@ export default
             leads: [
 				'City Dweller',
 				'Religious',
-				'Soldier',
+				'Professional Soldier',
 				'Outcast'
             ],
             skills: {
@@ -4426,7 +4426,7 @@ export default
             leads: [
 				'City Dweller',
 				'Noble Court',
-				'Soldier'
+				'Professional Soldier'
             ],
             skills: {
                 points: 6,
@@ -4490,7 +4490,7 @@ export default
             },
             leads: [
 				'Noble Court',
-				'Soldier'
+				'Professional Soldier'
             ],
             skills: {
                 generalPoints: 1
@@ -4526,7 +4526,7 @@ export default
             },
             leads: [
 				'Noble Court',
-				'Soldier'
+				'Professional Soldier'
             ],
             skills: {
 				generalPoints: 2
@@ -4560,7 +4560,7 @@ export default
             },
             leads: [
 				'Noble Court',
-				'Soldier'
+				'Professional Soldier'
             ],
             skills: {
 				generalPoints: 3
@@ -4593,7 +4593,7 @@ export default
             },
             leads: [
 				'Noble Court',
-				'Soldier'
+				'Professional Soldier'
             ],
             skills: {
 				generalPoints: 3
@@ -4623,7 +4623,7 @@ export default
             },
             leads: [
 				'Noble Court',
-				'Soldier'
+				'Professional Soldier'
             ],
             skills: {
 				generalPoints: 4
@@ -4651,7 +4651,7 @@ export default
             leads: [
 				'Noble Court',
 				'Religious',
-				'Soldier'
+				'Professional Soldier'
             ],
             skills: {
 				generalPoints: 2
@@ -4822,7 +4822,7 @@ export default
             leads: [
                 'Villager',
 				'City Dweller',
-				'Soldier'
+				'Professional Soldier'
             ],
             skills: {
                 points: 5,
@@ -4883,7 +4883,7 @@ export default
                 attributes: 'M'
             },
             leads: [
-				'Soldier',
+				'Professional Soldier',
 				'Servitude',
 				'Outcast'
             ],
@@ -4915,7 +4915,7 @@ export default
             leads: [
                 'Peasant',
                 'Villager',
-				'Soldier',
+				'Professional Soldier',
 				'Outcast'
             ],
             skills: {
@@ -4983,7 +4983,7 @@ export default
             leads: [
 				'City Dweller',
 				'Noble',
-				'Soldier',
+				'Professional Soldier',
 				'Servitude'
             ],
             skills: {
@@ -5012,7 +5012,7 @@ export default
             },
             leads: [
 				'City Dweller',
-				'Soldier',
+				'Professional Soldier',
 				'Outcast'
             ],
             skills: {
@@ -5033,7 +5033,7 @@ export default
             'requires': [
                 'Page',
                 'Squire',
-				'lifepath:Soldier'
+				'lifepath:Professional Soldier'
             ]
         },
 		{
@@ -5048,7 +5048,7 @@ export default
             leads: [
                 'Peasant',
 				'City Dweller',
-				'Soldier'
+				'Professional Soldier'
             ],
             skills: {
                 points: 4,
@@ -5078,7 +5078,7 @@ export default
             },
             leads: [
                 'Peasant',
-				'Soldier'
+				'Professional Soldier'
             ],
             skills: {
                 points: 8,
@@ -5104,7 +5104,7 @@ export default
             res: 10,
             leads: [
 				'City Dweller',
-				'Soldier',
+				'Professional Soldier',
 				'Servitude'
             ],
             skills: {
@@ -5161,7 +5161,7 @@ export default
             leads: [
 				'City Dweller',
 				'Noble',
-				'Soldier',
+				'Professional Soldier',
 				'Servitude',
 				'Outcast'
             ],
@@ -5239,7 +5239,7 @@ export default
             },
             leads: [
 				'Noble',
-				'Soldier',
+				'Professional Soldier',
 				'Outcast'
             ],
             skills: {
@@ -5349,7 +5349,7 @@ export default
             leads: [
 				'City Dweller',
 				'Religious',
-				'Soldier',
+				'Professional Soldier',
 				'Servitude'
             ],
             skills: {
@@ -5543,7 +5543,7 @@ export default
             },
             leads: [
 				'City Dweller',
-				'Soldier'
+				'Professional Soldier'
             ],
             skills: {
                 points: 9,
@@ -5577,7 +5577,7 @@ export default
             },
             leads: [
 				'City Dweller',
-				'Soldier'
+				'Professional Soldier'
             ],
             skills: {
                 points: 6,
@@ -5680,7 +5680,7 @@ export default
             res: 40,
             leads: [
 				'City Dweller',
-				'Soldier'
+				'Professional Soldier'
             ],
             skills: {
                 points: 4,
@@ -5713,7 +5713,7 @@ export default
             res: 20,
             leads: [
 				'City Dweller',
-				'Soldier'
+				'Professional Soldier'
             ],
             skills: {
                 points: 7,
@@ -5751,7 +5751,7 @@ export default
 				'City Dweller',
 				'Noble',
 				'Religious',
-				'Soldier'
+				'Professional Soldier'
             ],
             skills: {
                 points: 4,
@@ -5785,7 +5785,7 @@ export default
             },
             leads: [
 				'City Dweller',
-				'Soldier',
+				'Professional Soldier',
 				'Outcast'
             ],
             skills: {
@@ -5823,7 +5823,7 @@ export default
             leads: [
 				'City Dweller',
 				'Religious',
-				'Soldier',
+				'Professional Soldier',
 				'Outcast'
             ],
             skills: {
@@ -5857,7 +5857,7 @@ export default
             res: 15,
             leads: [
 				'City Dweller',
-				'Soldier'
+				'Professional Soldier'
             ],
             skills: {
                 points: 5,
@@ -5897,7 +5897,7 @@ export default
             },
             leads: [
 				'City Dweller',
-				'Soldier',
+				'Professional Soldier',
 				'Outcast'
             ],
             skills: {
@@ -5936,7 +5936,7 @@ export default
             leads: [
 				'City Dweller',
 				'Religious',
-				'Soldier'
+				'Professional Soldier'
             ],
             skills: {
                 points: 5,
@@ -5981,7 +5981,7 @@ export default
             leads: [
 				'City Dweller',
 				'Religious',
-				'Soldier'
+				'Professional Soldier'
             ],
             skills: {
                 points: 5,
@@ -6029,7 +6029,7 @@ export default
 				'City Dweller',
 				'Noble',
 				'Religious',
-				'Soldier',
+				'Professional Soldier',
 				'Seafaring',
 				'Servitude',
 				'Outcast'
@@ -6164,7 +6164,7 @@ export default
 				'City Dweller',
 				'Noble',
 				'Noble Court',
-				'Soldier',
+				'Professional Soldier',
 				'Seafaring',
 				'Servitude',
 				'Outcast'
@@ -6189,7 +6189,7 @@ export default
             'requires': [
                 'Squire',
                 'Knight',
-				'lifepath:Soldier'
+				'lifepath:Professional Soldier'
             ]
         },
 		{
@@ -6460,7 +6460,7 @@ export default
             },
             leads: [
 				'City Dweller',
-				'Soldier',
+				'Professional Soldier',
 				'Outcast'
             ],
             skills: {
@@ -6493,7 +6493,7 @@ export default
             leads: [
                 'Villager',
 				'Noble Court',
-				'Soldier',
+				'Professional Soldier',
 				'Outcast'
             ],
             skills: {
@@ -6577,7 +6577,7 @@ export default
             leads: [
 				'City Dweller',
 				'Noble Court',
-				'Soldier',
+				'Professional Soldier',
 				'Outcast'
             ],
             skills: {
@@ -7519,7 +7519,7 @@ export default
             time: 8,
             res: 3,
             leads: [
-                'Soldier',
+                'Professional Soldier',
 				'Servitude',
 				'Outcast'
             ],
@@ -7540,7 +7540,7 @@ export default
             res: 8,
             leads: [
 				'City Dweller',
-				'Soldier',
+				'Professional Soldier',
 				'Servitude',
 				'Outcast'
             ],
@@ -7568,7 +7568,7 @@ export default
             time: 6,
             res: 3,
             leads: [
-                'Soldier',
+                'Professional Soldier',
 				'Servitude',
 				'Outcast'
             ],
@@ -7627,7 +7627,7 @@ export default
             time: 4,
             res: 5,
             leads: [
-				'Soldier',
+				'Professional Soldier',
 				'Servitude',
 				'Outcast'
             ],
@@ -7656,7 +7656,7 @@ export default
             leads: [
                 'Villager',
 				'City Dweller',
-				'Soldier',
+				'Professional Soldier',
 				'Outcast'
             ],
             skills: {
@@ -7685,7 +7685,7 @@ export default
             },
             leads: [
 				'City Dweller',
-				'Soldier',
+				'Professional Soldier',
 				'Servitude',
 				'Outcast'
             ],
@@ -7750,7 +7750,7 @@ export default
             time: 4,
             res: 9,
             leads: [
-				'Soldier',
+				'Professional Soldier',
 				'Servitude'
             ],
             skills: {
@@ -7785,7 +7785,7 @@ export default
                 attributes: 'M'
             },
             leads: [
-				'Soldier',
+				'Professional Soldier',
 				'Servitude'
             ],
             skills: {
@@ -7811,7 +7811,7 @@ export default
             leads: [
                 'Villager',
 				'City Dweller',
-				'Soldier',
+				'Professional Soldier',
 				'Outcast'
             ],
             skills: {
@@ -7850,7 +7850,7 @@ export default
             leads: [
                 'Villager',
 				'City Dweller',
-				'Soldier',
+				'Professional Soldier',
 				'Outcast'
             ],
             skills: {
@@ -7882,7 +7882,7 @@ export default
             leads: [
                 'Villager',
 				'City Dweller',
-				'Soldier',
+				'Professional Soldier',
 				'Outcast'
             ],
             skills: {
@@ -7918,7 +7918,7 @@ export default
             leads: [
                 'Villager',
 				'City Dweller',
-				'Soldier',
+				'Professional Soldier',
 				'Outcast'
             ],
             skills: {
@@ -7951,7 +7951,7 @@ export default
             leads: [
                 'Villager',
 				'City Dweller',
-				'Soldier',
+				'Professional Soldier',
 				'Outcast'
             ],
             skills: {
@@ -7994,7 +7994,7 @@ export default
             leads: [
                 'Villager',
 				'City Dweller',
-				'Soldier',
+				'Professional Soldier',
 				'Outcast'
             ],
             skills: {
@@ -8029,7 +8029,7 @@ export default
                 'Villager',
 				'City Dweller',
 				'Religious',
-				'Soldier'
+				'Professional Soldier'
             ],
             skills: {
                 points: 4,
@@ -8104,7 +8104,7 @@ export default
             },
             leads: [
 				'City Dweller',
-				'Soldier',
+				'Professional Soldier',
 				'Servitude',
 				'Outcast'
             ],
@@ -8139,7 +8139,7 @@ export default
             },
             leads: [
                 'Villager',
-				'Soldier',
+				'Professional Soldier',
 				'Servitude',
 				'Outcast'
             ],
@@ -8170,7 +8170,7 @@ export default
             },
             leads: [
 				'City Dweller',
-				'Soldier',
+				'Professional Soldier',
 				'Servitude',
 				'Outcast'
             ],
@@ -8205,7 +8205,7 @@ export default
             },
             leads: [
 				'City Dweller',
-				'Soldier',
+				'Professional Soldier',
 				'Servitude',
 				'Outcast'
             ],
@@ -8235,7 +8235,7 @@ export default
             },
             leads: [
 				'City Dweller',
-				'Soldier',
+				'Professional Soldier',
 				'Servitude',
 				'Outcast'
             ],
@@ -8274,7 +8274,7 @@ export default
             },
             leads: [
 				'City Dweller',
-				'Soldier',
+				'Professional Soldier',
 				'Servitude',
 				'Outcast'
             ],
@@ -8310,7 +8310,7 @@ export default
             },
             leads: [
 				'City Dweller',
-				'Soldier',
+				'Professional Soldier',
 				'Servitude',
 				'Outcast'
             ],
@@ -8345,7 +8345,7 @@ export default
             },
             leads: [
 				'City Dweller',
-				'Soldier',
+				'Professional Soldier',
 				'Servitude',
 				'Outcast'
             ],
@@ -8382,7 +8382,7 @@ export default
 				'City Dweller',
 				'Noble Court',
 				'Religious',
-				'Soldier',
+				'Professional Soldier',
 				'Servitude',
 				'Outcast'
             ],
@@ -8420,7 +8420,7 @@ export default
                 attributes: 'M/P'
             },
             leads: [
-                'Soldier',
+                'Professional Soldier',
                 'Outcast'
             ],
             skills: {
@@ -8446,7 +8446,7 @@ export default
             time: 4,
             res: 4,
             leads: [
-				'Soldier',
+				'Professional Soldier',
 				'Outcast'
             ],
             skills: {
@@ -8473,7 +8473,7 @@ export default
             leads: [
 				'City Dweller',
 				'Noble Court',
-				'Soldier',
+				'Professional Soldier',
 				'Outcast'
             ],
             skills: {
@@ -8497,7 +8497,7 @@ export default
             time: 6,
             res: 5,
             leads: [
-				'Soldier',
+				'Professional Soldier',
 				'Outcast'
             ],
             skills: {
@@ -8525,7 +8525,7 @@ export default
             res: 4,
             leads: [
 				'City Dweller',
-				'Soldier',
+				'Professional Soldier',
 				'Outcast'
             ],
             skills: {
@@ -8550,7 +8550,7 @@ export default
             res: 3,
             leads: [
 				'City Dweller',
-				'Soldier',
+				'Professional Soldier',
 				'Outcast'
             ],
             skills: {
@@ -8597,7 +8597,7 @@ export default
             res: 7,
             leads: [
                 'Peasant',
-				'Soldier',
+				'Professional Soldier',
 				'Outcast'
             ],
             skills: {
@@ -8613,5 +8613,1038 @@ export default
                     'Lucky'
                 ]
             }
-        }
+        },
+		{
+            name: 'Urchin',
+            setting: 'Outcast',
+            time: 4,
+            res: 3,
+            leads: [
+                'Peasant',
+				'Professional Soldier',
+				'Servitude'
+            ],
+            skills: {
+                points: 4,
+                from: [
+                    'Inconspicuous',
+                    'Streetwise',
+					'Sleight of Hand'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Addicted',
+					'The Story'
+                ]
+            }
+			//TODO: Must be 2nd LP. May only be taken once.
+        },
+		{
+            name: 'Apostate',
+            setting: 'Outcast',
+            time: 3,
+            res: 6,
+            leads: [
+				'City Dweller',
+				'Religious',
+				'Professional Soldier'
+            ],
+            skills: {
+                points: 4,
+                from: [
+                    'Doctrine',
+                    'Heretical Doctrine',
+					'Foreign Doctrine'
+                ]
+            },
+            traits: {
+                points: 1,
+                from: [
+                    'Apostate'
+                ]
+            }
+        },
+		{
+            name: 'Blackmailer',
+            setting: 'Outcast',
+            time: 3,
+            res: 10,
+            stat: {
+                bonus: 1,
+                attributes: 'M'
+            },
+            leads: [
+                'Villager',
+				'City Dweller',
+				'Professional Soldier',
+				'Seafaring'
+            ],
+            skills: {
+                points: 4,
+                from: [
+                    'Extortion',
+                    'Forgery',
+					'Ugly Truth',
+					'Falsehood',
+					'Bribe-wise'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Cold Hearted'
+                ]
+            }
+        },
+		{
+            name: 'Kidnapper',
+            setting: 'Outcast',
+            time: 3,
+            res: 10,
+            stat: {
+                bonus: 1,
+                attributes: 'M'
+            },
+            leads: [
+                'Villager',
+				'City Dweller',
+				'Professional Soldier',
+				'Seafaring'
+            ],
+            skills: {
+                points: 5,
+                from: [
+                    'Interrogation',
+                    'Torture',
+					'Intimidation',
+					'Ransom-wise'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Hard Hearted'
+                ]
+            }
+        },
+		{
+            name: 'Pillager',
+            setting: 'Outcast',
+            time: 4,
+            res: 7,
+            leads: [
+				'City Dweller',
+				'Professional Soldier',
+				'Seafaring',
+				'Servitude'
+            ],
+            skills: {
+                points: 4,
+                from: [
+                    'Scavenging',
+                    'Foraging',
+					'Army-wise',
+					'Battle-wise',
+					'Haggling'
+                ]
+            },
+            traits: {
+                points: 1
+            }
+        },
+		{
+            name: 'Vagrant',
+            setting: 'Outcast',
+            time: 3,
+            res: 5,
+            leads: [
+				'City Dweller',
+				'Professional Soldier',
+				'Servitude'
+            ],
+            skills: {
+                points: 4,
+                from: [
+                    'Road-wise',
+                    'Hostel-wise',
+					'Hospital-wise',
+					'Inconspicuous'
+                ]
+            },
+            traits: {
+                points: 2
+            }
+        },
+		{
+            name: 'Cripple',
+            setting: 'Outcast',
+            time: 6,
+            res: 3,
+            leads: [
+				'City Dweller',
+				'Servitude'
+            ],
+            skills: {
+                points: 6,
+                from: [
+                    'Begging',
+                    'Inconspicuous',
+					'Conspicuous'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Lame',
+					'Missing Limb'
+					//TODO: It's 'Lame' OR 'Missing Limb'
+                ]
+            }
+        },
+		{
+            name: 'Poacher',
+            setting: 'Outcast',
+            time: 5,
+            res: 5,
+            stat: {
+                bonus: 1,
+                attributes: 'M/P'
+            },
+            leads: [
+                'Villager',
+				'Professional Soldier',
+				'Servitude'
+            ],
+            skills: {
+                points: 6,
+                from: [
+                    'Royal Parks-wise',
+                    'Hunting',
+					'Stealthy',
+					'Tracking',
+					'Orienteering'
+                ]
+            },
+            traits: {
+                points: 1
+            }
+        },
+		{
+            name: 'Deranged',
+            setting: 'Outcast',
+            time: 6,
+            res: 3,
+            leads: [
+				'Servitude'
+            ],
+            skills: {
+                points: 3,
+                from: [
+                    'Inconspicuous',
+                    'Quack-wise'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Sick',
+					'Phobia',
+					'Lunatic',
+					'Linguist',
+					'Possessed'
+                ]
+            }
+        },
+		{
+            name: 'Outlaw',
+            setting: 'Outcast',
+            time: 4,
+            res: 5,
+            stat: {
+                bonus: 1,
+                attributes: 'M/P'
+            },
+            leads: [
+                'Peasant',
+                'Villager',
+				'City Dweller',
+				'Professional Soldier',
+				'Seafaring'
+            ],
+            skills: {
+                points: 5,
+                from: [
+                    'Authority-wise',
+                    'Inconspicuous',
+					'Conspicuous'
+                ]
+            },
+            traits: {
+                points: 1,
+                from: [
+                    'Outlaw'
+                ]
+            }
+        },
+		{
+            name: 'Fence',
+            setting: 'Outcast',
+            time: 6,
+            res: 15,
+            stat: {
+                bonus: 1,
+                attributes: 'M/P'
+            },
+            leads: [
+				'City Dweller',
+				'Professional Soldier',
+				'Servitude'
+            ],
+            skills: {
+                points: 6,
+                from: [
+                    'Appraisal',
+                    'Haggling',
+					'Inconspicuous',
+					'Streetwise',
+					'Guard-wise'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Shrewd'
+                ]
+            },
+            'requires': [
+                'Shopkeeper',
+                'Barkeep',
+				'Moneylender',
+				'lifepath:Outcast',
+				'Coin Clipper',
+				'Pickpocket',
+				'Street Thug',
+				'Criminal',
+				'Confidence Man'
+            ]
+        },
+		{
+            name: 'Gravedigger',
+            setting: 'Outcast',
+            time: 5,
+            res: 4,
+            leads: [
+				'Professional Soldier',
+				'Servitude'
+            ],
+            skills: {
+                points: 6,
+                from: [
+                    'Ditch Digging',
+                    'Philosophy',
+					'Grave-wise',
+					'Cemetery-wise',
+					'Bone-wise'
+                ]
+            },
+            traits: {
+                points: 3,
+                from: [
+                    'Bitter'
+                ]
+            }
+        },
+		{
+            name: 'Ratcatcher',
+            setting: 'Outcast',
+            time: 5,
+            res: 4,
+            leads: [
+                'Rats'
+            ],
+            skills: {
+                points: 4,
+                from: [
+                    'Trapper',
+                    'Poisons',
+					'Ratiquette'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Diseased',
+					'Rat-Speak'
+                ]
+            }
+        },
+		{
+            name: 'Beggar',
+            setting: 'Outcast',
+            time: 3,
+            res: 5,
+            leads: [
+                'Peasant',
+                'Villager',
+				'Professional Soldier'
+            ],
+            skills: {
+                points: 5,
+                from: [
+                    'Inconspicuous',
+                    'Conspicuous',
+					'Streetwise',
+					'Falsehood'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'The Story'
+                ]
+            }
+        },
+		{
+            name: 'Leper',
+            setting: 'Outcast',
+            time: 4,
+            res: 3,
+            stat: {
+                bonus: -1,
+                attributes: 'P'
+            },
+            leads: [
+                'Peasant',
+				'Servitude'
+            ],
+            skills: {
+                points: 5,
+                from: [
+                    'Inconspicuous',
+                    'Hospital-wise',
+					'Priest-wise',
+					'Pilgrim-wise'
+                ]
+            },
+            traits: {
+                points: 3,
+                from: [
+                    'Leprosy',
+					'Unbeliever',
+					'White-Gold Wielder'
+                ]
+            }
+        },
+		{
+            name: 'Prostitue',
+            setting: 'Outcast',
+            time: 5,
+            res: 6,
+            leads: [
+                'Peasant',
+                'Villager',
+				'City Dweller',
+				'Servitude'
+            ],
+            skills: {
+                points: 3,
+                from: [
+                    'Conspicuous',
+                    'Inconspicuous',
+					'Persuasion',
+					'Falsehood',
+					'Haggling',
+					'Soothing Platitudes'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Tolerant'
+                ]
+            }
+        },
+		{
+            name: 'Whoremonger',
+            setting: 'Outcast',
+            time: 6,
+            res: 12,
+            leads: [
+                'Villager',
+				'City Dweller',
+				'Professional Soldier'
+            ],
+            skills: {
+                points: 5,
+                from: [
+                    'Intimidation',
+                    'Haggling',
+					'Prostitute-wise',
+					'City-wise',
+					'Guard-wise'
+                ]
+            },
+            traits: {
+                points: 1
+            },
+            'requires': [
+                'Corrupt Sergeant',
+                'Venal Priest',
+				'Shopkeeper',
+				'Barkeep',
+				'Moneylender',
+				'lifepath:Outcast',
+				'Coin Clipper',
+				'Pickpocket',
+				'Street Thug',
+				'Criminal',
+				'Confidence Man'
+            ]
+        },
+		{
+            name: 'Itinerant Performer',
+            setting: 'Outcast',
+            time: 4,
+            res: 5,
+            leads: [
+                'Peasant',
+                'Villager',
+				'City Dweller',
+				'Professional Soldier'
+            ],
+            skills: {
+                points: 8,
+                from: [
+                    'Cooking',
+                    'Sewing',
+					'Acting',
+					'Sleight of Hand',
+					'Haggling',
+					'Mending',
+					'Disguise'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Odd'
+                ]
+            }
+        },
+		{
+            name: 'Insurrectionist',
+            setting: 'Outcast',
+            time: 3,
+            res: 5,
+            leads: [
+				'City Dweller',
+				'Professional Soldier'
+            ],
+            skills: {
+                points: 4,
+                from: [
+                    'Philosophy',
+                    'Rule of Law',
+					'Doctrine',
+					'Oratory',
+					'Arson'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Zealot'
+                ]
+            }
+        },
+		{
+            name: 'Cultist',
+            setting: 'Outcast',
+            time: 4,
+            res: 8,
+            leads: [
+                'Peasant',
+				'Professional Soldier',
+				'Servitude'
+            ],
+            skills: {
+                points: 5,
+                from: [
+                    'Cult Doctrine',
+                    'Inconspicuous',
+					'Conspicuous',
+					'Falsehood',
+					'Persuasion'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Zealot',
+					'Rabble Rouser',
+					'Speaker of the Secret Language'
+                ]
+            }
+        },
+		{
+            name: 'Poisoner',
+            setting: 'Outcast',
+            time: 5,
+            res: 8,
+            stat: {
+                bonus: 1,
+                attributes: 'M'
+            },
+            leads: [
+                'Villager',
+				'City Dweller',
+				'Noble Court'
+            ],
+            skills: {
+                points: 5,
+                from: [
+                    'Poisons',
+                    'Cooking',
+					'Inconspicuous',
+					'Disguise'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Off-Kilter'
+                ]
+            }
+        },
+		{
+            name: 'Thug',
+            setting: 'Outcast',
+            time: 4,
+            res: 7,
+            leads: [
+				'City Dweller',
+				'Professional Soldier'
+            ],
+            skills: {
+                points: 4,
+                from: [
+                    'Streetwise',
+                    'Murder-wise',
+					'Guard-wise',
+					'Brawling'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Cold-Blooded',
+					'Jaded'
+                ]
+            }
+        },
+		{
+            name: 'Desperate Killer',
+            setting: 'Outcast',
+            time: 3,
+            res: 5,
+            leads: [
+				'City Dweller',
+				'Professional Soldier',
+				'Servitude'
+            ],
+            skills: {
+                points: 5,
+                from: [
+                    'Appropriate Weapons',
+                    'Inconspicuous',
+					'Assassination-wise'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Desperate',
+					'Murderous',
+					'Cold Hearted',
+					'Hard Hearted'
+                ]
+            }
+        },
+		{
+            name: 'Bandit',
+            setting: 'Outcast',
+            time: 3,
+            res: 7,
+            stat: {
+                bonus: 1,
+                attributes: 'P'
+            },
+            leads: [
+                'Peasant',
+				'Professional Soldier'
+            ],
+            skills: {
+                points: 4,
+                from: [
+                    'Appropriate Weapons',
+                    'Intimidation',
+					'Stealthy',
+					'Caravan-wise'
+                ]
+            },
+            traits: {
+                points: 1
+            }
+        },
+		{
+            name: 'Pirate',
+            setting: 'Outcast',
+            time: 4,
+            res: 5,
+            leads: [
+                'Villager',
+				'City Dweller',
+				'Seafaring'
+            ],
+            skills: {
+                points: 6,
+                from: [
+                    'Pirate Cove-wise',
+                    'Rigging',
+					'Knots',
+					'Knives',
+					'Sea-wise',
+					'Map-wise'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Problem with Authority',
+					'Scurvy',
+					'Maimed',
+					'Crippled',
+					'Lame'
+                ]
+            }
+        },
+		{
+            name: 'Smuggler',
+            setting: 'Outcast',
+            time: 4,
+            res: 15,
+            stat: {
+                bonus: 1,
+                attributes: 'M'
+            },
+            leads: [
+                'Villager',
+				'City Dweller',
+				'Professional Soldier'
+            ],
+            skills: {
+                points: 6,
+                from: [
+                    'Persuasion',
+                    'Falsehood',
+					'Appraisal',
+					'Law-wise',
+					'Forgery',
+					'Stealthy',
+					'Inconspicuous'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Paranoid'
+                ]
+            }
+        },
+		{
+            name: 'Freebooter',
+            setting: 'Outcast',
+            time: 4,
+            res: 10,
+            stat: {
+                bonus: 1,
+                attributes: 'P'
+            },
+            leads: [
+                'Peasant',
+				'Professional Soldier',
+				'Servitude'
+            ],
+            skills: {
+                points: 8,
+                from: [
+                    'Intimidation',
+                    'Appropriate Weapon',
+					'Coutryside-wise',
+					'Fortress-wise',
+					'Mercenary Company-wise',
+					'Foreign Languages',
+					'War-wise',
+					'Loot-wise',
+					'Extortion-wise'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Cold Blooded',
+					'Merciless'
+                ]
+            },
+            'requires': [
+                'Bandit',
+                'Smuggler',
+				'Squire',
+				'Knight',
+				'City Guard',
+				'Village Guard',
+				'Marine Sailor',
+				'lifepath:Professional Soldier'
+            ]
+        },
+		{
+            name: 'Strider',
+            setting: 'Outcast',
+            time: 5,
+            res: 6,
+            stat: {
+                bonus: 1,
+                attributes: 'P'
+            },
+            leads: [
+                'Peasant',
+				'Professional Soldier',
+				'Servitude'
+            ],
+            skills: {
+                points: 9,
+                from: [
+                    'Forest-wise',
+                    'Orienteering',
+					'Foraging',
+					'Tracking',
+					'Firebuilding',
+					'Riding',
+					'Stealthy',
+					'Appropriate Weapons'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Loner'
+                ]
+            },
+            'requires': [
+                'Born Noble',
+                'Hunter',
+				'Trapper',
+				'Huntsman',
+				'Scout'
+            ]
+        },
+		{
+            name: 'Mad Summoner',
+            setting: 'Outcast',
+            time: 8,
+            res: 20,
+            stat: {
+                bonus: 1,
+                attributes: 'M/P'
+            },
+            leads: [
+                'Peasant',
+				'City Dweller',
+				'Seafaring'
+            ],
+            skills: {
+                points: 6,
+                from: [
+                    'Summoning',
+                    'Enchanting',
+					'Demonology',
+					'Empyrealia'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Mad',
+					'Fear of Cheese',
+					'Fear of Wet Noises',
+					'Alarming'
+                ]
+            },
+            'requires': [
+                'Cultist',
+                'Augur',
+				'Neophyte Sorcerer',
+				'Arcane Devotee'
+            ]
+        },
+		{
+            name: 'Rogue Wizard',
+            setting: 'Outcast',
+            time: 6,
+            res: 24,
+            stat: {
+                bonus: 1,
+                attributes: 'M,P'
+            },
+            leads: [
+				'Religious',
+				'Seafaring',
+				'Servitude'
+            ],
+            skills: {
+                points: 8,
+                from: [
+                    'Sorcery',
+                    'Inconspicuous',
+					'Graveyard-wise',
+					'Astrology',
+					'Bloodletting',
+					'Ugly Truth',
+					'Apocalypse-wise',
+					'Enchanting',
+					'Alchemy'
+                ]
+            },
+            traits: {
+                points: 3,
+                from: [
+                    'Spooky',
+					'Aura of Fear',
+					'Obscure Aura'
+                ]
+            },
+            'requires': [
+                'Cultist',
+                'Augur',
+				'Neophyte Sorcerer',
+				'Arcane Devotee'
+            ]
+        },
+		{
+            name: 'Crazy Witch',
+            setting: 'Outcast',
+            time: 6,
+            res: 6,
+            stat: {
+                bonus: 1,
+                attributes: 'M/P'
+            },
+            leads: [
+                'Peasant',
+                'Villager',
+				'Servitude'
+            ],
+            skills: {
+                points: 5,
+                from: [
+                    'Folklore',
+                    'Herbalism',
+					'Poisons',
+					'Summoning',
+					'Profanity-wise'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'A Little Crazy',
+					'Gifted',
+					'Mark of the Beast'
+                ]
+            },
+            'requires': [
+                'Weather Witch',
+                'Young Lady',
+				'Augur',
+				'Midwife'
+            ]
+        },
+		{
+            name: 'Heretic Priest',
+            setting: 'Outcast',
+            time: 7,
+            res: 6,
+            leads: [
+                'Peasant',
+				'Servitude'
+            ],
+            skills: {
+                points: 7,
+                from: [
+                    'Heretical Doctrine',
+                    'Oratory',
+					'Apostate-wise',
+					'Demonology',
+					'Summoner-wise',
+					'Cultist-wise'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Lunatic',
+					'Overbearing Loony',
+					'Faith in Dead Gods'
+                ]
+            },
+            'requires': [
+                'Acolyte',
+                'Cultist',
+				'Apostate',
+				'Theologian',
+				'Venal Priest',
+				'Interpreter',
+				'Archivist'
+            ]
+        },
+		{
+            name: 'Thinker',
+            setting: 'Outcast',
+            time: 15,
+            res: 5,
+            stat: {
+                bonus: 1,
+                attributes: 'M'
+            },
+            leads: [
+                'Peasant',
+                'Villager',
+				'City Dweller',
+				'Noble',
+				'Noble Court',
+				'Religious',
+				'Professional Soldier',
+				'Seafaring',
+				'Servitude'
+            ],
+            skills: {
+                points: 6,
+                from: [
+                    'Philosophy',
+                    'Strategy',
+					'Strategy Games',
+					'Calligraphy',
+					'History',
+					'Painting'
+                ],
+				generalPoints: 1
+            },
+            traits: {
+                points: 2
+            }
+			//TODO: Thinker can only be taken if the character's starting age
+			//will be 36 years or older.
+        },
     ]
