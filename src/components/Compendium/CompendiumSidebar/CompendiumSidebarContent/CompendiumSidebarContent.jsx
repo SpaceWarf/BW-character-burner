@@ -1,9 +1,9 @@
 import React from "react";
 import { Menu, Icon } from 'semantic-ui-react';
 import { getLifepaths } from '#Utilities/data.js';
-import './SidebarContent.scss';
+import './CompendiumSidebarContent.scss';
 
-class SidebarContent extends React.Component {
+class CompendiumSidebarContent extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -67,7 +67,7 @@ class SidebarContent extends React.Component {
                 <div className="Content">
                     {!closedHeaders.includes(header) && filteredData.map(item => (
                         nested ?
-                            <SidebarContent
+                            <CompendiumSidebarContent
                                 key={item}
                                 header={item}
                                 subCategory={lifepathCategory}
@@ -89,4 +89,4 @@ class SidebarContent extends React.Component {
     }
 };
 
-export default SidebarContent;
+export default CompendiumSidebarContent;
