@@ -8408,5 +8408,210 @@ export default
 				'Military Order',
 				'Mercenary Captain' //TODO: Twice!
             ]
+        },
+		{
+            name: 'Born Slave',
+            isBornLifepath: true,
+            setting: 'Servitude',
+            time: 12,
+            res: 5,
+			stat: {
+                bonus: -1,
+                attributes: 'M/P'
+            },
+            leads: [
+                'Soldier',
+                'Outcast'
+            ],
+            skills: {
+                generalPoints: 2,
+				points: 1,
+				from: [
+					'Slavery-wise'
+				]
+            },
+            traits: {
+                points: 3,
+				from: [
+					'Broken',
+					'Scarred',
+					'Maimed',
+					'Lame'
+				]
+            }
+        },
+		{
+            name: 'Ditch Digger',
+            setting: 'Servitude',
+            time: 4,
+            res: 4,
+            leads: [
+				'Soldier',
+				'Outcast'
+            ],
+            skills: {
+                points: 3,
+                from: [
+                    'Ditch Digging',
+                    'Sing',
+					'Boss-wise'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Blisters',
+					'Back-Breaking Labor'
+                ]
+            }
+        },
+		{
+            name: 'Servant',
+            setting: 'Servitude',
+            time: 5,
+            res: 6,
+            leads: [
+				'City Dweller',
+				'Noble Court',
+				'Soldier',
+				'Outcast'
+            ],
+            skills: {
+                points: 2,
+                from: [
+                    'Soothing Platitudes',
+                    'Gossip-wise'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Mind-Numbing Work',
+					'Obsequious'
+                ]
+            }
+        },
+		{
+            name: 'Field Laborer',
+            setting: 'Servitude',
+            time: 6,
+            res: 5,
+            leads: [
+				'Soldier',
+				'Outcast'
+            ],
+            skills: {
+                points: 7,
+                from: [
+                    'Farming',
+                    'Mending',
+					'Sing',
+					'Hauling',
+					'Driving',
+					'Fall Grass-wise'
+                ]
+            },
+            traits: {
+                points: 3,
+                from: [
+                    'Hope'
+                ]
+            }
+        },
+		{
+            name: 'Captive of War',
+            setting: 'Servitude',
+            time: 4,
+            res: 4,
+            leads: [
+				'City Dweller',
+				'Soldier',
+				'Outcast'
+            ],
+            skills: {
+                points: 2,
+                from: [
+                    'Cell-wise',
+                    'Chain-wise'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Claustrophobic',
+					'Resigned to Fate'
+                ]
+            }
+        },
+		{
+            name: 'Gaol',
+            setting: 'Servitude',
+            time: 3,
+            res: 3,
+            leads: [
+				'City Dweller',
+				'Soldier',
+				'Outcast'
+            ],
+            skills: {
+                points: 3,
+                from: [
+                    'Gaol-wise',
+                    'Ratiquette'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Involuntary Shudders'
+                ]
+            }
+        },
+		{
+            name: 'Harem Slave',
+            setting: 'Servitude',
+            time: 5,
+            res: 4,
+            leads: [
+				'Outcast'
+            ],
+            skills: {
+                points: 3,
+                from: [
+                    'Falsehood',
+                    'Seduction'
+                ]
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Numb',
+					'Worldly'
+                ]
+            }
+        },
+		{
+            name: 'Bondsman',
+            setting: 'Servitude',
+            time: 7,
+            res: 7,
+            leads: [
+                'Peasant',
+				'Soldier',
+				'Outcast'
+            ],
+            skills: {
+                points: 'Special'
+				//TODO: May choose owner's lifepath from Noble, City Dweller,
+				//Soldier or Villager setting. Bondsman may purchase from 
+				//owner's skills with one quarter of that path's skill points.
+				//(minimum 1)
+            },
+            traits: {
+                points: 2,
+                from: [
+                    'Lucky'
+                ]
+            }
         }
     ]
