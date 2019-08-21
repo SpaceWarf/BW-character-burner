@@ -3,7 +3,7 @@ import { Menu } from 'semantic-ui-react';
 import CompendiumSidebar from './CompendiumSidebar/CompendiumSidebar.jsx';
 import CompendiumContent from './CompendiumContent/CompendiumContent.jsx';
 import { getDataSetFromCategory } from '#Utilities/data.js';
-import categories from '#Resources/config/categories.js';
+import sections from '#Resources/config/compendium-sections.config.js';
 import './Compendium.scss';
 
 const Compendium = () => {
@@ -12,19 +12,19 @@ const Compendium = () => {
             <CompendiumSidebar />
             <div className="Content">
                 <Menu vertical>
-                    {categories.map(category => {
-                        const dataSet = getDataSetFromCategory(category.type, category.subType);
+                    {sections.map(section => {
+                        const dataSet = getDataSetFromCategory(section.type, section.subType);
                         return dataSet.length > 0 && <CompendiumContent
-                            key={category.name}
-                            id={category.subType
-                                ? `${category.type}-${category.subType}`
-                                : category.type
+                            key={section.name}
+                            id={section.subType
+                                ? `${section.type}-${section.subType}`
+                                : section.type
                             }
-                            header={category.name}
-                            categoryType={category.type}
-                            categorySubType={category.subType}
+                            header={section.name}
+                            categoryType={section.type}
+                            categorySubType={section.subType}
                             lifepaths={dataSet}
-                            nested={category.nested}
+                            nested={section.nested}
                         />
                     })}
                 </Menu>
