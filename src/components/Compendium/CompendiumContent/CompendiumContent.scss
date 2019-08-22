@@ -1,18 +1,43 @@
 @import 'common';
 
 .Content .ui.vertical.menu .item {
-    padding: 15px 0 15px 15px;
+
+    & > .item > .ui.header {
+        font-size: 25px;
+    }
 
     & > .ui.header {
+        font-size: 30px;
         color: $main-font-color;
-        border-bottom: 2px solid $main-font-color;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+
+        &:before, &:after {
+            position: absolute;
+            top: 51%;
+            overflow: hidden;
+            width: 50%;
+            height: 2px;
+            content: '\a0';
+            background-color: $main-font-color;
+        }
+        &:before {
+            margin-left: -51%;
+            text-align: right;
+        }
+        &:after {
+            margin-left: 1%;
+        }
     }
 
     & > .Card {
         padding: 15px $compendium-card-padding 15px $compendium-card-padding;
     
         & > .ui.card {
+            margin: 0 auto;
             width: inherit;
+            max-width: 900px;
             
             & > .content {
 

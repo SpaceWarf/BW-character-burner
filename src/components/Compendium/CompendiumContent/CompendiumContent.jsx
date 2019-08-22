@@ -27,6 +27,7 @@ const CompendiumContent = ({ id, header, categoryType, categorySubType, lifepath
                 nested ?
                     <CompendiumContent
                         key={lifepath}
+                        id={lifepath.name}
                         header={lifepath}
                         categoryType={categoryType}
                         categorySubType={categorySubType}
