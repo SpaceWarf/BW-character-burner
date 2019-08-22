@@ -300,5 +300,253 @@ export default
                 exists: true,
                 type: 'Axe'
             }
+        },
+		{
+            name: 'Back Alley-wise',
+            isWiseSkill: true
+        },
+		{
+            name: 'Bad End-wise',
+            isWiseSkill: true
+        },
+		{
+            name: 'Baking',
+            roots: [
+                'Perception',
+				'Agility'
+            ],
+            description: 'description',
+            obstacles: {},
+            FoRKs: [
+                'Cooking'
+            ],
+            skillType: 'Peasant',
+            tools: {
+                exists: true,
+				type: 'Workshop'
+            }
+        },
+		{
+            name: 'Banner-wise',
+            isWiseSkill: true
+        },
+		{
+            name: 'Bannerman-wise',
+            isWiseSkill: true
+        },
+		{
+            name: 'Bat-wise',
+            isWiseSkill: true
+        },
+		{
+            name: 'Beast of Burden-wise',
+            isWiseSkill: true
+        },
+		{
+            name: 'Beer-wise',
+            isWiseSkill: true
+        },
+		{
+            name: 'Begging',
+            roots: [
+                'Will'
+            ],
+            description: 'description',
+            obstacles: {},
+            FoRKs: [
+                'Persuasion',
+				'Falsehood',
+				'Soothing Platitudes'
+            ],
+            skillType: 'Social',
+            tools: {
+				exists: false
+            }
+        },
+		{
+            name: 'Bird Husbandry',
+            roots: [
+                'Will'
+            ],
+            description: 'description',
+            obstacles: {},
+            skillType: 'Forester',
+            tools: {
+                exists: true
+            }
+        },
+		{
+            name: 'Blacksmith',
+            roots: [
+                'Agility',
+				'Power'
+            ],
+            description: 'description',
+            obstacles: {},
+            FoRKs: [
+                'Armorer',
+				'Weaponsmith'
+            ],
+            skillType: 'Craftsman',
+            tools: {
+                exists: true,
+				type: 'Workshop'
+            }
+        },
+		{
+            name: 'Bloodletting',
+            roots: [
+                'Perception'
+            ],
+            description: 'description',
+            obstacles: {},
+            FoRKs: [
+                'Apothecary',
+				'Surgery'
+            ],
+            skillType: 'Medicinal',
+            tools: {
+                exists: true
+            }
+        },
+		{
+            name: 'Boatwright',
+            roots: [
+                'Perception',
+				'Agility'
+            ],
+            description: 'description',
+            obstacles: {},
+            FoRKs: [
+                'Carpenter'
+            ],
+            skillType: 'Craftsman',
+            tools: {
+                exists: true,
+				type: 'Workshop'
+            }
+        },
+		{
+            name: 'Boss-wise',
+            isWiseSkill: true
+        },
+		{
+            name: 'Bow',
+            roots: [
+                'Agility'
+            ],
+            description: 'description',
+            obstacles: {},
+            skillType: '',
+            tools: {
+                exists: true,
+				type: 'Bow'
+            }
+        },
+		{
+            name: 'Bowyer',
+            roots: [
+                'Perception',
+				'Agility'
+            ],
+            description: 'description',
+            obstacles: {},
+            FoRKs: [
+                'Carpenter',
+				'Carving'
+            ],
+            skillType: 'Craftsman',
+            tools: {
+                exists: true,
+				type: 'Expendable'
+            }
+        },
+		{
+            name: 'Boxing (Martial Arts)',
+            roots: [
+                'Power',
+				'Agility'
+            ],
+            description: 'description',
+            obstacles: {},
+            FoRKs: [
+                'Brawling',
+				'Appropriate melee weapon skill'
+            ],
+            skillType: 'Martial',
+            tools: {
+				exists: false
+            }
+        },
+		{
+            name: 'Brawling',
+            roots: [
+                'Power'
+            ],
+            description: 'description',
+            obstacles: {},
+            FoRKs: [
+                'Boxing',
+				'Melee weapon skill'
+            ],
+            skillType: 'Martial',
+            tools: {
+				exists: false
+            }
+        },
+		{
+            name: 'Brewer',
+            roots: [
+                'Perception'
+            ],
+            description: 'description',
+            obstacles: {},
+            FoRKs: [
+                'Miller'
+            ],
+            skillType: 'Craftsman',
+            tools: {
+                exists: true,
+				type: 'Workshop'
+            }
+        },
+		{
+            name: 'Bribe-wise',
+            isWiseSkill: true
+        },
+		{
+            name: 'Burden of the Crown-wise',
+            isWiseSkill: true
+        },
+		{
+            name: 'Bureaucracy',
+            roots: [
+                'Will'
+            ],
+            description: 'description',
+            obstacles: {},
+            FoRKs: [
+                'Research',
+				'Etiquette',
+				'Soothing Platitudes',
+				'Falsehood'
+            ],
+            skillType: 'Special',
+            tools: {
+				exists: false
+            }
+        },
+		{
+            name: 'Butchery',
+            roots: [
+                'Perception',
+				'Agility'
+            ],
+            description: 'description',
+            obstacles: {},
+            skillType: 'Peasant',
+            tools: {
+                exists: true
+            }
         }
     ]
