@@ -1,6 +1,6 @@
 import React from "react";
 import { Menu, Input } from 'semantic-ui-react';
-import { getDataSetForSection } from '#Utilities/data-selectors.js';
+import { getDataSetForSection } from '#Utilities/selectors.js';
 import sections from '#Resources/config/compendium-sections.config.js';
 import CompendiumSidebarContent from './CompendiumSidebarContent/CompendiumSidebarContent.jsx';
 import './CompendiumSidebar.scss';

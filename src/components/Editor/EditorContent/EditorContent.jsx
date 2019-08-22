@@ -1,10 +1,11 @@
 import React from "react";
+import LifepathEditor from './LifepathEditor/LifepathEditor.jsx';
 import './EditorContent.scss';
 
 const EditorContent = () => {
     return (
         <div className="EditorContent">
-            Editor
+            <LifepathEditor />
         </div>
     );
 };

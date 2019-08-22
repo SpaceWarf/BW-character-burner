@@ -11,6 +11,7 @@ const EditorSidebar = () => {
                 <div className="content">
                     {sections.map((section, index) => (
                         <Menu.Item
+                            key={section.name}
                             onClick={e => window.location.href = `#${section.link}`}
                         >
                             {index + 1}. {section.name}

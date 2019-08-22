@@ -3,7 +3,7 @@ import { Header, Menu } from 'semantic-ui-react';
 import Lifepath from './Lifepath/Lifepath.jsx';
 import Skill from './Skill/Skill.jsx';
 import Trait from './Trait/Trait.jsx';
-import { getLifepaths } from '#Utilities/data-selectors.js';
+import { getLifepaths } from '#Utilities/selectors.js';
 import './CompendiumContent.scss';
 
 const getComponentForCategory = (type, data) => {
@@ -22,7 +22,7 @@ const getComponentForCategory = (type, data) => {
 const CompendiumContent = ({ id, header, categoryType, categorySubType, lifepaths, nested }) => {
     return (
         <Menu.Item id={id}>
-            <Header as="h1">{header}</Header>
+            <Header className="section" as="h1">{header}</Header>
             {lifepaths.map(lifepath => (
                 nested ?
                     <CompendiumContent

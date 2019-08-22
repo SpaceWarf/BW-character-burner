@@ -33,8 +33,9 @@ const Header = () => {
                         <Dropdown.Header>Lifepaths</Dropdown.Header>
                         {dropdownItems.map(item => (
                             item.isDivider
-                                ? <Dropdown.Divider />
+                                ? <Dropdown.Divider key="divider"/>
                                 : <Dropdown.Item
+                                    key={item.text}
                                     text={item.text}
                                     onClick={e => handleClick(e, `/compendium#${item.link}`)}
                                     disabled={item.disabled}

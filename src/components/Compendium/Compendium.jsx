@@ -2,7 +2,7 @@ import React from "react";
 import { Menu } from 'semantic-ui-react';
 import CompendiumSidebar from './CompendiumSidebar/CompendiumSidebar.jsx';
 import CompendiumContent from './CompendiumContent/CompendiumContent.jsx';
-import { getDataSetForSection } from '#Utilities/data-selectors.js';
+import { getDataSetForSection } from '#Utilities/selectors.js';
 import sections from '#Resources/config/compendium-sections.config.js';
 import './Compendium.scss';
 
@@ -10,7 +10,7 @@ const Compendium = () => {
     return (
         <div className="Compendium">
             <CompendiumSidebar />
-            <div className="Content">
+            <div className="CompendiumContent">
                 <Menu vertical>
                     {sections.map(section => {
                         const dataSet = getDataSetForSection(section.type, section.subType);

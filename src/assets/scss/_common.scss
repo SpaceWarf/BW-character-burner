@@ -23,3 +23,28 @@
 .halfs {
     width: 50%;
 }
+
+.section.header {
+    font-size: $header-font-size;
+    color: $main-font-color;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+
+    &:before, &:after {
+        position: absolute;
+        top: 51%;
+        overflow: hidden;
+        width: 50%;
+        height: 2px;
+        content: '\a0';
+        background-color: $main-font-color;
+    }
+    &:before {
+        margin-left: -51%;
+        text-align: right;
+    }
+    &:after {
+        margin-left: 1%;
+    }
+}
