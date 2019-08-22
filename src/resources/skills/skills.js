@@ -548,5 +548,427 @@ export default
             tools: {
                 exists: true
             }
+        },
+		{
+            name: 'Cadence-wise',
+            isWiseSkill: true
+        },
+		{
+            name: 'Calligraphy',
+            roots: [
+                'Perception',
+				'Agility'
+            ],
+            description: 'description',
+            obstacles: {},
+            FoRKs: [
+                'Write'
+            ],
+            skillType: 'Academic',
+            tools: {
+                exists: true
+            }
+        },
+		{
+            name: 'Campaign-wise',
+            isWiseSkill: true
+        },
+		{
+            name: 'Cargo-wise',
+            isWiseSkill: true
+        },
+		{
+            name: 'Carpentry',
+            roots: [
+                'Perception',
+				'Agility'
+            ],
+            description: 'description',
+            obstacles: {},
+            FoRKs: [
+                'Engineer',
+				'Carving'
+            ],
+            skillType: 'Craftsman',
+            tools: {
+                exists: true,
+				type: 'Workshop'
+            }
+        },
+		{
+            name: 'Cartography',
+            roots: [
+                'Perception',
+				'Agility'
+            ],
+            description: 'description',
+            obstacles: {},
+            FoRKs: [
+                'Calligraphy',
+				'Illumination'
+            ],
+            skillType: 'Academic',
+            tools: {
+                exists: true,
+				type: 'Expendable'
+            }
+        },
+		{
+            name: 'Cartwright',
+            roots: [
+                'Perception',
+				'Agility'
+            ],
+            description: 'description',
+            obstacles: {},
+            FoRKs: [
+                'Carpentry'
+            ],
+            skillType: 'Craftsman',
+            tools: {
+                exists: true,
+				type: 'Workshop'
+            }
+        },
+		{
+            name: 'Carving',
+            roots: [
+                'Perception',
+				'Agility'
+            ],
+            description: 'description',
+            obstacles: {},
+            FoRKs: [
+                'Carpentry',
+				'Etching',
+				'Engraving'
+            ],
+            skillType: 'Craftsman',
+            tools: {
+                exists: true,
+				type: 'Traveling Gear'
+            }
+        },
+		{
+            name: 'Cave-In-wise',
+            isWiseSkill: true
+        },
+		{
+            name: 'Cave-wise',
+            isWiseSkill: true
+        },
+		{
+            name: 'Champion-wise',
+            isWiseSkill: true
+        },
+		{
+            name: 'Chandler',
+            roots: [
+                'Perception',
+				'Agility'
+            ],
+            description: 'description',
+            obstacles: {},
+            skillType: 'Craftsman',
+            tools: {
+                exists: true,
+				type: 'Expendable'
+            }
+        },
+		{
+            name: 'Chattel-wise',
+            isWiseSkill: true
+        },
+		{
+            name: 'Cheating-wise',
+            isWiseSkill: true
+        },
+		{
+            name: 'Child-Rearing',
+            roots: [
+                'Will'
+            ],
+            description: 'description',
+            obstacles: {},
+            skillType: 'Social',
+            tools: {
+                exists: false
+            }
+        },
+		{
+            name: 'Chronology of Kings',
+            roots: [
+                'Perception'
+            ],
+            description: 'description',
+            obstacles: {},
+            FoRKs: [
+                'Ancient History',
+				'Obscure History'
+            ],
+            skillType: 'Academic',
+            tools: {
+                exists: false
+            }
+        },
+		{
+            name: 'Church Law',
+            roots: [
+                'Perception'
+            ],
+            description: 'description',
+            obstacles: {},
+            skillType: 'School of Thought',
+            tools: {
+                exists: false
+            }
+        },
+		{
+            name: 'Clan-wise',
+            isWiseSkill: true
+        },
+		{
+            name: 'Climbing',
+            roots: [
+                'Speed'
+            ],
+            description: 'description',
+            obstacles: {},
+            FoRKs: [
+                'Knots',
+				'Rigging'
+            ],
+            skillType: 'Physical',
+            tools: {
+                exists: true,
+				type: 'Expendable'
+            }
+        },
+		{
+            name: 'Cloth Dyeing',
+            roots: [
+                'Perception',
+				'Agility'
+            ],
+            description: 'description',
+            obstacles: {},
+            FoRKs: [
+                'Herbalism',
+				'Vintner'
+            ],
+            skillType: 'Craftsman',
+            tools: {
+                exists: true
+            }
+        },
+		{
+            name: 'Cobbler',
+            roots: [
+                'Perception',
+				'Agility'
+            ],
+            description: 'description',
+            obstacles: {},
+            skillType: 'Academic',
+            tools: {
+                exists: true,
+				type: 'Expendable'
+            }
+        },
+		{
+            name: 'Command',
+            roots: [
+                'Will'
+            ],
+            description: 'description',
+            obstacles: {},
+            FoRKs: [
+                'Oratory',
+				'Conspicuous'
+            ],
+            skillType: 'Social',
+            tools: {
+                exists: false
+            }
+        },
+		{
+            name: 'Composition',
+            roots: [
+                'Will',
+				'Perception'
+            ],
+            description: 'description',
+            obstacles: {},
+            FoRKs: [
+                'Write',
+				'Research',
+				'Skills applicable to the content'
+            ],
+            skillType: 'Academic',
+            tools: {
+                exists: true,
+				type: 'Expendable'
+            }
+        },
+		{
+            name: 'Conspicuous',
+            roots: [
+                'Will'
+            ],
+            description: 'description',
+            obstacles: {},
+            FoRKs: [
+                'Command',
+				'Oratory'
+            ],
+            skillType: 'Social',
+            tools: {
+                exists: false
+            }
+        },
+		{
+            name: 'Contract-wise',
+            isWiseSkill: true
+        },
+		{
+            name: 'Cooking',
+            roots: [
+                'Perception'
+            ],
+            description: 'description',
+            obstacles: {},
+            FoRKs: [
+                'Herbalism',
+				'Apothecary',
+				'Baking'
+            ],
+            skillType: 'Peasant',
+            tools: {
+                exists: true,
+				type: 'Traveling Gear'
+            }
+        },
+		{
+            name: 'Cooper',
+            roots: [
+                'Perception',
+				'Agility'
+            ],
+            description: 'description',
+            obstacles: {},
+            FoRKs: [
+                'Carpenter'
+            ],
+            skillType: 'Peasant',
+            tools: {
+                exists: true,
+				type: 'Workshop'
+            }
+        },
+		{
+            name: 'Coppersmith',
+            roots: [
+                'Perception',
+				'Agility'
+            ],
+            description: 'description',
+            obstacles: {},
+            FoRKs: [
+                'Blacksmith',
+				'Whitesmith'
+            ],
+            skillType: 'Craftsman',
+            tools: {
+                exists: true,
+				type: 'Workshop'
+            }
+        },
+		{
+            name: 'Counterfeiting',
+            roots: [
+                'Perception',
+				'Agility'
+            ],
+            description: 'description',
+            obstacles: {},
+            FoRKs: [
+                'Forgery',
+				'Whitesmith',
+				'Alchemy',
+				'Etching'
+            ],
+            skillType: 'Craftsman',
+            tools: {
+                exists: true,
+				type: 'Expendable'
+            }
+        },
+		{
+            name: 'Countryside-wise',
+            isWiseSkill: true
+        },
+		{
+            name: 'Crop-wise',
+            isWiseSkill: true
+        },
+		{
+            name: 'Crossbow',
+            roots: [
+				'Agility'
+            ],
+            description: 'description',
+            obstacles: {},
+            skillType: 'Martial',
+            tools: {
+                exists: true,
+				type: 'Crossbow'
+            }
+        },
+		{
+            name: 'Crowd-wise',
+            isWiseSkill: true
+        },
+		{
+            name: 'Cryptography',
+            roots: [
+				'Perception'
+            ],
+            description: 'description',
+            obstacles: {},
+			FoRKs: [
+                'Symbology',
+				'Astrology',
+				'Obscure History'
+            ],
+            skillType: 'Academic',
+            tools: {
+                exists: false
+            }
+        },
+		{
+            name: 'Cudgel',
+            roots: [
+				'Agility'
+            ],
+            description: 'description',
+            obstacles: {},
+			FoRKs: [
+                'Brawling',
+				'Martial Arts',
+				'Boxing',
+				'Axe',
+				'Hammer',
+				'Knives',
+				'Mace',
+				'Polearm',
+				'Spear',
+				'Staff',
+				'Sword'
+            ],
+            skillType: 'Martial',
+            tools: {
+                exists: true,
+				type: 'A big stick'
+            }
         }
     ]
