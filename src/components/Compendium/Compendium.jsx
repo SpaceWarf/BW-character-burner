@@ -3,7 +3,7 @@ import { Menu } from 'semantic-ui-react';
 import CompendiumSidebar from './CompendiumSidebar/CompendiumSidebar.jsx';
 import CompendiumContent from './CompendiumContent/CompendiumContent.jsx';
 import { getDataSetForSection } from '#Utilities/selectors.js';
-import sections from '#Resources/config/compendium-sections.config.js';
+import { sections } from '#Utilities/config/compendium.config.js';
 import './Compendium.scss';
 
 const Compendium = () => {

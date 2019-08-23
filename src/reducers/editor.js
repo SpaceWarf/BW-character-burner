@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux';
-import * as types from "#Utilities/action-types.js";
+import { sections } from '#Utilities/config/editor.config.js';
+import * as types from "#Actions/types.js";
 
 const selectedRace = (state = "", action) => {
     switch (action.type) {
@@ -10,6 +11,26 @@ const selectedRace = (state = "", action) => {
     }
 };
 
+const activeSection = (state = "Lifepaths", action) => {
+    switch (action.type) {
+        case types.SET_ACTIVE_SECTION:
+            return action.section;
+        default:
+            return state;
+    }
+};
+
+const lockedSections = (state = sections.slice(1), action) => {
+    switch (action.type) {
+        case types.UNLOCK_SECTION:
+            return action.section;
+        default:
+            return state;
+    }
+};
+
 export default combineReducers({
-    selectedRace
+    selectedRace,
+    activeSection,
+    lockedSections
 });

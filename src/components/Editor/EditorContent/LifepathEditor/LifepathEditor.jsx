@@ -1,9 +1,9 @@
 import React from "react";
 import { connect } from 'react-redux';
-import { Header, Button, Image, Label } from 'semantic-ui-react';
+import { Header, Button, Image } from 'semantic-ui-react';
 import { selectRace } from '#Actions/editor.js';
 import { getBornLifepaths } from '#Utilities/selectors.js';
-import { races } from './config/LifepathEditor.config.js';
+import { races } from '#Utilities/config/editor.config.js';
 import './LifepathEditor.scss';
 
 const LifepathEditor = ({ selectedRace, bornLifepaths, onSelectRace }) => {
@@ -13,6 +13,7 @@ const LifepathEditor = ({ selectedRace, bornLifepaths, onSelectRace }) => {
             <div className="RaceSelector">
                 {races.map(race => (
                     <Button
+                        key={race.name}
                         active={selectedRace === race.name}
                         disabled={race.disabled}
                         onClick={() => onSelectRace(race.name)}
@@ -37,6 +38,7 @@ const LifepathEditor = ({ selectedRace, bornLifepaths, onSelectRace }) => {
 
 const mapStateToProps = state => ({
     selectedRace: state.editor.selectedRace,
+    activeSection: state.editor.activeSection,
     bornLifepaths: getBornLifepaths(state)
 });
 

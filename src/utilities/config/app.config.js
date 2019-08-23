@@ -1,4 +1,4 @@
-const dropdownItems = [
+export const headerDropdownItems = [
     {
         text: 'Men',
         link: 'lifepaths-men'
@@ -30,5 +30,3 @@ const dropdownItems = [
         link: 'traits'
     }
 ];
-
-module.exports = dropdownItems;

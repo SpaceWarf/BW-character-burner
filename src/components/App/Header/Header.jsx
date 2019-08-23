@@ -1,6 +1,6 @@
 import React from "react";
 import { Menu, Image, Dropdown } from "semantic-ui-react";
-import dropdownItems from './config/Header.config.js';
+import { headerDropdownItems } from '#Utilities/config/app.config.js';
 import logo from '#Assets/images/logo.webp';
 import './Header.scss';
 
@@ -31,9 +31,9 @@ const Header = () => {
                 >
                     <Dropdown.Menu>
                         <Dropdown.Header>Lifepaths</Dropdown.Header>
-                        {dropdownItems.map(item => (
+                        {headerDropdownItems.map(item => (
                             item.isDivider
-                                ? <Dropdown.Divider key="divider"/>
+                                ? <Dropdown.Divider key="divider" />
                                 : <Dropdown.Item
                                     key={item.text}
                                     text={item.text}

@@ -1,0 +1,3 @@
+export const SELECT_RACE = "SELECT_RACE";
+export const SET_ACTIVE_SECTION = "SET_ACTIVE_SECTION";
+export const UNLOCK_SECTION = "UNLOCK_SECTION";
