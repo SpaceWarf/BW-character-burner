@@ -1,12 +1,12 @@
 import React from "react";
 import { Card, Icon } from 'semantic-ui-react';
-import './Trait.scss';
+import '../Card.scss';
 import { Menu } from "semantic-ui-react";
 
-const Trait = ({ trait }) => {
+const Trait = ({ trait, onClick }) => {
     return (
         <Menu.Item className="Card Trait" id={trait.name.replace(/\s/g, '')}>
-            <Card>
+            <Card onClick={onClick}>
                 <Card.Content>
                     <Card.Header className={trait.description ? 'with-description' : ''}>
                         <Icon

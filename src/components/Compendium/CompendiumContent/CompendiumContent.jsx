@@ -1,19 +1,19 @@
 import React from "react";
 import { Header, Menu } from 'semantic-ui-react';
-import Lifepath from './Lifepath/Lifepath.jsx';
-import Skill from './Skill/Skill.jsx';
-import Trait from './Trait/Trait.jsx';
+import Lifepath from '#Components/Common/Card/Lifepath/Lifepath.jsx';
+import Skill from '#Components/Common/Card/Skill/Skill.jsx';
+import Trait from '#Components/Common/Card/Trait/Trait.jsx';
 import { getLifepaths } from '#Utilities/selectors.js';
 import './CompendiumContent.scss';
 
 const getComponentForCategory = (type, data) => {
     switch (type) {
         case 'lifepaths':
-            return <Lifepath key={`${type}-${data.name}`} lifepath={data} />
+            return <Lifepath key={`${type}-${data.name}`} lifepath={data} linkable />
         case 'skills':
-            return <Skill key={`${type}-${data.name}`} skill={data} />
+            return <Skill key={`${type}-${data.name}`} skill={data} linkable />
         case 'traits':
-            return <Trait key={`${type}-${data.name}`} trait={data} />
+            return <Trait key={`${type}-${data.name}`} trait={data} linkable />
         default:
             return null;
     }

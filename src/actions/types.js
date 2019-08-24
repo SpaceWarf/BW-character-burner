@@ -1,3 +1,8 @@
-export const SELECT_RACE = "SELECT_RACE";
+// Editor
 export const SET_ACTIVE_SECTION = "SET_ACTIVE_SECTION";
 export const UNLOCK_SECTION = "UNLOCK_SECTION";
+export const SELECT_RACE = "SELECT_RACE";
+
+// Lifepath editor
+export const SELECT_BORN_LIFEPATH = "SELECT_BORN_LIFEPATH";
+export const UNSELECT_BORN_LIFEPATH = "UNSELECT_BORN_LIFEPATH";

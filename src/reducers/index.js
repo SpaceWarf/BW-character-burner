@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import editor from './editor.js';
+import editor from './editor/editor.js';
 
 const reducers = combineReducers({
     editor

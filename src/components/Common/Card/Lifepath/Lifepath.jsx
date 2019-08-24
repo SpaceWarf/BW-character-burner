@@ -1,19 +1,19 @@
 import React from "react";
 import { Card, Icon } from 'semantic-ui-react';
-import './Lifepath.scss';
+import '../Card.scss';
 import { Menu } from "semantic-ui-react";
 
-const Lifepath = ({ lifepath }) => {
+const Lifepath = ({ lifepath, linkable, onClick }) => {
     return (
         <Menu.Item className="Card Lifepath" id={lifepath.name.replace(/\s/g, '')}>
-            <Card>
+            <Card onClick={onClick}>
                 <Card.Content>
                     <Card.Header className='with-description'>
-                        <Icon
+                        {linkable && <Icon
                             name='linkify'
                             onClick={() => window.location.href = `#${lifepath.name.replace(/\s/g, '')}`}
                             link
-                        />
+                        />}
                         <div className='header-content'>
                             <p className='thirds'>{lifepath.name}</p>
                             <p className='fifths centered'>{lifepath.time} yrs</p>

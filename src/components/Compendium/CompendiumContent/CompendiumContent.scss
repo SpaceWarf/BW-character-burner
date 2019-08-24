@@ -5,58 +5,5 @@
     & > .item > .ui.header {
         font-size: $subheader-font-size;
     }
-
-    & > .Card {
-        padding: 15px $compendium-card-padding 15px $compendium-card-padding;
-    
-        & > .ui.card {
-            margin: 0 auto;
-            width: inherit;
-            max-width: 900px;
-            
-            & > .content {
-
-                & > .header {
-                    display: flex;
-                    justify-content: space-between;
-                    
-                    &.with-description {
-                        border-bottom: 1px solid $secondary-font-color;
-                    }
-    
-                    & > .link.icon {
-                        text-align: start;
-                        width: 3%;
-                        color: $secondary-font-color;
-        
-                        &:hover {
-                            color: $main-font-color;
-                        }
-                    }
-        
-                    & > .header-content {
-                        width: 67%;
-                        display: flex;
-                        justify-content: space-between;
-                    }
-        
-                    & > .left.content {
-                        text-align: end;
-                        width: 30%;
-                    }
-                }
-
-                & > .description {
-                    & > p {
-                        color: $secondary-font-color;
-
-                        & > b {
-                            color: $main-font-color;   
-                        }
-                    }
-                }
-            }
-        }
-    }
 }
 

@@ -1,12 +1,12 @@
 import React from "react";
 import { Card, Icon } from 'semantic-ui-react';
-import './Skill.scss';
+import '../Card.scss';
 import { Menu } from "semantic-ui-react";
 
-const Skill = ({ skill }) => {
+const Skill = ({ skill, onClick }) => {
     return (
         <Menu.Item className="Card Skill" id={skill.name.replace(/\s/g, '')}>
-            <Card>
+            <Card onClick={onClick}>
                 <Card.Content>
                     <Card.Header className={!skill.isWiseSkill ? 'with-description' : ''}>
                         <Icon
