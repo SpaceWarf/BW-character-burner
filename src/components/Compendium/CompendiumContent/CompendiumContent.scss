@@ -1,9 +1,20 @@
 @import 'common';
 
-.CompendiumContent .ui.vertical.menu .item {
+.CompendiumContent {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow-y: scroll;
+    padding: 15px;
+    
+    & > .ui.vertical.menu {
+        width: $content-width;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
 
-    & > .item > .ui.header {
-        font-size: $subheader-font-size;
+        & .item > .item > .ui.header {
+            font-size: $subheader-font-size;
+        }
     }
 }
-

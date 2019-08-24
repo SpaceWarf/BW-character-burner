@@ -1,13 +1,22 @@
 import React from "react";
+import { connect } from 'react-redux';
 import LifepathEditor from './LifepathEditor/LifepathEditor.jsx';
 import './EditorContent.scss';
 
-const EditorContent = () => {
+const EditorContent = ({ activeSection }) => {
     return (
         <div className="EditorContent">
-            <LifepathEditor />
+            {activeSection === 'Lifepaths' && <LifepathEditor />}
         </div>
     );
 };
 
-export default EditorContent;
+const mapStateToProps = state => ({
+    activeSection: state.editor.activeSection,
+});
+
+
+const mapDispatchToProps = dispatch => ({
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(EditorContent);

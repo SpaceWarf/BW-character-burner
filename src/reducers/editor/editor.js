@@ -21,7 +21,7 @@ const activeSection = (state = "Lifepaths", action) => {
     }
 };
 
-const lockedSections = (state = sections.slice(1), action) => {
+const lockedSections = (state = [], action) => {
     switch (action.type) {
         case types.UNLOCK_SECTION:
             return action.section;

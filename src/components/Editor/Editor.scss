@@ -4,19 +4,8 @@
     height: 100%;
     display: flex;
 
-    & > .Content {
-        display: flex;
-        justify-content: center;
+    & > .MainSection {
         width: 100%;
-        overflow-y: scroll;
-        padding: 15px;
-
-        & > .ui.menu {
-            width: 100%;
-            max-width: 1000px;
-            border: none;
-            border-radius: 0;
-            box-shadow: none;
-        }
+        height: 100%;
     }
 }

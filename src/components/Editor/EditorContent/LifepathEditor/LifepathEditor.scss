@@ -2,6 +2,8 @@
 
 .LifepathEditor {
     padding: $section-padding;
+    height: 100%;
+    width: $content-width;
 
     & > .Section {
         padding-top: 15px;

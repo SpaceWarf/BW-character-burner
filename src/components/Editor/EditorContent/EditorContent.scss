@@ -1,6 +1,18 @@
 @import 'common';
 
 .EditorContent {
+    display: flex;
+    justify-content: center;
     width: 100%;
+    height: calc(100% - #{$editor-footer-height});
+    overflow-y: scroll;
     padding: $section-padding;
+
+    & > .ui.menu {
+        width: 100%;
+        max-width: 1000px;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+    }
 }
