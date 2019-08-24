@@ -1,6 +1,6 @@
 import React from "react";
 import { Menu, Icon } from 'semantic-ui-react';
-import { getLifepaths } from '#Utilities/selectors.js';
+import { getLifepaths } from '#Utilities/data-selectors.js';
 import './CompendiumSidebarContent.scss';
 
 class CompendiumSidebarContent extends React.Component {
@@ -30,7 +30,7 @@ class CompendiumSidebarContent extends React.Component {
 
     getFilteredData(data) {
         const { nested, filter } = this.props;
-        
+
         return nested ?
             data :
             data.filter(item =>

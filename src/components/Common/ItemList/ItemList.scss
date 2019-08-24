@@ -1,6 +1,8 @@
 @import 'common';
 
 .ItemList {
+    max-width: $card-max-width;
+
     & > .insert {
         display: flex;
         justify-content: center;

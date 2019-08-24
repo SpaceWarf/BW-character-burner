@@ -36,7 +36,7 @@ class AddModal extends React.Component {
         switch (type) {
             case 'lifepath':
                 return <Lifepath
-                    key={item.name}
+                    key={`${item.setting}-${item.name}`}
                     lifepath={item}
                     onClick={() => onClick(item)}
                 />;

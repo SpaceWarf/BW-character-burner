@@ -8,15 +8,31 @@ import {
     addLifepath,
     removeLifepath
 } from '#Actions/editor.js';
-import { getBornLifepaths } from '#Utilities/selectors.js';
+import {
+    getBornLifepaths,
+    getLifepaths
+} from '#Utilities/redux-selectors.js';
 import './LifepathList.scss';
 
 class LifepathList extends React.Component {
+
+    getRestrictedLifepaths() {
+        const {
+            selectedBornLifepath,
+            selectedLifepaths,
+            lifepaths
+        } = this.props;
+
+        return lifepaths.filter(lifepath => (
+            !lifepath.isBornLifepath
+        ));
+    }
 
     getList() {
         const {
             lifepathCount,
             bornLifepaths,
+            lifepaths,
             selectedBornLifepath,
             selectedLifepaths,
             onSelectBornLifepath,
@@ -45,9 +61,10 @@ class LifepathList extends React.Component {
                         : <ItemList
                             header="Select a lifepath"
                             type="lifepath"
-                            choices={[]}
+                            choices={this.getRestrictedLifepaths()}
                             items={selectedLifepaths
-                                .find(lifepath => lifepath.index === i) || []
+                                .filter(lifepath => lifepath.index === i)
+                                .map(lifepath => lifepath.lifepath)
                             }
                             maxCount={1}
                             onSelect={lifepath => onAddLifepath(lifepath, i)}
@@ -72,6 +89,7 @@ class LifepathList extends React.Component {
 const mapStateToProps = state => ({
     lifepathCount: state.editor.lifepaths.count,
     bornLifepaths: getBornLifepaths(state),
+    lifepaths: getLifepaths(state),
     selectedBornLifepath: state.editor.lifepaths.selectedBornLifepath,
     selectedLifepaths: state.editor.lifepaths.selectedLifepaths
 });

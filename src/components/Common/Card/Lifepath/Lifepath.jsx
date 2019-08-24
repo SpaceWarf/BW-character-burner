@@ -3,10 +3,10 @@ import { Card, Icon } from 'semantic-ui-react';
 import '../Card.scss';
 import { Menu } from "semantic-ui-react";
 
-const Lifepath = ({ lifepath, linkable, onClick }) => {
+const Lifepath = ({ lifepath, centered, linkable, onClick }) => {
     return (
         <Menu.Item className="Card Lifepath" id={lifepath.name.replace(/\s/g, '')}>
-            <Card onClick={onClick}>
+            <Card className={centered ? 'center' : ''} onClick={onClick}>
                 <Card.Content>
                     <Card.Header className='with-description'>
                         {linkable && <Icon

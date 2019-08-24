@@ -1,12 +1,15 @@
 @import 'common';
 
 .Card {
-    padding: 15px $compendium-card-padding 15px $compendium-card-padding;
+    padding: 10px $compendium-card-padding;
 
     & > .ui.card {
-        margin: 0 auto;
         width: inherit;
-        max-width: 900px;
+
+        &.center {
+            margin: 0 auto;
+            max-width: $card-max-width;
+        }
         
         & > .content {
 
