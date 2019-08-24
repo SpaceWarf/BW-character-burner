@@ -1,19 +1,8 @@
 @import 'common';
 
 .ItemList {
-    & > .AddModal {
+    & > .insert {
         display: flex;
         justify-content: center;
-    }
-}
-
-.ui.large.modal {
-    & > .content {
-        padding-top: 15px;
-
-        & .ui.input {
-            width: 300px;
-            margin: 0 $compendium-card-padding;
-        }
     }
 }

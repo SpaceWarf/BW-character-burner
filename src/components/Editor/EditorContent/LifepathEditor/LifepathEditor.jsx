@@ -1,27 +1,23 @@
 import React from "react";
 import { connect } from 'react-redux';
-import { Header, Button, Image } from 'semantic-ui-react';
+import { Header, Dropdown, Button, Image } from 'semantic-ui-react';
 import {
     selectRace,
-    selectBornLifepath,
-    unselectBornLifepath
+    selectLifepathCount,
 } from '#Actions/editor.js';
-import { getBornLifepaths } from '#Utilities/selectors.js';
-import { races } from '#Utilities/config/editor.config.js';
-import ItemList from '#Components/Common/ItemList/ItemList.jsx';
+import { races, lifepathCounts } from '#Utilities/config/editor.config.js';
+import LifepathList from './LifepathList/LifepathList.jsx';
 import './LifepathEditor.scss';
 
 const LifepathEditor = ({
     selectedRace,
-    bornLifepaths,
-    selectedBornLifepath,
+    lifepathCount,
+    onSelectLifepathCount,
     onSelectRace,
-    onSelectBornLifepath,
-    onUnselectBornLifepath
 }) => {
     return (
         <div className="LifepathEditor">
-            <Header className="section" as="h1">Select your race</Header>
+            <Header className="section" as="h1">Select your character stock</Header>
             <div className="RaceSelector">
                 {races.map(race => (
                     <Button
@@ -40,22 +36,31 @@ const LifepathEditor = ({
                 ))}
             </div>
             {selectedRace &&
-                <div className='BornLifepath Section'>
-                    <Header className="section" as="h1">Select your born lifepath</Header>
-                    <ItemList
-                        header="Select your born lifepath"
-                        items={selectedBornLifepath}
-                        type="lifepath"
-                        choices={bornLifepaths}
-                        maxCount={1}
-                        onSelect={lifepath => onSelectBornLifepath(lifepath)}
-                        onRemove={onUnselectBornLifepath}
-                    />
-                </div>
-            }
-            {selectedBornLifepath.length !== 0 &&
                 <div className='Lifepath Section'>
-                    <Header className="section" as="h1">Select your lifepaths</Header>
+                    <Header className="section" as="h1">Select your character's lifepaths</Header>
+                    <div className="content">
+                        <div className="count">
+                            <Header as="h3">
+                                Your character will have
+                            <Dropdown
+                                    placeholder="0"
+                                    options={lifepathCounts}
+                                    value={lifepathCount}
+                                    onChange={(_, { value }) => onSelectLifepathCount(value)}
+                                    inline
+                                />
+                                lifepaths
+                        </Header>
+                            {lifepathCount &&
+                                <i className="hint">
+                                    {lifepathCounts
+                                        .find(count => count.value === lifepathCount).hint
+                                    }
+                                </i>
+                            }
+                        </div >
+                        {lifepathCount && <LifepathList />}
+                    </div >
                 </div>
             }
         </div>
@@ -64,16 +69,13 @@ const LifepathEditor = ({
 
 const mapStateToProps = state => ({
     selectedRace: state.editor.selectedRace,
-    activeSection: state.editor.activeSection,
-    selectedBornLifepath: state.editor.lifepaths.selectedBornLifepath,
-    bornLifepaths: getBornLifepaths(state)
+    lifepathCount: state.editor.lifepaths.count,
 });
 
 
 const mapDispatchToProps = dispatch => ({
     onSelectRace: race => dispatch(selectRace(race)),
-    onSelectBornLifepath: lifepath => dispatch(selectBornLifepath(lifepath)),
-    onUnselectBornLifepath: () => dispatch(unselectBornLifepath())
+    onSelectLifepathCount: count => dispatch(selectLifepathCount(count)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(LifepathEditor);

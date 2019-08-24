@@ -5,6 +5,20 @@
 
     & > .Section {
         padding-top: 15px;
+
+        &.Lifepath {
+            & > .content {
+                padding: 0 20px;
+
+                .ui.header {
+                    margin-bottom: 5px;
+                }
+
+                .ui.dropdown {
+                    padding-left: 10px;
+                }
+            }
+        }
     }
 
     & > .RaceSelector {

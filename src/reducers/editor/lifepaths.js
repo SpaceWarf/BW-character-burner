@@ -1,6 +1,15 @@
 import { combineReducers } from 'redux';
 import * as types from "#Actions/types.js";
 
+const count = (state = 3, action) => {
+    switch (action.type) {
+        case types.SELECT_LIFEPATH_COUNT:
+            return action.count;
+        default:
+            return state;
+    }
+};
+
 const selectedBornLifepath = (state = [], action) => {
     switch (action.type) {
         case types.SELECT_BORN_LIFEPATH:
@@ -12,6 +21,27 @@ const selectedBornLifepath = (state = [], action) => {
     }
 };
 
+const selectedLifepaths = (state = [], action) => {
+    switch (action.type) {
+        case types.ADD_LIFEPATH:
+            return [
+                ...state,
+                {
+                    lifepath: action.lifepath,
+                    index: action.index
+                }
+            ];
+        case types.REMOVE_LIFEPATH:
+            return state.filter(lifepath => (
+                lifepath.index !== action.index
+            ));
+        default:
+            return state;
+    }
+};
+
 export default combineReducers({
-    selectedBornLifepath
+    count,
+    selectedBornLifepath,
+    selectedLifepaths
 });
