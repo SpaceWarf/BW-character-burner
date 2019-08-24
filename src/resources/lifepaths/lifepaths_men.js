@@ -1072,7 +1072,7 @@ export default
             leads: [
                 'Professional Soldier',
                 'Servitude',
-                'Noble'
+                'Noble Court'
             ],
             skills: {
                 points: 6,
@@ -1114,7 +1114,7 @@ export default
             leads: [
                 'Professional Soldier',
                 'Servitude',
-                'Noble'
+                'Noble Court'
             ],
             skills: {
                 points: 6,
@@ -1317,7 +1317,7 @@ export default
             leads: [
                 'City Dweller',
                 'Peasant',
-                'Noble'
+                'Noble Court'
             ],
             skills: {
                 points: 4,
@@ -1649,7 +1649,7 @@ export default
                 attributes: 'M'
             },
             leads: [
-                'Noble',
+                'Noble Court',
                 'Peasant',
                 'Villager'
             ],
@@ -1682,7 +1682,7 @@ export default
             leads: [
                 'City Dweller',
                 'Peasant',
-                'Noble'
+                'Noble Court'
             ],
             skills: {
                 points: 4,
@@ -1712,7 +1712,7 @@ export default
             },
             leads: [
                 'City Dweller',
-                'Noble',
+                'Noble Court',
                 'Professional Soldier'
             ],
             skills: {
@@ -1806,7 +1806,7 @@ export default
                 points: 1
             }
         },
-		{
+        {
             name: 'City Born',
             isBornLifepath: true,
             setting: 'City Dweller',
@@ -1819,13 +1819,13 @@ export default
                 'Outcast'
             ],
             skills: {
-                generalPoints:  4
+                generalPoints: 4
             },
             traits: {
                 points: 1
             }
         },
-		{
+        {
             name: 'Runner',
             setting: 'City Dweller',
             time: 3,
@@ -1849,7 +1849,7 @@ export default
                 points: 1,
             }
         },
-		{
+        {
             name: 'Urchin',
             setting: 'City Dweller',
             time: 2,
@@ -1864,20 +1864,20 @@ export default
                 from: [
                     'Inconspicuous',
                     'Falsehood',
-					'Streetwise',
-					'Stealthy'
+                    'Streetwise',
+                    'Stealthy'
                 ]
             },
             traits: {
                 points: 1,
                 from: [
                     'Sickly',
-					'Fleet of Foot',
-					'Unheeded'
+                    'Fleet of Foot',
+                    'Unheeded'
                 ]
             }
         },
-		{
+        {
             name: 'Beggar',
             setting: 'City Dweller',
             time: 5,
@@ -1885,30 +1885,30 @@ export default
             leads: [
                 'Outcast',
                 'Servitude',
-				'Villager'
+                'Villager'
             ],
             skills: {
                 points: 6,
                 from: [
                     'City-wise',
                     'City Guard-wise',
-					'Wealth-wise',
-					'Inconspicuous',
-					'Persuasion',
-					'Falsehood'
+                    'Wealth-wise',
+                    'Inconspicuous',
+                    'Persuasion',
+                    'Falsehood'
                 ]
             },
             traits: {
                 points: 1,
                 from: [
                     'Lame',
-					'Downtrodden',
-					'Hurt',
-					'Broken'
+                    'Downtrodden',
+                    'Hurt',
+                    'Broken'
                 ]
             }
         },
-		{
+        {
             name: 'Courier',
             setting: 'City Dweller',
             time: 4,
@@ -1926,14 +1926,14 @@ export default
                 from: [
                     'Riding',
                     'Streetwise',
-					'Countryside-wise'
+                    'Countryside-wise'
                 ]
             },
             traits: {
                 points: 1,
             }
         },
-		{
+        {
             name: 'Laborer',
             setting: 'City Dweller',
             time: 4,
@@ -1945,8 +1945,8 @@ export default
             leads: [
                 'Professional Soldier',
                 'Outcast',
-				'Servitude',
-				'Peasant'
+                'Servitude',
+                'Peasant'
             ],
             skills: {
                 points: 2,
@@ -1959,11 +1959,11 @@ export default
                 points: 2,
                 from: [
                     'Drunk',
-					'Mind-Numbing Work'
+                    'Mind-Numbing Work'
                 ]
             }
         },
-		{
+        {
             name: 'Pilgrim',
             setting: 'City Dweller',
             time: 2,
@@ -1975,26 +1975,26 @@ export default
             leads: [
                 'Religious',
                 'Servitude',
-				'Villager'
+                'Villager'
             ],
             skills: {
                 points: 4,
                 from: [
                     'Religious Diatribe',
                     'City-wise',
-					'Shrine-wise',
-					'Doctrine'
+                    'Shrine-wise',
+                    'Doctrine'
                 ]
             },
             traits: {
                 points: 2,
                 from: [
                     'Tall Tale Teller',
-					'Stinky'
+                    'Stinky'
                 ]
             }
         },
-		{
+        {
             name: 'Groom',
             setting: 'City Dweller',
             time: 4,
@@ -2006,18 +2006,18 @@ export default
             leads: [
                 'Peasant',
                 'Villager',
-				'Professional Soldier'
+                'Professional Soldier'
             ],
             skills: {
                 points: 4,
                 from: [
                     'Road-wise',
                     'Driving',
-					'Riding',
-					'Animal Husbandry',
-					'Mending',
-					'City-wise',
-					'Traveler-wise'
+                    'Riding',
+                    'Animal Husbandry',
+                    'Mending',
+                    'City-wise',
+                    'Traveler-wise'
                 ]
             },
             traits: {
@@ -2027,7 +2027,7 @@ export default
                 ]
             }
         },
-		{
+        {
             name: 'Duelist',
             setting: 'City Dweller',
             time: 4,
@@ -2039,37 +2039,37 @@ export default
             leads: [
                 'Professional Soldier',
                 'Outcast',
-				'Servitude'
+                'Servitude'
             ],
             skills: {
                 points: 7,
                 from: [
                     'Sword',
                     'Brawling',
-					'Two-Fisted Fighting Training',
-					'Streetwise',
-					'Haggling',
-					'Conspicuous',
-					'Trial by Combat-wise'
+                    'Two-Fisted Fighting Training',
+                    'Streetwise',
+                    'Haggling',
+                    'Conspicuous',
+                    'Trial by Combat-wise'
                 ]
             },
             traits: {
                 points: 1,
                 from: [
                     'Mercenary',
-					'Cold-Blooded',
-					'Fearless'
+                    'Cold-Blooded',
+                    'Fearless'
                 ]
             },
             'requires': [
                 'Squire',
                 'Outcast',
-				'Professional Soldier',
-				'Village Guard',
-				'City Guard'
+                'Professional Soldier',
+                'Village Guard',
+                'City Guard'
             ]
         },
-		{
+        {
             name: 'Coin Clipper',
             setting: 'City Dweller',
             time: 6,
@@ -2087,10 +2087,10 @@ export default
                 from: [
                     'Streetwise',
                     'Forgery',
-					'Falsehood',
-					'Intimidation',
-					'Counterfeiting',
-					'Coin-wise'
+                    'Falsehood',
+                    'Intimidation',
+                    'Counterfeiting',
+                    'Coin-wise'
                 ]
             },
             traits: {
@@ -2100,7 +2100,7 @@ export default
                 ]
             }
         },
-		{
+        {
             name: 'Pickpocket',
             setting: 'City Dweller',
             time: 4,
@@ -2112,15 +2112,15 @@ export default
             leads: [
                 'Outcast',
                 'Villager',
-				'Servitude'
+                'Servitude'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Inconspicuous',
                     'Streetwise',
-					'Sleight of Hand',
-					'Crowd-wise'
+                    'Sleight of Hand',
+                    'Crowd-wise'
                 ]
             },
             traits: {
@@ -2130,7 +2130,7 @@ export default
                 ]
             }
         },
-		{
+        {
             name: 'Street Thug',
             setting: 'City Dweller',
             time: 3,
@@ -2142,26 +2142,26 @@ export default
             leads: [
                 'Outcast',
                 'Servitude',
-				'Professional Soldier'
+                'Professional Soldier'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Brawling',
                     'Intimidation',
-					'Streetwise',
-					'Darkened Streets-wise'
+                    'Streetwise',
+                    'Darkened Streets-wise'
                 ]
             },
             traits: {
                 points: 1,
                 from: [
                     'Cruel',
-					'Street Smart'
+                    'Street Smart'
                 ]
             }
         },
-		{
+        {
             name: 'Criminal',
             setting: 'City Dweller',
             time: 5,
@@ -2173,29 +2173,29 @@ export default
             leads: [
                 'Outcast',
                 'Villager',
-				'Professional Soldier'
+                'Professional Soldier'
             ],
             skills: {
                 points: 6,
                 from: [
                     'Inconspicuous',
                     'Streetwise',
-					'Intimidation',
-					'Knives',
-					'Climbing'
+                    'Intimidation',
+                    'Knives',
+                    'Climbing'
                 ]
             },
             traits: {
                 points: 2,
                 from: [
                     'Cynical',
-					'Poker Face',
-					'Rainman',
-					'Alert'
+                    'Poker Face',
+                    'Rainman',
+                    'Alert'
                 ]
             }
         },
-		{
+        {
             name: 'Confidence Man',
             setting: 'City Dweller',
             time: 4,
@@ -2203,23 +2203,23 @@ export default
             leads: [
                 'Outcast',
                 'Professional Soldier',
-				'Villager'
+                'Villager'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Falsehood',
                     'Inconspicuous',
-					'Disguise',
-					'Persuasion',
-					'Grift-wise'
+                    'Disguise',
+                    'Persuasion',
+                    'Grift-wise'
                 ]
             },
             traits: {
                 points: 1
             }
         },
-		{
+        {
             name: 'City Peddler',
             setting: 'City Dweller',
             time: 5,
@@ -2227,17 +2227,17 @@ export default
             leads: [
                 'Villager',
                 'Servitude',
-				'Peasant',
-				'Outcast'
+                'Peasant',
+                'Outcast'
             ],
             skills: {
                 points: 7,
                 from: [
                     'Mending',
                     'Sing',
-					'Haggling',
-					'Chandler',
-					'Persuasion'
+                    'Haggling',
+                    'Chandler',
+                    'Persuasion'
                 ]
             },
             traits: {
@@ -2247,7 +2247,7 @@ export default
                 ]
             }
         },
-		{
+        {
             name: 'Sailor',
             setting: 'City Dweller',
             time: 5,
@@ -2259,29 +2259,29 @@ export default
             leads: [
                 'Professional Soldier',
                 'Seafaring',
-				'Peasant',
-				'Servitude'
+                'Peasant',
+                'Servitude'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Rigging',
                     'Knots',
-					'Brawling',
-					'Mending',
-					'Sing',
-					'Gambling'
+                    'Brawling',
+                    'Mending',
+                    'Sing',
+                    'Gambling'
                 ]
             },
             traits: {
                 points: 1,
                 from: [
                     'Superstitious',
-					'Sea Legs'
+                    'Sea Legs'
                 ]
             }
         },
-		{
+        {
             name: 'Student',
             setting: 'City Dweller',
             time: 4,
@@ -2293,69 +2293,69 @@ export default
             leads: [
                 'Peasant',
                 'Villager',
-				'City Dweller',
-				'Noble Court',
-				'Religious',
-				'Professional Soldier',
-				'Seafaring',
-				'Servitude',
-				'Outcast'
+                'City Dweller',
+                'Noble Court',
+                'Religious',
+                'Professional Soldier',
+                'Seafaring',
+                'Servitude',
+                'Outcast'
             ],
             skills: {
                 points: 11,
                 from: [
                     'Write',
                     'Read',
-					'Philosophy',
-					'Rule of Law',
-					'History',
-					'Symbology',
-					'Anatomy',
-					'Astrology',
-					'Inconspicuous',
-					'Streetwise',
-					'City-wise'
+                    'Philosophy',
+                    'Rule of Law',
+                    'History',
+                    'Symbology',
+                    'Anatomy',
+                    'Astrology',
+                    'Inconspicuous',
+                    'Streetwise',
+                    'City-wise'
                 ]
             },
             traits: {
                 points: 3,
                 from: [
                     'Rabble Rouser',
-					'Drunk',
-					'Geometric'
+                    'Drunk',
+                    'Geometric'
                 ]
             }
         },
-		{
+        {
             name: 'Ganymede',
             setting: 'City Dweller',
             time: 5,
             res: 15,
             leads: [
                 'Noble Court',
-				'Servitude',
-				'Outcast'
+                'Servitude',
+                'Outcast'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Fashion-wise',
                     'Inconspicuous',
-					'Conspicuous',
-					'Soothing Platitudes'
+                    'Conspicuous',
+                    'Soothing Platitudes'
                 ]
             },
             traits: {
                 points: 2,
                 from: [
                     'Catamite',
-					'Flamboyant',
-					'Comely',
-					'Sharp Dresser'
+                    'Flamboyant',
+                    'Comely',
+                    'Sharp Dresser'
                 ]
             }
         },
-		{
+        {
             name: 'Dilettante',
             setting: 'City Dweller',
             time: 3,
@@ -2366,27 +2366,27 @@ export default
             },
             leads: [
                 'Villager',
-				'Noble Court',
-				'Outcast'
+                'Noble Court',
+                'Outcast'
             ],
             skills: {
                 points: 4,
                 from: [
                     'Sorcery-wise',
                     'Obscure History',
-					'Falsehood'
+                    'Falsehood'
                 ]
             },
             traits: {
                 points: 1,
                 from: [
                     'Superstitious',
-					'Entropic',
-					'Cipher'
+                    'Entropic',
+                    'Cipher'
                 ]
             }
         },
-		{
+        {
             name: 'Neophyte Sorcerer',
             setting: 'City Dweller',
             time: 6,
@@ -2398,29 +2398,29 @@ export default
             leads: [
                 'Peasant',
                 'Villager',
-				'Servitude',
-				'Outcast'
+                'Servitude',
+                'Outcast'
             ],
             skills: {
                 points: 6,
                 from: [
                     'Write',
                     'Read',
-					'Research',
-					'Symbology',
-					'Great Masters-wise'
+                    'Research',
+                    'Symbology',
+                    'Great Masters-wise'
                 ]
             },
             traits: {
                 points: 1,
                 from: [
                     'Extremely Respectful of One\'s Betters',
-					'Bitter',
-					'Gifted'
+                    'Bitter',
+                    'Gifted'
                 ]
             }
         },
-		{
+        {
             name: 'Temple Acolyte',
             setting: 'City Dweller',
             time: 5,
@@ -2431,30 +2431,30 @@ export default
             },
             leads: [
                 'Peasant',
-				'Religious',
-				'Servitude',
-				'Outcast'
+                'Religious',
+                'Servitude',
+                'Outcast'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Doctrine',
                     'Bureaucracy',
-					'Write',
-					'Read',
-					'Temple-wise'
+                    'Write',
+                    'Read',
+                    'Temple-wise'
                 ]
             },
             traits: {
                 points: 1,
                 from: [
                     'Believer',
-					'Tonsured',
-					'Faithful'
+                    'Tonsured',
+                    'Faithful'
                 ]
             }
         },
-		{
+        {
             name: 'Sculptor',
             setting: 'City Dweller',
             time: 5,
@@ -2465,17 +2465,17 @@ export default
             },
             leads: [
                 'Peasant',
-				'Noble Court',
-				'Outcast'
+                'Noble Court',
+                'Outcast'
             ],
             skills: {
                 points: 6,
                 from: [
                     'Sculpture',
                     'Mason',
-					'Blacksmith',
-					'Carpentry',
-					'Stone-wise'
+                    'Blacksmith',
+                    'Carpentry',
+                    'Stone-wise'
                 ]
             },
             traits: {
@@ -2485,7 +2485,7 @@ export default
                 ]
             }
         },
-		{
+        {
             name: 'Painter',
             setting: 'City Dweller',
             time: 5,
@@ -2496,28 +2496,28 @@ export default
             },
             leads: [
                 'Peasant',
-				'Noble Court',
-				'Outcast'
+                'Noble Court',
+                'Outcast'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Painting',
                     'Illuminations',
-					'Anatomy',
-					'Paint-wise'
+                    'Anatomy',
+                    'Paint-wise'
                 ]
             },
             traits: {
                 points: 2,
                 from: [
                     'Odd',
-					'Perspective',
-					'Greater Muse'
+                    'Perspective',
+                    'Greater Muse'
                 ]
             }
         },
-		{
+        {
             name: 'Composer',
             setting: 'City Dweller',
             time: 4,
@@ -2528,27 +2528,27 @@ export default
             },
             leads: [
                 'Peasant',
-				'Noble Court',
-				'Outcast'
+                'Noble Court',
+                'Outcast'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Music Composition',
                     'Poetry',
-					'Sing',
-					'Musical Instrument'
+                    'Sing',
+                    'Musical Instrument'
                 ]
             },
             traits: {
                 points: 2,
                 from: [
                     'Esoteric',
-					'Remote'
+                    'Remote'
                 ]
             }
         },
-		{
+        {
             name: 'Dramaturge',
             setting: 'City Dweller',
             time: 4,
@@ -2559,16 +2559,16 @@ export default
             },
             leads: [
                 'Peasant',
-				'Noble Court',
-				'Outcast'
+                'Noble Court',
+                'Outcast'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Playwright',
                     'Composition',
-					'Write',
-					'Drama-wise'
+                    'Write',
+                    'Drama-wise'
                 ]
             },
             traits: {
@@ -2578,7 +2578,7 @@ export default
                 ]
             }
         },
-		{
+        {
             name: 'Performer',
             setting: 'City Dweller',
             time: 3,
@@ -2589,19 +2589,19 @@ export default
             },
             leads: [
                 'Villager',
-				'Professional Soldier',
-				'Outcast'
+                'Professional Soldier',
+                'Outcast'
             ],
             skills: {
                 points: 6,
                 from: [
                     'Acting',
                     'Persuasion',
-					'Sing',
-					'Falsehood',
-					'Conspicuous',
-					'Sleight of Hand',
-					'Musical Instrument'
+                    'Sing',
+                    'Falsehood',
+                    'Conspicuous',
+                    'Sleight of Hand',
+                    'Musical Instrument'
                 ]
             },
             traits: {
@@ -2611,7 +2611,7 @@ export default
                 ]
             }
         },
-		{
+        {
             name: 'Tinkerer',
             setting: 'City Dweller',
             time: 7,
@@ -2623,38 +2623,38 @@ export default
             leads: [
                 'Peasant',
                 'Villager',
-				'Outcast'
+                'Outcast'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Mending',
                     'Scavenging',
-					'Junk-wise'
+                    'Junk-wise'
                 ]
             },
             traits: {
                 points: 2
             }
         },
-		{
+        {
             name: 'Coal Man',
             setting: 'City Dweller',
             time: 4,
             res: 5,
             leads: [
                 'Peasant',
-				'Professional Soldier',
-				'Servitude',
-				'Outcast'
+                'Professional Soldier',
+                'Servitude',
+                'Outcast'
             ],
             skills: {
                 points: 4,
                 from: [
                     'Firebuilding',
                     'Streetwise',
-					'Charcoal-wise',
-					'Haggling'
+                    'Charcoal-wise',
+                    'Haggling'
                 ]
             },
             traits: {
@@ -2664,7 +2664,7 @@ export default
                 ]
             }
         },
-		{
+        {
             name: 'Seamstress',
             setting: 'City Dweller',
             time: 5,
@@ -2678,19 +2678,19 @@ export default
                 from: [
                     'Sewing',
                     'Embroidery',
-					'Clothing-wise',
-					'Fashion-wise'
+                    'Clothing-wise',
+                    'Fashion-wise'
                 ]
             },
             traits: {
                 points: 1,
                 from: [
                     'Fretful',
-					'Sharp Dresser'
+                    'Sharp Dresser'
                 ]
             }
         },
-		{
+        {
             name: 'Barkeep',
             setting: 'City Dweller',
             time: 5,
@@ -2704,7 +2704,7 @@ export default
                 from: [
                     'Drink-wise',
                     'Drunk-wise',
-					'Persuasion'
+                    'Persuasion'
                 ]
             },
             traits: {
@@ -2714,7 +2714,7 @@ export default
                 ]
             }
         },
-		{
+        {
             name: 'Shopkeeper',
             setting: 'City Dweller',
             time: 6,
@@ -2732,15 +2732,15 @@ export default
                 from: [
                     'Merchant-wise',
                     'Haggling',
-					'Accounting',
-					'Observation'
+                    'Accounting',
+                    'Observation'
                 ]
             },
-			traits: {
-				
-			}
+            traits: {
+
+            }
         },
-		{
+        {
             name: 'Baker',
             setting: 'City Dweller',
             time: 6,
@@ -2754,8 +2754,8 @@ export default
                 from: [
                     'Baking',
                     'Cooking',
-					'Daily Bread-wise',
-					'Sweet Tooth-wise'
+                    'Daily Bread-wise',
+                    'Sweet Tooth-wise'
                 ]
             },
             traits: {
@@ -2765,7 +2765,7 @@ export default
                 ]
             }
         },
-		{
+        {
             name: 'Alewife',
             setting: 'City Dweller',
             time: 6,
@@ -2777,16 +2777,16 @@ export default
             leads: [
                 'Peasant',
                 'Villager',
-				'Noble Court'
+                'Noble Court'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Brewer',
                     'Mending',
-					'Drinking',
-					'Administration',
-					'Drunk Husband-wise'
+                    'Drinking',
+                    'Administration',
+                    'Drunk Husband-wise'
                 ]
             },
             traits: {
@@ -2796,7 +2796,7 @@ export default
                 ]
             }
         },
-		{
+        {
             name: 'Conner',
             setting: 'City Dweller',
             time: 6,
@@ -2804,27 +2804,27 @@ export default
             leads: [
                 'Peasant',
                 'Villager',
-				'Noble Court'
+                'Noble Court'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Brewer',
                     'Mending',
-					'Drinking',
-					'Cooper',
-					'Beer-wise'
+                    'Drinking',
+                    'Cooper',
+                    'Beer-wise'
                 ]
             },
             traits: {
                 points: 1,
                 from: [
                     'Red Cheeks',
-					'Drunk'
+                    'Drunk'
                 ]
             }
         },
-		{
+        {
             name: 'Clerk',
             setting: 'City Dweller',
             time: 4,
@@ -2835,25 +2835,25 @@ export default
             },
             leads: [
                 'Villager',
-				'Professional Soldier',
-				'Outcast'
+                'Professional Soldier',
+                'Outcast'
             ],
             skills: {
                 points: 4,
                 from: [
                     'Bureaucracy',
                     'Write',
-					'Read',
-					'Accounting',
-					'Bribe-wise',
-					'Paperwork-wise'
+                    'Read',
+                    'Accounting',
+                    'Bribe-wise',
+                    'Paperwork-wise'
                 ]
             },
             traits: {
                 points: 1
             }
         },
-		{
+        {
             name: 'Scribe',
             setting: 'City Dweller',
             time: 7,
@@ -2871,24 +2871,24 @@ export default
                 from: [
                     'Write',
                     'Illuminations',
-					'Read',
-					'Handwriting-wise'
+                    'Read',
+                    'Handwriting-wise'
                 ]
             },
             traits: {
                 points: 1,
                 from: [
                     'Near-Sighted',
-					'Cramped Hands'
+                    'Cramped Hands'
                 ]
             },
             'requires': [
                 'Student',
                 'Acolyte',
-				'Clerk'
+                'Clerk'
             ]
         },
-		{
+        {
             name: 'Accountant',
             setting: 'City Dweller',
             time: 10,
@@ -2906,9 +2906,9 @@ export default
                 from: [
                     'Accounting',
                     'Bureaucracy',
-					'Write',
-					'Read',
-					'Ledger-wise'
+                    'Write',
+                    'Read',
+                    'Ledger-wise'
                 ]
             },
             traits: {
@@ -2920,10 +2920,10 @@ export default
             'requires': [
                 'Clerk',
                 'Young Lady',
-				'Student'
+                'Student'
             ]
         },
-		{
+        {
             name: 'Scholar',
             setting: 'City Dweller',
             time: 10,
@@ -2934,51 +2934,51 @@ export default
             },
             leads: [
                 'Villager',
-				'Noble Court',
-				'Outcast'
+                'Noble Court',
+                'Outcast'
             ],
             skills: {
                 points: 11,
                 from: [
                     'Read',
                     'Research',
-					'History',
-					'Philosophy',
-					'Symbology',
-					'Instruction',
-					'Illuminations',
-					'Foreign Languages',
-					'Ancient Languages'
+                    'History',
+                    'Philosophy',
+                    'Symbology',
+                    'Instruction',
+                    'Illuminations',
+                    'Foreign Languages',
+                    'Ancient Languages'
                 ]
             },
             traits: {
                 points: 1,
                 from: [
                     'Know It All',
-					'Bookworm'
+                    'Bookworm'
                 ]
             },
             'requires': [
                 'Scribe',
                 'Thinker',
-				'Archivist',
-				'Interpreter',
-				'Custodian',
-				'Bishop',
-				'Recluse Wizard',
-				'Neophyte Sorcerer',
-				'Sorcerer',
-				'Court Sorcerer',
-				'Wizard of War',
-				'Weather Witch',
-				'Rogue Wizard',
-				'Crazy Witch',
-				'Mad Summoner',
-				'Augur',
-				'Arcane Devotee'
+                'Archivist',
+                'Interpreter',
+                'Custodian',
+                'Bishop',
+                'Recluse Wizard',
+                'Neophyte Sorcerer',
+                'Sorcerer',
+                'Court Sorcerer',
+                'Wizard of War',
+                'Weather Witch',
+                'Rogue Wizard',
+                'Crazy Witch',
+                'Mad Summoner',
+                'Augur',
+                'Arcane Devotee'
             ]
         },
-		{
+        {
             name: 'Moneylender',
             setting: 'City Dweller',
             time: 8,
@@ -2986,14 +2986,14 @@ export default
             leads: [
                 'Peasant',
                 'Villager',
-				'Outcast'
+                'Outcast'
             ],
             skills: {
                 points: 4,
                 from: [
                     'Currency-wise',
                     'Haggling',
-					'Accounting'
+                    'Accounting'
                 ]
             },
             traits: {
@@ -3003,7 +3003,7 @@ export default
                 ]
             }
         },
-		{
+        {
             name: 'Tax Collector',
             setting: 'City Dweller',
             time: 5,
@@ -3015,15 +3015,15 @@ export default
             leads: [
                 'Peasant',
                 'Villager',
-				'Outcast'
+                'Outcast'
             ],
             skills: {
                 points: 4,
                 from: [
                     'Intimidation',
                     'Accounting',
-					'Haggling',
-					'Interrogation'
+                    'Haggling',
+                    'Interrogation'
                 ]
             },
             traits: {
@@ -3033,7 +3033,7 @@ export default
                 ]
             }
         },
-		{
+        {
             name: 'Taskmaster',
             setting: 'City Dweller',
             time: 6,
@@ -3045,27 +3045,27 @@ export default
             leads: [
                 'Peasant',
                 'Villager',
-				'Professional Soldier'
+                'Professional Soldier'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Intimidation',
                     'Brawling',
-					'Sing',
-					'Conspicuous',
-					'Laborer-wise'
+                    'Sing',
+                    'Conspicuous',
+                    'Laborer-wise'
                 ]
             },
             traits: {
                 points: 1,
                 from: [
                     'Intimidating',
-					'Dreadful'
+                    'Dreadful'
                 ]
             }
         },
-		{
+        {
             name: 'Mercenary Captain',
             setting: 'City Dweller',
             time: 5,
@@ -3075,18 +3075,18 @@ export default
                 attributes: 'M/P'
             },
             leads: [
-				'Professional Soldier',
-				'Seafaring',
-				'Outcast'
+                'Professional Soldier',
+                'Seafaring',
+                'Outcast'
             ],
             skills: {
                 points: 6,
                 from: [
                     'Pilot',
                     'Fat Merchant-wise',
-					'Sword',
-					'Climbing',
-					'Intimidation'
+                    'Sword',
+                    'Climbing',
+                    'Intimidation'
                 ]
             },
             traits: {
@@ -3098,10 +3098,10 @@ export default
             'requires': [
                 'Sailor',
                 'Pirate',
-				'Knight'
+                'Knight'
             ]
         },
-		{
+        {
             name: 'City Guard',
             setting: 'City Dweller',
             time: 5,
@@ -3111,17 +3111,17 @@ export default
                 attributes: 'P'
             },
             leads: [
-				'Professional Soldier',
-				'Outcast'
+                'Professional Soldier',
+                'Outcast'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Brawling',
                     'Intimidation',
-					'Drinking',
-					'Appropriate Weapons',
-					'Armor Training'
+                    'Drinking',
+                    'Appropriate Weapons',
+                    'Armor Training'
                 ]
             },
             traits: {
@@ -3131,7 +3131,7 @@ export default
                 ]
             }
         },
-		{
+        {
             name: 'Sergeant-at-Arms',
             setting: 'City Dweller',
             time: 6,
@@ -3141,16 +3141,16 @@ export default
                 attributes: 'P'
             },
             leads: [
-				'Professional Soldier',
-				'Outcast'
+                'Professional Soldier',
+                'Outcast'
             ],
             skills: {
                 points: 6,
                 from: [
                     'Intimidation',
                     'Appropriate Weapons',
-					'Armor Training',
-					'Field Dressing'
+                    'Armor Training',
+                    'Field Dressing'
                 ]
             },
             traits: {
@@ -3161,20 +3161,20 @@ export default
             },
             'requires': [
                 'Village Guard',
-				'City Guard',
-				'Guard Captain',
-				'Village Sergeant',
-				'Corrupt Sergeant',
-				'Marine',
-				'First Mate',
-				'Foot Soldier',
-				'Freebooter',
-				'Squire',
-				'Man-at-Arms',
-				'Cavalryman'
+                'City Guard',
+                'Guard Captain',
+                'Village Sergeant',
+                'Corrupt Sergeant',
+                'Marine',
+                'First Mate',
+                'Foot Soldier',
+                'Freebooter',
+                'Squire',
+                'Man-at-Arms',
+                'Cavalryman'
             ]
         },
-		{
+        {
             name: 'Guard Captain',
             setting: 'City Dweller',
             time: 6,
@@ -3184,18 +3184,18 @@ export default
                 attributes: 'M'
             },
             leads: [
-				'Noble Court',
-				'Professional Soldier',
-				'Outcast'
+                'Noble Court',
+                'Professional Soldier',
+                'Outcast'
             ],
             skills: {
                 points: 6,
                 from: [
                     'Etiquette',
                     'Riding',
-					'Intimidation',
-					'Command',
-					'Appropriate Weapons'
+                    'Intimidation',
+                    'Command',
+                    'Appropriate Weapons'
                 ]
             },
             traits: {
@@ -3207,13 +3207,13 @@ export default
             'requires': [
                 'Knight',
                 'Captain',
-				'Village Sergeant',
-				'Corrupt Sergeant',
-				'Sergeant-at-Arms',
-				'Sergeant'
+                'Village Sergeant',
+                'Corrupt Sergeant',
+                'Sergeant-at-Arms',
+                'Sergeant'
             ]
         },
-		{
+        {
             name: 'Apprentice',
             setting: 'City Dweller',
             time: 7,
@@ -3225,29 +3225,29 @@ export default
             leads: [
                 'Peasant',
                 'Villager',
-				'Professional Soldier',
-				'Seafaring'
+                'Professional Soldier',
+                'Seafaring'
             ],
             skills: {
                 points: 6,
                 from: [
                     'Mending',
                     'Write',
-					'Read',
-					'Hauling',
-					'Driving',
-					'Ditch Digging'
+                    'Read',
+                    'Hauling',
+                    'Driving',
+                    'Ditch Digging'
                 ]
             },
             traits: {
                 points: 2,
                 from: [
                     'Broken In',
-					'Back-Breaking Labor'
+                    'Back-Breaking Labor'
                 ]
             }
         },
-		{
+        {
             name: 'Apprentice Artisan',
             setting: 'City Dweller',
             time: 8,
@@ -3258,29 +3258,29 @@ export default
             },
             leads: [
                 'Villager',
-				'Professional Soldier'
+                'Professional Soldier'
             ],
             skills: {
                 points: 8,
                 from: [
                     'Artisan-wise',
                     'Mason',
-					'Blacksmith',
-					'Coppersmith',
-					'Locksmith',
-					'Weaponsmith',
-					'Whitesmith',
-					'Carpentry',
-					'Write',
-					'Read',
-					'Jargon'
+                    'Blacksmith',
+                    'Coppersmith',
+                    'Locksmith',
+                    'Weaponsmith',
+                    'Whitesmith',
+                    'Carpentry',
+                    'Write',
+                    'Read',
+                    'Jargon'
                 ]
             },
             traits: {
                 points: 1
             }
         },
-		{
+        {
             name: 'Journeyman',
             setting: 'City Dweller',
             time: 6,
@@ -3292,33 +3292,33 @@ export default
             leads: [
                 'Peasant',
                 'Villager',
-				'Professional Soldier',
-				'Seafaring'
+                'Professional Soldier',
+                'Seafaring'
             ],
             skills: {
                 points: 7,
                 from: [
                     'Haggling',
                     'Appraisal',
-					'Blacksmith',
-					'Carpentry',
-					'Tanner',
-					'Potter',
-					'Cooper'
+                    'Blacksmith',
+                    'Carpentry',
+                    'Tanner',
+                    'Potter',
+                    'Cooper'
                 ]
             },
             traits: {
                 points: 1,
                 from: [
                     'Made Man',
-					'Geometric'
+                    'Geometric'
                 ]
             },
             'requires': [
                 'Apprentice'
             ]
         },
-		{
+        {
             name: 'Engraver',
             setting: 'City Dweller',
             time: 7,
@@ -3328,15 +3328,15 @@ export default
                 attributes: 'P'
             },
             leads: [
-				'Noble Court',
-				'Professional Soldier'
+                'Noble Court',
+                'Professional Soldier'
             ],
             skills: {
                 points: 4,
                 from: [
                     'Engraving',
                     'Etching',
-					'Jargon'
+                    'Jargon'
                 ]
             },
             traits: {
@@ -3349,7 +3349,7 @@ export default
                 'Journeyman'
             ]
         },
-		{
+        {
             name: 'Saddler',
             setting: 'City Dweller',
             time: 8,
@@ -3360,18 +3360,18 @@ export default
             },
             leads: [
                 'Villager',
-				'Noble Court',
-				'Professional Soldier'
+                'Noble Court',
+                'Professional Soldier'
             ],
             skills: {
                 points: 6,
                 from: [
                     'Saddlery',
                     'Tanner',
-					'Sewing',
-					'Embroidery',
-					'Mending',
-					'Mount-wise'
+                    'Sewing',
+                    'Embroidery',
+                    'Mending',
+                    'Mount-wise'
                 ]
             },
             traits: {
@@ -3381,24 +3381,24 @@ export default
                 'Journeyman'
             ]
         },
-		{
+        {
             name: 'Armorer',
             setting: 'City Dweller',
             time: 10,
             res: 25,
             leads: [
-				'Noble Court',
-				'Professional Soldier',
-				'Outcast'
+                'Noble Court',
+                'Professional Soldier',
+                'Outcast'
             ],
             skills: {
                 points: 7,
                 from: [
                     'Swordsman-wise',
                     'Blacksmith',
-					'Tanner',
-					'Armorer',
-					'Weaponsmith'
+                    'Tanner',
+                    'Armorer',
+                    'Weaponsmith'
                 ]
             },
             traits: {
@@ -3411,7 +3411,7 @@ export default
                 'Journeyman'
             ]
         },
-		{
+        {
             name: 'Plumber',
             setting: 'City Dweller',
             time: 7,
@@ -3421,16 +3421,16 @@ export default
                 attributes: 'M'
             },
             leads: [
-				'Noble Court',
-				'Outcast'
+                'Noble Court',
+                'Outcast'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Plumbing',
                     'Engineer',
-					'Coppersmith',
-					'Waterworks'
+                    'Coppersmith',
+                    'Waterworks'
                 ]
             },
             traits: {
@@ -3443,7 +3443,7 @@ export default
                 'Journeyman'
             ]
         },
-		{
+        {
             name: 'Locksmith',
             setting: 'City Dweller',
             time: 8,
@@ -3461,7 +3461,7 @@ export default
                 from: [
                     'Locksmith',
                     'Haggling',
-					'Lock-wise'
+                    'Lock-wise'
                 ]
             },
             traits: {
@@ -3474,7 +3474,7 @@ export default
                 'Journeyman'
             ]
         },
-		{
+        {
             name: 'Jeweler',
             setting: 'City Dweller',
             time: 9,
@@ -3488,9 +3488,9 @@ export default
                 from: [
                     'Jeweler',
                     'Lapidary',
-					'Appraisal',
-					'Haggling',
-					'Falsehood'
+                    'Appraisal',
+                    'Haggling',
+                    'Falsehood'
                 ]
             },
             traits: {
@@ -3503,24 +3503,24 @@ export default
                 'Journeyman'
             ]
         },
-		{
+        {
             name: 'Gaol Warden',
             setting: 'City Dweller',
             time: 4,
             res: 15,
             leads: [
                 'Villager',
-				'Noble Court',
-				'Professional Soldier',
-				'Outcast'
+                'Noble Court',
+                'Professional Soldier',
+                'Outcast'
             ],
             skills: {
                 points: 4,
                 from: [
                     'Administration',
                     'Etiquette',
-					'Gaol-wise',
-					'Everybody\'s Innocent-wise'
+                    'Gaol-wise',
+                    'Everybody\'s Innocent-wise'
                 ]
             },
             traits: {
@@ -3529,12 +3529,12 @@ export default
             'requires': [
                 'Born Noble',
                 'Merchant',
-				'Sergeant',
-				'Man-at-Arms',
-				'Judge'
+                'Sergeant',
+                'Man-at-Arms',
+                'Judge'
             ]
         },
-		{
+        {
             name: 'Advocate',
             setting: 'City Dweller',
             time: 6,
@@ -3545,17 +3545,17 @@ export default
             },
             leads: [
                 'Villager',
-				'Noble Court',
-				'Outcast'
+                'Noble Court',
+                'Outcast'
             ],
             skills: {
                 points: 6,
                 from: [
                     'Rule of Law',
                     'Bureaucracy',
-					'Persuasion',
-					'History',
-					'Rhetoric'
+                    'Persuasion',
+                    'History',
+                    'Rhetoric'
                 ]
             },
             traits: {
@@ -3569,7 +3569,7 @@ export default
                 'Young Lady'
             ]
         },
-		{
+        {
             name: 'Doctor',
             setting: 'City Dweller',
             time: 7,
@@ -3580,17 +3580,17 @@ export default
             },
             leads: [
                 'Villager',
-				'Noble Court',
-				'Outcast'
+                'Noble Court',
+                'Outcast'
             ],
             skills: {
                 points: 6,
                 from: [
                     'Anatomy',
                     'Apothecary',
-					'Bloodletting',
-					'Surgery',
-					'Soothing Platitudes'
+                    'Bloodletting',
+                    'Surgery',
+                    'Soothing Platitudes'
                 ]
             },
             traits: {
@@ -3604,7 +3604,7 @@ export default
                 'Young Lady'
             ]
         },
-		{
+        {
             name: 'Physician',
             setting: 'City Dweller',
             time: 5,
@@ -3614,17 +3614,17 @@ export default
                 attributes: 'M'
             },
             leads: [
-				'Noble Court',
-				'Professional Soldier'
+                'Noble Court',
+                'Professional Soldier'
             ],
             skills: {
                 points: 6,
                 from: [
                     'Herbalism',
                     'Apothecary',
-					'Anatomy',
-					'Research',
-					'Herbalist-wise'
+                    'Anatomy',
+                    'Research',
+                    'Herbalist-wise'
                 ]
             },
             traits: {
@@ -3633,60 +3633,60 @@ export default
             'requires': [
                 'Midwife',
                 'Young Lady',
-				'Student'
+                'Student'
             ]
         },
-		{
+        {
             name: 'Hospital Warden',
             setting: 'City Dweller',
             time: 4,
             res: 15,
             leads: [
-				'Religious',
-				'Servitude',
-				'Outcast'
+                'Religious',
+                'Servitude',
+                'Outcast'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Administration',
                     'Beggar-wise',
-					'Vagrant-wise',
-					'Leper-wise'
+                    'Vagrant-wise',
+                    'Leper-wise'
                 ]
             },
             traits: {
                 points: 2,
                 from: [
                     'Overworked',
-					'Generous',
-					'Venal',
-					'Hypochondriac'
+                    'Generous',
+                    'Venal',
+                    'Hypochondriac'
                 ]
             },
             'requires': [
                 'lifepath:Noble',
                 'lifepath:Noble Court',
-				'lifepath:Religious'
+                'lifepath:Religious'
             ]
         },
-		{
+        {
             name: 'Banker',
             setting: 'City Dweller',
             time: 10,
             res: 60,
             leads: [
-				'Noble',
-				'Noble Court'
+                'Noble',
+                'Noble Court'
             ],
             skills: {
                 points: 4,
                 from: [
                     'Accounting',
                     'Administration',
-					'Currency-wise',
+                    'Currency-wise',
                 ],
-				generalPoints: 2
+                generalPoints: 2
             },
             traits: {
                 points: 1,
@@ -3697,12 +3697,12 @@ export default
             'requires': [
                 'Merchant',
                 'Moneylender',
-				'Steward',
-				'Accountant',
-				'Chamberlain'
+                'Steward',
+                'Accountant',
+                'Chamberlain'
             ]
         },
-		{
+        {
             name: 'Merchant',
             setting: 'City Dweller',
             time: 6,
@@ -3714,36 +3714,36 @@ export default
             leads: [
                 'Peasant',
                 'Villager',
-				'Noble Court'
+                'Noble Court'
             ],
             skills: {
                 points: 6,
                 from: [
                     'Accounting',
                     'Haggling',
-					'Supplier-wise',
-					'Lord-wise',
-					'Peasant-wise'
+                    'Supplier-wise',
+                    'Lord-wise',
+                    'Peasant-wise'
                 ]
             },
-			traits: {
-				
-			},
+            traits: {
+
+            },
             'requires': [
                 'Master Craftsman',
                 'Master of Horses',
-				'Master of Hounds',
-				'Moneylender',
-				'Steward',
-				'Jeweler',
-				'Saddler',
-				'Armorer',
-				'Cobbler',
-				'Courtier',
-				'Chamberlain'
+                'Master of Hounds',
+                'Moneylender',
+                'Steward',
+                'Jeweler',
+                'Saddler',
+                'Armorer',
+                'Cobbler',
+                'Courtier',
+                'Chamberlain'
             ]
         },
-		{
+        {
             name: 'Sorcerer',
             setting: 'City Dweller',
             time: 6,
@@ -3754,15 +3754,15 @@ export default
             },
             leads: [
                 'Villager',
-				'Noble Court',
-				'Outcast'
+                'Noble Court',
+                'Outcast'
             ],
             skills: {
                 points: 6,
                 from: [
                     'Sorcery',
                     'Enchanting',
-					'Calligraphy'
+                    'Calligraphy'
                 ]
             },
             traits: {
@@ -3771,10 +3771,10 @@ export default
             'requires': [
                 'Neophyte Sorcerer',
                 'Arcane Devotee',
-				'Weather Witch'
+                'Weather Witch'
             ]
         },
-		{
+        {
             name: 'Temple Priest',
             setting: 'City Dweller',
             time: 5,
@@ -3782,39 +3782,39 @@ export default
             leads: [
                 'Peasant',
                 'Villager',
-				'Noble Court',
-				'Religious',
-				'Professional Soldier',
-				'Seafaring',
-				'Servitude',
-				'Outcast'
+                'Noble Court',
+                'Religious',
+                'Professional Soldier',
+                'Seafaring',
+                'Servitude',
+                'Outcast'
             ],
             skills: {
                 points: 8,
                 from: [
                     'Church Politics-wise',
                     'Doctrine',
-					'Oratory',
-					'Suasion',
-					'Symbology'
+                    'Oratory',
+                    'Suasion',
+                    'Symbology'
                 ]
             },
             traits: {
                 points: 2,
                 from: [
                     'Vested',
-					'Aloof',
-					'Imperious',
-					'Strong-Willed'
+                    'Aloof',
+                    'Imperious',
+                    'Strong-Willed'
                 ]
             },
             'requires': [
                 'Religious Acolyte',
                 'Temple Acolyte',
-				'Military Order'
+                'Military Order'
             ]
         },
-		{
+        {
             name: 'Judge',
             setting: 'City Dweller',
             time: 10,
@@ -3824,33 +3824,33 @@ export default
                 attributes: 'M'
             },
             leads: [
-				'Villager',
-				'Noble Court'
+                'Villager',
+                'Noble Court'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Rule of Law',
                     'Amercement',
-					'Criminal-wise',
-					'Interrogation'
+                    'Criminal-wise',
+                    'Interrogation'
                 ]
             },
             traits: {
                 points: 2,
                 from: [
                     'Ornery',
-					'Quick-Witted'
+                    'Quick-Witted'
                 ]
             },
             'requires': [
                 'Town Official',
                 'Tax Collector',
-				'Bailiff',
-				'Justiciar'
+                'Bailiff',
+                'Justiciar'
             ]
         },
-		{
+        {
             name: 'Municipal Minister',
             setting: 'City Dweller',
             time: 9,
@@ -3861,38 +3861,38 @@ export default
             },
             leads: [
                 'Villager',
-				'Noble Court',
-				'Outcast'
+                'Noble Court',
+                'Outcast'
             ],
             skills: {
                 points: 6,
                 from: [
                     'Persuasion',
                     'Rule of Law',
-					'Administration',
-					'Oratory',
-					'Law-wise',
-					'Minister-wise'
+                    'Administration',
+                    'Oratory',
+                    'Law-wise',
+                    'Minister-wise'
                 ]
             },
-			traits: {
-				
-			},
+            traits: {
+
+            },
             'requires': [
                 'Town Official',
                 'Scholar',
-				'Priest',
-				'Bishop',
-				'Captain',
-				'Sea Captain',
-				'Artisan',
-				'Master Craftsman',
-				'Knight',
-				'Courtier',
-				'Master of Horses'
+                'Priest',
+                'Bishop',
+                'Captain',
+                'Sea Captain',
+                'Artisan',
+                'Master Craftsman',
+                'Knight',
+                'Courtier',
+                'Master of Horses'
             ]
         },
-		{
+        {
             name: 'Artisan',
             setting: 'City Dweller',
             time: 10,
@@ -3902,16 +3902,16 @@ export default
                 attributes: 'M'
             },
             leads: [
-				'Noble Court',
-				'Professional Soldier'
+                'Noble Court',
+                'Professional Soldier'
             ],
             skills: {
                 points: 9,
                 from: [
                     'Jargon',
                     'Mason',
-					'Engineer',
-					'Architect'
+                    'Engineer',
+                    'Architect'
                 ]
             },
             traits: {
@@ -3923,10 +3923,10 @@ export default
             'requires': [
                 'Apprentice Artisan',
                 'Engineer',
-				'Master Craftsman'
+                'Master Craftsman'
             ]
         },
-		{
+        {
             name: 'Master Craftsman',
             setting: 'City Dweller',
             time: 10,
@@ -3937,41 +3937,41 @@ export default
             },
             leads: [
                 'Villager',
-				'Noble Court',
-				'Professional Soldier'
+                'Noble Court',
+                'Professional Soldier'
             ],
             skills: {
                 points: 6,
                 from: [
                     'Craftsman-wise',
                     'Artisan-wise',
-					'Materials-wise',
-					'Tools-wise'
+                    'Materials-wise',
+                    'Tools-wise'
                 ],
-				generalPoints: 3
+                generalPoints: 3
             },
             traits: {
                 points: 2,
                 from: [
                     'Ambitious',
-					'Charismatic'
+                    'Charismatic'
                 ]
             },
             'requires': [
-				//TODO: Requires Journeyman AND one of the following:
+                //TODO: Requires Journeyman AND one of the following:
                 'Locksmith',
                 'Plumber',
-				'Engraver',
-				'Saddler',
-				'Blacksmith',
-				'Armorer',
-				'Atilliator',
-				'Cobbler',
-				'Bowyer',
-				'Taskmaster'
+                'Engraver',
+                'Saddler',
+                'Blacksmith',
+                'Armorer',
+                'Atilliator',
+                'Cobbler',
+                'Bowyer',
+                'Taskmaster'
             ]
         },
-		{
+        {
             name: 'Bishop',
             setting: 'City Dweller',
             time: 12,
@@ -3981,17 +3981,17 @@ export default
                 attributes: 'M'
             },
             leads: [
-				'Noble Court',
-				'Religious'
+                'Noble Court',
+                'Religious'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Etiquette',
                     'Bureaucracy',
-					'Ritual',
-					'Church-wise',
-					'City-wise'
+                    'Ritual',
+                    'Church-wise',
+                    'City-wise'
                 ]
             },
             traits: {
@@ -4003,12 +4003,12 @@ export default
             'requires': [
                 'Archpriest',
                 'Canon',
-				'Steward',
-				'Chamberlain'
-				//TODO: or the 'Your Grace' trait
+                'Steward',
+                'Chamberlain'
+                //TODO: or the 'Your Grace' trait
             ]
         },
-		{
+        {
             name: 'Magnate',
             setting: 'City Dweller',
             time: 12,
@@ -4020,32 +4020,32 @@ export default
             leads: [
                 'Peasant',
                 'Villager',
-				'Noble',
-				'Noble Court',
-				'Religious',
-				'Professional Soldier',
-				'Seafaring',
-				'Servitude',
-				'Outcast'
+                'Noble',
+                'Noble Court',
+                'Religious',
+                'Professional Soldier',
+                'Seafaring',
+                'Servitude',
+                'Outcast'
             ],
             skills: {
                 points: 6,
                 from: [
                     'Administration',
                     'Merchant-wise',
-					'Court-wise',
-					'Commodities-wise',
-					'Pirates-wise',
-					'Bandit-wise'
+                    'Court-wise',
+                    'Commodities-wise',
+                    'Pirates-wise',
+                    'Bandit-wise'
                 ],
-				generalPoints: 1
+                generalPoints: 1
             },
             traits: {
                 points: 2,
                 from: [
                     'Self-Satisfied',
-					'Greedy',
-					'Affinity for Business'
+                    'Greedy',
+                    'Affinity for Business'
                 ]
             },
             'requires': [
@@ -4053,7 +4053,7 @@ export default
                 'Master of Horses'
             ]
         },
-		{
+        {
             name: 'City Wife',
             setting: 'City Dweller',
             time: 6,
@@ -4063,7 +4063,7 @@ export default
                 attributes: 'M'
             },
             leads: [
-				'Religious'
+                'Religious'
             ],
             skills: {
                 points: 2,
@@ -4075,13 +4075,13 @@ export default
             traits: {
                 points: 1
             }
-			//TODO: A player who takes the City Wife lifepath may also choose
-			//her husband's lifepath from the City Dweller setting. The City 
-			//Wife may choose from her husband's skills -- she gets half of his
-			//skill points, rounded down -- and she gets one quarter of her
-			//husband's Resources.
+            //TODO: A player who takes the City Wife lifepath may also choose
+            //her husband's lifepath from the City Dweller setting. The City 
+            //Wife may choose from her husband's skills -- she gets half of his
+            //skill points, rounded down -- and she gets one quarter of her
+            //husband's Resources.
         },
-		{
+        {
             name: 'Born Noble',
             isBornLifepath: true,
             setting: 'Noble',
@@ -4090,29 +4090,29 @@ export default
             leads: [
                 'Peasant',
                 'Villager',
-				'City Dweller',
-				'Noble',
-				'Noble Court',
-				'Religious',
-				'Professional Soldier',
-				'Seafaring',
-				'Servitude',
-				'Outcast'
+                'City Dweller',
+                'Noble',
+                'Noble Court',
+                'Religious',
+                'Professional Soldier',
+                'Seafaring',
+                'Servitude',
+                'Outcast'
             ],
             skills: {
                 generalPoints: 5
             },
             traits: {
                 points: 1,
-				from: [
+                from: [
                     'Mark of Privilege',
-					'Your Lordship',
-					'Your Eminence',
-					'Your Grace'
+                    'Your Lordship',
+                    'Your Eminence',
+                    'Your Grace'
                 ]
             }
         },
-		{
+        {
             name: 'Bastard',
             setting: 'Noble',
             time: 6,
@@ -4122,31 +4122,31 @@ export default
                 attributes: 'M/P'
             },
             leads: [
-				'City Dweller',
-				'Religious',
-				'Professional Soldier',
-				'Outcast'
+                'City Dweller',
+                'Religious',
+                'Professional Soldier',
+                'Outcast'
             ],
             skills: {
                 points: 4,
                 from: [
                     'Family Secrets-wise',
                     'Etiquette',
-					'Extortion'
+                    'Extortion'
                 ]
             },
             traits: {
                 points: 2,
                 from: [
                     'Bastard',
-					'Bitter',
-					'Cynical',
-					'Happy-Go-Lucky'
+                    'Bitter',
+                    'Cynical',
+                    'Happy-Go-Lucky'
                 ]
             }
-			//TODO: Must be 2nd lifepath.
+            //TODO: Must be 2nd lifepath.
         },
-		{
+        {
             name: 'Page',
             setting: 'Noble',
             time: 6,
@@ -4156,19 +4156,19 @@ export default
                 attributes: 'P'
             },
             leads: [
-				'City Dweller',
-				'Professional Soldier',
-				'Servitude'
+                'City Dweller',
+                'Professional Soldier',
+                'Servitude'
             ],
             skills: {
                 points: 7,
                 from: [
                     'Riding',
                     'Brawling',
-					'Write',
-					'Read',
-					'Sword',
-					'Etiquette'
+                    'Write',
+                    'Read',
+                    'Sword',
+                    'Etiquette'
                 ]
             },
             traits: {
@@ -4176,7 +4176,7 @@ export default
             }
             //TODO: Must be 2nd lifepath
         },
-		{
+        {
             name: 'Student',
             setting: 'Noble',
             time: 4,
@@ -4186,25 +4186,25 @@ export default
                 attributes: 'M'
             },
             leads: [
-				'City Dweller',
-				'Noble Court'
+                'City Dweller',
+                'Noble Court'
             ],
             skills: {
                 points: 8,
                 from: [
                     'Write',
                     'Read',
-					'Rule of Law',
-					'Oratory',
-					'Doctrine',
-					'Etiquette'
+                    'Rule of Law',
+                    'Oratory',
+                    'Doctrine',
+                    'Etiquette'
                 ]
             },
             traits: {
                 points: 1
             }
         },
-		{
+        {
             name: 'Squire',
             setting: 'Noble',
             time: 6,
@@ -4214,21 +4214,21 @@ export default
                 attributes: 'M,P'
             },
             leads: [
-				'City Dweller',
-				'Professional Soldier',
-				'Servitude',
-				'Outcast'
+                'City Dweller',
+                'Professional Soldier',
+                'Servitude',
+                'Outcast'
             ],
             skills: {
                 points: 9,
                 from: [
                     'Sword',
                     'Mounted Combat Training',
-					'Shield Training',
-					'Armor Training',
-					'Lance',
-					'Knives',
-					'Crossbow'
+                    'Shield Training',
+                    'Armor Training',
+                    'Lance',
+                    'Knives',
+                    'Crossbow'
                 ]
             },
             traits: {
@@ -4239,7 +4239,7 @@ export default
                 'lifepath:Professional Soldier'
             ]
         },
-		{
+        {
             name: 'Arcane Devotee',
             setting: 'Noble',
             time: 6,
@@ -4249,29 +4249,29 @@ export default
                 attributes: 'M'
             },
             leads: [
-				'City Dweller',
-				'Noble Court',
-				'Outcast'
+                'City Dweller',
+                'Noble Court',
+                'Outcast'
             ],
             skills: {
                 points: 6,
                 from: [
                     'Calligraphy',
                     'Write',
-					'Read',
-					'Research',
-					'Symbology'
+                    'Read',
+                    'Research',
+                    'Symbology'
                 ]
             },
             traits: {
                 points: 2,
                 from: [
                     'Base Humility',
-					'Gifted'
+                    'Gifted'
                 ]
             }
         },
-		{
+        {
             name: 'Religious Acolyte',
             setting: 'Noble',
             time: 5,
@@ -4281,29 +4281,29 @@ export default
                 attributes: 'M'
             },
             leads: [
-				'City Dweller',
-				'Noble Court',
-				'Religious'
+                'City Dweller',
+                'Noble Court',
+                'Religious'
             ],
             skills: {
                 points: 6,
                 from: [
                     'Doctrine',
                     'Bureaucracy',
-					'Write',
-					'Read',
-					'Etiquette'
+                    'Write',
+                    'Read',
+                    'Etiquette'
                 ]
             },
             traits: {
                 points: 2,
                 from: [
                     'Tonsured',
-					'Faithful'
+                    'Faithful'
                 ]
             }
         },
-		{
+        {
             name: 'Young Lady',
             setting: 'Noble',
             time: 10,
@@ -4313,30 +4313,30 @@ export default
                 attributes: 'M'
             },
             leads: [
-				'City Dweller',
-				'Noble Court',
-				'Religious'
+                'City Dweller',
+                'Noble Court',
+                'Religious'
             ],
             skills: {
                 points: 11,
                 from: [
                     'Write',
                     'Read',
-					'Etiquette',
-					'Astrology',
-					'Musical Instument',
-					'Composition',
-					'Field Dressing',
-					'Apothecary',
-					'Doctrine'
+                    'Etiquette',
+                    'Astrology',
+                    'Musical Instument',
+                    'Composition',
+                    'Field Dressing',
+                    'Apothecary',
+                    'Doctrine'
                 ]
             },
             traits: {
                 points: 2
             }
-			//TODO: Can only be 2nd or 3rd lifepath. Can only be taken once.
+            //TODO: Can only be 2nd or 3rd lifepath. Can only be taken once.
         },
-		{
+        {
             name: 'Knight',
             setting: 'Noble',
             time: 5,
@@ -4346,21 +4346,21 @@ export default
                 attributes: 'P'
             },
             leads: [
-				'City Dweller',
-				'Religious',
-				'Professional Soldier',
-				'Outcast'
+                'City Dweller',
+                'Religious',
+                'Professional Soldier',
+                'Outcast'
             ],
             skills: {
                 points: 10,
                 from: [
                     'Mounted Combat Training',
                     'Shield Training',
-					'Armor Training',
-					'Appropriate Weapons',
-					'Intimidation',
-					'Hunting',
-					'Conspicuous'
+                    'Armor Training',
+                    'Appropriate Weapons',
+                    'Intimidation',
+                    'Hunting',
+                    'Conspicuous'
                 ]
             },
             traits: {
@@ -4374,7 +4374,7 @@ export default
                 'Cavalryman'
             ]
         },
-		{
+        {
             name: 'Lady',
             setting: 'Noble',
             time: 5,
@@ -4384,24 +4384,24 @@ export default
                 attributes: 'M'
             },
             leads: [
-				'City Dweller',
-				'Noble Court',
-				'Religious',
-				'Outcast'
+                'City Dweller',
+                'Noble Court',
+                'Religious',
+                'Outcast'
             ],
             skills: {
                 points: 11,
                 from: [
                     'Etiquette',
                     'Estate Management',
-					'Persuasion',
-					'Seduction',
-					'Inconspicuous',
-					'Doctrine',
-					'Husband-wise',
-					'Estate-wise',
-					'Staff-wise',
-					'Court-wise'
+                    'Persuasion',
+                    'Seduction',
+                    'Inconspicuous',
+                    'Doctrine',
+                    'Husband-wise',
+                    'Estate-wise',
+                    'Staff-wise',
+                    'Court-wise'
                 ]
             },
             traits: {
@@ -4410,11 +4410,11 @@ export default
             'requires': [
                 'Young Lady',
                 'Courtier',
-				'Knight'
-				//TODO: or City Wife w/ Magnate or Bishop chosen as husband LP
+                'Knight'
+                //TODO: or City Wife w/ Magnate or Bishop chosen as husband LP
             ]
         },
-		{
+        {
             name: 'Lord',
             setting: 'Noble',
             time: 7,
@@ -4424,30 +4424,30 @@ export default
                 attributes: 'M'
             },
             leads: [
-				'City Dweller',
-				'Noble Court',
-				'Professional Soldier'
+                'City Dweller',
+                'Noble Court',
+                'Professional Soldier'
             ],
             skills: {
                 points: 6,
                 from: [
                     'Hunting',
                     'Dance',
-					'Sing',
-					'Falconry',
-					'Estate Management'
+                    'Sing',
+                    'Falconry',
+                    'Estate Management'
                 ],
-				generalPoints: 1
+                generalPoints: 1
             },
             traits: {
                 points: 1
             },
             'requires': [
                 'Knight'
-				//TODO: or 'Your Lordship' trait
+                //TODO: or 'Your Lordship' trait
             ]
         },
-		{
+        {
             name: 'Dame',
             setting: 'Noble',
             time: 7,
@@ -4457,10 +4457,10 @@ export default
                 attributes: 'M'
             },
             leads: [
-				'City Dweller',
-				'Noble Court',
-				'Religious',
-				'Outcast'
+                'City Dweller',
+                'Noble Court',
+                'Religious',
+                'Outcast'
             ],
             skills: {
                 points: 3,
@@ -4468,18 +4468,18 @@ export default
                     'Estate Management',
                     'Noble-wise'
                 ],
-				generalPoints: 2
+                generalPoints: 2
             },
             traits: {
                 points: 1
             },
             'requires': [
                 'Lady'
-				//TODO: or City Wife w/ Bishop or Magnate as husband's LP
-				//or 'Your Lordship' trait
+                //TODO: or City Wife w/ Bishop or Magnate as husband's LP
+                //or 'Your Lordship' trait
             ]
         },
-		{
+        {
             name: 'Baron',
             setting: 'Noble',
             time: 8,
@@ -4489,8 +4489,8 @@ export default
                 attributes: 'M/P'
             },
             leads: [
-				'Noble Court',
-				'Professional Soldier'
+                'Noble Court',
+                'Professional Soldier'
             ],
             skills: {
                 generalPoints: 1
@@ -4499,23 +4499,23 @@ export default
                 points: 1,
                 from: [
                     'Noblesse Oblige',
-					'Regal Bearing',
-					'Pompous',
-					'Sharp Dresser',
-					'Callous'
+                    'Regal Bearing',
+                    'Pompous',
+                    'Sharp Dresser',
+                    'Callous'
                 ]
             },
             'requires': [
                 'Knight', //TODO: and 'Your Lordship' trait
                 'Magnate',
-				'Master of Horses',
-				'Steward',
-				'Lord',
-				'Constable',
-				'Justiciar'
+                'Master of Horses',
+                'Steward',
+                'Lord',
+                'Constable',
+                'Justiciar'
             ]
         },
-		{
+        {
             name: 'Viscount',
             setting: 'Noble',
             time: 9,
@@ -4525,31 +4525,31 @@ export default
                 attributes: 'M/P'
             },
             leads: [
-				'Noble Court',
-				'Professional Soldier'
+                'Noble Court',
+                'Professional Soldier'
             ],
             skills: {
-				generalPoints: 2
+                generalPoints: 2
             },
             traits: {
                 points: 1,
                 from: [
                     'Noblesse Oblige',
-					'Regal Bearing',
-					'Pompous',
-					'Sharp Dresser',
-					'Callous'
+                    'Regal Bearing',
+                    'Pompous',
+                    'Sharp Dresser',
+                    'Callous'
                 ]
             },
             'requires': [
                 'Knight', //TODO: and 'Your Eminence' trait
                 'Magnate',
-				'Baron',
-				'Constable',
-				'Justiciar'
+                'Baron',
+                'Constable',
+                'Justiciar'
             ]
         },
-		{
+        {
             name: 'Count',
             setting: 'Noble',
             time: 10,
@@ -4559,30 +4559,30 @@ export default
                 attributes: 'M/P'
             },
             leads: [
-				'Noble Court',
-				'Professional Soldier'
+                'Noble Court',
+                'Professional Soldier'
             ],
             skills: {
-				generalPoints: 3
+                generalPoints: 3
             },
             traits: {
                 points: 1,
                 from: [
                     'Noblesse Oblige',
-					'Regal Bearing',
-					'Pompous',
-					'Sharp Dresser',
-					'Callous'
+                    'Regal Bearing',
+                    'Pompous',
+                    'Sharp Dresser',
+                    'Callous'
                 ]
             },
             'requires': [
                 'Knight', //TODO: and 'Your Eminence' trait
                 'Magnate',
-				'Constable',
-				'Justiciar'
+                'Constable',
+                'Justiciar'
             ]
         },
-		{
+        {
             name: 'Duke',
             setting: 'Noble',
             time: 10,
@@ -4592,27 +4592,27 @@ export default
                 attributes: 'M/P'
             },
             leads: [
-				'Noble Court',
-				'Professional Soldier'
+                'Noble Court',
+                'Professional Soldier'
             ],
             skills: {
-				generalPoints: 3
+                generalPoints: 3
             },
             traits: {
                 points: 1,
                 from: [
                     'Noblesse Oblige',
-					'Regal Bearing',
-					'Pompous',
-					'Sharp Dresser',
-					'Callous'
+                    'Regal Bearing',
+                    'Pompous',
+                    'Sharp Dresser',
+                    'Callous'
                 ]
             },
             'requires': [
                 'Knight' //TODO: and 'Your Grace' trait
             ]
         },
-		{
+        {
             name: 'Noble Prince',
             setting: 'Noble',
             time: 10,
@@ -4622,20 +4622,20 @@ export default
                 attributes: 'M/P'
             },
             leads: [
-				'Noble Court',
-				'Professional Soldier'
+                'Noble Court',
+                'Professional Soldier'
             ],
             skills: {
-				generalPoints: 4
+                generalPoints: 4
             },
             traits: {
                 points: 1,
                 from: [
                     'Noblesse Oblige',
-					'Regal Bearing',
-					'Pompous',
-					'Sharp Dresser',
-					'Callous'
+                    'Regal Bearing',
+                    'Pompous',
+                    'Sharp Dresser',
+                    'Callous'
                 ]
             },
             'requires': [
@@ -4643,35 +4643,35 @@ export default
                 'Knight' //TODO: and 'Your Grace' trait
             ]
         },
-		{
+        {
             name: 'Prince of the Blood',
             setting: 'Noble',
             //TODO: time: 2 to 20
             res: 60,
             leads: [
-				'Noble Court',
-				'Religious',
-				'Professional Soldier'
+                'Noble Court',
+                'Religious',
+                'Professional Soldier'
             ],
             skills: {
-				generalPoints: 2
+                generalPoints: 2
             },
             traits: {
                 points: 2,
                 from: [
                     'Born to be King',
-					'Noblesse Oblige',
-					'Regal Bearing',
-					'Pompous',
-					'Sharp Dresser',
-					'Callous'
+                    'Noblesse Oblige',
+                    'Regal Bearing',
+                    'Pompous',
+                    'Sharp Dresser',
+                    'Callous'
                 ]
             },
             'requires': [
                 //TODO: 'Your Grace' trait and permission from GM and players
             ]
         },
-		{
+        {
             name: 'Minstrel',
             setting: 'Noble Court',
             time: 4,
@@ -4682,15 +4682,15 @@ export default
             },
             leads: [
                 'Villager',
-				'City Dweller',
-				'Outcast'
+                'City Dweller',
+                'Outcast'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Poetry',
                     'Sing',
-					'Musical Instrument'
+                    'Musical Instrument'
                 ]
             },
             traits: {
@@ -4700,51 +4700,51 @@ export default
                 ]
             }
         },
-		{
+        {
             name: 'Court Jester',
             setting: 'Noble Court',
             time: 5,
             res: 10,
             leads: [
-				'Servitude',
-				'Outcast'
+                'Servitude',
+                'Outcast'
             ],
             skills: {
                 points: 7,
                 from: [
                     'Sing',
                     'Sleight of Hand',
-					'Climbing',
-					'Conspicuous',
-					'Throwing',
-					'Ugly Truth'
+                    'Climbing',
+                    'Conspicuous',
+                    'Throwing',
+                    'Ugly Truth'
                 ]
             },
             traits: {
                 points: 3,
                 from: [
                     'Scapegoat',
-					'Aura of Innocence'
+                    'Aura of Innocence'
                 ]
             }
-		},
-		{
+        },
+        {
             name: 'Court Artist',
             setting: 'Noble Court',
             time: 6,
             res: 15,
             leads: [
-				'City Dweller',
-				'Outcast'
+                'City Dweller',
+                'Outcast'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Sculpture',
                     'Painting',
-					'Engraving',
-					'Seduction',
-					'Genius-wise'
+                    'Engraving',
+                    'Seduction',
+                    'Genius-wise'
                 ]
             },
             traits: {
@@ -4756,55 +4756,55 @@ export default
             'requires': [
                 'Court Jester',
                 'Painter',
-				'Thinker',
-				'Scholar',
-				'Sculptor'
+                'Thinker',
+                'Scholar',
+                'Sculptor'
             ]
         },
-		{
+        {
             name: 'Servant',
             setting: 'Noble Court',
             time: 6,
             res: 7,
             leads: [
-				'Servitude',
-				'Outcast'
+                'Servitude',
+                'Outcast'
             ],
             skills: {
                 points: 4,
                 from: [
                     'Inconspicuous',
                     'Etiquette',
-					'Court Gossip-wise'
+                    'Court Gossip-wise'
                 ]
             },
             traits: {
                 points: 2,
                 from: [
                     'Veneer of Obedience',
-					'Lifting Heavy Things',
-					'Bored'
+                    'Lifting Heavy Things',
+                    'Bored'
                 ]
             }
         },
-		{
+        {
             name: 'Nurse',
             setting: 'Noble Court',
             time: 6,
             res: 7,
             leads: [
                 'Villager',
-				'Servitude',
-				'Outcast'
+                'Servitude',
+                'Outcast'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Child-Rearing',
                     'Etiquette',
-					'Court Gossip-wise',
-					'Field Dressing',
-					'Child-wise'
+                    'Court Gossip-wise',
+                    'Field Dressing',
+                    'Child-wise'
                 ]
             },
             traits: {
@@ -4814,31 +4814,31 @@ export default
                 ]
             }
         },
-		{
+        {
             name: 'Groom',
             setting: 'Noble Court',
             time: 4,
             res: 5,
             leads: [
                 'Villager',
-				'City Dweller',
-				'Professional Soldier'
+                'City Dweller',
+                'Professional Soldier'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Animal Husbandry',
                     'Riding',
-					'Mending',
-					'Border-wise',
-					'Road-wise'
+                    'Mending',
+                    'Border-wise',
+                    'Road-wise'
                 ]
             },
             traits: {
                 points: 1
             }
         },
-		{
+        {
             name: 'Gardener',
             setting: 'Noble Court',
             time: 10,
@@ -4848,32 +4848,32 @@ export default
                 attributes: 'P'
             },
             leads: [
-				'City Dweller',
-				'Servitude'
+                'City Dweller',
+                'Servitude'
             ],
             skills: {
                 points: 7,
                 from: [
                     'Plant-wise',
                     'Flower-wise',
-					'Tree-wise',
-					'Pest-wise',
-					'Herbalism',
-					'Farming',
-					'Almanac'
+                    'Tree-wise',
+                    'Pest-wise',
+                    'Herbalism',
+                    'Farming',
+                    'Almanac'
                 ]
             },
             traits: {
                 points: 2,
                 from: [
                     'Earthly Smell',
-					'Salt of the Earth',
-					'Down to Earth',
-					'Affinity for Plants'
+                    'Salt of the Earth',
+                    'Down to Earth',
+                    'Affinity for Plants'
                 ]
             }
         },
-		{
+        {
             name: 'Torturer',
             setting: 'Noble Court',
             time: 5,
@@ -4883,17 +4883,17 @@ export default
                 attributes: 'M'
             },
             leads: [
-				'Professional Soldier',
-				'Servitude',
-				'Outcast'
+                'Professional Soldier',
+                'Servitude',
+                'Outcast'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Interrogation',
                     'Torture',
-					'Anatomy',
-					'Torture Devices-wise'
+                    'Anatomy',
+                    'Torture Devices-wise'
                 ]
             },
             traits: {
@@ -4903,7 +4903,7 @@ export default
                 ]
             }
         },
-		{
+        {
             name: 'Forester',
             setting: 'Noble Court',
             time: 7,
@@ -4915,30 +4915,30 @@ export default
             leads: [
                 'Peasant',
                 'Villager',
-				'Professional Soldier',
-				'Outcast'
+                'Professional Soldier',
+                'Outcast'
             ],
             skills: {
                 points: 8,
                 from: [
                     'Observation',
                     'Orienteering',
-					'Foraging',
-					'Survival',
-					'Tracking',
-					'Trapper',
-					'Cudgel',
-					'Staff',
-					'Bow',
-					'Poacher-wise',
-					'Park-wise'
+                    'Foraging',
+                    'Survival',
+                    'Tracking',
+                    'Trapper',
+                    'Cudgel',
+                    'Staff',
+                    'Bow',
+                    'Poacher-wise',
+                    'Park-wise'
                 ]
             },
             traits: {
                 points: 1
             }
         },
-		{
+        {
             name: 'Student',
             setting: 'Noble Court',
             time: 4,
@@ -4948,30 +4948,30 @@ export default
                 attributes: 'M'
             },
             leads: [
-				'City Dweller',
-				'Noble',
-				'Religious'
+                'City Dweller',
+                'Noble',
+                'Religious'
             ],
             skills: {
                 points: 9,
                 from: [
                     'Write',
                     'Read',
-					'Rule of Law',
-					'Oratory',
-					'Doctrine',
-					'Etiquette'
+                    'Rule of Law',
+                    'Oratory',
+                    'Doctrine',
+                    'Etiquette'
                 ]
             },
             traits: {
                 points: 1,
                 from: [
                     'Dangerous',
-					'Geometric'
+                    'Geometric'
                 ]
             }
         },
-		{
+        {
             name: 'Page',
             setting: 'Noble Court',
             time: 6,
@@ -4981,27 +4981,27 @@ export default
                 attributes: 'P'
             },
             leads: [
-				'City Dweller',
-				'Noble',
-				'Professional Soldier',
-				'Servitude'
+                'City Dweller',
+                'Noble',
+                'Professional Soldier',
+                'Servitude'
             ],
             skills: {
                 points: 6,
                 from: [
                     'Riding',
                     'Brawling',
-					'Write',
-					'Read',
-					'Sword'
+                    'Write',
+                    'Read',
+                    'Sword'
                 ]
             },
             traits: {
                 points: 1
             }
-			//TODO: Must be 2nd LP. Can only be taken once.
+            //TODO: Must be 2nd LP. Can only be taken once.
         },
-		{
+        {
             name: 'Man-at-Arms',
             setting: 'Noble Court',
             time: 6,
@@ -5011,20 +5011,20 @@ export default
                 attributes: 'P'
             },
             leads: [
-				'City Dweller',
-				'Professional Soldier',
-				'Outcast'
+                'City Dweller',
+                'Professional Soldier',
+                'Outcast'
             ],
             skills: {
                 points: 8,
                 from: [
                     'Mounted Combat Training',
                     'Shield Training',
-					'Armor Training',
-					'Brawling',
-					'Intimidation',
-					'Etiquette',
-					'Appropriate Weapons'
+                    'Armor Training',
+                    'Brawling',
+                    'Intimidation',
+                    'Etiquette',
+                    'Appropriate Weapons'
                 ]
             },
             traits: {
@@ -5033,10 +5033,10 @@ export default
             'requires': [
                 'Page',
                 'Squire',
-				'lifepath:Professional Soldier'
+                'lifepath:Professional Soldier'
             ]
         },
-		{
+        {
             name: 'Falconer',
             setting: 'Noble Court',
             time: 5,
@@ -5047,27 +5047,27 @@ export default
             },
             leads: [
                 'Peasant',
-				'City Dweller',
-				'Professional Soldier'
+                'City Dweller',
+                'Professional Soldier'
             ],
             skills: {
                 points: 4,
                 from: [
                     'Falconry',
                     'Animal Husbandry',
-					'Hunting'
+                    'Hunting'
                 ]
             },
             traits: {
                 points: 2,
                 from: [
                     'Boaster',
-					'Weird',
-					'Birdie Talk'
+                    'Weird',
+                    'Birdie Talk'
                 ]
             }
         },
-		{
+        {
             name: 'Huntsman',
             setting: 'Noble Court',
             time: 5,
@@ -5078,34 +5078,34 @@ export default
             },
             leads: [
                 'Peasant',
-				'Professional Soldier'
+                'Professional Soldier'
             ],
             skills: {
                 points: 8,
                 from: [
                     'Hunting',
                     'Animal Husbandry',
-					'Forest-wise',
-					'Stealthy',
-					'Cooking',
-					'Tracking',
-					'Orienteering',
-					'Crossbow'
+                    'Forest-wise',
+                    'Stealthy',
+                    'Cooking',
+                    'Tracking',
+                    'Orienteering',
+                    'Crossbow'
                 ]
             },
             traits: {
                 points: 1
             }
         },
-		{
+        {
             name: 'Herald',
             setting: 'Noble Court',
             time: 4,
             res: 10,
             leads: [
-				'City Dweller',
-				'Professional Soldier',
-				'Servitude'
+                'City Dweller',
+                'Professional Soldier',
+                'Servitude'
             ],
             skills: {
                 points: 4,
@@ -5118,12 +5118,12 @@ export default
                 points: 1,
                 from: [
                     'Formalist',
-					'Rainman',
-					'Eidetic Memory'
+                    'Rainman',
+                    'Eidetic Memory'
                 ]
             }
         },
-		{
+        {
             name: 'Court Chef',
             setting: 'Noble Court',
             time: 5,
@@ -5133,23 +5133,23 @@ export default
                 attributes: 'M'
             },
             leads: [
-				'City Dweller',
-				'Outcast'
+                'City Dweller',
+                'Outcast'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Cooking',
                     'Sing',
-					'Herbalism',
-					'Falsehood'
+                    'Herbalism',
+                    'Falsehood'
                 ]
             },
             traits: {
                 points: 1
             }
         },
-		{
+        {
             name: 'Squire',
             setting: 'Noble Court',
             time: 5,
@@ -5159,42 +5159,42 @@ export default
                 attributes: 'M,P'
             },
             leads: [
-				'City Dweller',
-				'Noble',
-				'Professional Soldier',
-				'Servitude',
-				'Outcast'
+                'City Dweller',
+                'Noble',
+                'Professional Soldier',
+                'Servitude',
+                'Outcast'
             ],
             skills: {
                 points: 9,
                 from: [
                     'Sword',
                     'Armor Training',
-					'Shield Training',
-					'Lance',
-					'Brawling',
-					'Mounted Combat',
-					'Etiquette'
+                    'Shield Training',
+                    'Lance',
+                    'Brawling',
+                    'Mounted Combat',
+                    'Etiquette'
                 ]
             },
             traits: {
                 points: 1,
                 from: [
                     'Pragmatic',
-					'Tough',
-					'Determined'
+                    'Tough',
+                    'Determined'
                 ]
             },
             'requires': [
                 'Corrupt Sergeant',
                 'Village Sergeant',
-				'Sergeant',
-				'Veteran',
-				'Page',
-				'Man-at-Arms'
+                'Sergeant',
+                'Veteran',
+                'Page',
+                'Man-at-Arms'
             ]
         },
-		{
+        {
             name: 'Young Lady',
             setting: 'Noble Court',
             time: 9,
@@ -5204,31 +5204,31 @@ export default
                 attributes: 'M'
             },
             leads: [
-				'City Dweller',
-				'Noble',
-				'Religious'
+                'City Dweller',
+                'Noble',
+                'Religious'
             ],
             skills: {
                 points: 10,
                 from: [
                     'Write',
                     'Read',
-					'Etiquette',
-					'Poetry',
-					'Astrology',
-					'Musical Instrument',
-					'Composition',
-					'Field Dressing',
-					'Apothecary',
-					'Court Gossip-wise'
+                    'Etiquette',
+                    'Poetry',
+                    'Astrology',
+                    'Musical Instrument',
+                    'Composition',
+                    'Field Dressing',
+                    'Apothecary',
+                    'Court Gossip-wise'
                 ]
             },
             traits: {
                 points: 1
             }
-			//TODO: Must be 2nd or 3rd LP. Can only be taken once.
+            //TODO: Must be 2nd or 3rd LP. Can only be taken once.
         },
-		{
+        {
             name: 'Knight',
             setting: 'Noble Court',
             time: 6,
@@ -5238,27 +5238,27 @@ export default
                 attributes: 'P'
             },
             leads: [
-				'Noble',
-				'Professional Soldier',
-				'Outcast'
+                'Noble',
+                'Professional Soldier',
+                'Outcast'
             ],
             skills: {
                 points: 11,
                 from: [
                     'Conspicuous',
                     'Intimidation',
-					'Falconry',
-					'Mounted Combat Training',
-					'Shield Training',
-					'Armor Training',
-					'Appropriate Weapons'
+                    'Falconry',
+                    'Mounted Combat Training',
+                    'Shield Training',
+                    'Armor Training',
+                    'Appropriate Weapons'
                 ]
             },
             traits: {
                 points: 1,
                 from: [
                     'Sworn Homage',
-					'Sense of Entitlement'
+                    'Sense of Entitlement'
                 ]
             },
             'requires': [
@@ -5266,7 +5266,7 @@ export default
                 'Cavalryman'
             ]
         },
-		{
+        {
             name: 'Courtier',
             setting: 'Noble Court',
             time: 5,
@@ -5277,19 +5277,19 @@ export default
             },
             leads: [
                 'City Dweller',
-				'Noble',
-				'Outcast'
+                'Noble',
+                'Outcast'
             ],
             skills: {
                 points: 8,
                 from: [
                     'Etiquette',
                     'Observation',
-					'Persuasion',
-					'Seduction',
-					'Inconspicuous',
-					'Court Gossip-wise',
-					'Noble-wise'
+                    'Persuasion',
+                    'Seduction',
+                    'Inconspicuous',
+                    'Court Gossip-wise',
+                    'Noble-wise'
                 ]
             },
             traits: {
@@ -5299,45 +5299,45 @@ export default
                 ]
             }
         },
-		{
+        {
             name: 'Governess',
             setting: 'Noble Court',
             time: 8,
             res: 12,
             leads: [
                 'Villager',
-				'Servitude',
-				'Outcast'
+                'Servitude',
+                'Outcast'
             ],
             skills: {
                 points: 7,
                 from: [
                     'Family-wise',
                     'Administration',
-					'Intimidation',
-					'Etiquette',
-					'Persuasion',
-					'Ugly Truth'
+                    'Intimidation',
+                    'Etiquette',
+                    'Persuasion',
+                    'Ugly Truth'
                 ]
             },
             traits: {
                 points: 1,
                 from: [
                     'Dismissive',
-					'You Should Know Better than That!',
-					'Bitter'
+                    'You Should Know Better than That!',
+                    'Bitter'
                 ]
             },
             'requires': [
                 'Nurse',
                 'Midwife',
-				'Lady',
-				'Country Wife',
-				'City Wife',
-				'Village Wife'
+                'Lady',
+                'Country Wife',
+                'City Wife',
+                'Village Wife'
             ]
         },
-		{
+        {
             name: 'Chaplain',
             setting: 'Noble Court',
             time: 5,
@@ -5347,21 +5347,21 @@ export default
                 attributes: 'M/P'
             },
             leads: [
-				'City Dweller',
-				'Religious',
-				'Professional Soldier',
-				'Servitude'
+                'City Dweller',
+                'Religious',
+                'Professional Soldier',
+                'Servitude'
             ],
             skills: {
                 points: 8,
                 from: [
                     'Oratory',
                     'Doctrine',
-					'Riding',
-					'Armor Training',
-					'Mounted Combat Training',
-					'Shield Training',
-					'Appropriate Weapons'
+                    'Riding',
+                    'Armor Training',
+                    'Mounted Combat Training',
+                    'Shield Training',
+                    'Appropriate Weapons'
                 ]
             },
             traits: {
@@ -5370,16 +5370,16 @@ export default
             'requires': [
                 'Military Order',
                 'Priest',
-				'Itinerant Priest',
-				'Village Priest',
-				'Venal Priest',
-				'Temple Priest',
-				'Archpriest',
-				'Court Priest',
-				'Heretic Priest'
+                'Itinerant Priest',
+                'Village Priest',
+                'Venal Priest',
+                'Temple Priest',
+                'Archpriest',
+                'Court Priest',
+                'Heretic Priest'
             ]
         },
-		{
+        {
             name: 'Court Sorcerer',
             setting: 'Noble Court',
             time: 8,
@@ -5389,34 +5389,34 @@ export default
                 attributes: 'M'
             },
             leads: [
-				'City Dweller',
-				'Outcast'
+                'City Dweller',
+                'Outcast'
             ],
             skills: {
                 points: 7,
                 from: [
                     'Etiquette',
                     'Falsehood',
-					'Astrology',
-					'Alchemy',
-					'Sorcery'
+                    'Astrology',
+                    'Alchemy',
+                    'Sorcery'
                 ]
             },
             traits: {
                 points: 1,
                 from: [
                     'Inscrutable',
-					'Gifted',
-					'Second Sight'
+                    'Gifted',
+                    'Second Sight'
                 ]
             },
             'requires': [
                 'Arcane Devotee',
                 'Rogue Wizard',
-				'Sorcerer'
+                'Sorcerer'
             ]
         },
-		{
+        {
             name: 'Court Lawyer',
             setting: 'Noble Court',
             time: 8,
@@ -5426,25 +5426,25 @@ export default
                 attributes: 'M'
             },
             leads: [
-				'City Dweller',
-				'Religious',
-				'Outcast'
+                'City Dweller',
+                'Religious',
+                'Outcast'
             ],
             skills: {
                 points: 6,
                 from: [
                     'Etiquette',
                     'Oratory',
-					'Persuasion',
-					'Rule of Law',
-					'History'
+                    'Persuasion',
+                    'Rule of Law',
+                    'History'
                 ]
             },
             traits: {
                 points: 1,
                 from: [
                     'Rhetorical',
-					'Evasive'
+                    'Evasive'
                 ]
             },
             'requires': [
@@ -5452,7 +5452,7 @@ export default
                 'Advocate'
             ]
         },
-		{
+        {
             name: 'Court Doctor',
             setting: 'Noble Court',
             time: 8,
@@ -5462,19 +5462,19 @@ export default
                 attributes: 'M'
             },
             leads: [
-				'City Dweller',
-				'Outcast'
+                'City Dweller',
+                'Outcast'
             ],
             skills: {
                 points: 7,
                 from: [
                     'Etiquette',
                     'Apothecary',
-					'Bloodletting',
-					'Surgery',
-					'Anatomy',
-					'Astrology',
-					'Falsehood'
+                    'Bloodletting',
+                    'Surgery',
+                    'Anatomy',
+                    'Astrology',
+                    'Falsehood'
                 ]
             },
             traits: {
@@ -5486,11 +5486,11 @@ export default
             'requires': [
                 'Student',
                 'Itinerant Monk',
-				'Cloistered Nun',
-				'Priest'
+                'Cloistered Nun',
+                'Priest'
             ]
         },
-		{
+        {
             name: 'Chronicler',
             setting: 'Noble Court',
             time: 10,
@@ -5501,38 +5501,38 @@ export default
             },
             leads: [
                 'Villager',
-				'City Dweller',
-				'Outcast'
+                'City Dweller',
+                'Outcast'
             ],
             skills: {
                 points: 6,
                 from: [
                     'Composition',
                     'History',
-					'Etiquette',
-					'Illuminations',
-					'Obscure History'
+                    'Etiquette',
+                    'Illuminations',
+                    'Obscure History'
                 ]
             },
             traits: {
                 points: 2,
                 from: [
                     'Prone to Exaggeration',
-					'Flatterer',
-					'Denouncer',
-					'Cynical',
-					'Righteous'
+                    'Flatterer',
+                    'Denouncer',
+                    'Cynical',
+                    'Righteous'
                 ]
             },
             'requires': [
                 'Student',
                 'Custodian',
-				'Interpreter',
-				'Archivist',
-				'Young Lady'
+                'Interpreter',
+                'Archivist',
+                'Young Lady'
             ]
         },
-		{
+        {
             name: 'Armorer',
             setting: 'Noble Court',
             time: 7,
@@ -5542,18 +5542,18 @@ export default
                 attributes: 'P'
             },
             leads: [
-				'City Dweller',
-				'Professional Soldier'
+                'City Dweller',
+                'Professional Soldier'
             ],
             skills: {
                 points: 9,
                 from: [
                     'Etching',
                     'Armorer',
-					'Blacksmith',
-					'Tanner',
-					'Sewing',
-					'Weaponsmith'
+                    'Blacksmith',
+                    'Tanner',
+                    'Sewing',
+                    'Weaponsmith'
                 ]
             },
             traits: {
@@ -5566,7 +5566,7 @@ export default
                 'Journeyman'
             ]
         },
-		{
+        {
             name: 'Atilliator',
             setting: 'Noble Court',
             time: 10,
@@ -5576,15 +5576,15 @@ export default
                 attributes: 'P'
             },
             leads: [
-				'City Dweller',
-				'Professional Soldier'
+                'City Dweller',
+                'Professional Soldier'
             ],
             skills: {
                 points: 6,
                 from: [
                     'Atilliator',
                     'Carpentry',
-					'Carving'
+                    'Carving'
                 ]
             },
             traits: {
@@ -5597,7 +5597,7 @@ export default
                 'Journeyman'
             ]
         },
-		{
+        {
             name: 'Court Priest',
             setting: 'Noble Court',
             time: 6,
@@ -5607,34 +5607,34 @@ export default
                 attributes: 'M'
             },
             leads: [
-				'City Dweller',
-				'Religious',
-				'Outcast'
+                'City Dweller',
+                'Religious',
+                'Outcast'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Etiquette',
                     'History',
-					'Symbology',
-					'Doctrine',
-					'Persuasion'
+                    'Symbology',
+                    'Doctrine',
+                    'Persuasion'
                 ]
             },
             traits: {
                 points: 2,
                 from: [
                     'Royal Favorite',
-					'Faithful'
+                    'Faithful'
                 ]
             },
             'requires': [
                 'Chaplain',
                 'Priest',
-				'Religious Acolyte'
+                'Religious Acolyte'
             ]
         },
-		{
+        {
             name: 'Steward',
             setting: 'Noble Court',
             time: 7,
@@ -5644,18 +5644,18 @@ export default
                 attributes: 'M'
             },
             leads: [
-				'City Dweller',
-				'Noble',
-				'Religious',
-				'Outcast'
+                'City Dweller',
+                'Noble',
+                'Religious',
+                'Outcast'
             ],
             skills: {
                 points: 6,
                 from: [
                     'Estate Management',
                     'Accounting',
-					'Observation',
-					'Manor-wise'
+                    'Observation',
+                    'Manor-wise'
                 ]
             },
             traits: {
@@ -5664,117 +5664,117 @@ export default
             'requires': [
                 'Town Official',
                 'Municipal Minister',
-				'Judge',
-				'Court Lawyer',
-				'Court Doctor',
-				'Governess',
-				'Young Lady',
-				'Magnate',
-				'Lord'
+                'Judge',
+                'Court Lawyer',
+                'Court Doctor',
+                'Governess',
+                'Young Lady',
+                'Magnate',
+                'Lord'
             ]
         },
-		{
+        {
             name: 'Master of Horses',
             setting: 'Noble Court',
             time: 8,
             res: 40,
             leads: [
-				'City Dweller',
-				'Professional Soldier'
+                'City Dweller',
+                'Professional Soldier'
             ],
             skills: {
                 points: 4,
                 from: [
                     'Horse Husbandry',
                     'Appraisal',
-					'Horse-wise'
+                    'Horse-wise'
                 ]
             },
             traits: {
                 points: 1,
                 from: [
                     'Love of the Horse',
-					'Low Speech',
-					'Affinity for Horses'
+                    'Low Speech',
+                    'Affinity for Horses'
                 ]
             },
             'requires': [
                 'Captain',
                 'Baron',
-				'Saddler',
-				'Merchant',
-				'Magnate'
+                'Saddler',
+                'Merchant',
+                'Magnate'
             ]
         },
-		{
+        {
             name: 'Master of Hounds',
             setting: 'Noble Court',
             time: 7,
             res: 20,
             leads: [
-				'City Dweller',
-				'Professional Soldier'
+                'City Dweller',
+                'Professional Soldier'
             ],
             skills: {
                 points: 7,
                 from: [
                     'Dog Husbandry',
                     'Dog-wise',
-					'Hunting',
-					'Instruction',
-					'Mimicry'
+                    'Hunting',
+                    'Instruction',
+                    'Mimicry'
                 ]
             },
             traits: {
                 points: 1,
                 from: [
                     'Dog Lover',
-					'Pigpen',
-					'Emotional',
-					'Iron Stomach'
+                    'Pigpen',
+                    'Emotional',
+                    'Iron Stomach'
                 ]
             },
             'requires': [
                 'Captain',
                 'Baron',
-				'Saddler',
-				'Merchant',
-				'Magnate'
+                'Saddler',
+                'Merchant',
+                'Magnate'
             ]
         },
-		{
+        {
             name: 'Hostage',
             setting: 'Noble Court',
             time: 6,
             res: /*TODO:*/ 'Half of previous LP',
             leads: [
-				'City Dweller',
-				'Noble',
-				'Religious',
-				'Professional Soldier'
+                'City Dweller',
+                'Noble',
+                'Religious',
+                'Professional Soldier'
             ],
             skills: {
                 points: 4,
                 from: [
                     'Etiquette',
                     'Court-wise',
-					'Foreign Languages',
-					'Foreign History'
+                    'Foreign Languages',
+                    'Foreign History'
                 ]
             },
             traits: {
                 points: 1,
                 from: [
                     'Homesick',
-					'Bored',
-					'Darling of the Court'
+                    'Bored',
+                    'Darling of the Court'
                 ]
             },
             'requires': [
                 'lifepath:Noble'
             ]
         },
-		{
+        {
             name: 'Bailiff',
             setting: 'Noble Court',
             time: 4,
@@ -5784,20 +5784,20 @@ export default
                 attributes: 'M/P'
             },
             leads: [
-				'City Dweller',
-				'Professional Soldier',
-				'Outcast'
+                'City Dweller',
+                'Professional Soldier',
+                'Outcast'
             ],
             skills: {
                 points: 7,
                 from: [
                     'Intimidation',
                     'Interrogation',
-					'Rule of Law',
-					'Outlaw-wise',
-					'Village-wise',
-					'City-wise',
-					'Tax-wise'
+                    'Rule of Law',
+                    'Outlaw-wise',
+                    'Village-wise',
+                    'City-wise',
+                    'Tax-wise'
                 ]
             },
             traits: {
@@ -5811,7 +5811,7 @@ export default
                 //TODO: or the 'Your Lordship' trait
             ]
         },
-		{
+        {
             name: 'Justiciar',
             setting: 'Noble Court',
             time: 5,
@@ -5821,72 +5821,72 @@ export default
                 attributes: 'M/P'
             },
             leads: [
-				'City Dweller',
-				'Religious',
-				'Professional Soldier',
-				'Outcast'
+                'City Dweller',
+                'Religious',
+                'Professional Soldier',
+                'Outcast'
             ],
             skills: {
                 points: 6,
                 from: [
                     'Rule of Law',
                     'Amercement',
-					'Interrogation',
-					'Criminal-wise',
-					'Circuit-wise'
+                    'Interrogation',
+                    'Criminal-wise',
+                    'Circuit-wise'
                 ]
             },
             traits: {
                 points: 1,
                 from: [
                     'Stern Demeanor',
-					'Amenable to Other Options'
+                    'Amenable to Other Options'
                 ]
             },
             'requires': [
                 'Judge',
                 'Captain',
-				'Bailiff',
-				'Lord'
+                'Bailiff',
+                'Lord'
             ]
         },
-		{
+        {
             name: 'Coroner',
             setting: 'Noble Court',
             time: 6,
             res: 15,
             leads: [
-				'City Dweller',
-				'Professional Soldier'
+                'City Dweller',
+                'Professional Soldier'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Rule of Law',
                     'Anatomy',
-					'Writ-wise',
-					'Observation'
+                    'Writ-wise',
+                    'Observation'
                 ]
             },
             traits: {
                 points: 1,
                 from: [
                     'Hard Hearted',
-					'Seen It All'
+                    'Seen It All'
                 ]
             },
             'requires': [
                 'Steward',
                 'Town Official',
-				'Municipal Minister',
-				'Judge',
-				'Court Lawyer',
-				'Court Doctor',
-				'Magnate',
-				'Lord'
+                'Municipal Minister',
+                'Judge',
+                'Court Lawyer',
+                'Court Doctor',
+                'Magnate',
+                'Lord'
             ]
         },
-		{
+        {
             name: 'Constable',
             setting: 'Noble Court',
             time: 6,
@@ -5896,20 +5896,20 @@ export default
                 attributes: 'M'
             },
             leads: [
-				'City Dweller',
-				'Professional Soldier',
-				'Outcast'
+                'City Dweller',
+                'Professional Soldier',
+                'Outcast'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Command',
                     'Heraldry',
-					'Logistics',
-					'Kingdom-wise',
-					'Obligation-wise',
-					'Soldier-wise',
-					'Cavalry-wise'
+                    'Logistics',
+                    'Kingdom-wise',
+                    'Obligation-wise',
+                    'Soldier-wise',
+                    'Cavalry-wise'
                 ]
             },
             traits: {
@@ -5921,55 +5921,55 @@ export default
             'requires': [
                 'Captain',
                 'Baron',
-				'Viscount',
-				'Count',
-				'Duke',
-				'Noble Prince',
-				'Prince of the Blood'
+                'Viscount',
+                'Count',
+                'Duke',
+                'Noble Prince',
+                'Prince of the Blood'
             ]
         },
-		{
+        {
             name: 'Treasurer',
             setting: 'Noble Court',
             time: 7,
             res: 45,
             leads: [
-				'City Dweller',
-				'Religious',
-				'Professional Soldier'
+                'City Dweller',
+                'Religious',
+                'Professional Soldier'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Accounting',
                     'Estate Management',
-					'Tax-wise',
-					'Debt-wise'
+                    'Tax-wise',
+                    'Debt-wise'
                 ]
             },
             traits: {
                 points: 1,
                 from: [
                     'Pecunious',
-					'Lavish Taste'
+                    'Lavish Taste'
                 ]
             },
             'requires': [
                 'Steward',
                 'Town Official',
-				'Municipal Minister',
-				'Judge',
-				'Court Lawyer',
-				'Court Doctor',
-				'Magnate',
-				'Baron',
-				'Bishop',
-				'Viscount',
-				'Count',
-				'Duke'
+                'Municipal Minister',
+                'Judge',
+                'Court Lawyer',
+                'Court Doctor',
+                'Magnate',
+                'Baron',
+                'Bishop',
+                'Viscount',
+                'Count',
+                'Duke'
             ]
         },
-		{
+        {
             name: 'Chamberlain',
             setting: 'Noble Court',
             time: 7,
@@ -5979,18 +5979,18 @@ export default
                 attributes: 'M'
             },
             leads: [
-				'City Dweller',
-				'Religious',
-				'Professional Soldier'
+                'City Dweller',
+                'Religious',
+                'Professional Soldier'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Soothing Platitudes',
                     'Persuasion',
-					'Ugly Truth'
+                    'Ugly Truth'
                 ],
-				generalPoints: 1
+                generalPoints: 1
             },
             traits: {
                 points: 1
@@ -5998,25 +5998,25 @@ export default
             'requires': [
                 'Scholar',
                 'Steward',
-				'Town Official',
-				'Municipal Minister',
-				'Judge',
-				'Court Lawyer',
-				'Court Doctor',
-				'Magnate',
-				'Baron',
-				'Bishop',
-				'Viscount',
-				'Count',
-				'Duke'
+                'Town Official',
+                'Municipal Minister',
+                'Judge',
+                'Court Lawyer',
+                'Court Doctor',
+                'Magnate',
+                'Baron',
+                'Bishop',
+                'Viscount',
+                'Count',
+                'Duke'
             ]
         },
-		{
+        {
             name: 'Advisor to the Court',
             setting: 'Noble Court',
-			//TODO: This LP can be 1-3 yrs long. Player's choice.
-			//Character earns 10 res and 1 gen. skill point per year.
-			//The stat and trait points are earned once.
+            //TODO: This LP can be 1-3 yrs long. Player's choice.
+            //Character earns 10 res and 1 gen. skill point per year.
+            //The stat and trait points are earned once.
             time: '1 to 3',
             res: '10/yr',
             stat: {
@@ -6026,16 +6026,16 @@ export default
             leads: [
                 'Peasant',
                 'Villager',
-				'City Dweller',
-				'Noble',
-				'Religious',
-				'Professional Soldier',
-				'Seafaring',
-				'Servitude',
-				'Outcast'
+                'City Dweller',
+                'Noble',
+                'Religious',
+                'Professional Soldier',
+                'Seafaring',
+                'Servitude',
+                'Outcast'
             ],
             skills: {
-				generalPoints: '1/yr'
+                generalPoints: '1/yr'
             },
             traits: {
                 points: 1
@@ -6043,24 +6043,24 @@ export default
             'requires': [
                 'Thinker',
                 'Captain',
-				'Sea Captain',
-				'Magnate',
-				'Master Craftsman',
-				'Artisan',
-				'Bishop',
-				'Rogue Wizard',
-				'Mad Summoner',
-				'Heretic Priest',
-				'Dame',
-				'Baron',
-				'Viscount',
-				'Count',
-				'Duke',
-				'Noble Prince',
-				'Prince of the Blood'
+                'Sea Captain',
+                'Magnate',
+                'Master Craftsman',
+                'Artisan',
+                'Bishop',
+                'Rogue Wizard',
+                'Mad Summoner',
+                'Heretic Priest',
+                'Dame',
+                'Baron',
+                'Viscount',
+                'Count',
+                'Duke',
+                'Noble Prince',
+                'Prince of the Blood'
             ]
         },
-		{
+        {
             name: 'Castrati',
             setting: 'Religious',
             time: 7,
@@ -6070,29 +6070,29 @@ export default
                 attributes: 'M'
             },
             leads: [
-				'Noble Court',
-				'Outcast'
+                'Noble Court',
+                'Outcast'
             ],
             skills: {
                 points: 7,
                 from: [
                     'Sing',
                     'Persuasion',
-					'Falsehood',
-					'Etiquette',
-					'Administration',
-					'Rule of Law'
+                    'Falsehood',
+                    'Etiquette',
+                    'Administration',
+                    'Rule of Law'
                 ]
             },
             traits: {
                 points: 3,
                 from: [
                     'Eunuch',
-					'Scheming'
+                    'Scheming'
                 ]
             }
         },
-		{
+        {
             name: 'Pardoner',
             setting: 'Religious',
             time: 5,
@@ -6100,57 +6100,57 @@ export default
             leads: [
                 'Peasant',
                 'Villager',
-				'City Dweller',
-				'Outcast'
+                'City Dweller',
+                'Outcast'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Persuasion',
                     'Falsehood',
-					'Intimidation',
-					'Doctrine'
+                    'Intimidation',
+                    'Doctrine'
                 ]
             },
             traits: {
                 points: 1,
                 from: [
                     'Pardoner',
-					'Corrupt'
+                    'Corrupt'
                 ]
             }
         },
-		{
+        {
             name: 'Zealous Convert',
             setting: 'Religious',
             time: 4,
             res: 10,
             leads: [
                 'Peasant',
-				'Noble Court',
-				'Servitude',
-				'Outcast'
+                'Noble Court',
+                'Servitude',
+                'Outcast'
             ],
             skills: {
                 points: 4,
                 from: [
                     'Religious Diatribe',
                     'Doctrine',
-					'Rhetoric'
+                    'Rhetoric'
                 ]
             },
             traits: {
                 points: 3,
                 from: [
                     'Infallible',
-					'Religious Logic',
-					'Righteous',
-					'Firm',
-					'Demagogue'
+                    'Religious Logic',
+                    'Righteous',
+                    'Firm',
+                    'Demagogue'
                 ]
             }
         },
-		{
+        {
             name: 'Military Order',
             setting: 'Religious',
             time: 3,
@@ -6161,65 +6161,65 @@ export default
             },
             leads: [
                 'Villager',
-				'City Dweller',
-				'Noble',
-				'Noble Court',
-				'Professional Soldier',
-				'Seafaring',
-				'Servitude',
-				'Outcast'
+                'City Dweller',
+                'Noble',
+                'Noble Court',
+                'Professional Soldier',
+                'Seafaring',
+                'Servitude',
+                'Outcast'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Doctrine',
                     'Riding',
-					'Armor Training',
-					'Appropriate Weapons'
+                    'Armor Training',
+                    'Appropriate Weapons'
                 ]
             },
             traits: {
                 points: 2,
                 from: [
                     'Disciplined',
-					'Fanatical Devotion',
-					'Sworn to the Order'
+                    'Fanatical Devotion',
+                    'Sworn to the Order'
                 ]
             },
             'requires': [
                 'Squire',
                 'Knight',
-				'lifepath:Professional Soldier'
+                'lifepath:Professional Soldier'
             ]
         },
-		{
+        {
             name: 'Grave Digger',
             setting: 'Religious',
             time: 4,
             res: 6,
             leads: [
                 'Villager',
-				'City Dweller',
-				'Servitude',
-				'Outcast'
+                'City Dweller',
+                'Servitude',
+                'Outcast'
             ],
             skills: {
                 points: 4,
                 from: [
                     'Digging',
                     'Grave-wise',
-					'Cemetery-wise'
+                    'Cemetery-wise'
                 ]
             },
             traits: {
                 points: 2,
                 from: [
                     'Superstitious',
-					'Burial Rites'
+                    'Burial Rites'
                 ]
             }
         },
-		{
+        {
             name: 'Porter',
             setting: 'Religious',
             time: 3,
@@ -6227,42 +6227,42 @@ export default
             leads: [
                 'Peasant',
                 'Villager',
-				'Outcast'
+                'Outcast'
             ],
             skills: {
                 points: 4,
                 from: [
                     'Temple-wise',
                     'Priest-wise',
-					'Worshipper-wise',
-					'Church Treasure-wise'
+                    'Worshipper-wise',
+                    'Church Treasure-wise'
                 ]
             },
             traits: {
                 points: 1,
                 from: [
                     'Keys to the Church',
-					'Familiar Face'
+                    'Familiar Face'
                 ]
             }
         },
-		{
+        {
             name: 'Notary',
             setting: 'Religious',
             time: 4,
             res: 15,
             leads: [
-				'City Dweller',
-				'Noble Court',
-				'Outcast'
+                'City Dweller',
+                'Noble Court',
+                'Outcast'
             ],
             skills: {
                 points: 4,
                 from: [
                     'Rule of Law',
                     'Bureaucracy',
-					'Church Law',
-					'Bribe-wise'
+                    'Church Law',
+                    'Bribe-wise'
                 ]
             },
             traits: {
@@ -6271,10 +6271,10 @@ export default
             'requires': [
                 'Clerk',
                 'Young Lady',
-				'Student'
+                'Student'
             ]
         },
-		{
+        {
             name: 'Custodian',
             setting: 'Religious',
             time: 5,
@@ -6284,77 +6284,77 @@ export default
                 attributes: 'M'
             },
             leads: [
-				'City Dweller',
-				'Outcast'
+                'City Dweller',
+                'Outcast'
             ],
             skills: {
                 points: 7,
                 from: [
                     'Relic-wise',
                     'Observation',
-					'Obscure History',
-					'Religious History',
-					'Folklore',
-					'Saint-wise'
+                    'Obscure History',
+                    'Religious History',
+                    'Folklore',
+                    'Saint-wise'
                 ]
             },
             traits: {
                 points: 2,
                 from: [
                     'Strange',
-					'Erudite',
-					'Obsessed',
-					'Arcane'
+                    'Erudite',
+                    'Obsessed',
+                    'Arcane'
                 ]
             },
             'requires': [
                 'Student',
                 'Young Lady',
-				'Cloistered Monk',
-				'Cloistered Nun',
-				'Temple Acolyte',
-				'Inquisitor',
-				'Exorcist',
-				'Theologian'
+                'Cloistered Monk',
+                'Cloistered Nun',
+                'Temple Acolyte',
+                'Inquisitor',
+                'Exorcist',
+                'Theologian'
             ]
         },
-		{
+        {
             name: 'Interpreter',
             setting: 'Religious',
             time: 5,
             res: 10,
             leads: [
                 'Villager',
-				'City Dweller',
-				'Noble Court'
+                'City Dweller',
+                'Noble Court'
             ],
             skills: {
                 points: 7,
                 from: [
                     'Read',
                     'Ancient Languages',
-					'Instruction',
-					'Write',
-					'Doctrine',
-					'Foreign Languages'
+                    'Instruction',
+                    'Write',
+                    'Doctrine',
+                    'Foreign Languages'
                 ]
             },
             traits: {
                 points: 2,
                 from: [
                     'Ink-Stained Hands',
-					'Condescending'
+                    'Condescending'
                 ]
             },
             'requires': [
                 'Student',
                 'Young Lady',
-				'Temple Acolyte',
-				'Exorcist',
-				'Theologian'
+                'Temple Acolyte',
+                'Exorcist',
+                'Theologian'
             ]
         },
-		{
+        {
             name: 'Archivist',
             setting: 'Religious',
             time: 7,
@@ -6365,34 +6365,34 @@ export default
             },
             leads: [
                 'Villager',
-				'City Dweller',
-				'Noble Court'
+                'City Dweller',
+                'Noble Court'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Research',
                     'Library-wise',
-					'Ancient History',
-					'Symbology'
+                    'Ancient History',
+                    'Symbology'
                 ]
             },
             traits: {
                 points: 1,
                 from: [
                     'Myopic',
-					'Affinity for Books and Scrolls'
+                    'Affinity for Books and Scrolls'
                 ]
             },
             'requires': [
                 'Student',
                 'Cloistered Nun',
-				'Cloistered Monk',
-				'Exorcist',
-				'Theologian'
+                'Cloistered Monk',
+                'Exorcist',
+                'Theologian'
             ]
         },
-		{
+        {
             name: 'Itinerant Monk',
             setting: 'Religious',
             time: 6,
@@ -6400,16 +6400,16 @@ export default
             leads: [
                 'Peasant',
                 'Villager',
-				'Outcast'
+                'Outcast'
             ],
             skills: {
                 points: 7,
                 from: [
                     'Doctrine',
                     'Suasion',
-					'Meditation',
-					'Begging',
-					'Alms-wise'
+                    'Meditation',
+                    'Begging',
+                    'Alms-wise'
                 ]
             },
             traits: {
@@ -6419,37 +6419,37 @@ export default
                 ]
             }
         },
-		{
+        {
             name: 'Cloistered Nun',
             setting: 'Religious',
             time: 10,
             res: 12,
             leads: [
                 'Peasant',
-				'Noble Court',
-				'Outcast'
+                'Noble Court',
+                'Outcast'
             ],
             skills: {
                 points: 6,
                 from: [
                     'Research',
                     'History',
-					'Meditation',
-					'Monastic Ritual',
-					'Vintner',
-					'Symbology'
+                    'Meditation',
+                    'Monastic Ritual',
+                    'Vintner',
+                    'Symbology'
                 ]
             },
             traits: {
                 points: 1,
                 from: [
                     'Tonsured',
-					'Restless',
-					'Bored'
+                    'Restless',
+                    'Bored'
                 ]
             }
         },
-		{
+        {
             name: 'Temple Acolyte',
             setting: 'Religious',
             time: 6,
@@ -6459,29 +6459,29 @@ export default
                 attributes: 'M'
             },
             leads: [
-				'City Dweller',
-				'Professional Soldier',
-				'Outcast'
+                'City Dweller',
+                'Professional Soldier',
+                'Outcast'
             ],
             skills: {
                 points: 4,
                 from: [
                     'Write',
                     'Read',
-					'Doctrine',
-					'Temple-wise'
+                    'Doctrine',
+                    'Temple-wise'
                 ]
             },
             traits: {
                 points: 1,
                 from: [
                     'Tonsured',
-					'Obedient',
-					'Faithful'
+                    'Obedient',
+                    'Faithful'
                 ]
             }
         },
-		{
+        {
             name: 'Priest',
             setting: 'Religious',
             time: 5,
@@ -6492,21 +6492,21 @@ export default
             },
             leads: [
                 'Villager',
-				'Noble Court',
-				'Professional Soldier',
-				'Outcast'
+                'Noble Court',
+                'Professional Soldier',
+                'Outcast'
             ],
             skills: {
                 points: 7,
                 from: [
                     'Oratory',
                     'Suasion',
-					'Write',
-					'Read',
-					'Doctrine',
-					'Ritual',
-					'Symbology',
-					'Religious History'
+                    'Write',
+                    'Read',
+                    'Doctrine',
+                    'Ritual',
+                    'Symbology',
+                    'Religious History'
                 ]
             },
             traits: {
@@ -6520,7 +6520,7 @@ export default
                 'Religious Acolyte'
             ]
         },
-		{
+        {
             name: 'Exorcist',
             setting: 'Religious',
             time: 6,
@@ -6530,42 +6530,42 @@ export default
                 attributes: 'M'
             },
             leads: [
-				'City Dweller',
-				'Noble Court',
-				'Outcast'
+                'City Dweller',
+                'Noble Court',
+                'Outcast'
             ],
             skills: {
                 points: 8,
                 from: [
                     'Doctrine',
                     'Obscure History',
-					'Observation',
-					'Church Law',
-					'Symbology',
-					'Demonology',
-					'Ancient Languages'
+                    'Observation',
+                    'Church Law',
+                    'Symbology',
+                    'Demonology',
+                    'Ancient Languages'
                 ]
             },
             traits: {
                 points: 2,
                 from: [
                     'Skeptical',
-					'Haunted',
-					'Possessed',
-					'Exorcist',
-					'Lost Faith',
-					'Faithful'
+                    'Haunted',
+                    'Possessed',
+                    'Exorcist',
+                    'Lost Faith',
+                    'Faithful'
                 ]
             },
             'requires': [
                 'Temple Priest',
                 'Itinerant Priest',
-				'Priest',
-				'Court Priest',
-				'Archivist'
+                'Priest',
+                'Court Priest',
+                'Archivist'
             ]
         },
-		{
+        {
             name: 'Inquisitor',
             setting: 'Religious',
             time: 6,
@@ -6575,39 +6575,39 @@ export default
                 attributes: 'M/P'
             },
             leads: [
-				'City Dweller',
-				'Noble Court',
-				'Professional Soldier',
-				'Outcast'
+                'City Dweller',
+                'Noble Court',
+                'Professional Soldier',
+                'Outcast'
             ],
             skills: {
                 points: 6,
                 from: [
                     'Doctrine',
                     'Interrogation',
-					'Torture',
-					'Heresy-wise'
+                    'Torture',
+                    'Heresy-wise'
                 ]
             },
             traits: {
                 points: 2,
                 from: [
                     'Suspicious',
-					'Merciless',
-					'Cold-Blooded',
-					'Righteous'
+                    'Merciless',
+                    'Cold-Blooded',
+                    'Righteous'
                 ]
             },
             'requires': [
                 'Temple Priest',
                 'Itinerant Priest',
-				'Priest',
-				'Court Priest',
-				'Judge',
-				'Justiciar'
+                'Priest',
+                'Court Priest',
+                'Judge',
+                'Justiciar'
             ]
         },
-		{
+        {
             name: 'Theologian',
             setting: 'Religious',
             time: 10,
@@ -6618,44 +6618,44 @@ export default
             },
             leads: [
                 'Villager',
-				'City Dweller',
-				'Noble Court'
+                'City Dweller',
+                'Noble Court'
             ],
             skills: {
                 points: 10,
                 from: [
                     'Doctrine',
                     'Rhetoric',
-					'Philosophy',
-					'History',
-					'Religious History',
-					'Church Law',
-					'Obscure History',
-					'Read',
-					'Write'
+                    'Philosophy',
+                    'History',
+                    'Religious History',
+                    'Church Law',
+                    'Obscure History',
+                    'Read',
+                    'Write'
                 ]
             },
             traits: {
                 points: 2,
                 from: [
                     'Learned',
-					'Insightful',
-					'Bookworm',
-					'Academic'
+                    'Insightful',
+                    'Bookworm',
+                    'Academic'
                 ]
             },
             'requires': [
                 'Scribe',
                 'Archivist',
-				'Court Lawyer',
-				'Advocate',
-				'Custodian',
-				'Interpreter',
-				'Priest',
-				'Bishop'
+                'Court Lawyer',
+                'Advocate',
+                'Custodian',
+                'Interpreter',
+                'Priest',
+                'Bishop'
             ]
         },
-		{
+        {
             name: 'Archpriest',
             setting: 'Religious',
             time: 5,
@@ -6665,24 +6665,24 @@ export default
                 attributes: 'M/P'
             },
             leads: [
-				'City Dweller',
-				'Noble Court',
-				'Outcast'
+                'City Dweller',
+                'Noble Court',
+                'Outcast'
             ],
             skills: {
                 points: 10,
                 from: [
                     'Oratory',
                     'Suasion',
-					'Write',
-					'Read',
-					'Doctrine',
-					'History',
-					'Religious History',
-					'Ritual',
-					'Church-wise',
-					'Parish-wise',
-					'Tithe-wise'
+                    'Write',
+                    'Read',
+                    'Doctrine',
+                    'History',
+                    'Religious History',
+                    'Ritual',
+                    'Church-wise',
+                    'Parish-wise',
+                    'Tithe-wise'
                 ]
             },
             traits: {
@@ -6694,12 +6694,12 @@ export default
             'requires': [
                 'Temple Priest',
                 'Itinerant Priest',
-				'Priest',
-				'Court Priest',
-				'Chaplain'
+                'Priest',
+                'Court Priest',
+                'Chaplain'
             ]
         },
-		{
+        {
             name: 'Canon',
             setting: 'Religious',
             time: 10,
@@ -6709,18 +6709,18 @@ export default
                 attributes: 'M/P'
             },
             leads: [
-				'City Dweller',
-				'Noble Court',
-				'Outcast'
+                'City Dweller',
+                'Noble Court',
+                'Outcast'
             ],
             skills: {
                 points: 6,
                 from: [
                     'Rule of Law',
                     'Church Law',
-					'Administration',
-					'Doctrine',
-					'Church-wise'
+                    'Administration',
+                    'Doctrine',
+                    'Church-wise'
                 ]
             },
             traits: {
@@ -6732,10 +6732,10 @@ export default
             'requires': [
                 'Archpriest',
                 'Theologian',
-				'Abbot'
+                'Abbot'
             ]
         },
-		{
+        {
             name: 'Abbot/Abbess',
             setting: 'Religious',
             time: 10,
@@ -6745,21 +6745,21 @@ export default
                 attributes: 'M'
             },
             leads: [
-				'City Dweller',
-				'Noble Court',
-				'Outcast'
+                'City Dweller',
+                'Noble Court',
+                'Outcast'
             ],
             skills: {
                 points: 6,
                 from: [
                     'Administration',
                     'Accounting',
-					'Vintner',
-					'Wine Tasting',
-					'Royal Secret-wise',
-					'Abbey-wise'
+                    'Vintner',
+                    'Wine Tasting',
+                    'Royal Secret-wise',
+                    'Abbey-wise'
                 ],
-				generalPoints: 2
+                generalPoints: 2
             },
             traits: {
                 points: 1
@@ -6767,29 +6767,29 @@ export default
             'requires': [
                 'Itinerant Monk',
                 'Cloistered Nun',
-				'Theologian',
-				'Vintner'
+                'Theologian',
+                'Vintner'
             ]
         },
-		{
+        {
             name: 'Bishop',
             setting: 'Religious',
             time: 8,
             res: 45,
             leads: [
-				'City Dweller',
-				'Noble Court',
-				'Outcast'
+                'City Dweller',
+                'Noble Court',
+                'Outcast'
             ],
             skills: {
                 points: 7,
                 from: [
                     'Religious History',
                     'Intimidation',
-					'Ritual',
-					'Symbology',
-					'History',
-					'Obscure History'
+                    'Ritual',
+                    'Symbology',
+                    'History',
+                    'Obscure History'
                 ]
             },
             traits: {
@@ -6801,14 +6801,14 @@ export default
             'requires': [
                 'Archpriest',
                 'Baron',
-				'Viscount',
-				'Count',
-				'Duke',
-				'Noble Prince', //TODO: and 'Your Grace' trait
-				'Prince of the Blood'
+                'Viscount',
+                'Count',
+                'Duke',
+                'Noble Prince', //TODO: and 'Your Grace' trait
+                'Prince of the Blood'
             ]
         },
-		{
+        {
             name: 'Runner',
             setting: 'Professional Soldier',
             time: 3,
@@ -6820,27 +6820,27 @@ export default
             leads: [
                 'Peasant',
                 'Villager',
-				'Servitude',
-				'Outcast'
+                'Servitude',
+                'Outcast'
             ],
             skills: {
                 points: 4,
                 from: [
                     'Inconspicuous',
                     'Stealthy',
-					'Sing'
+                    'Sing'
                 ]
             },
             traits: {
                 points: 2,
                 from: [
                     'Skinny',
-					'Fleet of Foot',
-					'Sprinter'
+                    'Fleet of Foot',
+                    'Sprinter'
                 ]
             }
         },
-		{
+        {
             name: 'Apprentice',
             setting: 'Professional Soldier',
             time: 4,
@@ -6852,28 +6852,28 @@ export default
             leads: [
                 'Peasant',
                 'Villager',
-				'City Dweller'
+                'City Dweller'
             ],
             skills: {
                 points: 6,
                 from: [
                     'Mending',
                     'Write',
-					'Read',
-					'Hauling',
-					'Driving',
-					'Ditch Digging'
+                    'Read',
+                    'Hauling',
+                    'Driving',
+                    'Ditch Digging'
                 ]
             },
             traits: {
                 points: 2,
                 from: [
                     'Exhausted',
-					'Back-Breaking Labor'
+                    'Back-Breaking Labor'
                 ]
             }
         },
-		{
+        {
             name: 'Musician',
             setting: 'Professional Soldier',
             time: 3,
@@ -6885,21 +6885,21 @@ export default
             leads: [
                 'Peasant',
                 'Villager',
-				'Servitude'
+                'Servitude'
             ],
             skills: {
                 points: 4,
                 from: [
                     'Musical Instrument',
                     'Conspicuous',
-					'Riding'
+                    'Riding'
                 ]
             },
             traits: {
                 points: 1
             }
         },
-		{
+        {
             name: 'Foot Soldier',
             setting: 'Professional Soldier',
             time: 3,
@@ -6910,25 +6910,25 @@ export default
             },
             leads: [
                 'Villager',
-				'Servitude',
-				'Outcast'
+                'Servitude',
+                'Outcast'
             ],
             skills: {
                 points: 6,
                 from: [
                     'Soldiering',
                     'Appropriate Weapons',
-					'Shield Training',
-					'Brawling',
-					'Foraging',
-					'Firebuilding'
+                    'Shield Training',
+                    'Brawling',
+                    'Foraging',
+                    'Firebuilding'
                 ]
             },
             traits: {
                 points: 1
             }
         },
-		{
+        {
             name: 'Archer',
             setting: 'Professional Soldier',
             time: 3,
@@ -6939,24 +6939,24 @@ export default
             },
             leads: [
                 'Villager',
-				'Servitude',
-				'Outcast'
+                'Servitude',
+                'Outcast'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Bow',
                     'Fletcher',
-					'Brawling',
-					'Foraging',
-					'Firebuilding'
+                    'Brawling',
+                    'Foraging',
+                    'Firebuilding'
                 ]
             },
             traits: {
                 points: 1
             }
         },
-		{
+        {
             name: 'Crossbowman',
             setting: 'Professional Soldier',
             time: 3,
@@ -6967,24 +6967,24 @@ export default
             },
             leads: [
                 'Villager',
-				'Servitude',
-				'Outcast'
+                'Servitude',
+                'Outcast'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Crossbow',
                     'Fletcher',
-					'Brawling',
-					'Foraging',
-					'Firebuilding'
+                    'Brawling',
+                    'Foraging',
+                    'Firebuilding'
                 ]
             },
             traits: {
                 points: 1
             }
         },
-		{
+        {
             name: 'Sailor',
             setting: 'Professional Soldier',
             time: 5,
@@ -6995,32 +6995,32 @@ export default
             },
             leads: [
                 'Villager',
-				'Seafaring',
-				'Servitude',
-				'Outcast'
+                'Seafaring',
+                'Servitude',
+                'Outcast'
             ],
             skills: {
                 points: 6,
                 from: [
                     'Seamanship',
                     'Rigging',
-					'Knots',
-					'Mending',
-					'Navigation',
-					'Knives',
-					'Sword'
+                    'Knots',
+                    'Mending',
+                    'Navigation',
+                    'Knives',
+                    'Sword'
                 ]
             },
             traits: {
                 points: 1,
                 from: [
                     'Iron Stomach',
-					'Sea Legs',
-					'Affinity for Rope'
+                    'Sea Legs',
+                    'Affinity for Rope'
                 ]
             }
         },
-		{
+        {
             name: 'Herald',
             setting: 'Professional Soldier',
             time: 3,
@@ -7031,24 +7031,24 @@ export default
             },
             leads: [
                 'Villager',
-				'Noble Court',
-				'Servitude'
+                'Noble Court',
+                'Servitude'
             ],
             skills: {
                 points: 4,
                 from: [
                     'Oratory',
                     'Conspicuous',
-					'Riding',
-					'Heraldry',
-					'Bannerman-wise'
+                    'Riding',
+                    'Heraldry',
+                    'Bannerman-wise'
                 ]
             },
             traits: {
                 points: 1
             }
         },
-		{
+        {
             name: 'Bannerman',
             setting: 'Professional Soldier',
             time: 3,
@@ -7059,28 +7059,28 @@ export default
             },
             leads: [
                 'Villager',
-				'Noble Court',
-				'Servitude'
+                'Noble Court',
+                'Servitude'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Conspicuous',
                     'Riding',
-					'Appropriate Weapons',
-					'Armor Training'
+                    'Appropriate Weapons',
+                    'Armor Training'
                 ]
             },
             traits: {
                 points: 2,
                 from: [
                     'Honored',
-					'Brutal',
-					'Aggressive'
+                    'Brutal',
+                    'Aggressive'
                 ]
             }
         },
-		{
+        {
             name: 'Scout',
             setting: 'Professional Soldier',
             time: 3,
@@ -7091,24 +7091,24 @@ export default
             },
             leads: [
                 'Peasant',
-				'Servitude',
-				'Outcast'
+                'Servitude',
+                'Outcast'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Stealthy',
                     'Foraging',
-					'Orienteering',
-					'Appropriate Weapons',
-					'Observation'
+                    'Orienteering',
+                    'Appropriate Weapons',
+                    'Observation'
                 ]
             },
             traits: {
                 points: 1
             }
         },
-		{
+        {
             name: 'Sergeant',
             setting: 'Professional Soldier',
             time: 5,
@@ -7119,16 +7119,16 @@ export default
             },
             leads: [
                 'Villager',
-				'Noble Court',
-				'Servitude'
+                'Noble Court',
+                'Servitude'
             ],
             skills: {
                 points: 6,
                 from: [
                     'Intimidation',
                     'Command',
-					'Field Dressing',
-					'Appropriate Weapons'
+                    'Field Dressing',
+                    'Appropriate Weapons'
                 ]
             },
             traits: {
@@ -7137,44 +7137,44 @@ export default
             'requires': [
                 'Squire',
                 'Village Guard',
-				'City Guard',
-				'Foot Soldier'
+                'City Guard',
+                'Foot Soldier'
             ]
         },
-		{
+        {
             name: 'Veteran',
             setting: 'Professional Soldier',
             time: 8,
             res: 20,
             leads: [
-				'Noble Court',
-				'Outcast'
+                'Noble Court',
+                'Outcast'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Soldier-wise',
                     'Soldiering',
-					'Campaign History',
-					'Tactics'
+                    'Campaign History',
+                    'Tactics'
                 ]
             },
             traits: {
                 points: 2,
                 from: [
                     'Stubborn',
-					'Maimed'
+                    'Maimed'
                 ]
             },
             'requires': [
                 'Sergeant',
                 'Sergeant-at-Arms',
-				'Knight',
-				'Military Order',
-				'Freebooter'
+                'Knight',
+                'Military Order',
+                'Freebooter'
             ]
         },
-		{
+        {
             name: 'Cavalryman',
             setting: 'Professional Soldier',
             time: 4,
@@ -7185,19 +7185,19 @@ export default
             },
             leads: [
                 'Villager',
-				'Noble Court',
-				'Servitude'
+                'Noble Court',
+                'Servitude'
             ],
             skills: {
                 points: 10,
                 from: [
                     'Riding',
                     'Mounted Combat Training',
-					'Armor Training',
-					'Shield Training',
-					'Appropriate Weapons',
-					'Horse-wise',
-					'Haggling'
+                    'Armor Training',
+                    'Shield Training',
+                    'Appropriate Weapons',
+                    'Horse-wise',
+                    'Haggling'
                 ]
             },
             traits: {
@@ -7206,12 +7206,12 @@ export default
             'requires': [
                 'Knight',
                 'Squire',
-				'Groom',
-				'Master of Horses'
-				//OTHER LPs HAVING TO DO WITH HORSES
+                'Groom',
+                'Master of Horses'
+                //OTHER LPs HAVING TO DO WITH HORSES
             ]
         },
-		{
+        {
             name: 'Journeyman',
             setting: 'Professional Soldier',
             time: 5,
@@ -7223,15 +7223,15 @@ export default
             leads: [
                 'Peasant',
                 'Villager',
-				'Outcast'
+                'Outcast'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Blacksmith',
                     'Appraisal',
-					'Haggling',
-					'Ridiculous Request-wise'
+                    'Haggling',
+                    'Ridiculous Request-wise'
                 ]
             },
             traits: {
@@ -7241,7 +7241,7 @@ export default
                 'Apprentice'
             ]
         },
-		{
+        {
             name: 'Armorer',
             setting: 'Professional Soldier',
             time: 8,
@@ -7252,18 +7252,18 @@ export default
             },
             leads: [
                 'Villager',
-				'City Dweller',
-				'Outcast'
+                'City Dweller',
+                'Outcast'
             ],
             skills: {
                 points: 9,
                 from: [
                     'Mending',
                     'Blacksmith',
-					'Armorer',
-					'Weaponsmith',
-					'Etching',
-					'Tanner'
+                    'Armorer',
+                    'Weaponsmith',
+                    'Etching',
+                    'Tanner'
                 ]
             },
             traits: {
@@ -7273,7 +7273,7 @@ export default
                 'Journeyman'
             ]
         },
-		{
+        {
             name: 'Atilliator',
             setting: 'Professional Soldier',
             time: 10,
@@ -7283,18 +7283,18 @@ export default
                 attributes: 'P'
             },
             leads: [
-				'City Dweller',
-				'Noble Court',
-				'Outcast'
+                'City Dweller',
+                'Noble Court',
+                'Outcast'
             ],
             skills: {
                 points: 6,
                 from: [
                     'Atilliator',
                     'Carpentry',
-					'Carving',
-					'Blacksmith',
-					'Tanner'
+                    'Carving',
+                    'Blacksmith',
+                    'Tanner'
                 ]
             },
             traits: {
@@ -7304,7 +7304,7 @@ export default
                 'Journeyman'
             ]
         },
-		{
+        {
             name: 'Chaplain',
             setting: 'Professional Soldier',
             time: 5,
@@ -7314,42 +7314,42 @@ export default
                 attributes: 'M/P'
             },
             leads: [
-				'City Dweller',
-				'Noble Court',
-				'Religious',
-				'Seafaring',
-				'Outcast'
+                'City Dweller',
+                'Noble Court',
+                'Religious',
+                'Seafaring',
+                'Outcast'
             ],
             skills: {
                 points: 6,
                 from: [
                     'Oratory',
                     'Riding',
-					'Armor Training',
-					'Mounted Combat Training',
-					'Appropriate Weapons'
+                    'Armor Training',
+                    'Mounted Combat Training',
+                    'Appropriate Weapons'
                 ]
             },
             traits: {
                 points: 1,
                 from: [
                     'Ideologue',
-					'Psychotic'
+                    'Psychotic'
                 ]
             },
             'requires': [
                 'Priest',
-				'Itinerant Priest',
-				'Village Priest',
-				'Venal Priest',
-				'Temple Priest',
-				'Archpriest',
-				'Court Priest',
-				'Heretic Priest',
-				'Military Order'
+                'Itinerant Priest',
+                'Village Priest',
+                'Venal Priest',
+                'Temple Priest',
+                'Archpriest',
+                'Court Priest',
+                'Heretic Priest',
+                'Military Order'
             ]
         },
-		{
+        {
             name: 'Engineer',
             setting: 'Professional Soldier',
             time: 5,
@@ -7359,33 +7359,33 @@ export default
                 attributes: 'M'
             },
             leads: [
-				'City Dweller',
-				'Noble Court',
-				'Outcast'
+                'City Dweller',
+                'Noble Court',
+                'Outcast'
             ],
             skills: {
                 points: 6,
                 from: [
                     'Artillerist',
                     'Engineer',
-					'Fortifications'
+                    'Fortifications'
                 ]
             },
             traits: {
                 points: 1,
                 from: [
                     'Smart',
-					'Sense of Distance'
+                    'Sense of Distance'
                 ]
             },
             'requires': [
                 'Student',
                 'Engineer',
-				'Mining Engineer',
-				'Artillerist\'s Hand'
+                'Mining Engineer',
+                'Artillerist\'s Hand'
             ]
         },
-		{
+        {
             name: 'Wizard of War',
             setting: 'Professional Soldier',
             time: 4,
@@ -7395,19 +7395,19 @@ export default
                 attributes: 'M'
             },
             leads: [
-				'City Dweller',
-				'Noble Court',
-				'Outcast'
+                'City Dweller',
+                'Noble Court',
+                'Outcast'
             ],
             skills: {
                 points: 7,
                 from: [
                     'Sorcery',
                     'Strategy Games',
-					'Soldier-wise',
-					'War-wise',
-					'Haggling',
-					'Cartography'
+                    'Soldier-wise',
+                    'War-wise',
+                    'Haggling',
+                    'Cartography'
                 ]
             },
             traits: {
@@ -7419,12 +7419,12 @@ export default
             'requires': [
                 'Neophyte Sorcerer',
                 'Arcane Devotee',
-				'Weather Witch',
-				'Rogue Wizard',
-				'Mad Summoner'
+                'Weather Witch',
+                'Rogue Wizard',
+                'Mad Summoner'
             ]
         },
-		{
+        {
             name: 'Quartermaster',
             setting: 'Professional Soldier',
             time: 5,
@@ -7435,16 +7435,16 @@ export default
             },
             leads: [
                 'Villager',
-				'City Dweller',
-				'Noble Court'
+                'City Dweller',
+                'Noble Court'
             ],
             skills: {
                 points: 7,
                 from: [
                     'Administration',
-					'Accounting',
-					'Haggling',
-					'Logistics'
+                    'Accounting',
+                    'Haggling',
+                    'Logistics'
                 ]
             },
             traits: {
@@ -7456,17 +7456,17 @@ export default
             'requires': [
                 'Sergeant',
                 'Veteran',
-				'Steward',
-				'Ship\'s Captain',
-				'Guard Captain',
-				'Merchant',
-				'Man-at-Arms',
-				'Smuggler',
-				'Constable',
-				'Lord'
+                'Steward',
+                'Ship\'s Captain',
+                'Guard Captain',
+                'Merchant',
+                'Man-at-Arms',
+                'Smuggler',
+                'Constable',
+                'Lord'
             ]
         },
-		{
+        {
             name: 'Captain',
             setting: 'Professional Soldier',
             time: 6,
@@ -7478,24 +7478,24 @@ export default
             leads: [
                 'Peasant',
                 'Villager',
-				'City Dweller',
-				'Noble Court',
-				'Religious',
-				'Seafaring',
-				'Servitude',
-				'Outcast'
+                'City Dweller',
+                'Noble Court',
+                'Religious',
+                'Seafaring',
+                'Servitude',
+                'Outcast'
             ],
             skills: {
                 points: 9,
                 from: [
                     'Command',
                     'Contract-wise',
-					'Haggling',
-					'Oratory',
-					'Appropriate Weapons',
-					'Field Dressing',
-					'Riding',
-					'Strategy'
+                    'Haggling',
+                    'Oratory',
+                    'Appropriate Weapons',
+                    'Field Dressing',
+                    'Riding',
+                    'Strategy'
                 ]
             },
             traits: {
@@ -7507,12 +7507,12 @@ export default
             'requires': [
                 'Guard Captain',
                 'Knight',
-				'Lord',
-				'Constable',
-				'Freebooter' //TODO: Taken twice!
+                'Lord',
+                'Constable',
+                'Freebooter' //TODO: Taken twice!
             ]
         },
-		{
+        {
             name: 'Son of a Gun',
             isBornLifepath: true,
             setting: 'Seafaring',
@@ -7520,151 +7520,151 @@ export default
             res: 3,
             leads: [
                 'Professional Soldier',
-				'Servitude',
-				'Outcast'
+                'Servitude',
+                'Outcast'
             ],
             skills: {
-                generalPoints: 3 
+                generalPoints: 3
             },
             traits: {
                 points: 2,
-				from: [
-					'Sea Legs'
-				]
+                from: [
+                    'Sea Legs'
+                ]
             }
         },
-		{
+        {
             name: 'Boy',
             setting: 'Seafaring',
             time: 4,
             res: 8,
             leads: [
-				'City Dweller',
-				'Professional Soldier',
-				'Servitude',
-				'Outcast'
+                'City Dweller',
+                'Professional Soldier',
+                'Servitude',
+                'Outcast'
             ],
             skills: {
                 points: 4,
                 from: [
                     'Sailor-wise',
                     'Ship-wise',
-					'Captain-wise'
+                    'Captain-wise'
                 ]
             },
             traits: {
                 points: 1,
                 from: [
                     'Veneer of Obedience',
-					'Curses like a Sailor',
-					'Sprinter'
+                    'Curses like a Sailor',
+                    'Sprinter'
                 ]
             }
-			//TODO: Must be 2nd LP. May only be taken once.
+            //TODO: Must be 2nd LP. May only be taken once.
         },
-		{
+        {
             name: 'Galley Slave',
             setting: 'Seafaring',
             time: 6,
             res: 3,
             leads: [
                 'Professional Soldier',
-				'Servitude',
-				'Outcast'
+                'Servitude',
+                'Outcast'
             ],
             skills: {
                 points: 3,
                 from: [
                     'Slave Deck-wise',
                     'Taskmaster-wise',
-					'Sing',
-					'Seamanship',
-					'Knots'
+                    'Sing',
+                    'Seamanship',
+                    'Knots'
                 ]
             },
             traits: {
                 points: 3,
                 from: [
                     'Tasting the Lash',
-					'Eating Maggots',
-					'Following the Beat',
-					'Iron Stomach',
-					'Bottomless Stomach',
-					'Gnawing Hunger'
+                    'Eating Maggots',
+                    'Following the Beat',
+                    'Iron Stomach',
+                    'Bottomless Stomach',
+                    'Gnawing Hunger'
                 ]
             }
         },
-		{
+        {
             name: 'Ratcatcher',
             setting: 'Seafaring',
             time: 6,
             res: 4,
             leads: [
-				'City Dweller',
-				'Servitude',
-				'Outcast'
+                'City Dweller',
+                'Servitude',
+                'Outcast'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Trapper',
                     'Poisons',
-					'Ratiquette'
+                    'Ratiquette'
                 ]
             },
             traits: {
                 points: 3,
                 from: [
                     'Bilge-Drinker',
-					'Rat-Speak',
-					'Feral'
+                    'Rat-Speak',
+                    'Feral'
                 ]
             }
         },
-		{
+        {
             name: 'Landsman',
             setting: 'Seafaring',
             time: 4,
             res: 5,
             leads: [
-				'Professional Soldier',
-				'Servitude',
-				'Outcast'
+                'Professional Soldier',
+                'Servitude',
+                'Outcast'
             ],
             skills: {
                 points: 3,
                 from: [
                     'Seamanship',
                     'Knots',
-					'Brawling',
-					'Rope-wise'
+                    'Brawling',
+                    'Rope-wise'
                 ]
             },
             traits: {
                 points: 1,
                 from: [
                     'Cursing',
-					'Aches and Pains'
+                    'Aches and Pains'
                 ]
             }
         },
-		{
+        {
             name: 'Drummer',
             setting: 'Seafaring',
             time: 5,
             res: 6,
             leads: [
                 'Villager',
-				'City Dweller',
-				'Professional Soldier',
-				'Outcast'
+                'City Dweller',
+                'Professional Soldier',
+                'Outcast'
             ],
             skills: {
                 points: 3,
                 from: [
                     'Drum',
                     'Sing',
-					'Drum Maker'
+                    'Drum Maker'
                 ]
             },
             traits: {
@@ -7674,7 +7674,7 @@ export default
                 ]
             }
         },
-		{
+        {
             name: 'Sailor',
             setting: 'Seafaring',
             time: 5,
@@ -7684,21 +7684,21 @@ export default
                 attributes: 'P'
             },
             leads: [
-				'City Dweller',
-				'Professional Soldier',
-				'Servitude',
-				'Outcast'
+                'City Dweller',
+                'Professional Soldier',
+                'Servitude',
+                'Outcast'
             ],
             skills: {
                 points: 6,
                 from: [
                     'Seamanship',
                     'Rigging',
-					'Knots',
-					'Brawling',
-					'Sing',
-					'Sea-wise',
-					'Gambling'
+                    'Knots',
+                    'Brawling',
+                    'Sing',
+                    'Sea-wise',
+                    'Gambling'
                 ]
             },
             traits: {
@@ -7708,7 +7708,7 @@ export default
                 ]
             }
         },
-		{
+        {
             name: 'Crazy Old Sailor',
             setting: 'Seafaring',
             time: 10,
@@ -7718,64 +7718,64 @@ export default
                 attributes: 'M'
             },
             leads: [
-				'Servitude',
-				'Outcast'
+                'Servitude',
+                'Outcast'
             ],
             skills: {
                 points: 3,
                 from: [
                     'Ugly Truth',
                     'Intimidation',
-					'Omen-wise'
+                    'Omen-wise'
                 ]
             },
             traits: {
                 points: 3,
                 from: [
                     'Superstitious',
-					'Metal Plate in the Skull',
-					'"He\'s a Jonah, that one."'
+                    'Metal Plate in the Skull',
+                    '"He\'s a Jonah, that one."'
                 ]
             },
             'requires': [
                 'Sailor',
                 'Pirate',
-				'Mercenary Captain'
-				//TODO: The character must take this path sometime in his 40s.
+                'Mercenary Captain'
+                //TODO: The character must take this path sometime in his 40s.
             ]
         },
-		{
+        {
             name: 'Purser',
             setting: 'Seafaring',
             time: 4,
             res: 9,
             leads: [
-				'Professional Soldier',
-				'Servitude'
+                'Professional Soldier',
+                'Servitude'
             ],
             skills: {
                 points: 4,
                 from: [
                     'Accounting',
                     'Crew-wise',
-					'Supply-wise',
-					'Ship-wise'
+                    'Supply-wise',
+                    'Ship-wise'
                 ]
             },
             traits: {
                 points: 2,
                 from: [
                     'Gnawing Hunger',
-					'Bitter'
+                    'Bitter'
                 ]
             },
             'requires': [
                 'Clerk',
                 'Student',
-				'Sailor'
+                'Sailor'
             ]
         },
-		{
+        {
             name: 'Signalman',
             setting: 'Seafaring',
             time: 5,
@@ -7785,15 +7785,15 @@ export default
                 attributes: 'M'
             },
             leads: [
-				'Professional Soldier',
-				'Servitude'
+                'Professional Soldier',
+                'Servitude'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Signaling',
                     'Observation',
-					'Cryptography'
+                    'Cryptography'
                 ]
             },
             traits: {
@@ -7803,42 +7803,42 @@ export default
                 ]
             }
         },
-		{
+        {
             name: 'Pilot',
             setting: 'Seafaring',
             time: 4,
             res: 8,
             leads: [
                 'Villager',
-				'City Dweller',
-				'Professional Soldier',
-				'Outcast'
+                'City Dweller',
+                'Professional Soldier',
+                'Outcast'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Pilot',
                     'Ship-wise',
-					'Observation',
-					'Shoal-wise'
+                    'Observation',
+                    'Shoal-wise'
                 ]
             },
             traits: {
                 points: 2,
                 from: [
                     'Blisters',
-					'Light Sleeper',
-					'Bored',
-					'Paranoid about the Ship'
+                    'Light Sleeper',
+                    'Bored',
+                    'Paranoid about the Ship'
                 ]
             },
             'requires': [
                 'Sailor',
                 'Pirate',
-				'Mercenary Captain'
+                'Mercenary Captain'
             ]
         },
-		{
+        {
             name: 'Marine',
             setting: 'Seafaring',
             time: 4,
@@ -7849,64 +7849,64 @@ export default
             },
             leads: [
                 'Villager',
-				'City Dweller',
-				'Professional Soldier',
-				'Outcast'
+                'City Dweller',
+                'Professional Soldier',
+                'Outcast'
             ],
             skills: {
                 points: 4,
                 from: [
                     'Appropriate Weapons',
                     'Knots',
-					'Intimidation'
+                    'Intimidation'
                 ]
             },
             traits: {
                 points: 1,
                 from: [
                     'Bruiser',
-					'Sea Legs'
+                    'Sea Legs'
                 ]
             },
             'requires': [
                 'Sailor',
                 'Pirate',
-				'Mercenary Captain'
+                'Mercenary Captain'
             ]
         },
-		{
+        {
             name: 'Bosun',
             setting: 'Seafaring',
             time: 5,
             res: 8,
             leads: [
                 'Villager',
-				'City Dweller',
-				'Professional Soldier',
-				'Outcast'
+                'City Dweller',
+                'Professional Soldier',
+                'Outcast'
             ],
             skills: {
                 points: 3,
                 from: [
                     'Intimidation',
                     'Brawling',
-					'Sailor-wise'
+                    'Sailor-wise'
                 ]
             },
             traits: {
                 points: 1,
                 from: [
                     'Mean',
-					'Obedient'
+                    'Obedient'
                 ]
             },
             'requires': [
                 'Sailor',
                 'Pirate',
-				'Mercenary Captain'
+                'Mercenary Captain'
             ]
         },
-		{
+        {
             name: 'Sailmaker',
             setting: 'Seafaring',
             time: 5,
@@ -7917,17 +7917,17 @@ export default
             },
             leads: [
                 'Villager',
-				'City Dweller',
-				'Professional Soldier',
-				'Outcast'
+                'City Dweller',
+                'Professional Soldier',
+                'Outcast'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Sewing',
                     'Weaving',
-					'Mending',
-					'Sail-wise'
+                    'Mending',
+                    'Sail-wise'
                 ]
             },
             traits: {
@@ -7936,10 +7936,10 @@ export default
             'requires': [
                 'Sailor',
                 'Pirate',
-				'Seamstress'
+                'Seamstress'
             ]
         },
-		{
+        {
             name: 'Ship\'s Doctor',
             setting: 'Seafaring',
             time: 6,
@@ -7950,39 +7950,39 @@ export default
             },
             leads: [
                 'Villager',
-				'City Dweller',
-				'Professional Soldier',
-				'Outcast'
+                'City Dweller',
+                'Professional Soldier',
+                'Outcast'
             ],
             skills: {
                 points: 8,
                 from: [
                     'Apothecary',
                     'Bloodletting',
-					'Surgery',
-					'Anatomy',
-					'Astrology',
-					'Falsehood',
-					'Tar-wise',
-					'Scurvy-wise'
+                    'Surgery',
+                    'Anatomy',
+                    'Astrology',
+                    'Falsehood',
+                    'Tar-wise',
+                    'Scurvy-wise'
                 ]
             },
             traits: {
                 points: 3,
                 from: [
                     'Incomprehensible Diagnosis',
-					'Ugly Reputation'
+                    'Ugly Reputation'
                 ]
             },
             'requires': [
                 'Doctor',
                 'Court Doctor',
-				'Physician',
-				'Barber',
-				'Student'
+                'Physician',
+                'Barber',
+                'Student'
             ]
         },
-		{
+        {
             name: 'Ship\'s Cook',
             setting: 'Seafaring',
             time: 5,
@@ -7993,26 +7993,26 @@ export default
             },
             leads: [
                 'Villager',
-				'City Dweller',
-				'Professional Soldier',
-				'Outcast'
+                'City Dweller',
+                'Professional Soldier',
+                'Outcast'
             ],
             skills: {
                 points: 6,
                 from: [
                     'Cooking',
                     'Firebuilding',
-					'Sing',
-					'Falsehood',
-					'Mystery Meat-wise'
+                    'Sing',
+                    'Falsehood',
+                    'Mystery Meat-wise'
                 ]
             },
             traits: {
                 points: 3,
                 from: [
                     'Crippled',
-					'Cookie',
-					'Maggot Connoisseur'
+                    'Cookie',
+                    'Maggot Connoisseur'
                 ]
             },
             'requires': [
@@ -8020,41 +8020,41 @@ export default
                 'Pirate'
             ]
         },
-		{
+        {
             name: 'Ship\'s Chaplain',
             setting: 'Seafaring',
             time: 5,
             res: 15,
             leads: [
                 'Villager',
-				'City Dweller',
-				'Religious',
-				'Professional Soldier'
+                'City Dweller',
+                'Religious',
+                'Professional Soldier'
             ],
             skills: {
                 points: 4,
                 from: [
                     'Oratory',
                     'Doctrine',
-					'Ship-wise'
+                    'Ship-wise'
                 ]
             },
             traits: {
                 points: 2,
                 from: [
                     'World Weary',
-					'Burial at Sea',
-					'Secretly Worships the Black Sea God'
+                    'Burial at Sea',
+                    'Secretly Worships the Black Sea God'
                 ]
             },
             'requires': [
                 'Chaplain',
                 'Military Order',
-				'Temple Acolyte',
-				'Religious Acolyte'
+                'Temple Acolyte',
+                'Religious Acolyte'
             ]
         },
-		{
+        {
             name: 'Weather Witch',
             setting: 'Seafaring',
             time: 5,
@@ -8065,19 +8065,19 @@ export default
             },
             leads: [
                 'Villager',
-				'City Dweller',
-				'Servitude',
-				'Outcast'
+                'City Dweller',
+                'Servitude',
+                'Outcast'
             ],
             skills: {
                 points: 6,
                 from: [
                     'Sea-wise',
                     'Summoning',
-					'Spirit Binding',
-					'Superstition-wise',
-					'Navigation',
-					'Astrology'
+                    'Spirit Binding',
+                    'Superstition-wise',
+                    'Navigation',
+                    'Astrology'
                 ]
             },
             traits: {
@@ -8089,11 +8089,11 @@ export default
             'requires': [
                 'Augur',
                 'Neophyte Sorcerer',
-				'Arcane Devotee',
-				'Rogue Wizard'
+                'Arcane Devotee',
+                'Rogue Wizard'
             ]
         },
-		{
+        {
             name: 'Navigator',
             setting: 'Seafaring',
             time: 6,
@@ -8103,19 +8103,19 @@ export default
                 attributes: 'M'
             },
             leads: [
-				'City Dweller',
-				'Professional Soldier',
-				'Servitude',
-				'Outcast'
+                'City Dweller',
+                'Professional Soldier',
+                'Servitude',
+                'Outcast'
             ],
             skills: {
                 points: 6,
                 from: [
                     'Navigation',
                     'Sea-wise',
-					'Cartography',
-					'Astrology',
-					'Current-wise'
+                    'Cartography',
+                    'Astrology',
+                    'Current-wise'
                 ]
             },
             traits: {
@@ -8124,11 +8124,11 @@ export default
             'requires': [
                 'Pilot',
                 'Mercenary Captain',
-				'Sailor',
-				'Student'
+                'Sailor',
+                'Student'
             ]
         },
-		{
+        {
             name: 'Carpenter\'s Mate',
             setting: 'Seafaring',
             time: 6,
@@ -8139,27 +8139,27 @@ export default
             },
             leads: [
                 'Villager',
-				'Professional Soldier',
-				'Servitude',
-				'Outcast'
+                'Professional Soldier',
+                'Servitude',
+                'Outcast'
             ],
             skills: {
                 points: 3,
                 from: [
                     'Mending',
                     'Gambling',
-					'Wood-wise'
+                    'Wood-wise'
                 ]
             },
             traits: {
                 points: 1,
                 from: [
                     'Cursing',
-					'Bull\'s-eye Spitter'
+                    'Bull\'s-eye Spitter'
                 ]
             }
         },
-		{
+        {
             name: 'Ship\'s Carpenter',
             setting: 'Seafaring',
             time: 4,
@@ -8169,18 +8169,18 @@ export default
                 attributes: 'P'
             },
             leads: [
-				'City Dweller',
-				'Professional Soldier',
-				'Servitude',
-				'Outcast'
+                'City Dweller',
+                'Professional Soldier',
+                'Servitude',
+                'Outcast'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Carpentry',
                     'Shipwright',
-					'Boatwright',
-					'Ship-wise'
+                    'Boatwright',
+                    'Ship-wise'
                 ]
             },
             traits: {
@@ -8194,7 +8194,7 @@ export default
                 'Carpenter\'s Mate'
             ]
         },
-		{
+        {
             name: 'Artillerist\'s Mate',
             setting: 'Seafaring',
             time: 4,
@@ -8204,17 +8204,17 @@ export default
                 attributes: 'M'
             },
             leads: [
-				'City Dweller',
-				'Professional Soldier',
-				'Servitude',
-				'Outcast'
+                'City Dweller',
+                'Professional Soldier',
+                'Servitude',
+                'Outcast'
             ],
             skills: {
                 points: 4,
                 from: [
                     'Mending',
                     'Carpentry',
-					'Artillerist'
+                    'Artillerist'
                 ]
             },
             traits: {
@@ -8224,7 +8224,7 @@ export default
                 ]
             }
         },
-		{
+        {
             name: 'Engineer',
             setting: 'Seafaring',
             time: 4,
@@ -8234,19 +8234,19 @@ export default
                 attributes: 'M'
             },
             leads: [
-				'City Dweller',
-				'Professional Soldier',
-				'Servitude',
-				'Outcast'
+                'City Dweller',
+                'Professional Soldier',
+                'Servitude',
+                'Outcast'
             ],
             skills: {
                 points: 6,
                 from: [
                     'Engineer',
                     'Munitions',
-					'Artillerist',
-					'Carpentry',
-					'Mending'
+                    'Artillerist',
+                    'Carpentry',
+                    'Mending'
                 ]
             },
             traits: {
@@ -8258,12 +8258,12 @@ export default
             'requires': [
                 'Artillerist\'s Mate',
                 'Student',
-				'Ship\'s Carpenter',
-				'Engineer',
-				'Journeyman'
+                'Ship\'s Carpenter',
+                'Engineer',
+                'Journeyman'
             ]
         },
-		{
+        {
             name: 'Officer\'s Mate',
             setting: 'Seafaring',
             time: 4,
@@ -8273,17 +8273,17 @@ export default
                 attributes: 'M/P'
             },
             leads: [
-				'City Dweller',
-				'Professional Soldier',
-				'Servitude',
-				'Outcast'
+                'City Dweller',
+                'Professional Soldier',
+                'Servitude',
+                'Outcast'
             ],
             skills: {
                 points: 4,
                 from: [
                     'Etiquette',
                     'Captain-wise',
-					'Seamanship'
+                    'Seamanship'
                 ]
             },
             traits: {
@@ -8295,11 +8295,11 @@ export default
             'requires': [
                 'Born Noble',
                 'Page',
-				'Son of a Gun'
+                'Son of a Gun'
             ]
-			//TODO: Must be 2nd lifepath, or 3rd if Page is 2nd
+            //TODO: Must be 2nd lifepath, or 3rd if Page is 2nd
         },
-		{
+        {
             name: 'Steward',
             setting: 'Seafaring',
             time: 6,
@@ -8309,19 +8309,19 @@ export default
                 attributes: 'M'
             },
             leads: [
-				'City Dweller',
-				'Professional Soldier',
-				'Servitude',
-				'Outcast'
+                'City Dweller',
+                'Professional Soldier',
+                'Servitude',
+                'Outcast'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Accounting',
                     'Ship Management',
-					'Haggling',
-					'Merchant-wise',
-					'Appraisal'
+                    'Haggling',
+                    'Merchant-wise',
+                    'Appraisal'
                 ]
             },
             traits: {
@@ -8330,11 +8330,11 @@ export default
             'requires': [
                 'Purser',
                 'Merchant',
-				'Steward',
-				'Accountant'
+                'Steward',
+                'Accountant'
             ]
         },
-		{
+        {
             name: 'First Mate',
             setting: 'Seafaring',
             time: 6,
@@ -8344,19 +8344,19 @@ export default
                 attributes: 'M'
             },
             leads: [
-				'City Dweller',
-				'Professional Soldier',
-				'Servitude',
-				'Outcast'
+                'City Dweller',
+                'Professional Soldier',
+                'Servitude',
+                'Outcast'
             ],
             skills: {
                 points: 6,
                 from: [
                     'Intimidation',
                     'Command',
-					'Conspicuous',
-					'Seaman-wise',
-					'Sword'
+                    'Conspicuous',
+                    'Seaman-wise',
+                    'Sword'
                 ]
             },
             traits: {
@@ -8367,7 +8367,7 @@ export default
                 //TODO: Any 2 sailor/seafaring lifepaths
             ]
         },
-		{
+        {
             name: 'Ship\'s Captain',
             setting: 'Seafaring',
             time: 7,
@@ -8379,22 +8379,22 @@ export default
             leads: [
                 'Peasant',
                 'Villager',
-				'City Dweller',
-				'Noble Court',
-				'Religious',
-				'Professional Soldier',
-				'Servitude',
-				'Outcast'
+                'City Dweller',
+                'Noble Court',
+                'Religious',
+                'Professional Soldier',
+                'Servitude',
+                'Outcast'
             ],
             skills: {
                 points: 6,
                 from: [
                     'Command',
                     'Oratory',
-					'Ship-wise',
-					'Sea-wise'
+                    'Ship-wise',
+                    'Sea-wise'
                 ],
-				generalPoints: 2
+                generalPoints: 2
             },
             traits: {
                 points: 2,
@@ -8405,17 +8405,17 @@ export default
             'requires': [
                 'First Mate',
                 'Knight',
-				'Military Order',
-				'Mercenary Captain' //TODO: Twice!
+                'Military Order',
+                'Mercenary Captain' //TODO: Twice!
             ]
         },
-		{
+        {
             name: 'Born Slave',
             isBornLifepath: true,
             setting: 'Servitude',
             time: 12,
             res: 5,
-			stat: {
+            stat: {
                 bonus: -1,
                 attributes: 'M/P'
             },
@@ -8425,56 +8425,56 @@ export default
             ],
             skills: {
                 generalPoints: 2,
-				points: 1,
-				from: [
-					'Slavery-wise'
-				]
+                points: 1,
+                from: [
+                    'Slavery-wise'
+                ]
             },
             traits: {
                 points: 3,
-				from: [
-					'Broken',
-					'Scarred',
-					'Maimed',
-					'Lame'
-				]
+                from: [
+                    'Broken',
+                    'Scarred',
+                    'Maimed',
+                    'Lame'
+                ]
             }
         },
-		{
+        {
             name: 'Ditch Digger',
             setting: 'Servitude',
             time: 4,
             res: 4,
             leads: [
-				'Professional Soldier',
-				'Outcast'
+                'Professional Soldier',
+                'Outcast'
             ],
             skills: {
                 points: 3,
                 from: [
                     'Ditch Digging',
                     'Sing',
-					'Boss-wise'
+                    'Boss-wise'
                 ]
             },
             traits: {
                 points: 2,
                 from: [
                     'Blisters',
-					'Back-Breaking Labor'
+                    'Back-Breaking Labor'
                 ]
             }
         },
-		{
+        {
             name: 'Servant',
             setting: 'Servitude',
             time: 5,
             res: 6,
             leads: [
-				'City Dweller',
-				'Noble Court',
-				'Professional Soldier',
-				'Outcast'
+                'City Dweller',
+                'Noble Court',
+                'Professional Soldier',
+                'Outcast'
             ],
             skills: {
                 points: 2,
@@ -8487,28 +8487,28 @@ export default
                 points: 2,
                 from: [
                     'Mind-Numbing Work',
-					'Obsequious'
+                    'Obsequious'
                 ]
             }
         },
-		{
+        {
             name: 'Field Laborer',
             setting: 'Servitude',
             time: 6,
             res: 5,
             leads: [
-				'Professional Soldier',
-				'Outcast'
+                'Professional Soldier',
+                'Outcast'
             ],
             skills: {
                 points: 7,
                 from: [
                     'Farming',
                     'Mending',
-					'Sing',
-					'Hauling',
-					'Driving',
-					'Fall Grass-wise'
+                    'Sing',
+                    'Hauling',
+                    'Driving',
+                    'Fall Grass-wise'
                 ]
             },
             traits: {
@@ -8518,15 +8518,15 @@ export default
                 ]
             }
         },
-		{
+        {
             name: 'Captive of War',
             setting: 'Servitude',
             time: 4,
             res: 4,
             leads: [
-				'City Dweller',
-				'Professional Soldier',
-				'Outcast'
+                'City Dweller',
+                'Professional Soldier',
+                'Outcast'
             ],
             skills: {
                 points: 2,
@@ -8539,19 +8539,19 @@ export default
                 points: 2,
                 from: [
                     'Claustrophobic',
-					'Resigned to Fate'
+                    'Resigned to Fate'
                 ]
             }
         },
-		{
+        {
             name: 'Gaol',
             setting: 'Servitude',
             time: 3,
             res: 3,
             leads: [
-				'City Dweller',
-				'Professional Soldier',
-				'Outcast'
+                'City Dweller',
+                'Professional Soldier',
+                'Outcast'
             ],
             skills: {
                 points: 3,
@@ -8567,13 +8567,13 @@ export default
                 ]
             }
         },
-		{
+        {
             name: 'Harem Slave',
             setting: 'Servitude',
             time: 5,
             res: 4,
             leads: [
-				'Outcast'
+                'Outcast'
             ],
             skills: {
                 points: 3,
@@ -8586,26 +8586,26 @@ export default
                 points: 2,
                 from: [
                     'Numb',
-					'Worldly'
+                    'Worldly'
                 ]
             }
         },
-		{
+        {
             name: 'Bondsman',
             setting: 'Servitude',
             time: 7,
             res: 7,
             leads: [
                 'Peasant',
-				'Professional Soldier',
-				'Outcast'
+                'Professional Soldier',
+                'Outcast'
             ],
             skills: {
                 points: 'Special'
-				//TODO: May choose owner's lifepath from Noble, City Dweller,
-				//Soldier or Villager setting. Bondsman may purchase from 
-				//owner's skills with one quarter of that path's skill points.
-				//(minimum 1)
+                //TODO: May choose owner's lifepath from Noble, City Dweller,
+                //Soldier or Villager setting. Bondsman may purchase from 
+                //owner's skills with one quarter of that path's skill points.
+                //(minimum 1)
             },
             traits: {
                 points: 2,
@@ -8614,49 +8614,49 @@ export default
                 ]
             }
         },
-		{
+        {
             name: 'Urchin',
             setting: 'Outcast',
             time: 4,
             res: 3,
             leads: [
                 'Peasant',
-				'Professional Soldier',
-				'Servitude'
+                'Professional Soldier',
+                'Servitude'
             ],
             skills: {
                 points: 4,
                 from: [
                     'Inconspicuous',
                     'Streetwise',
-					'Sleight of Hand'
+                    'Sleight of Hand'
                 ]
             },
             traits: {
                 points: 2,
                 from: [
                     'Addicted',
-					'The Story'
+                    'The Story'
                 ]
             }
-			//TODO: Must be 2nd LP. May only be taken once.
+            //TODO: Must be 2nd LP. May only be taken once.
         },
-		{
+        {
             name: 'Apostate',
             setting: 'Outcast',
             time: 3,
             res: 6,
             leads: [
-				'City Dweller',
-				'Religious',
-				'Professional Soldier'
+                'City Dweller',
+                'Religious',
+                'Professional Soldier'
             ],
             skills: {
                 points: 4,
                 from: [
                     'Doctrine',
                     'Heretical Doctrine',
-					'Foreign Doctrine'
+                    'Foreign Doctrine'
                 ]
             },
             traits: {
@@ -8666,7 +8666,7 @@ export default
                 ]
             }
         },
-		{
+        {
             name: 'Blackmailer',
             setting: 'Outcast',
             time: 3,
@@ -8677,18 +8677,18 @@ export default
             },
             leads: [
                 'Villager',
-				'City Dweller',
-				'Professional Soldier',
-				'Seafaring'
+                'City Dweller',
+                'Professional Soldier',
+                'Seafaring'
             ],
             skills: {
                 points: 4,
                 from: [
                     'Extortion',
                     'Forgery',
-					'Ugly Truth',
-					'Falsehood',
-					'Bribe-wise'
+                    'Ugly Truth',
+                    'Falsehood',
+                    'Bribe-wise'
                 ]
             },
             traits: {
@@ -8698,7 +8698,7 @@ export default
                 ]
             }
         },
-		{
+        {
             name: 'Kidnapper',
             setting: 'Outcast',
             time: 3,
@@ -8709,17 +8709,17 @@ export default
             },
             leads: [
                 'Villager',
-				'City Dweller',
-				'Professional Soldier',
-				'Seafaring'
+                'City Dweller',
+                'Professional Soldier',
+                'Seafaring'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Interrogation',
                     'Torture',
-					'Intimidation',
-					'Ransom-wise'
+                    'Intimidation',
+                    'Ransom-wise'
                 ]
             },
             traits: {
@@ -8729,81 +8729,81 @@ export default
                 ]
             }
         },
-		{
+        {
             name: 'Pillager',
             setting: 'Outcast',
             time: 4,
             res: 7,
             leads: [
-				'City Dweller',
-				'Professional Soldier',
-				'Seafaring',
-				'Servitude'
+                'City Dweller',
+                'Professional Soldier',
+                'Seafaring',
+                'Servitude'
             ],
             skills: {
                 points: 4,
                 from: [
                     'Scavenging',
                     'Foraging',
-					'Army-wise',
-					'Battle-wise',
-					'Haggling'
+                    'Army-wise',
+                    'Battle-wise',
+                    'Haggling'
                 ]
             },
             traits: {
                 points: 1
             }
         },
-		{
+        {
             name: 'Vagrant',
             setting: 'Outcast',
             time: 3,
             res: 5,
             leads: [
-				'City Dweller',
-				'Professional Soldier',
-				'Servitude'
+                'City Dweller',
+                'Professional Soldier',
+                'Servitude'
             ],
             skills: {
                 points: 4,
                 from: [
                     'Road-wise',
                     'Hostel-wise',
-					'Hospital-wise',
-					'Inconspicuous'
+                    'Hospital-wise',
+                    'Inconspicuous'
                 ]
             },
             traits: {
                 points: 2
             }
         },
-		{
+        {
             name: 'Cripple',
             setting: 'Outcast',
             time: 6,
             res: 3,
             leads: [
-				'City Dweller',
-				'Servitude'
+                'City Dweller',
+                'Servitude'
             ],
             skills: {
                 points: 6,
                 from: [
                     'Begging',
                     'Inconspicuous',
-					'Conspicuous'
+                    'Conspicuous'
                 ]
             },
             traits: {
                 points: 2,
                 from: [
                     'Lame',
-					'Missing Limb'
-					//TODO: It's 'Lame' OR 'Missing Limb'
+                    'Missing Limb'
+                    //TODO: It's 'Lame' OR 'Missing Limb'
                 ]
             }
         },
-		{
+        {
             name: 'Poacher',
             setting: 'Outcast',
             time: 5,
@@ -8814,30 +8814,30 @@ export default
             },
             leads: [
                 'Villager',
-				'Professional Soldier',
-				'Servitude'
+                'Professional Soldier',
+                'Servitude'
             ],
             skills: {
                 points: 6,
                 from: [
                     'Royal Parks-wise',
                     'Hunting',
-					'Stealthy',
-					'Tracking',
-					'Orienteering'
+                    'Stealthy',
+                    'Tracking',
+                    'Orienteering'
                 ]
             },
             traits: {
                 points: 1
             }
         },
-		{
+        {
             name: 'Deranged',
             setting: 'Outcast',
             time: 6,
             res: 3,
             leads: [
-				'Servitude'
+                'Servitude'
             ],
             skills: {
                 points: 3,
@@ -8850,14 +8850,14 @@ export default
                 points: 2,
                 from: [
                     'Sick',
-					'Phobia',
-					'Lunatic',
-					'Linguist',
-					'Possessed'
+                    'Phobia',
+                    'Lunatic',
+                    'Linguist',
+                    'Possessed'
                 ]
             }
         },
-		{
+        {
             name: 'Outlaw',
             setting: 'Outcast',
             time: 4,
@@ -8869,16 +8869,16 @@ export default
             leads: [
                 'Peasant',
                 'Villager',
-				'City Dweller',
-				'Professional Soldier',
-				'Seafaring'
+                'City Dweller',
+                'Professional Soldier',
+                'Seafaring'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Authority-wise',
                     'Inconspicuous',
-					'Conspicuous'
+                    'Conspicuous'
                 ]
             },
             traits: {
@@ -8888,7 +8888,7 @@ export default
                 ]
             }
         },
-		{
+        {
             name: 'Fence',
             setting: 'Outcast',
             time: 6,
@@ -8898,18 +8898,18 @@ export default
                 attributes: 'M/P'
             },
             leads: [
-				'City Dweller',
-				'Professional Soldier',
-				'Servitude'
+                'City Dweller',
+                'Professional Soldier',
+                'Servitude'
             ],
             skills: {
                 points: 6,
                 from: [
                     'Appraisal',
                     'Haggling',
-					'Inconspicuous',
-					'Streetwise',
-					'Guard-wise'
+                    'Inconspicuous',
+                    'Streetwise',
+                    'Guard-wise'
                 ]
             },
             traits: {
@@ -8921,32 +8921,32 @@ export default
             'requires': [
                 'Shopkeeper',
                 'Barkeep',
-				'Moneylender',
-				'lifepath:Outcast',
-				'Coin Clipper',
-				'Pickpocket',
-				'Street Thug',
-				'Criminal',
-				'Confidence Man'
+                'Moneylender',
+                'lifepath:Outcast',
+                'Coin Clipper',
+                'Pickpocket',
+                'Street Thug',
+                'Criminal',
+                'Confidence Man'
             ]
         },
-		{
+        {
             name: 'Gravedigger',
             setting: 'Outcast',
             time: 5,
             res: 4,
             leads: [
-				'Professional Soldier',
-				'Servitude'
+                'Professional Soldier',
+                'Servitude'
             ],
             skills: {
                 points: 6,
                 from: [
                     'Ditch Digging',
                     'Philosophy',
-					'Grave-wise',
-					'Cemetery-wise',
-					'Bone-wise'
+                    'Grave-wise',
+                    'Cemetery-wise',
+                    'Bone-wise'
                 ]
             },
             traits: {
@@ -8956,7 +8956,7 @@ export default
                 ]
             }
         },
-		{
+        {
             name: 'Ratcatcher',
             setting: 'Outcast',
             time: 5,
@@ -8969,18 +8969,18 @@ export default
                 from: [
                     'Trapper',
                     'Poisons',
-					'Ratiquette'
+                    'Ratiquette'
                 ]
             },
             traits: {
                 points: 2,
                 from: [
                     'Diseased',
-					'Rat-Speak'
+                    'Rat-Speak'
                 ]
             }
         },
-		{
+        {
             name: 'Beggar',
             setting: 'Outcast',
             time: 3,
@@ -8988,15 +8988,15 @@ export default
             leads: [
                 'Peasant',
                 'Villager',
-				'Professional Soldier'
+                'Professional Soldier'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Inconspicuous',
                     'Conspicuous',
-					'Streetwise',
-					'Falsehood'
+                    'Streetwise',
+                    'Falsehood'
                 ]
             },
             traits: {
@@ -9006,7 +9006,7 @@ export default
                 ]
             }
         },
-		{
+        {
             name: 'Leper',
             setting: 'Outcast',
             time: 4,
@@ -9017,27 +9017,27 @@ export default
             },
             leads: [
                 'Peasant',
-				'Servitude'
+                'Servitude'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Inconspicuous',
                     'Hospital-wise',
-					'Priest-wise',
-					'Pilgrim-wise'
+                    'Priest-wise',
+                    'Pilgrim-wise'
                 ]
             },
             traits: {
                 points: 3,
                 from: [
                     'Leprosy',
-					'Unbeliever',
-					'White-Gold Wielder'
+                    'Unbeliever',
+                    'White-Gold Wielder'
                 ]
             }
         },
-		{
+        {
             name: 'Prostitue',
             setting: 'Outcast',
             time: 5,
@@ -9045,18 +9045,18 @@ export default
             leads: [
                 'Peasant',
                 'Villager',
-				'City Dweller',
-				'Servitude'
+                'City Dweller',
+                'Servitude'
             ],
             skills: {
                 points: 3,
                 from: [
                     'Conspicuous',
                     'Inconspicuous',
-					'Persuasion',
-					'Falsehood',
-					'Haggling',
-					'Soothing Platitudes'
+                    'Persuasion',
+                    'Falsehood',
+                    'Haggling',
+                    'Soothing Platitudes'
                 ]
             },
             traits: {
@@ -9066,24 +9066,24 @@ export default
                 ]
             }
         },
-		{
+        {
             name: 'Whoremonger',
             setting: 'Outcast',
             time: 6,
             res: 12,
             leads: [
                 'Villager',
-				'City Dweller',
-				'Professional Soldier'
+                'City Dweller',
+                'Professional Soldier'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Intimidation',
                     'Haggling',
-					'Prostitute-wise',
-					'City-wise',
-					'Guard-wise'
+                    'Prostitute-wise',
+                    'City-wise',
+                    'Guard-wise'
                 ]
             },
             traits: {
@@ -9092,18 +9092,18 @@ export default
             'requires': [
                 'Corrupt Sergeant',
                 'Venal Priest',
-				'Shopkeeper',
-				'Barkeep',
-				'Moneylender',
-				'lifepath:Outcast',
-				'Coin Clipper',
-				'Pickpocket',
-				'Street Thug',
-				'Criminal',
-				'Confidence Man'
+                'Shopkeeper',
+                'Barkeep',
+                'Moneylender',
+                'lifepath:Outcast',
+                'Coin Clipper',
+                'Pickpocket',
+                'Street Thug',
+                'Criminal',
+                'Confidence Man'
             ]
         },
-		{
+        {
             name: 'Itinerant Performer',
             setting: 'Outcast',
             time: 4,
@@ -9111,19 +9111,19 @@ export default
             leads: [
                 'Peasant',
                 'Villager',
-				'City Dweller',
-				'Professional Soldier'
+                'City Dweller',
+                'Professional Soldier'
             ],
             skills: {
                 points: 8,
                 from: [
                     'Cooking',
                     'Sewing',
-					'Acting',
-					'Sleight of Hand',
-					'Haggling',
-					'Mending',
-					'Disguise'
+                    'Acting',
+                    'Sleight of Hand',
+                    'Haggling',
+                    'Mending',
+                    'Disguise'
                 ]
             },
             traits: {
@@ -9133,23 +9133,23 @@ export default
                 ]
             }
         },
-		{
+        {
             name: 'Insurrectionist',
             setting: 'Outcast',
             time: 3,
             res: 5,
             leads: [
-				'City Dweller',
-				'Professional Soldier'
+                'City Dweller',
+                'Professional Soldier'
             ],
             skills: {
                 points: 4,
                 from: [
                     'Philosophy',
                     'Rule of Law',
-					'Doctrine',
-					'Oratory',
-					'Arson'
+                    'Doctrine',
+                    'Oratory',
+                    'Arson'
                 ]
             },
             traits: {
@@ -9159,36 +9159,36 @@ export default
                 ]
             }
         },
-		{
+        {
             name: 'Cultist',
             setting: 'Outcast',
             time: 4,
             res: 8,
             leads: [
                 'Peasant',
-				'Professional Soldier',
-				'Servitude'
+                'Professional Soldier',
+                'Servitude'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Cult Doctrine',
                     'Inconspicuous',
-					'Conspicuous',
-					'Falsehood',
-					'Persuasion'
+                    'Conspicuous',
+                    'Falsehood',
+                    'Persuasion'
                 ]
             },
             traits: {
                 points: 2,
                 from: [
                     'Zealot',
-					'Rabble Rouser',
-					'Speaker of the Secret Language'
+                    'Rabble Rouser',
+                    'Speaker of the Secret Language'
                 ]
             }
         },
-		{
+        {
             name: 'Poisoner',
             setting: 'Outcast',
             time: 5,
@@ -9199,16 +9199,16 @@ export default
             },
             leads: [
                 'Villager',
-				'City Dweller',
-				'Noble Court'
+                'City Dweller',
+                'Noble Court'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Poisons',
                     'Cooking',
-					'Inconspicuous',
-					'Disguise'
+                    'Inconspicuous',
+                    'Disguise'
                 ]
             },
             traits: {
@@ -9218,61 +9218,61 @@ export default
                 ]
             }
         },
-		{
+        {
             name: 'Thug',
             setting: 'Outcast',
             time: 4,
             res: 7,
             leads: [
-				'City Dweller',
-				'Professional Soldier'
+                'City Dweller',
+                'Professional Soldier'
             ],
             skills: {
                 points: 4,
                 from: [
                     'Streetwise',
                     'Murder-wise',
-					'Guard-wise',
-					'Brawling'
+                    'Guard-wise',
+                    'Brawling'
                 ]
             },
             traits: {
                 points: 2,
                 from: [
                     'Cold-Blooded',
-					'Jaded'
+                    'Jaded'
                 ]
             }
         },
-		{
+        {
             name: 'Desperate Killer',
             setting: 'Outcast',
             time: 3,
             res: 5,
             leads: [
-				'City Dweller',
-				'Professional Soldier',
-				'Servitude'
+                'City Dweller',
+                'Professional Soldier',
+                'Servitude'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Appropriate Weapons',
                     'Inconspicuous',
-					'Assassination-wise'
+                    'Assassination-wise'
                 ]
             },
             traits: {
                 points: 2,
                 from: [
                     'Desperate',
-					'Murderous',
-					'Cold Hearted',
-					'Hard Hearted'
+                    'Murderous',
+                    'Cold Hearted',
+                    'Hard Hearted'
                 ]
             }
         },
-		{
+        {
             name: 'Bandit',
             setting: 'Outcast',
             time: 3,
@@ -9283,54 +9283,54 @@ export default
             },
             leads: [
                 'Peasant',
-				'Professional Soldier'
+                'Professional Soldier'
             ],
             skills: {
                 points: 4,
                 from: [
                     'Appropriate Weapons',
                     'Intimidation',
-					'Stealthy',
-					'Caravan-wise'
+                    'Stealthy',
+                    'Caravan-wise'
                 ]
             },
             traits: {
                 points: 1
             }
         },
-		{
+        {
             name: 'Pirate',
             setting: 'Outcast',
             time: 4,
             res: 5,
             leads: [
                 'Villager',
-				'City Dweller',
-				'Seafaring'
+                'City Dweller',
+                'Seafaring'
             ],
             skills: {
                 points: 6,
                 from: [
                     'Pirate Cove-wise',
                     'Rigging',
-					'Knots',
-					'Knives',
-					'Sea-wise',
-					'Map-wise'
+                    'Knots',
+                    'Knives',
+                    'Sea-wise',
+                    'Map-wise'
                 ]
             },
             traits: {
                 points: 2,
                 from: [
                     'Problem with Authority',
-					'Scurvy',
-					'Maimed',
-					'Crippled',
-					'Lame'
+                    'Scurvy',
+                    'Maimed',
+                    'Crippled',
+                    'Lame'
                 ]
             }
         },
-		{
+        {
             name: 'Smuggler',
             setting: 'Outcast',
             time: 4,
@@ -9341,19 +9341,19 @@ export default
             },
             leads: [
                 'Villager',
-				'City Dweller',
-				'Professional Soldier'
+                'City Dweller',
+                'Professional Soldier'
             ],
             skills: {
                 points: 6,
                 from: [
                     'Persuasion',
                     'Falsehood',
-					'Appraisal',
-					'Law-wise',
-					'Forgery',
-					'Stealthy',
-					'Inconspicuous'
+                    'Appraisal',
+                    'Law-wise',
+                    'Forgery',
+                    'Stealthy',
+                    'Inconspicuous'
                 ]
             },
             traits: {
@@ -9363,7 +9363,7 @@ export default
                 ]
             }
         },
-		{
+        {
             name: 'Freebooter',
             setting: 'Outcast',
             time: 4,
@@ -9374,42 +9374,42 @@ export default
             },
             leads: [
                 'Peasant',
-				'Professional Soldier',
-				'Servitude'
+                'Professional Soldier',
+                'Servitude'
             ],
             skills: {
                 points: 8,
                 from: [
                     'Intimidation',
                     'Appropriate Weapon',
-					'Coutryside-wise',
-					'Fortress-wise',
-					'Mercenary Company-wise',
-					'Foreign Languages',
-					'War-wise',
-					'Loot-wise',
-					'Extortion-wise'
+                    'Coutryside-wise',
+                    'Fortress-wise',
+                    'Mercenary Company-wise',
+                    'Foreign Languages',
+                    'War-wise',
+                    'Loot-wise',
+                    'Extortion-wise'
                 ]
             },
             traits: {
                 points: 2,
                 from: [
                     'Cold Blooded',
-					'Merciless'
+                    'Merciless'
                 ]
             },
             'requires': [
                 'Bandit',
                 'Smuggler',
-				'Squire',
-				'Knight',
-				'City Guard',
-				'Village Guard',
-				'Marine Sailor',
-				'lifepath:Professional Soldier'
+                'Squire',
+                'Knight',
+                'City Guard',
+                'Village Guard',
+                'Marine Sailor',
+                'lifepath:Professional Soldier'
             ]
         },
-		{
+        {
             name: 'Strider',
             setting: 'Outcast',
             time: 5,
@@ -9420,20 +9420,20 @@ export default
             },
             leads: [
                 'Peasant',
-				'Professional Soldier',
-				'Servitude'
+                'Professional Soldier',
+                'Servitude'
             ],
             skills: {
                 points: 9,
                 from: [
                     'Forest-wise',
                     'Orienteering',
-					'Foraging',
-					'Tracking',
-					'Firebuilding',
-					'Riding',
-					'Stealthy',
-					'Appropriate Weapons'
+                    'Foraging',
+                    'Tracking',
+                    'Firebuilding',
+                    'Riding',
+                    'Stealthy',
+                    'Appropriate Weapons'
                 ]
             },
             traits: {
@@ -9445,12 +9445,12 @@ export default
             'requires': [
                 'Born Noble',
                 'Hunter',
-				'Trapper',
-				'Huntsman',
-				'Scout'
+                'Trapper',
+                'Huntsman',
+                'Scout'
             ]
         },
-		{
+        {
             name: 'Mad Summoner',
             setting: 'Outcast',
             time: 8,
@@ -9461,35 +9461,35 @@ export default
             },
             leads: [
                 'Peasant',
-				'City Dweller',
-				'Seafaring'
+                'City Dweller',
+                'Seafaring'
             ],
             skills: {
                 points: 6,
                 from: [
                     'Summoning',
                     'Enchanting',
-					'Demonology',
-					'Empyrealia'
+                    'Demonology',
+                    'Empyrealia'
                 ]
             },
             traits: {
                 points: 2,
                 from: [
                     'Mad',
-					'Fear of Cheese',
-					'Fear of Wet Noises',
-					'Alarming'
+                    'Fear of Cheese',
+                    'Fear of Wet Noises',
+                    'Alarming'
                 ]
             },
             'requires': [
                 'Cultist',
                 'Augur',
-				'Neophyte Sorcerer',
-				'Arcane Devotee'
+                'Neophyte Sorcerer',
+                'Arcane Devotee'
             ]
         },
-		{
+        {
             name: 'Rogue Wizard',
             setting: 'Outcast',
             time: 6,
@@ -9499,40 +9499,40 @@ export default
                 attributes: 'M,P'
             },
             leads: [
-				'Religious',
-				'Seafaring',
-				'Servitude'
+                'Religious',
+                'Seafaring',
+                'Servitude'
             ],
             skills: {
                 points: 8,
                 from: [
                     'Sorcery',
                     'Inconspicuous',
-					'Graveyard-wise',
-					'Astrology',
-					'Bloodletting',
-					'Ugly Truth',
-					'Apocalypse-wise',
-					'Enchanting',
-					'Alchemy'
+                    'Graveyard-wise',
+                    'Astrology',
+                    'Bloodletting',
+                    'Ugly Truth',
+                    'Apocalypse-wise',
+                    'Enchanting',
+                    'Alchemy'
                 ]
             },
             traits: {
                 points: 3,
                 from: [
                     'Spooky',
-					'Aura of Fear',
-					'Obscure Aura'
+                    'Aura of Fear',
+                    'Obscure Aura'
                 ]
             },
             'requires': [
                 'Cultist',
                 'Augur',
-				'Neophyte Sorcerer',
-				'Arcane Devotee'
+                'Neophyte Sorcerer',
+                'Arcane Devotee'
             ]
         },
-		{
+        {
             name: 'Crazy Witch',
             setting: 'Outcast',
             time: 6,
@@ -9544,72 +9544,72 @@ export default
             leads: [
                 'Peasant',
                 'Villager',
-				'Servitude'
+                'Servitude'
             ],
             skills: {
                 points: 5,
                 from: [
                     'Folklore',
                     'Herbalism',
-					'Poisons',
-					'Summoning',
-					'Profanity-wise'
+                    'Poisons',
+                    'Summoning',
+                    'Profanity-wise'
                 ]
             },
             traits: {
                 points: 2,
                 from: [
                     'A Little Crazy',
-					'Gifted',
-					'Mark of the Beast'
+                    'Gifted',
+                    'Mark of the Beast'
                 ]
             },
             'requires': [
                 'Weather Witch',
                 'Young Lady',
-				'Augur',
-				'Midwife'
+                'Augur',
+                'Midwife'
             ]
         },
-		{
+        {
             name: 'Heretic Priest',
             setting: 'Outcast',
             time: 7,
             res: 6,
             leads: [
                 'Peasant',
-				'Servitude'
+                'Servitude'
             ],
             skills: {
                 points: 7,
                 from: [
                     'Heretical Doctrine',
                     'Oratory',
-					'Apostate-wise',
-					'Demonology',
-					'Summoner-wise',
-					'Cultist-wise'
+                    'Apostate-wise',
+                    'Demonology',
+                    'Summoner-wise',
+                    'Cultist-wise'
                 ]
             },
             traits: {
                 points: 2,
                 from: [
                     'Lunatic',
-					'Overbearing Loony',
-					'Faith in Dead Gods'
+                    'Overbearing Loony',
+                    'Faith in Dead Gods'
                 ]
             },
             'requires': [
                 'Acolyte',
                 'Cultist',
-				'Apostate',
-				'Theologian',
-				'Venal Priest',
-				'Interpreter',
-				'Archivist'
+                'Apostate',
+                'Theologian',
+                'Venal Priest',
+                'Interpreter',
+                'Archivist'
             ]
         },
-		{
+        {
             name: 'Thinker',
             setting: 'Outcast',
             time: 15,
@@ -9621,30 +9621,30 @@ export default
             leads: [
                 'Peasant',
                 'Villager',
-				'City Dweller',
-				'Noble',
-				'Noble Court',
-				'Religious',
-				'Professional Soldier',
-				'Seafaring',
-				'Servitude'
+                'City Dweller',
+                'Noble',
+                'Noble Court',
+                'Religious',
+                'Professional Soldier',
+                'Seafaring',
+                'Servitude'
             ],
             skills: {
                 points: 6,
                 from: [
                     'Philosophy',
                     'Strategy',
-					'Strategy Games',
-					'Calligraphy',
-					'History',
-					'Painting'
+                    'Strategy Games',
+                    'Calligraphy',
+                    'History',
+                    'Painting'
                 ],
-				generalPoints: 1
+                generalPoints: 1
             },
             traits: {
                 points: 2
             }
-			//TODO: Thinker can only be taken if the character's starting age
-			//will be 36 years or older.
+            //TODO: Thinker can only be taken if the character's starting age
+            //will be 36 years or older.
         },
     ]

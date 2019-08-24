@@ -16,23 +16,70 @@ import './LifepathList.scss';
 
 class LifepathList extends React.Component {
 
-    getRestrictedLifepaths() {
+    filterBornLifepath() {
         const {
-            selectedBornLifepath,
+            bornLifepaths,
+            selectedLifepaths
+        } = this.props;
+        const nextLifepath = selectedLifepaths.find(lifepath => (
+            lifepath.index === 1
+        ));
+
+        if (nextLifepath) {
+            return bornLifepaths.filter(lifepath => (
+                lifepath.setting === nextLifepath.lifepath.setting
+                || lifepath.leads.includes(nextLifepath.lifepath.setting)
+            ));
+        }
+        return bornLifepaths;
+    }
+
+    filterLifepathsForPreviousLifepath(previousLifepath, lifepaths) {
+        if (previousLifepath) {
+            const setting = previousLifepath.lifepath.setting;
+            const leads = previousLifepath.lifepath.leads;
+            return lifepaths.filter(lifepath => (
+                lifepath.setting === setting
+                || leads.includes(lifepath.setting)
+            ));
+        }
+        return lifepaths;
+    }
+
+    filterLifepathsForNextLifepath(nextLifepath, lifepaths) {
+        if (nextLifepath) {
+            const setting = nextLifepath.lifepath.setting;
+            return lifepaths.filter(lifepath => (
+                setting === lifepath.setting
+                || lifepath.leads.includes(setting)
+            ));
+        }
+        return lifepaths;
+    }
+
+    getRestrictedLifepaths(index) {
+        const {
             selectedLifepaths,
             lifepaths
         } = this.props;
 
-        return lifepaths.filter(lifepath => (
+        let filteredLifepaths = lifepaths.filter(lifepath => (
             !lifepath.isBornLifepath
         ));
+        const previousLifepath = selectedLifepaths
+            .find(lifepath => lifepath.index === index - 1);
+        const nextLifepath = selectedLifepaths
+            .find(lifepath => lifepath.index === index + 1);
+
+        filteredLifepaths = this.filterLifepathsForPreviousLifepath(previousLifepath, filteredLifepaths);
+        filteredLifepaths = this.filterLifepathsForNextLifepath(nextLifepath, filteredLifepaths);
+
+        return filteredLifepaths;
     }
 
     getList() {
         const {
             lifepathCount,
-            bornLifepaths,
-            lifepaths,
             selectedBornLifepath,
             selectedLifepaths,
             onSelectBornLifepath,
@@ -52,7 +99,7 @@ class LifepathList extends React.Component {
                         ? <ItemList
                             header="Select your character's born lifepath"
                             type="lifepath"
-                            choices={bornLifepaths}
+                            choices={this.filterBornLifepath()}
                             items={selectedBornLifepath}
                             maxCount={1}
                             onSelect={lifepath => onSelectBornLifepath(lifepath)}
@@ -61,7 +108,7 @@ class LifepathList extends React.Component {
                         : <ItemList
                             header="Select a lifepath"
                             type="lifepath"
-                            choices={this.getRestrictedLifepaths()}
+                            choices={this.getRestrictedLifepaths(i)}
                             items={selectedLifepaths
                                 .filter(lifepath => lifepath.index === i)
                                 .map(lifepath => lifepath.lifepath)

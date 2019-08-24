@@ -35,6 +35,15 @@ const selectedLifepaths = (state = [], action) => {
             return state.filter(lifepath => (
                 lifepath.index !== action.index
             ));
+        case types.SELECT_BORN_LIFEPATH:
+            return [{
+                lifepath: action.lifepath,
+                index: 0
+            }];
+        case types.UNSELECT_BORN_LIFEPATH:
+            return state.filter(lifepath => (
+                lifepath.index !== 0
+            ));
         default:
             return state;
     }
