@@ -3,7 +3,7 @@ import { sections } from '#Utilities/config/editor.config.js';
 import lifepaths from './lifepaths.js';
 import * as types from "#Actions/types.js";
 
-const selectedRace = (state = "men", action) => {
+const selectedRace = (state = "", action) => {
     switch (action.type) {
         case types.SELECT_RACE:
             return action.race;
@@ -21,7 +21,7 @@ const activeSection = (state = "Lifepaths", action) => {
     }
 };
 
-const lockedSections = (state = [], action) => {
+const lockedSections = (state = sections.slice(1), action) => {
     switch (action.type) {
         case types.UNLOCK_SECTION:
             return action.section;

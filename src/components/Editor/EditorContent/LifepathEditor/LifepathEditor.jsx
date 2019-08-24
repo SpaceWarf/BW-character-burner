@@ -24,7 +24,7 @@ const LifepathEditor = ({
                         key={race.name}
                         active={selectedRace === race.name}
                         disabled={race.disabled}
-                        onSelect={() => onSelectRace(race.name)}
+                        onClick={() => onSelectRace(race.name)}
                         basic
                     >
                         <Image
