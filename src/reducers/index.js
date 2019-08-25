@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import app from './app.js';
+import editor from './editor/editor.js';
 
 const reducers = combineReducers({
-    app
+    editor
 });
 
 export default reducers;

@@ -1,0 +1,23 @@
+@import 'common';
+
+.EditorSidebar {
+    height: inherit;
+
+    .ui.vertical.menu {
+        display: flex;
+        justify-content: space-between;
+        height: inherit;
+        border-radius: 0;
+        width: $sidebar-width;
+
+        .item {
+            font-size: 20px;
+            text-align: center;
+            padding-bottom: 15px;
+
+            &.disabled {
+                color: $secondary-font-color !important;
+            }
+        }
+    }
+}

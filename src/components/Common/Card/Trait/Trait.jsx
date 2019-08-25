@@ -1,19 +1,19 @@
 import React from "react";
 import { Card, Icon } from 'semantic-ui-react';
-import './Trait.scss';
+import '../Card.scss';
 import { Menu } from "semantic-ui-react";
 
-const Trait = ({ trait }) => {
+const Trait = ({ trait, centered, linkable, onClick }) => {
     return (
         <Menu.Item className="Card Trait" id={trait.name.replace(/\s/g, '')}>
-            <Card>
+            <Card className={centered ? 'centered' : ''} onClick={onClick}>
                 <Card.Content>
                     <Card.Header className={trait.description ? 'with-description' : ''}>
-                        <Icon
+                        {linkable && <Icon
                             name='linkify'
                             onClick={() => window.location.href = `#${trait.name.replace(/\s/g, '')}`}
                             link
-                        />
+                        />}
                         <div className='header-content'>
                             <p className='halfs'>{trait.name}</p>
                             <p className='halfs centered'>{trait.type}</p>

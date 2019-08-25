@@ -1,30 +1,30 @@
 import React from "react";
 import { Menu } from 'semantic-ui-react';
-import Sidebar from './Sidebar/Sidebar.jsx';
+import CompendiumSidebar from './CompendiumSidebar/CompendiumSidebar.jsx';
 import CompendiumContent from './CompendiumContent/CompendiumContent.jsx';
-import { getDataSetFromCategory } from '#Utilities/data.js';
-import categories from '#Resources/config/categories.js';
+import { getDataSetForSection } from '#Utilities/data-selectors.js';
+import { sections } from '#Utilities/config/compendium.config.js';
 import './Compendium.scss';
 
 const Compendium = () => {
     return (
         <div className="Compendium">
-            <Sidebar />
-            <div className="Content">
+            <CompendiumSidebar />
+            <div className="CompendiumContent">
                 <Menu vertical>
-                    {categories.map(category => {
-                        const dataSet = getDataSetFromCategory(category.type, category.subType);
+                    {sections.map(section => {
+                        const dataSet = getDataSetForSection(section.type, section.subType);
                         return dataSet.length > 0 && <CompendiumContent
-                            key={category.name}
-                            id={category.subType
-                                ? `${category.type}-${category.subType}`
-                                : category.type
+                            key={section.name}
+                            id={section.subType
+                                ? `${section.type}-${section.subType}`
+                                : section.type
                             }
-                            header={category.name}
-                            categoryType={category.type}
-                            categorySubType={category.subType}
+                            header={section.name}
+                            categoryType={section.type}
+                            categorySubType={section.subType}
                             lifepaths={dataSet}
-                            nested={category.nested}
+                            nested={section.nested}
                         />
                     })}
                 </Menu>

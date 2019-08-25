@@ -1,0 +1,12 @@
+@import 'common';
+
+.ui.menu.attached.EditorFooter {
+    height: $editor-footer-height;
+    border-radius: 0;
+    border: none;
+    margin: 0;
+
+    &:after {
+        content: none;
+     }
+}

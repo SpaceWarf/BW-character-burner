@@ -5,8 +5,8 @@ import lifepaths_orcs from '#Resources/lifepaths/lifepaths_orcs.js';
 import skills from '#Resources/skills/skills.js';
 import traits from '#Resources/traits/traits.js';
 
-const getLifepathDataSet = lifepath => {
-    switch (lifepath) {
+export const getLifepathDataSet = lifepathCategory => {
+    switch (lifepathCategory) {
         case 'men':
             return lifepaths_men;
         case 'elves':
@@ -16,14 +16,19 @@ const getLifepathDataSet = lifepath => {
         case 'orcs':
             return lifepaths_orcs;
         default:
-            return [];
+            return [
+                ...lifepaths_men,
+                ...lifepaths_elves,
+                ...lifepaths_dwarves,
+                ...lifepaths_orcs
+            ];
     }
 };
 
-export const getDataSetFromCategory = (category, subCategory) => {
-    switch (category) {
+export const getDataSetForSection = (section, subSection) => {
+    switch (section) {
         case 'lifepaths':
-            return getLifepathSettings(subCategory);
+            return getLifepathSettings(subSection);
         case 'skills':
             return skills;
         case 'traits':
@@ -33,15 +38,15 @@ export const getDataSetFromCategory = (category, subCategory) => {
     }
 };
 
-export const getLifepathSettings = lifepath => {
+export const getLifepathSettings = lifepathCategory => {
     return [...new Set(
-        getLifepathDataSet(lifepath)
+        getLifepathDataSet(lifepathCategory)
             .map(obj => obj.setting)
     )];
 };
 
-export const getLifepaths = (lifepath, setting) => {
-    const lifepathDataSet = getLifepathDataSet(lifepath);
+export const getLifepaths = (lifepathCategory, setting) => {
+    const lifepathDataSet = getLifepathDataSet(lifepathCategory);
     return setting ?
         lifepathDataSet.filter(lifepath => lifepath.setting === setting)
         : lifepathDataSet;

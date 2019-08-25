@@ -1,62 +1,20 @@
 @import 'common';
 
-.Content .ui.vertical.menu .item {
-    padding: 15px 0 15px 15px;
-
-    & > .ui.header {
-        color: $main-font-color;
-        border-bottom: 2px solid $main-font-color;
-    }
-
-    & > .Card {
-        padding: 15px $compendium-card-padding 15px $compendium-card-padding;
+.CompendiumContent {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow-y: scroll;
+    padding: 15px;
     
-        & > .ui.card {
-            width: inherit;
-            
-            & > .content {
+    & > .ui.vertical.menu {
+        width: $content-width;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
 
-                & > .header {
-                    display: flex;
-                    justify-content: space-between;
-                    
-                    &.with-description {
-                        border-bottom: 1px solid $secondary-font-color;
-                    }
-    
-                    & > .link.icon {
-                        text-align: start;
-                        width: 3%;
-                        color: $secondary-font-color;
-        
-                        &:hover {
-                            color: $main-font-color;
-                        }
-                    }
-        
-                    & > .header-content {
-                        width: 67%;
-                        display: flex;
-                        justify-content: space-between;
-                    }
-        
-                    & > .left.content {
-                        text-align: end;
-                        width: 30%;
-                    }
-                }
-
-                & > .description {
-                    & > p {
-                        color: $secondary-font-color;
-
-                        & > b {
-                            color: $main-font-color;   
-                        }
-                    }
-                }
-            }
+        & .item > .item > .ui.header {
+            font-size: $subheader-font-size;
         }
     }
 }
-

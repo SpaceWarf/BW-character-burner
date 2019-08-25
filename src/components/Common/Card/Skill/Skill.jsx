@@ -1,19 +1,19 @@
 import React from "react";
 import { Card, Icon } from 'semantic-ui-react';
-import './Skill.scss';
+import '../Card.scss';
 import { Menu } from "semantic-ui-react";
 
-const Skill = ({ skill }) => {
+const Skill = ({ skill, centered, linkable, onClick }) => {
     return (
         <Menu.Item className="Card Skill" id={skill.name.replace(/\s/g, '')}>
-            <Card>
+            <Card className={centered ? 'centered' : ''} onClick={onClick}>
                 <Card.Content>
                     <Card.Header className={!skill.isWiseSkill ? 'with-description' : ''}>
-                        <Icon
+                        {linkable && <Icon
                             name='linkify'
                             onClick={() => window.location.href = `#${skill.name.replace(/\s/g, '')}`}
                             link
-                        />
+                        />}
                         <div className='header-content'>
                             <p className='halfs'>{skill.name}</p>
                             {skill.skillType && <p className='halfs centered'>{skill.skillType}</p>}
