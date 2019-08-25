@@ -37,10 +37,13 @@ const selectedLifepaths = (state = [], action) => {
                 lifepath.index !== action.index
             ));
         case types.SELECT_BORN_LIFEPATH:
-            return [{
-                lifepath: action.lifepath,
-                index: 0
-            }];
+            return [
+                ...state,
+                {
+                    lifepath: action.lifepath,
+                    index: 0
+                }
+            ];
         case types.UNSELECT_BORN_LIFEPATH:
             return state.filter(lifepath => (
                 lifepath.index !== 0

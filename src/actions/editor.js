@@ -1,46 +1,46 @@
 import * as types from "#Actions/types.js";
 
-const setActiveSection = section => ({
+export const setActiveSection = section => ({
     type: types.SET_ACTIVE_SECTION,
     section
 });
 
-const selectRace = race => ({
+export const selectRace = race => ({
     type: types.SELECT_RACE,
     race
 });
 
-const selectLifepathCount = count => ({
+export const selectLifepathCount = count => ({
     type: types.SELECT_LIFEPATH_COUNT,
     count
 });
 
-const selectBornLifepath = lifepath => ({
+export const selectBornLifepath = lifepath => ({
     type: types.SELECT_BORN_LIFEPATH,
     lifepath
 });
 
-const unselectBornLifepath = () => ({
+export const unselectBornLifepath = () => ({
     type: types.UNSELECT_BORN_LIFEPATH
 });
 
-const addLifepath = (lifepath, index) => ({
+export const addLifepath = (lifepath, index) => ({
     type: types.ADD_LIFEPATH,
     lifepath,
     index
 });
 
-const removeLifepath = index => ({
+export const removeLifepath = index => ({
     type: types.REMOVE_LIFEPATH,
     index
 });
 
-export {
-    setActiveSection,
-    selectRace,
-    selectLifepathCount,
-    selectBornLifepath,
-    unselectBornLifepath,
-    addLifepath,
-    removeLifepath
-};
+export const lockSection = section => ({
+    type: types.LOCK_SECTION,
+    section
+});
+
+export const unlockSection = section => ({
+    type: types.UNLOCK_SECTION,
+    section
+});
