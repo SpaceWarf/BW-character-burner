@@ -116,17 +116,17 @@ class AddModal extends React.Component {
             >
                 <Modal.Header>{header}</Modal.Header>
                 <Modal.Content scrolling>
-                    {sections && <div className="ContentHeader">
+                    <div className="ContentHeader">
                         <Input
                             icon='search'
                             placeholder='Search...'
                             text={filter}
                             onChange={this.handleFilterChange}
                         />
-                        <Header as="h2">
+                        {sections && <Header as="h2">
                             {filledSections[activeSectionIndex]} Setting
-                        </Header>
-                    </div>}
+                        </Header>}
+                    </div>
                     <div className="choices">
                         {components}
                     </div>

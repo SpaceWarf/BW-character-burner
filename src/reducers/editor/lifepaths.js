@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 import * as types from "#Actions/types.js";
 
-const count = (state = 3, action) => {
+const count = (state = null, action) => {
     switch (action.type) {
         case types.SELECT_LIFEPATH_COUNT:
             return action.count;

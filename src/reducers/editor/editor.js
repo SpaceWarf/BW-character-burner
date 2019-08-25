@@ -3,7 +3,7 @@ import { sections } from '#Utilities/config/editor.config.js';
 import lifepaths from './lifepaths.js';
 import * as types from "#Actions/types.js";
 
-const selectedRace = (state = "men", action) => {
+const selectedRace = (state = "", action) => {
     switch (action.type) {
         case types.SELECT_RACE:
             return action.race;
