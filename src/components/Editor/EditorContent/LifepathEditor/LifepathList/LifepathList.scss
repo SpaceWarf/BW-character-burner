@@ -1,3 +1,7 @@
 .LifepathList {
-    padding-top: 30px;
+    padding-top: 10px;
+
+    & > .ui.header.LifepathHeader {
+        margin: 10px 0;
+    }
 }

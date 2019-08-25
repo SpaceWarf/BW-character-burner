@@ -93,7 +93,7 @@ class LifepathList extends React.Component {
         for (let i = 0; i < lifepathCount; i++) {
             items.push(
                 <React.Fragment key={`lifepath-${i}`}>
-                    <Header as="h4">
+                    <Header as="h4" className="LifepathHeader">
                         {i === 0 ? 'Born lifepath' : `Lifepath ${i + 1}`}
                     </Header>
                     {i === 0

@@ -23,19 +23,21 @@ class AddModal extends React.Component {
         });
     }
 
-    getFilteredChoices(section) {
-        const { choices } = this.props;
-        const { filter } = this.state;
-        const filteredChoices = choices.filter(choice =>
-            choice.name.toLowerCase()
-                .indexOf(filter.toLowerCase()) !== -1
-        );
+    getSectionChoices(choices, section) {
         if (section) {
-            return filteredChoices.filter(choice => (
+            return choices.filter(choice => (
                 choice.setting === section
             ));
         }
-        return filteredChoices;
+        return choices;
+    }
+
+    getFilteredChoices(choices) {
+        const { filter } = this.state;
+        return choices.filter(choice =>
+            choice.name.toLowerCase()
+                .indexOf(filter.toLowerCase()) !== -1
+        );
     }
 
     handleClose() {
@@ -45,30 +47,37 @@ class AddModal extends React.Component {
         });
     }
 
-    getItemComponent(item) {
+    getItemComponents(choices) {
         const { type, onSelect } = this.props;
-        switch (type) {
-            case 'lifepath':
-                return <Lifepath
-                    key={`${item.setting}-${item.name}`}
-                    lifepath={item}
-                    onClick={() => onSelect(item)}
-                />;
-            case 'skill':
-                return <Skill
-                    key={item.name}
-                    skill={item}
-                    onClick={() => onSelect(item)}
-                />;
-            case 'trait':
-                return <Trait
-                    key={item.name}
-                    trait={item}
-                    onClick={() => onSelect(item)}
-                />;
-            default:
-                <p>No component for item type</p>
-        }
+
+        const components = choices.map(choice => {
+            switch (type) {
+                case 'lifepath':
+                    return <Lifepath
+                        key={`${choice.setting}-${choice.name}`}
+                        lifepath={choice}
+                        onClick={() => onSelect(choice)}
+                    />;
+                case 'skill':
+                    return <Skill
+                        key={choice.name}
+                        skill={choice}
+                        onClick={() => onSelect(choice)}
+                    />;
+                case 'trait':
+                    return <Trait
+                        key={choice.name}
+                        trait={choice}
+                        onClick={() => onSelect(choice)}
+                    />;
+                default:
+                    <p>No component for item type</p>
+            }
+        });
+
+        return components.length > 0
+            ? components
+            : <p className="NoContent">No items matching the filter.</p>
     }
 
     handleSectionChange(index) {
@@ -80,18 +89,24 @@ class AddModal extends React.Component {
     render() {
         const {
             header,
-            sections
+            sections,
+            choices
         } = this.props;
         const {
             filter,
             activeSectionIndex
         } = this.state;
-        const choices = this.getFilteredChoices(
-            sections ? sections[activeSectionIndex] : ''
-        );
-        const components = choices.map(choice => (
-            this.getItemComponent(choice)
-        ));
+
+        const filledSections = sections
+            ? sections.filter(section => (
+                this.getSectionChoices(choices, section).length > 0
+            ))
+            : [];
+        const activeSection = sections ? filledSections[activeSectionIndex] : '';
+        const sectionChoices = this.getSectionChoices(choices, activeSection);
+        const filteredChoices = this.getFilteredChoices(sectionChoices);
+        const components = this.getItemComponents(filteredChoices);
+
         return (
             <Modal
                 className="AddModal"
@@ -109,19 +124,16 @@ class AddModal extends React.Component {
                             onChange={this.handleFilterChange}
                         />
                         <Header as="h2">
-                            {sections[activeSectionIndex]} Setting
+                            {filledSections[activeSectionIndex]} Setting
                         </Header>
                     </div>}
                     <div className="choices">
-                        {components.length !== 0
-                            ? components
-                            : <p className="NoContent">TODO: filter empty sections.</p>
-                        }
+                        {components}
                     </div>
                 </Modal.Content>
                 {sections && <Modal.Actions>
                     <SectionChanger
-                        sections={sections}
+                        sections={filledSections}
                         activeIndex={activeSectionIndex}
                         onClick={(_, index) => this.handleSectionChange(index)}
                     />

@@ -1,15 +1,14 @@
 @import 'common';
 
-.modals.dimmer > .ui.large.modal.AddModal {
-    margin: auto !important;
+.ui.large.modal.AddModal {
 
     & > .header {
         font-size: 30px;
+        padding: 10px calc(#{$compendium-card-padding} + #{$modal-content-padding});
     }
 
     & > .content {
-        height: 100%;
-        padding-top: 15px;
+        padding: 15px $modal-content-padding;
 
         & > .ContentHeader {
 
@@ -25,7 +24,12 @@
         }
 
         & > .choices .NoContent {
-            margin: 10px $compendium-card-padding;
+            font-size: 15px;
+            margin: 10px #{$compendium-card-padding + 2px};
         }
+    }
+
+    & > .actions {
+        padding: 0;
     }
 }
