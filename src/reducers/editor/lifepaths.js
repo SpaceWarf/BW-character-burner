@@ -15,6 +15,7 @@ const selectedBornLifepath = (state = [], action) => {
         case types.SELECT_BORN_LIFEPATH:
             return [action.lifepath];
         case types.UNSELECT_BORN_LIFEPATH:
+        case types.SELECT_RACE:
             return [];
         default:
             return state;
@@ -43,6 +44,12 @@ const selectedLifepaths = (state = [], action) => {
         case types.UNSELECT_BORN_LIFEPATH:
             return state.filter(lifepath => (
                 lifepath.index !== 0
+            ));
+        case types.SELECT_RACE:
+            return [];
+        case types.SELECT_LIFEPATH_COUNT:
+            return state.filter(lifepath => (
+                lifepath.index < action.count
             ));
         default:
             return state;
