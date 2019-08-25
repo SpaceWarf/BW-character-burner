@@ -16,7 +16,12 @@ export const getLifepathDataSet = lifepathCategory => {
         case 'orcs':
             return lifepaths_orcs;
         default:
-            return [];
+            return [
+                ...lifepaths_men,
+                ...lifepaths_elves,
+                ...lifepaths_dwarves,
+                ...lifepaths_orcs
+            ];
     }
 };
 

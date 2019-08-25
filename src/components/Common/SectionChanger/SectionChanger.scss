@@ -1,0 +1,42 @@
+@import 'common';
+
+.container {
+    display: flex;
+    width: $content-width;
+
+    & > .box {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & > button {
+            margin: 9px;
+
+            & > i {
+                padding-left: 0 10px;
+            }
+        }
+
+        & > p {
+            margin: 0;
+            color: $secondary-font-color;
+        }
+
+        &:first-child {
+            justify-content: flex-start;
+        }
+
+        &:last-child {
+            justify-content: flex-end;
+        }
+    }
+
+    &:first-child {
+        margin-right: auto;
+    }
+
+    &:last-child {
+        margin-left: auto;
+    }
+}

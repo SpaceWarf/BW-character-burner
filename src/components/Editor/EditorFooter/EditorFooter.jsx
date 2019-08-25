@@ -1,50 +1,26 @@
 import React from "react";
 import { connect } from 'react-redux';
-import { Menu, Button, Icon } from 'semantic-ui-react';
+import { Menu } from 'semantic-ui-react';
+import SectionChanger from '#Components/Common/SectionChanger/SectionChanger.jsx';
 import { setActiveSection } from '#Actions/editor.js';
 import { sections } from '#Utilities/config/editor.config.js';
 import './EditorFooter.scss';
 
 const EditorFooter = ({ activeSection, lockedSections, onSetActiveSection }) => {
     const activeIndex = sections.indexOf(activeSection);
-    const previousSection = sections[activeIndex - 1];
-    const nextSection = sections[activeIndex + 1]
     return (
         <Menu
             className="EditorFooter"
             attached="bottom"
             inverted
         >
-            <div className="container">
-                <div className="box">
-                    {previousSection
-                        ? <Button
-                            onClick={() => onSetActiveSection(previousSection)}
-                            inverted
-                        >
-                            <Icon name="angle left" />
-                            {previousSection}
-                        </Button>
-                        : <div />
-                    }
-                </div>
-                <div className="box">
-                    <p>{activeIndex + 1} / {sections.length}</p>
-                </div>
-                <div className="box">
-                    {nextSection
-                        ? <Button
-                            disabled={lockedSections.includes(nextSection)}
-                            onClick={() => onSetActiveSection(nextSection)}
-                            inverted
-                        >
-                            {nextSection}
-                            <Icon name="angle right" />
-                        </Button>
-                        : <div />
-                    }
-                </div>
-            </div>
+            <SectionChanger
+                sections={sections}
+                activeIndex={activeIndex}
+                lockedSections={lockedSections}
+                onClick={onSetActiveSection}
+                inverted
+            />
         </Menu>
     );
 };

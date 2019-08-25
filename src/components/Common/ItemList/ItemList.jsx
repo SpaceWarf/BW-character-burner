@@ -5,7 +5,7 @@ import Skill from '#Components/Common/Card/Skill/Skill.jsx';
 import Trait from '#Components/Common/Card/Trait/Trait.jsx';
 import './ItemList.scss';
 
-const ItemList = ({ header, items, type, choices, maxCount, onSelect, onRemove }) => {
+const ItemList = ({ header, items, type, choices, maxCount, sections, onSelect, onRemove }) => {
 
     const getItemComponent = (item, onClick) => {
         switch (type) {
@@ -45,6 +45,7 @@ const ItemList = ({ header, items, type, choices, maxCount, onSelect, onRemove }
                         header={header}
                         type={type}
                         choices={choices}
+                        sections={sections}
                         onSelect={onSelect}
                     />
                 }

@@ -1,12 +1,31 @@
 @import 'common';
 
-.ui.large.modal {
+.modals.dimmer > .ui.large.modal.AddModal {
+    margin: auto !important;
+
+    & > .header {
+        font-size: 30px;
+    }
+
     & > .content {
+        height: 100%;
         padding-top: 15px;
 
-        & .ui.input {
-            width: 300px;
-            margin: 0 $compendium-card-padding;
+        & > .ContentHeader {
+
+            & > .ui.input {
+                width: 300px;
+                margin: 0 $compendium-card-padding;
+            }
+
+            & > .ui.header {
+                float: right;
+                margin: auto $compendium-card-padding;
+            }
+        }
+
+        & > .choices .NoContent {
+            margin: 10px $compendium-card-padding;
         }
     }
 }

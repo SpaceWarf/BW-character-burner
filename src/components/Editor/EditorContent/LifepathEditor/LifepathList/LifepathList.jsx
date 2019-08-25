@@ -8,6 +8,7 @@ import {
     addLifepath,
     removeLifepath
 } from '#Actions/editor.js';
+import { getLifepathSettings } from '#Utilities/data-selectors.js';
 import {
     getBornLifepaths,
     getLifepaths
@@ -114,6 +115,7 @@ class LifepathList extends React.Component {
                                 .map(lifepath => lifepath.lifepath)
                             }
                             maxCount={1}
+                            sections={getLifepathSettings()}
                             onSelect={lifepath => onAddLifepath(lifepath, i)}
                             onRemove={() => onRemoveLifepath(i)}
                         />
