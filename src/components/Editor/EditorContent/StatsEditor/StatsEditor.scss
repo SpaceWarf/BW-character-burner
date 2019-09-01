@@ -1,0 +1,34 @@
+@import 'common';
+
+.StatsEditor {
+    padding: $section-padding;
+    height: 100%;
+    width: $content-width;
+
+    .Section {
+        padding-bottom: 10px;
+
+        &.Age {
+            & > .ui.header {
+                margin: 0;
+            }
+        }
+
+        &.Bonuses {
+            display: flex;
+
+            & > .ui.header {
+                margin: auto 5px auto 0;
+            }
+
+            & > .ui.buttons {
+                padding: 0 5px;
+            }
+
+        }
+    }
+
+    & .ui.table {
+        width: 400px;
+    }
+}

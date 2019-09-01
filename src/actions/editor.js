@@ -44,3 +44,9 @@ export const unlockSection = section => ({
     type: types.UNLOCK_SECTION,
     section
 });
+
+export const selectStatBonus = (bonus, index) => ({
+    type: types.SELECT_STAT_BONUS,
+    bonus,
+    index
+});
