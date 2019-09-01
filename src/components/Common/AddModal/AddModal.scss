@@ -11,15 +11,21 @@
         padding: 15px $modal-content-padding;
 
         & > .ContentHeader {
+            display: flex;
+            justify-content: space-between;
 
             & > .ui.input {
                 width: 300px;
                 margin: 0 $compendium-card-padding;
             }
 
-            & > .ui.header {
-                float: right;
+            & > .SettingsDropdown {
+                display: flex;
                 margin: auto $compendium-card-padding;
+
+                & > .ui.header {
+                    margin: auto 10px auto 0;
+                }
             }
         }
 

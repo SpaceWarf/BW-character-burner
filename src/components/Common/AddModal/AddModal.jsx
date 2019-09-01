@@ -1,9 +1,8 @@
 import React from "react";
-import { Modal, Button, Input, Header } from 'semantic-ui-react';
+import { Modal, Button, Input, Header, Dropdown } from 'semantic-ui-react';
 import Lifepath from '#Components/Common/Card/Lifepath/Lifepath.jsx';
 import Skill from '#Components/Common/Card/Skill/Skill.jsx';
 import Trait from '#Components/Common/Card/Trait/Trait.jsx';
-import SectionChanger from '#Components/Common/SectionChanger/SectionChanger.jsx';
 import './AddModal.scss';
 
 class AddModal extends React.Component {
@@ -117,27 +116,36 @@ class AddModal extends React.Component {
                 <Modal.Header>{header}</Modal.Header>
                 <Modal.Content scrolling>
                     <div className="ContentHeader">
+                        {sections
+                            ? <div className='SettingsDropdown'>
+                                <Header as='h3'>Setting: </Header>
+                                <Dropdown
+                                    options={
+                                        filledSections.map((section, index) => ({
+                                            key: section,
+                                            text: section,
+                                            value: index
+                                        }))
+                                    }
+                                    value={activeSectionIndex}
+                                    onChange={(_, { value }) => this.handleSectionChange(value)}
+                                    selection
+                                    search
+                                />
+                            </div>
+                            : <div />
+                        }
                         <Input
                             icon='search'
                             placeholder='Search...'
                             text={filter}
                             onChange={this.handleFilterChange}
                         />
-                        {sections && <Header as="h2">
-                            {filledSections[activeSectionIndex]} Setting
-                        </Header>}
                     </div>
                     <div className="choices">
                         {components}
                     </div>
                 </Modal.Content>
-                {sections && <Modal.Actions>
-                    <SectionChanger
-                        sections={filledSections}
-                        activeIndex={activeSectionIndex}
-                        onClick={(_, index) => this.handleSectionChange(index)}
-                    />
-                </Modal.Actions>}
             </Modal>
         );
     }
