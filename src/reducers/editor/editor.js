@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux';
 import { sections } from '#Utilities/config/editor.config.js';
 import lifepaths from './lifepaths.js';
+import stats from './stats';
 import * as types from "#Actions/types.js";
 
 const selectedRace = (state = "", action) => {
@@ -41,5 +42,6 @@ export default combineReducers({
     selectedRace,
     activeSection,
     lockedSections,
-    lifepaths
+    lifepaths,
+    stats
 });

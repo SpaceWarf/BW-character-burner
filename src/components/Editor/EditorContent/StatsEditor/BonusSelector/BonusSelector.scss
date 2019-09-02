@@ -1,0 +1,16 @@
+.BonusSelector {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+
+    & > .ui.header {
+        margin: auto 5px auto 0;
+    }
+
+    & > .Bonuses {
+
+        & > .ui.buttons {
+            padding: 10px 10px 0 0;
+        }
+    }
+}

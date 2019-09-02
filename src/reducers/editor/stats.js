@@ -11,6 +11,9 @@ const selectedStatBonuses = (state = [], action) => {
                 index: action.index
             })
             return newState;
+        case types.REMOVE_LIFEPATH:
+        case types.SELECT_LIFEPATH_COUNT:
+            return [];
         default:
             return state;
     }
