@@ -79,3 +79,72 @@ export const lifepathCounts = [
         hint: "Potent and experienced character that has plenty of points to play with."
     }
 ];
+
+export const statPools = [
+    {
+        minAge: 1,
+        maxAge: 10,
+        mental: 5,
+        physical: 10
+    },
+    {
+        minAge: 11,
+        maxAge: 14,
+        mental: 6,
+        physical: 13
+    },
+    {
+        minAge: 15,
+        maxAge: 16,
+        mental: 6,
+        physical: 16
+    },
+    {
+        minAge: 17,
+        maxAge: 25,
+        mental: 7,
+        physical: 16
+    },
+    {
+        minAge: 26,
+        maxAge: 29,
+        mental: 7,
+        physical: 15
+    },
+    {
+        minAge: 30,
+        maxAge: 35,
+        mental: 7,
+        physical: 14
+    },
+    {
+        minAge: 36,
+        maxAge: 40,
+        mental: 7,
+        physical: 13
+    },
+    {
+        minAge: 41,
+        maxAge: 55,
+        mental: 7,
+        physical: 12
+    },
+    {
+        minAge: 56,
+        maxAge: 65,
+        mental: 7,
+        physical: 11
+    },
+    {
+        minAge: 66,
+        maxAge: 79,
+        mental: 7,
+        physical: 10
+    },
+    {
+        minAge: 80,
+        maxAge: 100,
+        mental: 6,
+        physical: 9
+    },
+]

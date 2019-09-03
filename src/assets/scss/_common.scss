@@ -24,7 +24,7 @@
     width: 50%;
 }
 
-.section.header {
+.ui.section.header {
     font-size: $header-font-size;
     color: $main-font-color;
     position: relative;
@@ -47,4 +47,8 @@
     &:after {
         margin-left: 1%;
     }
+}
+
+.error {
+    color: red;
 }

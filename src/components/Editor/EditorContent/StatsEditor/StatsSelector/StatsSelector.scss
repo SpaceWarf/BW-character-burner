@@ -1,0 +1,26 @@
+@import 'common';
+
+.StatsSelector {
+    & > .Stats {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+
+        & > .ui.header {
+            margin-bottom: 5px;
+        }
+
+        & > .StatsBloc {
+            display: flex;
+
+            & > .Stat {
+                display: flex;
+                padding-right: 30px;
+
+                & > b {
+                    padding-right: 10px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+@import 'common';
+
+.StatsEditor {
+    padding: $section-padding;
+    height: 100%;
+    width: $content-width;
+
+    .Content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .Section {
+        padding-bottom: 30px;
+
+        &.Age {
+            & > .ui.header {
+                margin: 0;
+            }
+        }
+    }
+
+    & .ui.table {
+        width: 400px;
+    }
+}
