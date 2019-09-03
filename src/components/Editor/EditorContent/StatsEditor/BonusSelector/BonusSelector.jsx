@@ -1,11 +1,43 @@
 import React from "react";
 import { connect } from 'react-redux';
-import { selectStatBonus } from '#Actions/editor.js';
-import { getStatBonuses } from '#Utilities/redux-selectors.js';
+import {
+    selectStatBonus,
+    lockSection,
+    unlockSection
+} from '#Actions/editor.js';
+import {
+    getStatBonuses,
+    getMentalPointsLeftToAssign,
+    getPhysicalPointsLeftToAssign
+} from '#Utilities/redux-selectors.js';
 import { Header, Button } from "semantic-ui-react";
 import './BonusSelector.scss';
 
 class BonusSelector extends React.Component {
+    constructor(props) {
+        super(props);
+        this.handleOnClick = this.handleOnClick.bind(this);
+    }
+
+    handleOnClick(stat, index) {
+        const {
+            onSelectStatBonus,
+            physicalPointsLeftToAssign,
+            mentalPointsLeftToAssign,
+            onUnlockSection,
+            onLockSection
+        } = this.props;
+        if (
+            stat === 'P' && physicalPointsLeftToAssign === -1
+            || stat === 'M' && mentalPointsLeftToAssign === -1
+        ) {
+            onUnlockSection('Skills');
+        } else {
+            onLockSection('Skills');
+        }
+        onSelectStatBonus(stat, index);
+    }
+
     getBonusesComponents() {
         const {
             statBonuses,
@@ -21,7 +53,7 @@ class BonusSelector extends React.Component {
                     <Button
                         active={selectedStatBonus && selectedStatBonus.bonus === 'M'}
                         positive={selectedStatBonus && selectedStatBonus.bonus === 'M'}
-                        onClick={() => onSelectStatBonus('M', i)}
+                        onClick={() => this.handleOnClick('M', i)}
                     >
                         M
                     </Button>
@@ -29,7 +61,7 @@ class BonusSelector extends React.Component {
                     <Button
                         active={selectedStatBonus && selectedStatBonus.bonus === 'P'}
                         positive={selectedStatBonus && selectedStatBonus.bonus === 'P'}
-                        onClick={() => onSelectStatBonus('P', i)}
+                        onClick={() => this.handleOnClick('P', i)}
                     >
                         P
                     </Button>
@@ -42,7 +74,7 @@ class BonusSelector extends React.Component {
     render() {
         return (
             <div className="BonusSelector">
-                <Header as='h3'>Bonuses to choose: </Header>
+                <Header as='h3'>Choose your character's bonuses: </Header>
                 <div className="Bonuses">
                     {this.getBonusesComponents()}
                 </div>
@@ -53,12 +85,16 @@ class BonusSelector extends React.Component {
 
 const mapStateToProps = state => ({
     statBonuses: getStatBonuses(state),
-    selectedStatBonuses: state.editor.stats.selectedStatBonuses
+    selectedStatBonuses: state.editor.stats.selectedStatBonuses,
+    mentalPointsLeftToAssign: getMentalPointsLeftToAssign(state),
+    physicalPointsLeftToAssign: getPhysicalPointsLeftToAssign(state)
 });
 
 
 const mapDispatchToProps = dispatch => ({
-    onSelectStatBonus: (bonus, index) => dispatch(selectStatBonus(bonus, index))
+    onSelectStatBonus: (bonus, index) => dispatch(selectStatBonus(bonus, index)),
+    onLockSection: section => dispatch(lockSection(section)),
+    onUnlockSection: section => dispatch(unlockSection(section))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(BonusSelector);

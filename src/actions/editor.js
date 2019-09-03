@@ -50,3 +50,9 @@ export const selectStatBonus = (bonus, index) => ({
     bonus,
     index
 });
+
+export const selectStat = (stat, value) => ({
+    type: types.SELECT_STAT,
+    stat,
+    value
+});
