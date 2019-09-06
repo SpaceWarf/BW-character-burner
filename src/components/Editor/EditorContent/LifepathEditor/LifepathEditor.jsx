@@ -4,8 +4,8 @@ import { Header, Dropdown, Button, Image } from 'semantic-ui-react';
 import {
     selectRace,
     selectLifepathCount,
-    lockSection,
-    unlockSection
+    lockSections,
+    unlockSections
 } from '#Actions/editor.js';
 import { races, lifepathCounts } from '#Utilities/config/editor.config.js';
 import LifepathList from './LifepathList/LifepathList.jsx';
@@ -31,11 +31,11 @@ class LifepathEditor extends React.Component {
                 .find(lifepath => lifepath.index === i);
             if (!lifepathAtIndex) {
                 shouldUnlockNextSection = false;
-                onLockSection('Stats');
+                onLockSection(['Stats', 'Skills']);
             }
         }
         if (shouldUnlockNextSection) {
-            onUnlockSection('Stats');
+            onUnlockSection(['Stats']);
         }
 
         onSelectLifepathCount(count);
@@ -110,8 +110,8 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
     onSelectRace: race => dispatch(selectRace(race)),
     onSelectLifepathCount: count => dispatch(selectLifepathCount(count)),
-    onLockSection: section => dispatch(lockSection(section)),
-    onUnlockSection: section => dispatch(unlockSection(section))
+    onLockSection: section => dispatch(lockSections(section)),
+    onUnlockSection: section => dispatch(unlockSections(section))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(LifepathEditor);

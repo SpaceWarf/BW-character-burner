@@ -2,8 +2,8 @@ import React from "react";
 import { connect } from 'react-redux';
 import {
     selectStatBonus,
-    lockSection,
-    unlockSection
+    lockSections,
+    unlockSections
 } from '#Actions/editor.js';
 import {
     getStatBonuses,
@@ -31,9 +31,9 @@ class BonusSelector extends React.Component {
             stat === 'P' && physicalPointsLeftToAssign === -1
             || stat === 'M' && mentalPointsLeftToAssign === -1
         ) {
-            onUnlockSection('Skills');
+            onUnlockSection(['Skills']);
         } else {
-            onLockSection('Skills');
+            onLockSection(['Skills']);
         }
         onSelectStatBonus(stat, index);
     }
@@ -41,7 +41,6 @@ class BonusSelector extends React.Component {
     getBonusesComponents() {
         const {
             statBonuses,
-            onSelectStatBonus,
             selectedStatBonuses
         } = this.props;
         const buttonGroups = [];
@@ -93,8 +92,8 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
     onSelectStatBonus: (bonus, index) => dispatch(selectStatBonus(bonus, index)),
-    onLockSection: section => dispatch(lockSection(section)),
-    onUnlockSection: section => dispatch(unlockSection(section))
+    onLockSection: section => dispatch(lockSections(section)),
+    onUnlockSection: section => dispatch(unlockSections(section))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(BonusSelector);

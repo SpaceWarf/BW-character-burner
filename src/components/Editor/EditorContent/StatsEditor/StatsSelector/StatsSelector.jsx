@@ -2,12 +2,13 @@ import React from "react";
 import { connect } from 'react-redux';
 import {
     getMentalPointsLeftToAssign,
-    getPhysicalPointsLeftToAssign
+    getPhysicalPointsLeftToAssign,
+    getMentalPool
 } from '#Utilities/redux-selectors.js';
 import {
     selectStat,
-    lockSection,
-    unlockSection
+    lockSections,
+    unlockSections
 } from '#Actions/editor.js'
 import { Header, Dropdown } from 'semantic-ui-react';
 import './StatsSelector.scss';
@@ -44,16 +45,30 @@ class StatsSelector extends React.Component {
             physicalPointsLeftToAssign,
             mentalPointsLeftToAssign,
             selectedStats,
+            mentalPool,
             onSelectStat,
             onLockSection,
             onUnlockSection
         } = this.props;
-        const addedPoints = value - (selectedStats[stat] || 0);
-        const pointsLeftToAssign = physicalPointsLeftToAssign + mentalPointsLeftToAssign;
-        if (pointsLeftToAssign - addedPoints === 0) {
-            onUnlockSection('Skills');
+        let shouldUnlockNextSection = false;
+
+        if (['perception', 'will'].includes(stat)) {
+            if (stat === 'perception') {
+                onSelectStat('will', Math.min(6, mentalPool - value));
+            } else if (stat === 'will') {
+                onSelectStat('perception', Math.min(6, mentalPool - value));
+            }
+            shouldUnlockNextSection = value + Math.min(6, mentalPool - value) === mentalPool
+                && physicalPointsLeftToAssign === 0;
         } else {
-            onLockSection('Skills');
+            const addedPoints = value - (selectedStats[stat] || 0);
+            const pointsLeftToAssign = physicalPointsLeftToAssign + mentalPointsLeftToAssign;
+            shouldUnlockNextSection = pointsLeftToAssign - addedPoints === 0;
+        }
+        if (shouldUnlockNextSection) {
+            onUnlockSection(['Skills']);
+        } else {
+            onLockSection(['Skills']);
         }
         onSelectStat(stat, value);
     }
@@ -140,14 +155,15 @@ class StatsSelector extends React.Component {
 const mapStateToProps = state => ({
     selectedStats: state.editor.stats.selectedStats,
     mentalPointsLeftToAssign: getMentalPointsLeftToAssign(state),
-    physicalPointsLeftToAssign: getPhysicalPointsLeftToAssign(state)
+    physicalPointsLeftToAssign: getPhysicalPointsLeftToAssign(state),
+    mentalPool: getMentalPool(state)
 });
 
 
 const mapDispatchToProps = dispatch => ({
     onSelectStat: (stat, value) => dispatch(selectStat(stat, value)),
-    onLockSection: section => dispatch(lockSection(section)),
-    onUnlockSection: section => dispatch(unlockSection(section))
+    onLockSection: section => dispatch(lockSections(section)),
+    onUnlockSection: section => dispatch(unlockSections(section))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(StatsSelector);
