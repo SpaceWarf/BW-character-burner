@@ -66,6 +66,7 @@ module.exports = {
   },
   devServer: {
     historyApiFallback: true,
+    public: 'cynder.app'
   },
   devtool: 'source-map',
   plugins: [
