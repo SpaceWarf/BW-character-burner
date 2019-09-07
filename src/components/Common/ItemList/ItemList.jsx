@@ -13,6 +13,7 @@ const ItemList = ({ header, items, type, choices, maxCount, sections, onSelect, 
                 return <Lifepath
                     key={item.name}
                     lifepath={item}
+                    showSetting
                     onClick={() => onClick(item)}
                 />;
             case 'skill':

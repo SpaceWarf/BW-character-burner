@@ -84,7 +84,7 @@ class BonusSelector extends React.Component {
         const { type } = this.props;
         return (
             <div className="BonusSelector">
-                <Header as='h3'>Choose your character's {type === 'bonus' ? 'bonuses' : 'maluses'}: </Header>
+                <Header as='h3'>Select the pool {type === 'bonus' ? 'bonuses' : 'maluses'}: </Header>
                 <div className="Bonuses">
                     {this.getBonusesComponents()}
                 </div>

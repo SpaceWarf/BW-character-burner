@@ -50,12 +50,24 @@ export const getStatBonuses = createSelector(
     }
 )
 
-// TODO: add leads
-export const getAge = createSelector(
+export const getUsedLeads = createSelector(
     [getSelectedLifepaths], selectedLifepaths => {
-        return selectedLifepaths.reduce((age, { lifepath }) => {
+        return selectedLifepaths.reduce((usedLeads, { lifepath }, index) => {
+            const nextLifepath = selectedLifepaths.find(lifepath => lifepath.index === index + 1);
+            if (nextLifepath && lifepath.setting !== nextLifepath.lifepath.setting) {
+                return usedLeads + 1;
+            }
+            return usedLeads;
+        }, 0);
+    }
+);
+
+export const getAge = createSelector(
+    [getSelectedLifepaths, getUsedLeads], (selectedLifepaths, usedLeads) => {
+        const age = selectedLifepaths.reduce((age, { lifepath }) => {
             return age + lifepath.time;
-        }, 0)
+        }, 0);
+        return age + usedLeads;
     }
 );
 

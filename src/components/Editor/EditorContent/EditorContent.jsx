@@ -1,14 +1,20 @@
 import React from "react";
 import { connect } from 'react-redux';
 import LifepathEditor from './LifepathEditor/LifepathEditor.jsx';
-import Stats from './StatsEditor/StatsEditor.jsx';
+import StatsEditor from './StatsEditor/StatsEditor.jsx';
+import SkillsEditor from './SkillsEditor/SkillsEditor.jsx';
+import TraitsEditor from './TraitsEditor/TraitsEditor.jsx';
+import ResourcesEditor from './ResourcesEditor/ResourcesEditor.jsx';
 import './EditorContent.scss';
 
 const EditorContent = ({ activeSection }) => {
     return (
         <div className="EditorContent">
             {activeSection === 'Lifepaths' && <LifepathEditor />}
-            {activeSection === 'Stats' && <Stats />}
+            {activeSection === 'Stats' && <StatsEditor />}
+            {activeSection === 'Skills' && <SkillsEditor />}
+            {activeSection === 'Traits' && <TraitsEditor />}
+            {activeSection === 'Resources' && <ResourcesEditor />}
         </div>
     );
 };

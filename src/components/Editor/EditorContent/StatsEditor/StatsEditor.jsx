@@ -11,7 +11,7 @@ import './StatsEditor.scss';
 const StatsEditor = ({ age, statBonuses, selectedStatBonuses }) => {
     return (
         <div className="StatsEditor">
-            <Header className="section" as="h1">Choose your character's stats</Header>
+            <Header className="section" as="h1">Select your character's stats</Header>
             <div className="Content">
                 <div className="StatsContent">
                     <div className="Age Section">

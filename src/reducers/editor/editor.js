@@ -22,7 +22,7 @@ const activeSection = (state = "Lifepaths", action) => {
     }
 };
 
-const lockedSections = (state = sections.slice(1), action) => {
+const lockedSections = (state = /* sections.slice(1) */[], action) => {
     switch (action.type) {
         case types.LOCK_SECTIONS:
             return [
