@@ -20,7 +20,8 @@ const StatsEditor = ({ age, statBonuses, selectedStatBonuses }) => {
                             Remember: your character's age increases by one everytime you use a lead to change setting.
                     </i>
                     </div>
-                    {statBonuses.choose > 0 && <BonusSelector />}
+                    {statBonuses.chooseMalus > 0 && <BonusSelector type="malus" />}
+                    {statBonuses.chooseBonus > 0 && <BonusSelector type="bonus" />}
                     <StatPools />
                     {selectedStatBonuses.length === statBonuses.choose && <StatsSelector />}
                 </div>

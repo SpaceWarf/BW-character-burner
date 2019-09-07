@@ -45,10 +45,11 @@ export const unlockSections = sections => ({
     sections
 });
 
-export const selectStatBonus = (bonus, index) => ({
+export const selectStatBonus = (bonus, index, bonusType) => ({
     type: types.SELECT_STAT_BONUS,
     bonus,
-    index
+    index,
+    bonusType
 });
 
 export const selectStat = (stat, value) => ({

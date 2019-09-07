@@ -19,7 +19,7 @@ const Lifepath = ({ lifepath, centered, linkable, onClick }) => {
                             <p className='fifths centered'>{lifepath.time} yrs</p>
                             <p className='fifths centered'>{lifepath.res}</p>
                             <p className='fifths centered'>{lifepath.stat ?
-                                `+ ${lifepath.stat.bonus} ${lifepath.stat.attributes}`
+                                `${lifepath.stat.bonus >= 0 ? '+' : '-'} ${Math.abs(lifepath.stat.bonus)} ${lifepath.stat.attributes}`
                                 : '—'
                             }</p>
                         </div>

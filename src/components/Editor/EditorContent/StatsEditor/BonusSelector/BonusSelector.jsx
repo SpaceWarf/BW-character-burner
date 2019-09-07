@@ -21,6 +21,7 @@ class BonusSelector extends React.Component {
 
     handleOnClick(stat, index) {
         const {
+            type,
             onSelectStatBonus,
             physicalPointsLeftToAssign,
             mentalPointsLeftToAssign,
@@ -35,31 +36,40 @@ class BonusSelector extends React.Component {
         } else {
             onLockSection(['Skills']);
         }
-        onSelectStatBonus(stat, index);
+        onSelectStatBonus(stat, index, type);
     }
 
     getBonusesComponents() {
         const {
+            type,
             statBonuses,
             selectedStatBonuses
         } = this.props;
         const buttonGroups = [];
-        for (let i = 0; i < statBonuses.choose; i++) {
-            const selectedStatBonus = selectedStatBonuses
+        const bonuses = type === 'bonus'
+            ? statBonuses.chooseBonus
+            : statBonuses.chooseMalus;
+        const selectedBonuses = type === 'bonus'
+            ? selectedStatBonuses
+            : selectedStatBonuses;
+        for (let i = 0; i < bonuses; i++) {
+            const selectedBonus = selectedBonuses[type]
                 .find(bonus => bonus.index === i);
             buttonGroups.push(
                 <Button.Group key={i} size="mini">
                     <Button
-                        active={selectedStatBonus && selectedStatBonus.bonus === 'M'}
-                        positive={selectedStatBonus && selectedStatBonus.bonus === 'M'}
+                        active={selectedBonus && selectedBonus.bonus === 'M'}
+                        positive={type === 'bonus' && selectedBonus && selectedBonus.bonus === 'M'}
+                        negative={type === 'malus' && selectedBonus && selectedBonus.bonus === 'M'}
                         onClick={() => this.handleOnClick('M', i)}
                     >
                         M
                     </Button>
                     <Button.Or />
                     <Button
-                        active={selectedStatBonus && selectedStatBonus.bonus === 'P'}
-                        positive={selectedStatBonus && selectedStatBonus.bonus === 'P'}
+                        active={selectedBonus && selectedBonus.bonus === 'P'}
+                        positive={type === 'bonus' && selectedBonus && selectedBonus.bonus === 'P'}
+                        negative={type === 'malus' && selectedBonus && selectedBonus.bonus === 'P'}
                         onClick={() => this.handleOnClick('P', i)}
                     >
                         P
@@ -71,9 +81,10 @@ class BonusSelector extends React.Component {
     };
 
     render() {
+        const { type } = this.props;
         return (
             <div className="BonusSelector">
-                <Header as='h3'>Choose your character's bonuses: </Header>
+                <Header as='h3'>Choose your character's {type === 'bonus' ? 'bonuses' : 'maluses'}: </Header>
                 <div className="Bonuses">
                     {this.getBonusesComponents()}
                 </div>
@@ -91,7 +102,7 @@ const mapStateToProps = state => ({
 
 
 const mapDispatchToProps = dispatch => ({
-    onSelectStatBonus: (bonus, index) => dispatch(selectStatBonus(bonus, index)),
+    onSelectStatBonus: (bonus, index, type) => dispatch(selectStatBonus(bonus, index, type)),
     onLockSection: section => dispatch(lockSections(section)),
     onUnlockSection: section => dispatch(unlockSections(section))
 });
