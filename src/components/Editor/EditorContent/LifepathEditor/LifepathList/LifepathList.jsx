@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from 'react-redux';
 import { Header } from 'semantic-ui-react';
-import ItemList from '#Components/Common/ItemList/ItemList.jsx';
+import CardList from '#Components/Common/CardList/CardList.jsx';
 import {
     selectBornLifepath,
     unselectBornLifepath,
@@ -160,7 +160,7 @@ class LifepathList extends React.Component {
                         {i === 0 ? 'Born lifepath' : `Lifepath ${i + 1}`}
                     </Header>
                     {i === 0
-                        ? <ItemList
+                        ? <CardList
                             header="Select your character's born lifepath"
                             type="lifepath"
                             choices={this.filterBornLifepath()}
@@ -169,7 +169,7 @@ class LifepathList extends React.Component {
                             onSelect={lifepath => this.handleSelectBornLifepath(lifepath)}
                             onRemove={() => this.handleUnselectBornLifepath()}
                         />
-                        : <ItemList
+                        : <CardList
                             header="Select a lifepath"
                             type="lifepath"
                             choices={this.getRestrictedLifepaths(i)}
