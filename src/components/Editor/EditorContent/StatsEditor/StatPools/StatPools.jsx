@@ -1,6 +1,11 @@
 import React from "react";
 import { connect } from 'react-redux';
-import { getMentalPool, getPhysicalPool, getStatBonuses, getAppliedBonuses } from '#Utilities/redux-selectors.js';
+import {
+    getMentalPool,
+    getPhysicalPool,
+    getStatBonuses,
+    getAppliedBonuses
+} from '#Utilities/redux-selectors.js';
 import { Header } from "semantic-ui-react";
 import './StatPools.scss';
 

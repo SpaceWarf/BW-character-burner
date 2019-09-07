@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import {
     getMentalPointsLeftToAssign,
     getPhysicalPointsLeftToAssign,
-    getMentalPool
+    getMentalPool,
+    getAppliedBonuses
 } from '#Utilities/redux-selectors.js';
 import {
     selectStat,
@@ -48,15 +49,16 @@ class StatsSelector extends React.Component {
             mentalPool,
             onSelectStat,
             onLockSection,
-            onUnlockSection
+            onUnlockSection,
+            appliedBonuses
         } = this.props;
         let shouldUnlockNextSection = false;
 
         if (['perception', 'will'].includes(stat)) {
             if (stat === 'perception') {
-                onSelectStat('will', Math.min(6, mentalPool - value));
+                onSelectStat('will', Math.min(6, mentalPool + appliedBonuses.mental - value));
             } else if (stat === 'will') {
-                onSelectStat('perception', Math.min(6, mentalPool - value));
+                onSelectStat('perception', Math.min(6, mentalPool + appliedBonuses.mental - value));
             }
             shouldUnlockNextSection = value + Math.min(6, mentalPool - value) === mentalPool
                 && physicalPointsLeftToAssign === 0;
@@ -156,7 +158,8 @@ const mapStateToProps = state => ({
     selectedStats: state.editor.stats.selectedStats,
     mentalPointsLeftToAssign: getMentalPointsLeftToAssign(state),
     physicalPointsLeftToAssign: getPhysicalPointsLeftToAssign(state),
-    mentalPool: getMentalPool(state)
+    mentalPool: getMentalPool(state),
+    appliedBonuses: getAppliedBonuses(state)
 });
 
 
