@@ -1,12 +1,13 @@
 import { combineReducers } from 'redux';
 import * as types from "#Actions/types.js";
 
-const selectedStatBonuses = (state = [], action) => {
+const selectedStatBonuses = (state = { bonus: [], malus: [] }, action) => {
     switch (action.type) {
         case types.SELECT_STAT_BONUS:
-            const newState = state
+            const newState = { bonus: [...state.bonus], malus: [...state.malus] };
+            newState[action.bonusType] = newState[action.bonusType]
                 .filter(bonus => bonus.index !== action.index);
-            newState.push({
+            newState[action.bonusType].push({
                 bonus: action.bonus,
                 index: action.index
             })
@@ -14,7 +15,7 @@ const selectedStatBonuses = (state = [], action) => {
         case types.UNSELECT_BORN_LIFEPATH:
         case types.REMOVE_LIFEPATH:
         case types.SELECT_LIFEPATH_COUNT:
-            return [];
+            return { bonus: [], malus: [] };
         default:
             return state;
     }

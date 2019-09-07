@@ -36,13 +36,17 @@ export const getStatBonuses = createSelector(
                         bonuses.physical += lifepath.stat.bonus;
                         break;
                     case 'M/P':
-                        bonuses.choose += lifepath.stat.bonus;
+                        if (lifepath.stat.bonus > 0) {
+                            bonuses.chooseBonus += lifepath.stat.bonus;
+                        } else {
+                            bonuses.chooseMalus += Math.abs(lifepath.stat.bonus);
+                        }
                         break;
                     default:
                 }
             }
             return bonuses;
-        }, { mental: 0, physical: 0, choose: 0 })
+        }, { mental: 0, physical: 0, chooseBonus: 0, chooseMalus: 0 })
     }
 )
 
@@ -71,22 +75,37 @@ export const getPhysicalPool = createSelector(
     }
 );
 
-export const getMentalPointsLeftToAssign = createSelector(
-    [getMentalPool, getSelectedStatBonuses, getSelectedStats], (mentalPool, selectedStatBonuses, selectedStats) => {
-        const selectedMentalBonuses = selectedStatBonuses.reduce((total, bonus) => {
+export const getAppliedBonuses = createSelector(
+    [getSelectedStatBonuses], (selectedStatBonuses) => {
+        const selectedMentalBonuses = selectedStatBonuses.bonus.reduce((total, bonus) => {
             return bonus.bonus === 'M' ? total + 1 : total;
-        }, 0)
-        const totalPool = mentalPool + selectedMentalBonuses;
+        }, 0);
+        const selectedMentalMaluses = selectedStatBonuses.malus.reduce((total, bonus) => {
+            return bonus.bonus === 'M' ? total + 1 : total;
+        }, 0);
+        const selectedPhysicalBonuses = selectedStatBonuses.bonus.reduce((total, bonus) => {
+            return bonus.bonus === 'P' ? total + 1 : total;
+        }, 0);
+        const selectedPhysicalMaluses = selectedStatBonuses.malus.reduce((total, bonus) => {
+            return bonus.bonus === 'P' ? total + 1 : total;
+        }, 0);
+        return {
+            mental: selectedMentalBonuses - selectedMentalMaluses,
+            physical: selectedPhysicalBonuses - selectedPhysicalMaluses
+        };
+    }
+);
+
+export const getMentalPointsLeftToAssign = createSelector(
+    [getMentalPool, getAppliedBonuses, getSelectedStats], (mentalPool, appliedBonuses, selectedStats) => {
+        const totalPool = mentalPool + appliedBonuses.mental;
         return totalPool - (selectedStats.will || 0) - (selectedStats.perception || 0);
     }
 );
 
 export const getPhysicalPointsLeftToAssign = createSelector(
-    [getPhysicalPool, getSelectedStatBonuses, getSelectedStats], (physicalPool, selectedStatBonuses, selectedStats) => {
-        const selectedPhysicalBonuses = selectedStatBonuses.reduce((total, bonus) => {
-            return bonus.bonus === 'P' ? total + 1 : total;
-        }, 0)
-        const totalPool = physicalPool + selectedPhysicalBonuses;
+    [getPhysicalPool, getAppliedBonuses, getSelectedStats], (physicalPool, appliedBonuses, selectedStats) => {
+        const totalPool = physicalPool + appliedBonuses.physical;
         return totalPool - (selectedStats.power || 0) - (selectedStats.forte || 0)
             - (selectedStats.agility || 0) - (selectedStats.speed || 0);
     }
