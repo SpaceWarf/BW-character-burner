@@ -7,8 +7,8 @@ import {
     unselectBornLifepath,
     addLifepath,
     removeLifepath,
-    lockSection,
-    unlockSection
+    lockSections,
+    unlockSections
 } from '#Actions/editor.js';
 import { getLifepathSettings } from '#Utilities/data-selectors.js';
 import {
@@ -98,7 +98,7 @@ class LifepathList extends React.Component {
         } = this.props;
 
         if (lifepathCount === selectedLifepaths.length + 1) {
-            onUnlockSection('Stats');
+            onUnlockSection(['Stats']);
         }
         onSelectBornLifepath(lifepath);
     }
@@ -112,7 +112,7 @@ class LifepathList extends React.Component {
         } = this.props;
 
         if (lifepathCount === selectedLifepaths.length) {
-            onLockSection('Stats');
+            onLockSection(['Stats', 'Skills']);
         }
         onUnselectBornLifepath();
     }
@@ -126,7 +126,7 @@ class LifepathList extends React.Component {
         } = this.props;
 
         if (lifepathCount === selectedLifepaths.length + 1) {
-            onUnlockSection('Stats');
+            onUnlockSection(['Stats']);
         }
         onAddLifepath(lifepath, index);
     }
@@ -140,7 +140,7 @@ class LifepathList extends React.Component {
         } = this.props;
 
         if (lifepathCount === selectedLifepaths.length) {
-            onLockSection('Stats');
+            onLockSection(['Stats', 'Skills']);
         }
         onRemoveLifepath(index);
     }
@@ -212,8 +212,8 @@ const mapDispatchToProps = dispatch => ({
     onUnselectBornLifepath: () => dispatch(unselectBornLifepath()),
     onAddLifepath: (lifepath, index) => dispatch(addLifepath(lifepath, index)),
     onRemoveLifepath: index => dispatch(removeLifepath(index)),
-    onLockSection: section => dispatch(lockSection(section)),
-    onUnlockSection: section => dispatch(unlockSection(section))
+    onLockSection: section => dispatch(lockSections(section)),
+    onUnlockSection: section => dispatch(unlockSections(section))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(LifepathList);

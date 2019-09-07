@@ -24,14 +24,14 @@ const activeSection = (state = "Lifepaths", action) => {
 
 const lockedSections = (state = sections.slice(1), action) => {
     switch (action.type) {
-        case types.LOCK_SECTION:
+        case types.LOCK_SECTIONS:
             return [
                 ...state,
-                action.section
+                ...action.sections
             ];
-        case types.UNLOCK_SECTION:
+        case types.UNLOCK_SECTIONS:
             return state.filter(section => (
-                section !== action.section
+                !action.sections.includes(section)
             ));
         default:
             return state;

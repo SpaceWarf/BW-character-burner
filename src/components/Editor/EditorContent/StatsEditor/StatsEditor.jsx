@@ -34,7 +34,10 @@ const StatsEditor = ({ age, statBonuses, selectedStatBonuses }) => {
                     </Table.Header>
                     <Table.Body>
                         {statPools.map(pool => (
-                            <Table.Row key={`${pool.minAge}-${pool.maxAge}`}>
+                            <Table.Row
+                                key={`${pool.minAge}-${pool.maxAge}`}
+                                active={pool.minAge <= age && pool.maxAge >= age}
+                            >
                                 <Table.Cell>{`${pool.minAge} - ${pool.maxAge} years`}</Table.Cell>
                                 <Table.Cell>{`${pool.mental} pts`}</Table.Cell>
                                 <Table.Cell>{`${pool.physical} pts`}</Table.Cell>

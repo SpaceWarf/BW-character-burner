@@ -35,14 +35,14 @@ export const removeLifepath = index => ({
     index
 });
 
-export const lockSection = section => ({
-    type: types.LOCK_SECTION,
-    section
+export const lockSections = sections => ({
+    type: types.LOCK_SECTIONS,
+    sections
 });
 
-export const unlockSection = section => ({
-    type: types.UNLOCK_SECTION,
-    section
+export const unlockSections = sections => ({
+    type: types.UNLOCK_SECTIONS,
+    sections
 });
 
 export const selectStatBonus = (bonus, index) => ({
