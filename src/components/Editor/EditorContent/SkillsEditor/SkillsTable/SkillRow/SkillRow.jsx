@@ -30,6 +30,7 @@ const SkillRow = ({
         onUpdateSectionsLockState();
     };
 
+    // TODO: counter max should be determined by the final exponent which cannot be higher than 6
     return (
         <Table.Row
             key={`${skill.name}`}

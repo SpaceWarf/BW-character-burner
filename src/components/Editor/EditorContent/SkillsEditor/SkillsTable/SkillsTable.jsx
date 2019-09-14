@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from 'react-redux';
-import { Header, Table, Label } from "semantic-ui-react";
+import { Header, Table } from "semantic-ui-react";
 import {
     getLifepathSkills,
     getSkillPoints,
@@ -32,7 +32,7 @@ const SkillsTable = ({
         const dataSet = getDataSetForSection("skills");
         const allSkillsInTable = [
             ...lifepathSkills.required,
-            ...lifepathSkills.nonRequired,
+            ...lifepathSkills.optional,
             ...openedGeneralSkills
         ];
         return dataSet.filter(skill => !allSkillsInTable.includes(skill.name));
@@ -63,7 +63,7 @@ const SkillsTable = ({
                     {lifepathSkills.required.map(skill => (
                         <SkillRow key={skill} skill={{ name: skill }} required />
                     ))}
-                    {lifepathSkills.nonRequired.map(skill => (
+                    {lifepathSkills.optional.map(skill => (
                         <SkillRow key={skill} skill={{ name: skill }} />
                     ))}
                     {openedGeneralSkills.map(skill => (

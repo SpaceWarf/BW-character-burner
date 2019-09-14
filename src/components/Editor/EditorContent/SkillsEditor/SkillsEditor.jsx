@@ -1,5 +1,4 @@
 import React from "react";
-import { connect } from 'react-redux';
 import { Header } from 'semantic-ui-react';
 import SkillsTable from './SkillsTable/SkillsTable.jsx';
 import './SkillsEditor.scss';

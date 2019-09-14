@@ -25,7 +25,7 @@ const LifepathEditor = ({
 
     return (
         <div className="LifepathEditor">
-            <Header className="section" as="h1">Select your character stock</Header>
+            <Header className="section" as="h1">Select your character's stock</Header>
             <div className="RaceSelector">
                 {races.map(race => (
                     <Button
