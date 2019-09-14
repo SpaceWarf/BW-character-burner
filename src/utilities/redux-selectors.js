@@ -181,7 +181,11 @@ export const getSkillPoints = createSelector(
 );
 
 export const getSkillPointsLeft = createSelector(
-    [getSkillPoints, getRequiredSkills, getAdvancedSkills], (skillPoints, requiredSkills, advancedSkills) => {
+    [
+        getSkillPoints,
+        getRequiredSkills,
+        getAdvancedSkills
+    ], (skillPoints, requiredSkills, advancedSkills) => {
         const spentPoints = advancedSkills.reduce((total, advances) => {
             return {
                 lifepath: total.lifepath + advances.lifepath,

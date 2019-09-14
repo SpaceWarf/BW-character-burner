@@ -18,11 +18,28 @@ const advancedSkills = (state = [], action) => {
                         : advancedSkill.general
                 }
             ];
+        case types.REMOVE_GENERAL_SKILL:
+            return state.filter(skill => skill.name !== action.skill);
+        default:
+            return state;
+    }
+};
+
+const openedGeneralSkills = (state = ["Acting"], action) => {
+    switch (action.type) {
+        case types.OPEN_GENERAL_SKILL:
+            return [
+                ...state,
+                action.skill
+            ];
+        case types.REMOVE_GENERAL_SKILL:
+            return state.filter(skill => skill !== action.skill);
         default:
             return state;
     }
 };
 
 export default combineReducers({
-    advancedSkills
+    advancedSkills,
+    openedGeneralSkills
 });

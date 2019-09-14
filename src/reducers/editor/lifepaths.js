@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 import * as types from "#Actions/types.js";
 
-const count = (state = 2, action) => {
+const count = (state = null, action) => {
     switch (action.type) {
         case types.SELECT_LIFEPATH_COUNT:
             return action.count;
@@ -22,37 +22,7 @@ const selectedBornLifepath = (state = [], action) => {
     }
 };
 
-const selectedLifepaths = (state = [
-    {
-        lifepath: {
-            name: 'Head of Household',
-            setting: 'Peasant',
-            time: 15,
-            res: 20,
-            stat: {
-                bonus: 1,
-                attributes: 'M'
-            },
-            leads: [
-                'Professional Soldier',
-                'Villager'
-            ],
-            skills: {
-                points: 8,
-                from: [
-                    'Carpentry',
-                    'Hunting',
-                    'Haggling',
-                    'Almanac'
-                ]
-            },
-            traits: {
-                points: 2
-            }
-        },
-        index: 1
-    }
-], action) => {
+const selectedLifepaths = (state = [], action) => {
     switch (action.type) {
         case types.ADD_LIFEPATH:
             return [

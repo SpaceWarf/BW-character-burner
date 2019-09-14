@@ -1,9 +1,14 @@
-.SkillsList {
+.SkillsTable {
     & > .Points {
         display: flex;
 
         & > .ui.header {
             margin: 0 20px 0 0;
         }
+    }
+
+    & > .AddRow {
+        display: flex;
+        justify-content: center;
     }
 }

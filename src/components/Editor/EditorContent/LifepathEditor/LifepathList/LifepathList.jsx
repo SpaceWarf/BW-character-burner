@@ -7,8 +7,7 @@ import {
     unselectBornLifepath,
     addLifepath,
     removeLifepath,
-    lockSections,
-    unlockSections
+    updateSectionsLockState
 } from '#Actions/editor.js';
 import { getLifepathSettings } from '#Utilities/data-selectors.js';
 import {
@@ -17,22 +16,20 @@ import {
 } from '#Utilities/redux-selectors.js';
 import './LifepathList.scss';
 
-class LifepathList extends React.Component {
+const LifepathList = ({
+    lifepathCount,
+    selectedBornLifepath,
+    selectedLifepaths,
+    bornLifepaths,
+    lifepaths,
+    onSelectBornLifepath,
+    onUnselectBornLifepath,
+    onAddLifepath,
+    onRemoveLifepath,
+    onUpdateSectionsLockState
+}) => {
 
-    constructor(props) {
-        super(props);
-
-        this.handleAddLifepath = this.handleAddLifepath.bind(this);
-        this.handleRemoveLifepath = this.handleRemoveLifepath.bind(this);
-        this.handleSelectBornLifepath = this.handleSelectBornLifepath.bind(this);
-        this.handleUnselectBornLifepath = this.handleUnselectBornLifepath.bind(this);
-    }
-
-    filterBornLifepath() {
-        const {
-            bornLifepaths,
-            selectedLifepaths
-        } = this.props;
+    const filterBornLifepath = () => {
         const nextLifepath = selectedLifepaths.find(lifepath => (
             lifepath.index === 1
         ));
@@ -44,9 +41,9 @@ class LifepathList extends React.Component {
             ));
         }
         return bornLifepaths;
-    }
+    };
 
-    filterLifepathsForPreviousLifepath(previousLifepath, lifepaths) {
+    const filterLifepathsForPreviousLifepath = (previousLifepath, lifepaths) => {
         if (previousLifepath) {
             const setting = previousLifepath.lifepath.setting;
             const leads = previousLifepath.lifepath.leads;
@@ -56,9 +53,9 @@ class LifepathList extends React.Component {
             ));
         }
         return lifepaths;
-    }
+    };
 
-    filterLifepathsForNextLifepath(nextLifepath, lifepaths) {
+    const filterLifepathsForNextLifepath = (nextLifepath, lifepaths) => {
         if (nextLifepath) {
             const setting = nextLifepath.lifepath.setting;
             return lifepaths.filter(lifepath => (
@@ -67,14 +64,9 @@ class LifepathList extends React.Component {
             ));
         }
         return lifepaths;
-    }
+    };
 
-    getRestrictedLifepaths(index) {
-        const {
-            selectedLifepaths,
-            lifepaths
-        } = this.props;
-
+    const getRestrictedLifepaths = index => {
         let filteredLifepaths = lifepaths.filter(lifepath => (
             !lifepath.isBornLifepath
         ));
@@ -83,76 +75,38 @@ class LifepathList extends React.Component {
         const nextLifepath = selectedLifepaths
             .find(lifepath => lifepath.index === index + 1);
 
-        filteredLifepaths = this.filterLifepathsForPreviousLifepath(previousLifepath, filteredLifepaths);
-        filteredLifepaths = this.filterLifepathsForNextLifepath(nextLifepath, filteredLifepaths);
+        filteredLifepaths = filterLifepathsForPreviousLifepath(previousLifepath, filteredLifepaths);
+        filteredLifepaths = filterLifepathsForNextLifepath(nextLifepath, filteredLifepaths);
 
         return filteredLifepaths;
+    };
+
+    const handleSelectBornLifepath = lifepath => {
+        onSelectBornLifepath(lifepath).then(_ => {
+            onUpdateSectionsLockState();
+        });
     }
 
-    handleSelectBornLifepath(lifepath) {
-        const {
-            lifepathCount,
-            selectedLifepaths,
-            onSelectBornLifepath,
-            onUnlockSection
-        } = this.props;
-
-        if (lifepathCount === selectedLifepaths.length + 1) {
-            onUnlockSection(['Stats']);
-        }
-        onSelectBornLifepath(lifepath);
+    const handleUnselectBornLifepath = () => {
+        onUnselectBornLifepath().then(_ => {
+            onUpdateSectionsLockState();
+        });
     }
 
-    handleUnselectBornLifepath() {
-        const {
-            lifepathCount,
-            selectedLifepaths,
-            onUnselectBornLifepath,
-            onLockSection
-        } = this.props;
-
-        if (lifepathCount === selectedLifepaths.length) {
-            onLockSection(['Stats', 'Skills']);
-        }
-        onUnselectBornLifepath();
+    const handleAddLifepath = (lifepath, index) => {
+        onAddLifepath(lifepath, index).then(_ => {
+            onUpdateSectionsLockState();
+        });
     }
 
-    handleAddLifepath(lifepath, index) {
-        const {
-            lifepathCount,
-            selectedLifepaths,
-            onAddLifepath,
-            onUnlockSection
-        } = this.props;
-
-        if (lifepathCount === selectedLifepaths.length + 1) {
-            onUnlockSection(['Stats']);
-        }
-        onAddLifepath(lifepath, index);
+    const handleRemoveLifepath = (index) => {
+        onRemoveLifepath(index).then(_ => {
+            onUpdateSectionsLockState();
+        });
     }
 
-    handleRemoveLifepath(index) {
-        const {
-            lifepathCount,
-            selectedLifepaths,
-            onRemoveLifepath,
-            onLockSection
-        } = this.props;
-
-        if (lifepathCount === selectedLifepaths.length) {
-            onLockSection(['Stats', 'Skills']);
-        }
-        onRemoveLifepath(index);
-    }
-
-    getList() {
-        const {
-            lifepathCount,
-            selectedBornLifepath,
-            selectedLifepaths
-        } = this.props;
+    const getList = () => {
         const items = [];
-
         for (let i = 0; i < lifepathCount; i++) {
             items.push(
                 <React.Fragment key={`lifepath-${i}`}>
@@ -163,40 +117,38 @@ class LifepathList extends React.Component {
                         ? <CardList
                             header="Select your character's born lifepath"
                             type="lifepath"
-                            choices={this.filterBornLifepath()}
+                            choices={filterBornLifepath()}
                             items={selectedBornLifepath}
                             maxCount={1}
-                            onSelect={lifepath => this.handleSelectBornLifepath(lifepath)}
-                            onRemove={() => this.handleUnselectBornLifepath()}
+                            onSelect={lifepath => handleSelectBornLifepath(lifepath)}
+                            onRemove={() => handleUnselectBornLifepath()}
                         />
                         : <CardList
                             header="Select a lifepath"
                             type="lifepath"
-                            choices={this.getRestrictedLifepaths(i)}
+                            choices={getRestrictedLifepaths(i)}
                             items={selectedLifepaths
                                 .filter(lifepath => lifepath.index === i)
                                 .map(lifepath => lifepath.lifepath)
                             }
                             maxCount={1}
                             sections={getLifepathSettings()}
-                            onSelect={lifepath => this.handleAddLifepath(lifepath, i)}
-                            onRemove={() => this.handleRemoveLifepath(i)}
+                            onSelect={lifepath => handleAddLifepath(lifepath, i)}
+                            onRemove={() => handleRemoveLifepath(i)}
                         />
                     }
                 </React.Fragment>
             )
         }
         return items;
-    }
+    };
 
-    render() {
-        return (
-            <div className="LifepathList">
-                {this.getList()}
-            </div>
-        );
-    }
-}
+    return (
+        <div className="LifepathList">
+            {getList()}
+        </div>
+    );
+};
 
 const mapStateToProps = state => ({
     lifepathCount: state.editor.lifepaths.count,
@@ -212,8 +164,7 @@ const mapDispatchToProps = dispatch => ({
     onUnselectBornLifepath: () => dispatch(unselectBornLifepath()),
     onAddLifepath: (lifepath, index) => dispatch(addLifepath(lifepath, index)),
     onRemoveLifepath: index => dispatch(removeLifepath(index)),
-    onLockSection: section => dispatch(lockSections(section)),
-    onUnlockSection: section => dispatch(unlockSections(section))
+    onUpdateSectionsLockState: () => dispatch(updateSectionsLockState())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(LifepathList);
