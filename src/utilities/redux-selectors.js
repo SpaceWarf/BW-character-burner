@@ -1,11 +1,15 @@
 const { createSelector } = require('reselect');
 const { getLifepathDataSet } = require('./data-selectors.js');
 const { statPools } = require('./config/editor.config.js');
+const get = require('lodash/get');
+const { uniq } = require('./utilities.js');
 
 const getSelectedRace = state => state.editor.selectedRace;
 const getSelectedLifepaths = state => state.editor.lifepaths.selectedLifepaths;
 const getSelectedStatBonuses = state => state.editor.stats.selectedStatBonuses;
 const getSelectedStats = state => state.editor.stats.selectedStats;
+
+// Lifepaths
 
 export const getBornLifepaths = createSelector(
     [getSelectedRace], selectedRace => {
@@ -19,6 +23,8 @@ export const getLifepaths = createSelector(
         return getLifepathDataSet(selectedRace);
     }
 );
+
+// Stats
 
 export const getStatBonuses = createSelector(
     [getSelectedLifepaths], selectedLifepaths => {
@@ -120,5 +126,57 @@ export const getPhysicalPointsLeftToAssign = createSelector(
         const totalPool = physicalPool + appliedBonuses.physical;
         return totalPool - (selectedStats.power || 0) - (selectedStats.forte || 0)
             - (selectedStats.agility || 0) - (selectedStats.speed || 0);
+    }
+);
+
+// Skills
+
+export const getLifepathSkillsPool = createSelector(
+    [getSelectedLifepaths], selectedLifepaths => {
+        return selectedLifepaths.reduce((lifepathSkills, { lifepath }) => {
+            const skillChoices = get(lifepath, 'skills.from', []);
+            return uniq([...lifepathSkills, ...skillChoices]);
+        }, []);
+    }
+);
+
+export const getRequiredSkills = createSelector(
+    [getSelectedLifepaths], selectedLifepaths => {
+        return selectedLifepaths.reduce((requiredSkills, { lifepath }) => {
+            const skillChoices = get(lifepath, 'skills.from', []);
+            const requiredSkill = skillChoices.find(skill => !requiredSkills.includes(skill));
+            return requiredSkill
+                ? [...requiredSkills, requiredSkill]
+                : requiredSkills;
+        }, []);
+    }
+);
+
+export const getNonRequiredSkills = createSelector(
+    [getLifepathSkillsPool, getRequiredSkills], (lifepathSkills, requiredSkills) => {
+        return lifepathSkills.filter(skill => !requiredSkills.includes(skill));
+    }
+);
+
+export const getLifepathSkills = createSelector(
+    [getRequiredSkills, getNonRequiredSkills], (requiredSkills, nonRequiredSkills) => {
+        return {
+            required: requiredSkills,
+            nonRequired: nonRequiredSkills
+        };
+    }
+);
+
+export const getSkillPoints = createSelector(
+    [getSelectedLifepaths], selectedLifepaths => {
+        return selectedLifepaths.reduce((skillPoints, { lifepath }) => {
+            if (lifepath.skills.points) {
+                skillPoints.lifepath += lifepath.skills.points
+            }
+            if (lifepath.skills.generalPoints) {
+                skillPoints.general += lifepath.skills.generalPoints
+            }
+            return skillPoints;
+        }, { lifepath: 0, general: 0 });
     }
 );

@@ -2,9 +2,10 @@ import { combineReducers } from 'redux';
 import { sections } from '#Utilities/config/editor.config.js';
 import lifepaths from './lifepaths.js';
 import stats from './stats';
+import skills from './skills';
 import * as types from "#Actions/types.js";
 
-const selectedRace = (state = "", action) => {
+const selectedRace = (state = "men", action) => {
     switch (action.type) {
         case types.SELECT_RACE:
             return action.race;
@@ -13,7 +14,7 @@ const selectedRace = (state = "", action) => {
     }
 };
 
-const activeSection = (state = "Lifepaths", action) => {
+const activeSection = (state = "Skills", action) => {
     switch (action.type) {
         case types.SET_ACTIVE_SECTION:
             return action.section;
@@ -25,10 +26,11 @@ const activeSection = (state = "Lifepaths", action) => {
 const lockedSections = (state = /* sections.slice(1) */[], action) => {
     switch (action.type) {
         case types.LOCK_SECTIONS:
-            return [
-                ...state,
-                ...action.sections
-            ];
+            return [];
+        // return [
+        //     ...state,
+        //     ...action.sections
+        // ];
         case types.UNLOCK_SECTIONS:
             return state.filter(section => (
                 !action.sections.includes(section)
@@ -43,5 +45,6 @@ export default combineReducers({
     activeSection,
     lockedSections,
     lifepaths,
-    stats
+    stats,
+    skills
 });

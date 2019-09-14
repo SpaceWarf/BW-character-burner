@@ -1,10 +1,22 @@
 import * as types from "#Actions/types.js";
 
+// App
 export const setActiveSection = section => ({
     type: types.SET_ACTIVE_SECTION,
     section
 });
 
+export const lockSections = sections => ({
+    type: types.LOCK_SECTIONS,
+    sections
+});
+
+export const unlockSections = sections => ({
+    type: types.UNLOCK_SECTIONS,
+    sections
+});
+
+// Lifepath editor
 export const selectRace = race => ({
     type: types.SELECT_RACE,
     race
@@ -35,16 +47,7 @@ export const removeLifepath = index => ({
     index
 });
 
-export const lockSections = sections => ({
-    type: types.LOCK_SECTIONS,
-    sections
-});
-
-export const unlockSections = sections => ({
-    type: types.UNLOCK_SECTIONS,
-    sections
-});
-
+// Stats editor
 export const selectStatBonus = (bonus, index, bonusType) => ({
     type: types.SELECT_STAT_BONUS,
     bonus,
@@ -57,3 +60,11 @@ export const selectStat = (stat, value) => ({
     stat,
     value
 });
+
+// Skills editor
+export const advanceSkill = (skill, advances, isGeneral) => ({
+    type: types.ADVANCE_SKILL,
+    skill,
+    advances,
+    isGeneral
+})

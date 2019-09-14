@@ -1,0 +1,12 @@
+.PointCounter {
+    display: flex;
+    justify-content: space-evenly;
+
+    & > p {
+        margin: auto 0;
+    }
+
+    & .ui.circular.button {
+        background: none;
+    }
+}

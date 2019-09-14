@@ -14,3 +14,6 @@ export const REMOVE_LIFEPATH = "REMOVE_LIFEPATH"
 // Stats editor
 export const SELECT_STAT_BONUS = "SELECT_STAT_BONUS";
 export const SELECT_STAT = "SELECT_STAT";
+
+// Skills editor
+export const ADVANCE_SKILL = "ADVANCE_SKILL";
