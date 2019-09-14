@@ -4,13 +4,14 @@ const { statPools } = require('./config/editor.config.js');
 const get = require('lodash/get');
 const { uniq } = require('./utilities.js');
 
+// State properties
 const getSelectedRace = state => state.editor.selectedRace;
 const getSelectedLifepaths = state => state.editor.lifepaths.selectedLifepaths;
 const getSelectedStatBonuses = state => state.editor.stats.selectedStatBonuses;
 const getSelectedStats = state => state.editor.stats.selectedStats;
+const getAdvancedSkills = state => state.editor.skills.advancedSkills;
 
 // Lifepaths
-
 export const getBornLifepaths = createSelector(
     [getSelectedRace], selectedRace => {
         const lifepaths = getLifepathDataSet(selectedRace);
@@ -25,7 +26,6 @@ export const getLifepaths = createSelector(
 );
 
 // Stats
-
 export const getStatBonuses = createSelector(
     [getSelectedLifepaths], selectedLifepaths => {
         return selectedLifepaths.reduce((bonuses, { lifepath }) => {
@@ -130,7 +130,6 @@ export const getPhysicalPointsLeftToAssign = createSelector(
 );
 
 // Skills
-
 export const getLifepathSkillsPool = createSelector(
     [getSelectedLifepaths], selectedLifepaths => {
         return selectedLifepaths.reduce((lifepathSkills, { lifepath }) => {
@@ -178,5 +177,20 @@ export const getSkillPoints = createSelector(
             }
             return skillPoints;
         }, { lifepath: 0, general: 0 });
+    }
+);
+
+export const getSkillPointsLeft = createSelector(
+    [getSkillPoints, getRequiredSkills, getAdvancedSkills], (skillPoints, requiredSkills, advancedSkills) => {
+        const spentPoints = advancedSkills.reduce((total, advances) => {
+            return {
+                lifepath: total.lifepath + advances.lifepath,
+                general: total.general + advances.general
+            };
+        }, { lifepath: 0, general: 0 })
+        return {
+            lifepath: skillPoints.lifepath - requiredSkills.length - spentPoints.lifepath,
+            general: skillPoints.general - spentPoints.general
+        };
     }
 );

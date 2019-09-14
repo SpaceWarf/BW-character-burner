@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from 'react-redux';
 import { getAge, getStatBonuses } from '#Utilities/redux-selectors.js';
-import { Header, Table } from "semantic-ui-react";
+import { Header, Table, Label } from "semantic-ui-react";
 import BonusSelector from './BonusSelector/BonusSelector.jsx';
 import StatPools from './StatPools/StatPools.jsx';
 import StatsSelector from './StatsSelector/StatsSelector.jsx';
@@ -37,9 +37,11 @@ const StatsEditor = ({ age, statBonuses, selectedStatBonuses }) => {
                         {statPools.map(pool => (
                             <Table.Row
                                 key={`${pool.minAge}-${pool.maxAge}`}
-                                active={pool.minAge <= age && pool.maxAge >= age}
                             >
-                                <Table.Cell>{`${pool.minAge} - ${pool.maxAge} years`}</Table.Cell>
+                                <Table.Cell>{pool.minAge <= age && pool.maxAge >= age
+                                    ? <Label ribbon>{`${pool.minAge} - ${pool.maxAge} years`}</Label>
+                                    : `${pool.minAge} - ${pool.maxAge} years`
+                                }</Table.Cell>
                                 <Table.Cell>{`${pool.mental} pts`}</Table.Cell>
                                 <Table.Cell>{`${pool.physical} pts`}</Table.Cell>
                             </Table.Row>
