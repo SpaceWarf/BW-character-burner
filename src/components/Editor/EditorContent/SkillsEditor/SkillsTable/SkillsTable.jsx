@@ -28,14 +28,24 @@ const SkillsTable = ({
         onUpdateSectionsLockState();
     };
 
+    const getAddModalChoices = () => {
+        const dataSet = getDataSetForSection("skills");
+        const allSkillsInTable = [
+            ...lifepathSkills.required,
+            ...lifepathSkills.nonRequired,
+            ...openedGeneralSkills
+        ];
+        return dataSet.filter(skill => !allSkillsInTable.includes(skill.name));
+    };
+
     return (
         <div className="SkillsTable">
             <div className="Points">
                 <Header as="h3">
-                    Lifepath points spent: {skillPointsLeft.lifepath} / {skillPoints.lifepath}
+                    Lifepath points left: {skillPointsLeft.lifepath} / {skillPoints.lifepath}
                 </Header>
                 <Header as="h3">
-                    General points spent: {skillPointsLeft.general} / {skillPoints.general}
+                    General points left: {skillPointsLeft.general} / {skillPoints.general}
                 </Header>
             </div>
             <Table striped celled>
@@ -51,23 +61,22 @@ const SkillsTable = ({
                 </Table.Header>
                 <Table.Body>
                     {lifepathSkills.required.map(skill => (
-                        <SkillRow skill={{ name: skill }} required />
+                        <SkillRow key={skill} skill={{ name: skill }} required />
                     ))}
                     {lifepathSkills.nonRequired.map(skill => (
-                        <SkillRow skill={{ name: skill }} />
+                        <SkillRow key={skill} skill={{ name: skill }} />
                     ))}
                     {openedGeneralSkills.map(skill => (
-                        <SkillRow skill={{ name: skill }} general />
+                        <SkillRow key={skill} skill={{ name: skill }} general />
                     ))}
                 </Table.Body>
             </Table>
             {skillPointsLeft.general > 0 &&
                 <div className="AddRow">
                     <AddModal
-                        header={"Select a skill"}
+                        header={"Select general skills"}
                         type={"skill"}
-                        // TODO: filter skills already in list
-                        choices={getDataSetForSection("skills")}
+                        choices={getAddModalChoices()}
                         onSelect={({ name }) => handleOpenGeneralSkill(name)}
                     />
                 </div>

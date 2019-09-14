@@ -42,7 +42,7 @@ const SkillRow = ({
                 }
             </Table.Cell>
             <Table.Cell textAlign="center">{'Root'}</Table.Cell>
-            <Table.Cell textAlign="center">
+            <Table.Cell textAlign="center" disabled={general}>
                 {general
                     ? (' — ')
                     : <PointCounter

@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 import * as types from "#Actions/types.js";
 
-const count = (state = null, action) => {
+const count = (state = 2, action) => {
     switch (action.type) {
         case types.SELECT_LIFEPATH_COUNT:
             return action.count;
@@ -10,7 +10,27 @@ const count = (state = null, action) => {
     }
 };
 
-const selectedBornLifepath = (state = [], action) => {
+const selectedBornLifepath = (state = [
+    {
+        name: 'Born Peasant',
+        isBornLifepath: true,
+        setting: 'Peasant',
+        time: 8,
+        res: 3,
+        leads: [
+            'Servitude',
+            'Professional Soldier',
+            'Seafaring',
+            'Religious'
+        ],
+        skills: {
+            generalPoints: 3
+        },
+        traits: {
+            points: 2
+        }
+    }
+], action) => {
     switch (action.type) {
         case types.SELECT_BORN_LIFEPATH:
             return [action.lifepath];
@@ -22,7 +42,67 @@ const selectedBornLifepath = (state = [], action) => {
     }
 };
 
-const selectedLifepaths = (state = [], action) => {
+const selectedLifepaths = (state = [
+    {
+        lifepath: {
+            name: 'Born Peasant',
+            isBornLifepath: true,
+            setting: 'Peasant',
+            time: 8,
+            res: 3,
+            leads: [
+                'Servitude',
+                'Professional Soldier',
+                'Seafaring',
+                'Religious'
+            ],
+            skills: {
+                generalPoints: 3
+            },
+            traits: {
+                points: 2
+            }
+        },
+        index: 0
+    },
+    {
+        lifepath: {
+            name: 'Farmer',
+            setting: 'Peasant',
+            time: 8,
+            res: 5,
+            stat: {
+                bonus: 1,
+                attributes: 'P'
+            },
+            leads: [
+                'Servitude',
+                'Professional Soldier',
+                'Villager'
+            ],
+            skills: {
+                points: 8,
+                from: [
+                    'Farming',
+                    'Mending',
+                    'Animal Husbandry',
+                    'Weaving',
+                    'Cooking',
+                    'Sewing',
+                    'Firebuilding',
+                    'Sing'
+                ]
+            },
+            traits: {
+                points: 1,
+                from: [
+                    'Hoarding'
+                ]
+            }
+        },
+        index: 1
+    }
+], action) => {
     switch (action.type) {
         case types.ADD_LIFEPATH:
             return [

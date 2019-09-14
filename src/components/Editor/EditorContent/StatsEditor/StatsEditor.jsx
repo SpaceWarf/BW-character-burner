@@ -23,7 +23,6 @@ const StatsEditor = ({ age, statBonuses, selectedStatBonuses }) => {
                     {statBonuses.chooseMalus > 0 && <BonusSelector type="malus" />}
                     {statBonuses.chooseBonus > 0 && <BonusSelector type="bonus" />}
                     <StatPools />
-                    {/* TODO: put back render condition */}
                     {selectedStatBonuses.bonus.length === statBonuses.chooseBonus
                         && selectedStatBonuses.malus.length === statBonuses.chooseMalus
                         && <StatsSelector />

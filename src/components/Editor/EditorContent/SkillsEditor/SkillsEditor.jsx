@@ -13,11 +13,4 @@ const SkillsEditor = () => {
     );
 };
 
-const mapStateToProps = state => ({
-});
-
-
-const mapDispatchToProps = dispatch => ({
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(SkillsEditor);
+export default SkillsEditor;

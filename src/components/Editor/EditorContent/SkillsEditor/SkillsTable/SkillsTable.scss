@@ -1,4 +1,8 @@
 .SkillsTable {
+    & > .ui.striped.table {
+        margin-bottom: 15px;
+    }
+
     & > .Points {
         display: flex;
 
@@ -10,5 +14,6 @@
     & > .AddRow {
         display: flex;
         justify-content: center;
+        padding-bottom: 15px;
     }
 }
