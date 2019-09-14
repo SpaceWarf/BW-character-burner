@@ -23,11 +23,9 @@ const SkillsTable = ({
 }) => {
 
     const handleOpenGeneralSkill = name => {
-        onOpenGeneralSkill(name).then(_ => {
-            onAdvanceSkill(name, 1, true).then(_ => {
-                onUpdateSectionsLockState();
-            });
-        });
+        onOpenGeneralSkill(name);
+        onAdvanceSkill(name, 1, true);
+        onUpdateSectionsLockState();
     };
 
     return (

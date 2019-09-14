@@ -1,7 +1,9 @@
 import { combineReducers } from 'redux';
 import { sections } from '#Utilities/config/editor.config.js';
 import {
-    getSkillPointsLeft
+    getSkillPointsLeft,
+    getPhysicalPointsLeftToAssign,
+    getMentalPointsLeftToAssign
 } from '#Utilities/redux-selectors.js';
 import lifepaths from './lifepaths.js';
 import stats from './stats';
@@ -31,19 +33,41 @@ const lockedSections = (state = sections.slice(1), action) => {
         case types.UPDATE_SECTIONS_LOCK_STATE:
             const newState = [];
             const editorState = action.state.editor;
-            const skillPointsLeft = getSkillPointsLeft(action.state);
+
+            // Lifepath section lock conditions
             if (editorState.lifepaths.selectedLifepaths.length !== editorState.lifepaths.count) {
-                newState.push('Stats');
+                return sections.slice(1);
             }
-            if (
-                !newState.includes('Skills') &&
-                (skillPointsLeft.lifepath !== 0 || skillPointsLeft.general !== 0)
-            ) {
-                newState.push('Traits');
+
+            // Stats section lock conditions
+            const mentalPointsLeft = getMentalPointsLeftToAssign(action.state);
+            const physicalPointsLeft = getPhysicalPointsLeftToAssign(action.state);
+            if (mentalPointsLeft !== 0 || physicalPointsLeft !== 0) {
+                return sections.slice(2);
             }
+
+            // Skills section lock conditions
+            const skillPointsLeft = getSkillPointsLeft(action.state);
+            if (skillPointsLeft.lifepath !== 0 || skillPointsLeft.general !== 0) {
+                return sections.slice(3);
+            }
+
+            // Traits section lock conditions
+            if (true) {
+                return sections.slice(4);
+            }
+
+            // Attributes section lock conditions
+            if (true) {
+                return sections.slice(5);
+            }
+
+            // Resources section lock conditions
+            if (true) {
+                return sections.slice(6);
+            }
+
             return newState;
-        case types.LOCK_SECTIONS:
-        case types.UNLOCK_SECTIONS:
         default:
             return state;
     }

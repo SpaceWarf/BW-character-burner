@@ -21,15 +21,13 @@ const SkillRow = ({
         || { lifepath: 0, general: 0 };
 
     const handleAdvanceSkill = (name, value, isGeneral) => {
-        onAdvanceSkill(name, value, isGeneral).then(_ => {
-            onUpdateSectionsLockState();
-        });
+        onAdvanceSkill(name, value, isGeneral)
+        onUpdateSectionsLockState();
     };
 
     const handleRemoveGeneralSkill = name => {
-        onRemoveGeneralSkill(name).then(_ => {
-            onUpdateSectionsLockState();
-        });
+        onRemoveGeneralSkill(name)
+        onUpdateSectionsLockState();
     };
 
     return (

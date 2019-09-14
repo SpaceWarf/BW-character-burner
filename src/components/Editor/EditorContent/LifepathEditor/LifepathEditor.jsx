@@ -4,8 +4,6 @@ import { Header, Dropdown, Button, Image } from 'semantic-ui-react';
 import {
     selectRace,
     selectLifepathCount,
-    lockSections,
-    unlockSections,
     updateSectionsLockState
 } from '#Actions/editor.js';
 import { races, lifepathCounts } from '#Utilities/config/editor.config.js';
@@ -21,9 +19,8 @@ const LifepathEditor = ({
 }) => {
 
     const handleSelectLifepathCount = count => {
-        onSelectLifepathCount(count).then(_ => {
-            onUpdateSectionsLockState()
-        });
+        onSelectLifepathCount(count);
+        onUpdateSectionsLockState();
     };
 
     return (

@@ -82,27 +82,23 @@ const LifepathList = ({
     };
 
     const handleSelectBornLifepath = lifepath => {
-        onSelectBornLifepath(lifepath).then(_ => {
-            onUpdateSectionsLockState();
-        });
+        onSelectBornLifepath(lifepath)
+        onUpdateSectionsLockState();
     }
 
     const handleUnselectBornLifepath = () => {
-        onUnselectBornLifepath().then(_ => {
-            onUpdateSectionsLockState();
-        });
+        onUnselectBornLifepath()
+        onUpdateSectionsLockState();
     }
 
     const handleAddLifepath = (lifepath, index) => {
-        onAddLifepath(lifepath, index).then(_ => {
-            onUpdateSectionsLockState();
-        });
+        onAddLifepath(lifepath, index)
+        onUpdateSectionsLockState();
     }
 
     const handleRemoveLifepath = (index) => {
-        onRemoveLifepath(index).then(_ => {
-            onUpdateSectionsLockState();
-        });
+        onRemoveLifepath(index)
+        onUpdateSectionsLockState();
     }
 
     const getList = () => {
