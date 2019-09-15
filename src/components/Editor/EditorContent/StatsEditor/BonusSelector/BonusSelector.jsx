@@ -1,15 +1,7 @@
 import React from "react";
 import { connect } from 'react-redux';
-import {
-    selectStatBonus,
-    lockSections,
-    unlockSections
-} from '#Actions/editor.js';
-import {
-    getStatBonuses,
-    getMentalPointsLeftToAssign,
-    getPhysicalPointsLeftToAssign
-} from '#Utilities/redux-selectors.js';
+import { selectStatBonus, updateSectionsLockState } from '#Actions/editor.js';
+import { getStatBonuses } from '#Utilities/redux-selectors.js';
 import { Header, Button } from "semantic-ui-react";
 import './BonusSelector.scss';
 
@@ -23,20 +15,10 @@ class BonusSelector extends React.Component {
         const {
             type,
             onSelectStatBonus,
-            physicalPointsLeftToAssign,
-            mentalPointsLeftToAssign,
-            onUnlockSection,
-            onLockSection
+            onUpdateSectionsLockState
         } = this.props;
-        if (
-            stat === 'P' && physicalPointsLeftToAssign === -1
-            || stat === 'M' && mentalPointsLeftToAssign === -1
-        ) {
-            onUnlockSection(['Skills']);
-        } else {
-            onLockSection(['Skills']);
-        }
         onSelectStatBonus(stat, index, type);
+        onUpdateSectionsLockState();
     }
 
     getBonusesComponents() {
@@ -84,7 +66,7 @@ class BonusSelector extends React.Component {
         const { type } = this.props;
         return (
             <div className="BonusSelector">
-                <Header as='h3'>Choose your character's {type === 'bonus' ? 'bonuses' : 'maluses'}: </Header>
+                <Header as='h3'>Select the pool {type === 'bonus' ? 'bonuses' : 'maluses'}: </Header>
                 <div className="Bonuses">
                     {this.getBonusesComponents()}
                 </div>
@@ -95,16 +77,13 @@ class BonusSelector extends React.Component {
 
 const mapStateToProps = state => ({
     statBonuses: getStatBonuses(state),
-    selectedStatBonuses: state.editor.stats.selectedStatBonuses,
-    mentalPointsLeftToAssign: getMentalPointsLeftToAssign(state),
-    physicalPointsLeftToAssign: getPhysicalPointsLeftToAssign(state)
+    selectedStatBonuses: state.editor.stats.selectedStatBonuses
 });
 
 
 const mapDispatchToProps = dispatch => ({
     onSelectStatBonus: (bonus, index, type) => dispatch(selectStatBonus(bonus, index, type)),
-    onLockSection: section => dispatch(lockSections(section)),
-    onUnlockSection: section => dispatch(unlockSections(section))
+    onUpdateSectionsLockState: () => dispatch(updateSectionsLockState())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(BonusSelector);

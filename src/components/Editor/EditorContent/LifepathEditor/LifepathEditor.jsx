@@ -4,52 +4,34 @@ import { Header, Dropdown, Button, Image } from 'semantic-ui-react';
 import {
     selectRace,
     selectLifepathCount,
-    lockSections,
-    unlockSections
+    updateSectionsLockState
 } from '#Actions/editor.js';
 import { races, lifepathCounts } from '#Utilities/config/editor.config.js';
 import LifepathList from './LifepathList/LifepathList.jsx';
 import './LifepathEditor.scss';
 
-class LifepathEditor extends React.Component {
-    constructor(props) {
-        super(props);
-        this.handleSelectLifepathCount = this.handleSelectLifepathCount.bind(this);
-    }
+const LifepathEditor = ({
+    selectedRace,
+    lifepathCount,
+    onSelectRace,
+    onSelectLifepathCount,
+    onUpdateSectionsLockState
+}) => {
 
-    handleSelectLifepathCount(count) {
-        const {
-            selectedLifepaths,
-            onSelectLifepathCount,
-            onLockSection,
-            onUnlockSection
-        } = this.props;
-
-        let shouldUnlockNextSection = true;
-        for (let i = 0; i < count; i++) {
-            const lifepathAtIndex = selectedLifepaths
-                .find(lifepath => lifepath.index === i);
-            if (!lifepathAtIndex) {
-                shouldUnlockNextSection = false;
-                onLockSection(['Stats', 'Skills']);
-            }
-        }
-        if (shouldUnlockNextSection) {
-            onUnlockSection(['Stats']);
-        }
-
+    const handleSelectLifepathCount = count => {
         onSelectLifepathCount(count);
-    }
+        onUpdateSectionsLockState();
+    };
 
-    render() {
-        const {
-            selectedRace,
-            lifepathCount,
-            onSelectRace,
-        } = this.props;
-        return (
-            <div className="LifepathEditor">
-                <Header className="section" as="h1">Select your character stock</Header>
+    return (
+        <div className="LifepathEditor">
+            <Header className="section" as="h1">Select your character's stock</Header>
+            <div className="content">
+                <p>
+                    <b>Stocks</b> each have their unique culture, with a variety of settings and lifepaths.
+                    They grant access to particular traits, skills and cultural artifacts which will mold your
+                    character.
+                </p>
                 <div className="RaceSelector">
                     {races.map(race => (
                         <Button
@@ -67,42 +49,46 @@ class LifepathEditor extends React.Component {
                         </Button>
                     ))}
                 </div>
-                {selectedRace &&
-                    <div className='Lifepath Section'>
-                        <Header className="section" as="h1">Select your character's lifepaths</Header>
-                        <div className="content">
-                            <div className="count">
-                                <Header as="h3">
-                                    Your character will have
-                                <Dropdown
-                                        placeholder="0"
-                                        options={lifepathCounts}
-                                        value={lifepathCount}
-                                        onChange={(_, { value }) => this.handleSelectLifepathCount(value)}
-                                        inline
-                                    />
-                                    lifepaths
-                            </Header>
-                                {lifepathCount &&
-                                    <i className="hint">
-                                        {lifepathCounts
-                                            .find(count => count.value === lifepathCount).hint
-                                        }
-                                    </i>
-                                }
-                            </div >
-                            {lifepathCount && <LifepathList />}
-                        </div >
-                    </div>
-                }
             </div>
-        );
-    }
-}
+            {selectedRace &&
+                <div className='Lifepath Section'>
+                    <Header className="section" as="h1">Select your character's lifepaths</Header>
+                    <div className="content">
+                        <p>
+                            <b>Lifepaths</b> are short slices of the life of your character. They teach skills, bestow traits, toughen your character
+                            and can make them richer or poorer. Ultimately your character is the sum of their lifepaths and choosing whether those
+                            experiences have been prosperous and fruitful, miserable and painful, or a mix of both is up to you.
+                        </p>
+                        <div className="count">
+                            <Header as="h3">
+                                Your character will have
+                                <Dropdown
+                                    placeholder="0"
+                                    options={lifepathCounts}
+                                    value={lifepathCount}
+                                    onChange={(_, { value }) => handleSelectLifepathCount(value)}
+                                    inline
+                                />
+                                lifepaths
+                            </Header>
+                            {lifepathCount &&
+                                <i className="hint">
+                                    {lifepathCounts
+                                        .find(count => count.value === lifepathCount).hint
+                                    }
+                                </i>
+                            }
+                        </div >
+                        {lifepathCount && <LifepathList />}
+                    </div >
+                </div>
+            }
+        </div>
+    );
+};
 
 const mapStateToProps = state => ({
     selectedRace: state.editor.selectedRace,
-    selectedLifepaths: state.editor.lifepaths.selectedLifepaths,
     lifepathCount: state.editor.lifepaths.count,
 });
 
@@ -110,8 +96,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
     onSelectRace: race => dispatch(selectRace(race)),
     onSelectLifepathCount: count => dispatch(selectLifepathCount(count)),
-    onLockSection: section => dispatch(lockSections(section)),
-    onUnlockSection: section => dispatch(unlockSections(section))
+    onUpdateSectionsLockState: () => dispatch(updateSectionsLockState())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(LifepathEditor);

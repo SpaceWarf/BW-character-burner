@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from 'react-redux';
 import { getAge, getStatBonuses } from '#Utilities/redux-selectors.js';
-import { Header, Table } from "semantic-ui-react";
+import { Header, Table, Label } from "semantic-ui-react";
 import BonusSelector from './BonusSelector/BonusSelector.jsx';
 import StatPools from './StatPools/StatPools.jsx';
 import StatsSelector from './StatsSelector/StatsSelector.jsx';
@@ -11,8 +11,13 @@ import './StatsEditor.scss';
 const StatsEditor = ({ age, statBonuses, selectedStatBonuses }) => {
     return (
         <div className="StatsEditor">
-            <Header className="section" as="h1">Choose your character's stats</Header>
-            <div className="Content">
+            <Header className="section" as="h1">Select your character's stats</Header>
+            <p>
+                <b>Stats</b> will determine how good your character is at certain types of skills. Want a stealthy rogue
+                that runs around pickpocketing people? Prioritize Perception and Agility. Want a savage barbarian that can
+                dish out as much pain as they can take? Prioritize Forte and Power.
+            </p>
+            <div className="content">
                 <div className="StatsContent">
                     <div className="Age Section">
                         <Header as='h3'>Starting Age: {age}</Header>
@@ -23,7 +28,10 @@ const StatsEditor = ({ age, statBonuses, selectedStatBonuses }) => {
                     {statBonuses.chooseMalus > 0 && <BonusSelector type="malus" />}
                     {statBonuses.chooseBonus > 0 && <BonusSelector type="bonus" />}
                     <StatPools />
-                    {selectedStatBonuses.length === statBonuses.choose && <StatsSelector />}
+                    {selectedStatBonuses.bonus.length === statBonuses.chooseBonus
+                        && selectedStatBonuses.malus.length === statBonuses.chooseMalus
+                        && <StatsSelector />
+                    }
                 </div>
                 <Table compact='very' striped celled>
                     <Table.Header>
@@ -37,9 +45,11 @@ const StatsEditor = ({ age, statBonuses, selectedStatBonuses }) => {
                         {statPools.map(pool => (
                             <Table.Row
                                 key={`${pool.minAge}-${pool.maxAge}`}
-                                active={pool.minAge <= age && pool.maxAge >= age}
                             >
-                                <Table.Cell>{`${pool.minAge} - ${pool.maxAge} years`}</Table.Cell>
+                                <Table.Cell>{pool.minAge <= age && pool.maxAge >= age
+                                    ? <Label ribbon>{`${pool.minAge} - ${pool.maxAge} years`}</Label>
+                                    : `${pool.minAge} - ${pool.maxAge} years`
+                                }</Table.Cell>
                                 <Table.Cell>{`${pool.mental} pts`}</Table.Cell>
                                 <Table.Cell>{`${pool.physical} pts`}</Table.Cell>
                             </Table.Row>

@@ -1,12 +1,17 @@
 const { createSelector } = require('reselect');
-const { getLifepathDataSet } = require('./data-selectors.js');
+const { getLifepathDataSet, getSkillData } = require('./data-selectors.js');
 const { statPools } = require('./config/editor.config.js');
+const get = require('lodash/get');
+const { uniq } = require('./utilities.js');
 
+// State properties
 const getSelectedRace = state => state.editor.selectedRace;
 const getSelectedLifepaths = state => state.editor.lifepaths.selectedLifepaths;
 const getSelectedStatBonuses = state => state.editor.stats.selectedStatBonuses;
 const getSelectedStats = state => state.editor.stats.selectedStats;
+const getAdvancedSkills = state => state.editor.skills.advancedSkills;
 
+// Lifepaths
 export const getBornLifepaths = createSelector(
     [getSelectedRace], selectedRace => {
         const lifepaths = getLifepathDataSet(selectedRace);
@@ -20,6 +25,7 @@ export const getLifepaths = createSelector(
     }
 );
 
+// Stats
 export const getStatBonuses = createSelector(
     [getSelectedLifepaths], selectedLifepaths => {
         return selectedLifepaths.reduce((bonuses, { lifepath }) => {
@@ -50,12 +56,24 @@ export const getStatBonuses = createSelector(
     }
 )
 
-// TODO: add leads
-export const getAge = createSelector(
+export const getUsedLeads = createSelector(
     [getSelectedLifepaths], selectedLifepaths => {
-        return selectedLifepaths.reduce((age, { lifepath }) => {
+        return selectedLifepaths.reduce((usedLeads, { lifepath }, index) => {
+            const nextLifepath = selectedLifepaths.find(lifepath => lifepath.index === index + 1);
+            if (nextLifepath && lifepath.setting !== nextLifepath.lifepath.setting) {
+                return usedLeads + 1;
+            }
+            return usedLeads;
+        }, 0);
+    }
+);
+
+export const getAge = createSelector(
+    [getSelectedLifepaths, getUsedLeads], (selectedLifepaths, usedLeads) => {
+        const age = selectedLifepaths.reduce((age, { lifepath }) => {
             return age + lifepath.time;
-        }, 0)
+        }, 0);
+        return age + usedLeads;
     }
 );
 
@@ -108,5 +126,131 @@ export const getPhysicalPointsLeftToAssign = createSelector(
         const totalPool = physicalPool + appliedBonuses.physical;
         return totalPool - (selectedStats.power || 0) - (selectedStats.forte || 0)
             - (selectedStats.agility || 0) - (selectedStats.speed || 0);
+    }
+);
+
+// Skills
+export const getLifepathSkillsPool = createSelector(
+    [getSelectedLifepaths], selectedLifepaths => {
+        return selectedLifepaths.reduce((lifepathSkills, { lifepath }) => {
+            const skillName = get(lifepath, 'skills.from', []);
+            return uniq([
+                ...lifepathSkills,
+                ...skillName
+            ]);
+        }, [])
+            // TODO: remove { name } validator once all skills have been transcribed
+            .map(name => getSkillData(name) || { name });
+    }
+);
+
+export const getRequiredSkills = createSelector(
+    [getSelectedLifepaths], selectedLifepaths => {
+        return selectedLifepaths.reduce((requiredSkills, { lifepath }) => {
+            const skillChoices = get(lifepath, 'skills.from', []);
+            const requiredSkill = skillChoices.find(skill => !requiredSkills.includes(skill));
+            return requiredSkill
+                ? [...requiredSkills, requiredSkill]
+                : requiredSkills;
+        }, [])
+            // TODO: remove { name } validator once all skills have been transcribed
+            .map(name => getSkillData(name) || { name });
+    }
+);
+
+export const getOptionalSkills = createSelector(
+    [getLifepathSkillsPool, getRequiredSkills], (lifepathSkills, requiredSkills) => {
+        return lifepathSkills.filter(lifepathSkill => !requiredSkills
+            .find(requiredSkill => requiredSkill.name === lifepathSkill.name)
+        );
+    }
+);
+
+export const getLifepathSkills = createSelector(
+    [getRequiredSkills, getOptionalSkills], (requiredSkills, optionalSkills) => {
+        return {
+            required: requiredSkills,
+            optional: optionalSkills
+        };
+    }
+);
+
+export const getSkillPoints = createSelector(
+    [getSelectedLifepaths], selectedLifepaths => {
+        return selectedLifepaths.reduce((skillPoints, { lifepath }) => {
+            if (lifepath.skills.points) {
+                skillPoints.lifepath += lifepath.skills.points
+            }
+            if (lifepath.skills.generalPoints) {
+                skillPoints.general += lifepath.skills.generalPoints
+            }
+            return skillPoints;
+        }, { lifepath: 0, general: 0 });
+    }
+);
+
+export const getSkillPointsLeft = createSelector(
+    [
+        getSkillPoints,
+        getRequiredSkills,
+        getAdvancedSkills
+    ], (skillPoints, requiredSkills, advancedSkills) => {
+        const spentPoints = advancedSkills.reduce((total, advances) => {
+            return {
+                lifepath: total.lifepath + advances.lifepath,
+                general: total.general + advances.general
+            };
+        }, { lifepath: 0, general: 0 })
+        return {
+            lifepath: skillPoints.lifepath - requiredSkills.length - spentPoints.lifepath,
+            general: skillPoints.general - spentPoints.general
+        };
+    }
+);
+
+// Traits
+export const getLifepathTraitsPool = createSelector(
+    [getSelectedLifepaths], selectedLifepaths => {
+        return selectedLifepaths.reduce((lifepathTraits, { lifepath }) => {
+            return uniq([
+                ...lifepathTraits,
+                ...get(lifepath, 'traits.from', [])
+            ]);
+        }, []);
+    }
+);
+
+export const getRequiredTraits = createSelector(
+    [getSelectedLifepaths], selectedLifepaths => {
+        return selectedLifepaths.reduce((requiredTraits, { lifepath }) => {
+            const traitChoices = get(lifepath, 'traits.from', []);
+            const requiredTrait = traitChoices.find(trait => !requiredTraits.includes(trait));
+            return requiredTrait
+                ? [...requiredTraits, requiredTrait]
+                : requiredTraits;
+        }, []);
+    }
+);
+
+export const getOptionalTraits = createSelector(
+    [getLifepathTraitsPool, getRequiredTraits], (lifepathTraits, requiredTraits) => {
+        return lifepathTraits.filter(trait => !requiredTraits.includes(trait));
+    }
+);
+
+export const getLifepathTraits = createSelector(
+    [getRequiredTraits, getOptionalTraits], (requiredTraits, optionalTraits) => {
+        return {
+            required: requiredTraits,
+            optional: optionalTraits
+        };
+    }
+);
+
+export const getTraitPoints = createSelector(
+    [getSelectedLifepaths], selectedLifepaths => {
+        return selectedLifepaths.reduce((traitPoints, { lifepath }) => {
+            return traitPoints + get(lifepath, 'traits.points', 0);
+        }, 0);
     }
 );

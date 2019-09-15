@@ -3,9 +3,9 @@ import AddModal from '#Components/Common/AddModal/AddModal.jsx';
 import Lifepath from '#Components/Common/Card/Lifepath/Lifepath.jsx';
 import Skill from '#Components/Common/Card/Skill/Skill.jsx';
 import Trait from '#Components/Common/Card/Trait/Trait.jsx';
-import './ItemList.scss';
+import './CardList.scss';
 
-const ItemList = ({ header, items, type, choices, maxCount, sections, onSelect, onRemove }) => {
+const CardList = ({ header, items, type, choices, maxCount, sections, onSelect, onRemove }) => {
 
     const getItemComponent = (item, onClick) => {
         switch (type) {
@@ -13,6 +13,7 @@ const ItemList = ({ header, items, type, choices, maxCount, sections, onSelect, 
                 return <Lifepath
                     key={item.name}
                     lifepath={item}
+                    showSetting
                     onClick={() => onClick(item)}
                 />;
             case 'skill':
@@ -33,7 +34,7 @@ const ItemList = ({ header, items, type, choices, maxCount, sections, onSelect, 
     }
 
     return (
-        <div className="ItemList">
+        <div className="CardList">
             <div className="ListContent">
                 {items.map(item => (
                     getItemComponent(item, onRemove)
@@ -54,4 +55,4 @@ const ItemList = ({ header, items, type, choices, maxCount, sections, onSelect, 
     );
 }
 
-export default ItemList;
+export default CardList;

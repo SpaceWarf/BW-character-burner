@@ -3,14 +3,10 @@ import { connect } from 'react-redux';
 import {
     getMentalPointsLeftToAssign,
     getPhysicalPointsLeftToAssign,
-    getMentalPool,
-    getAppliedBonuses
+    getAppliedBonuses,
+    getMentalPool
 } from '#Utilities/redux-selectors.js';
-import {
-    selectStat,
-    lockSections,
-    unlockSections
-} from '#Actions/editor.js'
+import { selectStat, updateSectionsLockState } from '#Actions/editor.js'
 import { Header, Dropdown } from 'semantic-ui-react';
 import './StatsSelector.scss';
 
@@ -43,36 +39,24 @@ class StatsSelector extends React.Component {
 
     onHandleChange(stat, value) {
         const {
-            physicalPointsLeftToAssign,
-            mentalPointsLeftToAssign,
-            selectedStats,
-            mentalPool,
             onSelectStat,
-            onLockSection,
-            onUnlockSection,
-            appliedBonuses
+            appliedBonuses,
+            mentalPool,
+            onUpdateSectionsLockState
         } = this.props;
-        let shouldUnlockNextSection = false;
 
         if (['perception', 'will'].includes(stat)) {
-            if (stat === 'perception') {
-                onSelectStat('will', Math.min(6, mentalPool + appliedBonuses.mental - value));
-            } else if (stat === 'will') {
-                onSelectStat('perception', Math.min(6, mentalPool + appliedBonuses.mental - value));
+            const oppositeValue = Math.min(6, mentalPool + appliedBonuses.mental - value);
+            if (oppositeValue > 0) {
+                onSelectStat(
+                    stat === 'will' ? 'perception' : 'will',
+                    Math.min(6, mentalPool + appliedBonuses.mental - value)
+                );
             }
-            shouldUnlockNextSection = value + Math.min(6, mentalPool - value) === mentalPool
-                && physicalPointsLeftToAssign === 0;
-        } else {
-            const addedPoints = value - (selectedStats[stat] || 0);
-            const pointsLeftToAssign = physicalPointsLeftToAssign + mentalPointsLeftToAssign;
-            shouldUnlockNextSection = pointsLeftToAssign - addedPoints === 0;
         }
-        if (shouldUnlockNextSection) {
-            onUnlockSection(['Skills']);
-        } else {
-            onLockSection(['Skills']);
-        }
+
         onSelectStat(stat, value);
+        onUpdateSectionsLockState();
     }
 
     render() {
@@ -165,8 +149,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
     onSelectStat: (stat, value) => dispatch(selectStat(stat, value)),
-    onLockSection: section => dispatch(lockSections(section)),
-    onUnlockSection: section => dispatch(unlockSections(section))
+    onUpdateSectionsLockState: () => dispatch(updateSectionsLockState())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(StatsSelector);

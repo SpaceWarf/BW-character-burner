@@ -3,7 +3,7 @@ import { Card, Icon } from 'semantic-ui-react';
 import '../Card.scss';
 import { Menu } from "semantic-ui-react";
 
-const Lifepath = ({ lifepath, centered, linkable, onClick }) => {
+const Lifepath = ({ lifepath, centered, linkable, showSetting, onClick }) => {
     return (
         <Menu.Item className="Card Lifepath" id={lifepath.name.replace(/\s/g, '')}>
             <Card className={centered ? 'center' : ''} onClick={onClick}>
@@ -15,7 +15,9 @@ const Lifepath = ({ lifepath, centered, linkable, onClick }) => {
                             link
                         />}
                         <div className='header-content'>
-                            <p className='thirds'>{lifepath.name}</p>
+                            <p className='fourths'>{lifepath.name}</p>
+                            {showSetting &&
+                                <p className='fifths centered'>{lifepath.setting}</p>}
                             <p className='fifths centered'>{lifepath.time} yrs</p>
                             <p className='fifths centered'>{lifepath.res}</p>
                             <p className='fifths centered'>{lifepath.stat ?

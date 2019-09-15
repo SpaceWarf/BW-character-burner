@@ -5,9 +5,14 @@
     height: 100%;
     width: $content-width;
 
-    .Content {
+    & > p {
+        padding: 0 20px;
+    }
+
+    .content {
         display: flex;
         justify-content: space-between;
+        padding: 0 20px;
     }
 
     .Section {
@@ -22,5 +27,6 @@
 
     & .ui.table {
         width: 400px;
+        margin: 0;
     }
 }

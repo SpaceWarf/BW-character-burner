@@ -10,18 +10,6 @@ const count = (state = null, action) => {
     }
 };
 
-const selectedBornLifepath = (state = [], action) => {
-    switch (action.type) {
-        case types.SELECT_BORN_LIFEPATH:
-            return [action.lifepath];
-        case types.UNSELECT_BORN_LIFEPATH:
-        case types.SELECT_RACE:
-            return [];
-        default:
-            return state;
-    }
-};
-
 const selectedLifepaths = (state = [], action) => {
     switch (action.type) {
         case types.ADD_LIFEPATH:
@@ -36,18 +24,6 @@ const selectedLifepaths = (state = [], action) => {
             return state.filter(lifepath => (
                 lifepath.index !== action.index
             ));
-        case types.SELECT_BORN_LIFEPATH:
-            return [
-                ...state,
-                {
-                    lifepath: action.lifepath,
-                    index: 0
-                }
-            ];
-        case types.UNSELECT_BORN_LIFEPATH:
-            return state.filter(lifepath => (
-                lifepath.index !== 0
-            ));
         case types.SELECT_RACE:
             return [];
         case types.SELECT_LIFEPATH_COUNT:
@@ -61,6 +37,5 @@ const selectedLifepaths = (state = [], action) => {
 
 export default combineReducers({
     count,
-    selectedBornLifepath,
     selectedLifepaths
 });

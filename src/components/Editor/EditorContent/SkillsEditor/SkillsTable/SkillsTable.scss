@@ -1,0 +1,19 @@
+.SkillsTable {
+    & > .ui.striped.table {
+        margin-bottom: 15px;
+    }
+
+    & > .Points {
+        display: flex;
+
+        & > .ui.header {
+            margin: 0 20px 0 0;
+        }
+    }
+
+    & > .AddRow {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 15px;
+    }
+}
