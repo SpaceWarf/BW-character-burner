@@ -1,5 +1,9 @@
 const { createSelector } = require('reselect');
-const { getLifepathDataSet, getSkillData } = require('./data-selectors.js');
+const {
+    getLifepathDataSet,
+    getSkillData,
+    getTraitData
+} = require('./data-selectors.js');
 const { statPools } = require('./config/editor.config.js');
 const get = require('lodash/get');
 const { uniq } = require('./utilities.js');
@@ -10,6 +14,7 @@ const getSelectedLifepaths = state => state.editor.lifepaths.selectedLifepaths;
 const getSelectedStatBonuses = state => state.editor.stats.selectedStatBonuses;
 const getSelectedStats = state => state.editor.stats.selectedStats;
 const getAdvancedSkills = state => state.editor.skills.advancedSkills;
+const getBoughtTraits = state => state.editor.traits.boughtTraits;
 
 // Lifepaths
 export const getBornLifepaths = createSelector(
@@ -216,7 +221,9 @@ export const getLifepathTraitsPool = createSelector(
                 ...lifepathTraits,
                 ...get(lifepath, 'traits.from', [])
             ]);
-        }, []);
+        }, [])
+            // TODO: remove { name } validator once all traits have been transcribed
+            .map(name => getTraitData(name) || { name });
     }
 );
 
@@ -228,7 +235,9 @@ export const getRequiredTraits = createSelector(
             return requiredTrait
                 ? [...requiredTraits, requiredTrait]
                 : requiredTraits;
-        }, []);
+        }, [])
+            // TODO: remove { name } validator once all traits have been transcribed
+            .map(name => getTraitData(name) || { name });
     }
 );
 
@@ -252,5 +261,14 @@ export const getTraitPoints = createSelector(
         return selectedLifepaths.reduce((traitPoints, { lifepath }) => {
             return traitPoints + get(lifepath, 'traits.points', 0);
         }, 0);
+    }
+);
+
+export const getTraitPointsLeft = createSelector(
+    [getTraitPoints, getRequiredTraits, getBoughtTraits], (traitPoints, requiredTraits, boughtTraits) => {
+        const spentPoints = boughtTraits.reduce((total, trait) => {
+            return total + trait.cost;
+        }, 0);
+        return traitPoints - requiredTraits.length - spentPoints;
     }
 );

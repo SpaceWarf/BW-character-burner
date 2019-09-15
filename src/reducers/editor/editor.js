@@ -3,11 +3,13 @@ import { sections } from '#Utilities/config/editor.config.js';
 import {
     getSkillPointsLeft,
     getPhysicalPointsLeftToAssign,
-    getMentalPointsLeftToAssign
+    getMentalPointsLeftToAssign,
+    getTraitPointsLeft
 } from '#Utilities/redux-selectors.js';
 import lifepaths from './lifepaths.js';
 import stats from './stats';
 import skills from './skills';
+import traits from './traits';
 import * as types from "#Actions/types.js";
 
 const selectedRace = (state = "", action) => {
@@ -53,7 +55,8 @@ const lockedSections = (state = sections.slice(1), action) => {
             }
 
             // Traits section lock conditions
-            if (true) {
+            const traitPointsLeft = getTraitPointsLeft(action.state);
+            if (traitPointsLeft !== 0) {
                 return sections.slice(4);
             }
 
@@ -79,5 +82,6 @@ export default combineReducers({
     lockedSections,
     lifepaths,
     stats,
-    skills
+    skills,
+    traits
 });

@@ -16,3 +16,8 @@ export const SELECT_STAT = "SELECT_STAT";
 export const ADVANCE_SKILL = "ADVANCE_SKILL";
 export const OPEN_GENERAL_SKILL = "OPEN_GENERAL_SKILL";
 export const REMOVE_GENERAL_SKILL = "REMOVE_GENERAL_SKILL";
+
+// Traits editor
+export const BUY_TRAIT = "BUY_TRAIT";
+export const ADD_TRAIT = "ADD_TRAIT";
+export const REMOVE_TRAIT = "REMOVE_TRAIT";
