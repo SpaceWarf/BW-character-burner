@@ -1,0 +1,11 @@
+.TraitsTable {
+    & > .ui.striped.table {
+        margin-bottom: 15px;
+    }
+
+    & > .AddRow {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 15px;
+    }
+}

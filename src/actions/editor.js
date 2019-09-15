@@ -67,3 +67,19 @@ export const removeGeneralSkill = skill => ({
     type: types.REMOVE_GENERAL_SKILL,
     skill
 });
+
+// Traits editor
+export const buyTrait = trait => ({
+    type: types.BUY_TRAIT,
+    trait
+});
+
+export const addTrait = trait => ({
+    type: types.ADD_TRAIT,
+    trait
+});
+
+export const removeTrait = trait => ({
+    type: types.REMOVE_TRAIT,
+    trait
+});

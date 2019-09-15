@@ -55,3 +55,7 @@ export const getLifepaths = (lifepathCategory, setting) => {
 export const getSkillData = name => {
     return skills.find(skill => skill.name === name);
 };
+
+export const getTraitData = name => {
+    return traits.find(trait => trait.name === name);
+};
