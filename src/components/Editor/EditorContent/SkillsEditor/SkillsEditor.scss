@@ -4,4 +4,8 @@
     padding: $section-padding;
     height: 100%;
     width: $content-width;
+
+    & > .content {
+        padding: 0 20px;
+    }
 }

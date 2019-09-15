@@ -33,12 +33,12 @@ const SkillRow = ({
 
     const calculateExponent = () => {
         if (skill.roots && (required || skillAdvances.lifepath > 0 || skillAdvances.general > 0)) {
-            const openValue = skill.roots
+            const rootAverage = skill.roots
                 .map(root => selectedStats[root.toLowerCase()])
                 .reduce((total, value) => total + value, 0) / skill.roots.length;
             return required
-                ? Math.floor(openValue) + skillAdvances.lifepath + skillAdvances.general
-                : (Math.floor(openValue) + skillAdvances.lifepath + skillAdvances.general) - 1;
+                ? Math.floor(rootAverage / 2) + skillAdvances.lifepath + skillAdvances.general
+                : (Math.floor(rootAverage / 2) + skillAdvances.lifepath + skillAdvances.general) - 1;
         }
         return 0;
     };

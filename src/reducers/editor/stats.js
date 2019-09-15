@@ -20,14 +20,7 @@ const selectedStatBonuses = (state = { bonus: [], malus: [] }, action) => {
     }
 };
 
-const selectedStats = (state = {
-    perception: 5,
-    will: 3,
-    power: 2,
-    forte: 3,
-    agility: 5,
-    speed: 6
-}, action) => {
+const selectedStats = (state = {}, action) => {
     switch (action.type) {
         case types.SELECT_STAT:
             const newState = { ...state };
@@ -35,7 +28,7 @@ const selectedStats = (state = {
             return newState;
         case types.REMOVE_LIFEPATH:
         case types.SELECT_LIFEPATH_COUNT:
-            return [];
+            return {};
         default:
             return state;
     }

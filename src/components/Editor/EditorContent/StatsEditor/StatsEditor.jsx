@@ -12,7 +12,12 @@ const StatsEditor = ({ age, statBonuses, selectedStatBonuses }) => {
     return (
         <div className="StatsEditor">
             <Header className="section" as="h1">Select your character's stats</Header>
-            <div className="Content">
+            <p>
+                <b>Stats</b> will determine how good your character is at certain types of skills. Want a stealthy rogue
+                that runs around pickpocketing people? Prioritize Perception and Agility. Want a savage barbarian that can
+                dish out as much pain as they can take? Prioritize Forte and Power.
+            </p>
+            <div className="content">
                 <div className="StatsContent">
                     <div className="Age Section">
                         <Header as='h3'>Starting Age: {age}</Header>

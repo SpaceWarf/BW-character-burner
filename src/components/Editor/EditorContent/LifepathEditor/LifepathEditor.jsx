@@ -26,27 +26,39 @@ const LifepathEditor = ({
     return (
         <div className="LifepathEditor">
             <Header className="section" as="h1">Select your character's stock</Header>
-            <div className="RaceSelector">
-                {races.map(race => (
-                    <Button
-                        key={race.name}
-                        active={selectedRace === race.name}
-                        disabled={race.disabled}
-                        onClick={() => onSelectRace(race.name)}
-                        basic
-                    >
-                        <Image
-                            disabled={selectedRace !== race.name}
-                            src={race.icon}
-                        />
-                        <p>{race.name}</p>
-                    </Button>
-                ))}
+            <div className="content">
+                <p>
+                    <b>Stocks</b> each have their unique culture, with a variety of settings and lifepaths.
+                    They grant access to particular traits, skills and cultural artifacts which will mold your
+                    character.
+                </p>
+                <div className="RaceSelector">
+                    {races.map(race => (
+                        <Button
+                            key={race.name}
+                            active={selectedRace === race.name}
+                            disabled={race.disabled}
+                            onClick={() => onSelectRace(race.name)}
+                            basic
+                        >
+                            <Image
+                                disabled={selectedRace !== race.name}
+                                src={race.icon}
+                            />
+                            <p>{race.name}</p>
+                        </Button>
+                    ))}
+                </div>
             </div>
             {selectedRace &&
                 <div className='Lifepath Section'>
                     <Header className="section" as="h1">Select your character's lifepaths</Header>
                     <div className="content">
+                        <p>
+                            <b>Lifepaths</b> are short slices of the life of your character. They teach skills, bestow traits, toughen your character
+                            and can make them richer or poorer. Ultimately your character is the sum of their lifepaths and choosing whether those
+                            experiences have been prosperous and fruitful, miserable and painful, or a mix of both is up to you.
+                        </p>
                         <div className="count">
                             <Header as="h3">
                                 Your character will have

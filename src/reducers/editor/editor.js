@@ -10,7 +10,7 @@ import stats from './stats';
 import skills from './skills';
 import * as types from "#Actions/types.js";
 
-const selectedRace = (state = "men", action) => {
+const selectedRace = (state = "", action) => {
     switch (action.type) {
         case types.SELECT_RACE:
             return action.race;
@@ -19,7 +19,7 @@ const selectedRace = (state = "men", action) => {
     }
 };
 
-const activeSection = (state = sections[2], action) => {
+const activeSection = (state = sections[0], action) => {
     switch (action.type) {
         case types.SET_ACTIVE_SECTION:
             return action.section;
@@ -28,13 +28,9 @@ const activeSection = (state = sections[2], action) => {
     }
 };
 
-const lockedSections = (state = /* sections.slice(1) */[], action) => {
+const lockedSections = (state = sections.slice(1), action) => {
     switch (action.type) {
         case types.UPDATE_SECTIONS_LOCK_STATE:
-
-            // REMOVE
-            return state;
-
             const newState = [];
             const editorState = action.state.editor;
 
