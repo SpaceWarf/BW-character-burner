@@ -22,9 +22,9 @@ const SkillsTable = ({
     onUpdateSectionsLockState
 }) => {
 
-    const handleOpenGeneralSkill = name => {
-        onOpenGeneralSkill(name);
-        onAdvanceSkill(name, 1, true);
+    const handleOpenGeneralSkill = skill => {
+        onOpenGeneralSkill(skill);
+        onAdvanceSkill(skill.name, 1, true);
         onUpdateSectionsLockState();
     };
 
@@ -35,7 +35,9 @@ const SkillsTable = ({
             ...lifepathSkills.optional,
             ...openedGeneralSkills
         ];
-        return dataSet.filter(skill => !allSkillsInTable.includes(skill.name));
+        return dataSet.filter(skill => !allSkillsInTable
+            .find((skillInTable) => skillInTable.name === skill.name)
+        );
     };
 
     return (
@@ -61,13 +63,13 @@ const SkillsTable = ({
                 </Table.Header>
                 <Table.Body>
                     {lifepathSkills.required.map(skill => (
-                        <SkillRow key={skill} skill={{ name: skill }} required />
+                        <SkillRow key={skill.name} skill={skill} required />
                     ))}
                     {lifepathSkills.optional.map(skill => (
-                        <SkillRow key={skill} skill={{ name: skill }} />
+                        <SkillRow key={skill.name} skill={skill} />
                     ))}
                     {openedGeneralSkills.map(skill => (
-                        <SkillRow key={skill} skill={{ name: skill }} general />
+                        <SkillRow key={skill.name} skill={skill} general />
                     ))}
                 </Table.Body>
             </Table>
@@ -77,7 +79,7 @@ const SkillsTable = ({
                         header={"Select general skills"}
                         type={"skill"}
                         choices={getAddModalChoices()}
-                        onSelect={({ name }) => handleOpenGeneralSkill(name)}
+                        onSelect={skill => handleOpenGeneralSkill(skill)}
                     />
                 </div>
             }

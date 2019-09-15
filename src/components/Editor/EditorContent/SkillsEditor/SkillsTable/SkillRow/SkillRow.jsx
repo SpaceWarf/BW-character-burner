@@ -4,6 +4,7 @@ import { Table, Label, Button } from "semantic-ui-react";
 import { getSkillPointsLeft } from '#Utilities/redux-selectors.js';
 import { advanceSkill, removeGeneralSkill, updateSectionsLockState } from '#Actions/editor.js';
 import PointCounter from '#Components/Common/PointCounter/PointCounter.jsx';
+import CardModal from '#Components/Common/CardModal/CardModal.jsx';
 import './SkillRow.scss';
 
 const SkillRow = ({
@@ -12,13 +13,13 @@ const SkillRow = ({
     general,
     advancedSkills,
     skillPointsLeft,
+    selectedStats,
     onAdvanceSkill,
     onRemoveGeneralSkill,
     onUpdateSectionsLockState
 }) => {
     const skillAdvances = advancedSkills
-        .find(advancedSkill => advancedSkill.name === skill.name)
-        || { lifepath: 0, general: 0 };
+        .find(advancedSkill => advancedSkill.name === skill.name) || { lifepath: 0, general: 0 };
 
     const handleAdvanceSkill = (name, value, isGeneral) => {
         onAdvanceSkill(name, value, isGeneral)
@@ -30,7 +31,18 @@ const SkillRow = ({
         onUpdateSectionsLockState();
     };
 
-    // TODO: counter max should be determined by the final exponent which cannot be higher than 6
+    const calculateExponent = () => {
+        if (skill.roots && (required || skillAdvances.lifepath > 0 || skillAdvances.general > 0)) {
+            const openValue = skill.roots
+                .map(root => selectedStats[root.toLowerCase()])
+                .reduce((total, value) => total + value, 0) / skill.roots.length;
+            return required
+                ? Math.floor(openValue) + skillAdvances.lifepath + skillAdvances.general
+                : (Math.floor(openValue) + skillAdvances.lifepath + skillAdvances.general) - 1;
+        }
+        return 0;
+    };
+
     return (
         <Table.Row
             key={`${skill.name}`}
@@ -42,10 +54,12 @@ const SkillRow = ({
                     : skill.name
                 }
             </Table.Cell>
-            <Table.Cell textAlign="center">{'Root'}</Table.Cell>
+            <Table.Cell textAlign="center" disabled={!skill.roots}>
+                {(skill.roots || ['—']).join(', ')}
+            </Table.Cell>
             <Table.Cell textAlign="center" disabled={general}>
                 {general
-                    ? (' — ')
+                    ? ('—')
                     : <PointCounter
                         value={required
                             ? skillAdvances.lifepath + 1
@@ -53,7 +67,7 @@ const SkillRow = ({
                         }
                         min={required ? 1 : 0}
                         max={6}
-                        canIncrease={skillPointsLeft.lifepath > 0}
+                        canIncrease={skillPointsLeft.lifepath > 0 && calculateExponent() < 6}
                         onIncrease={() => handleAdvanceSkill(skill.name, skillAdvances.lifepath + 1, false)}
                         onDecrease={() => handleAdvanceSkill(skill.name, skillAdvances.lifepath - 1, false)}
                     />
@@ -64,19 +78,14 @@ const SkillRow = ({
                     value={skillAdvances.general}
                     min={0}
                     max={6}
-                    canIncrease={skillPointsLeft.general > 0}
+                    canIncrease={skillPointsLeft.general > 0 && calculateExponent() < 6}
                     onIncrease={() => handleAdvanceSkill(skill.name, skillAdvances.general + 1, true)}
                     onDecrease={() => handleAdvanceSkill(skill.name, skillAdvances.general - 1, true)}
                 />
             </Table.Cell>
-            <Table.Cell textAlign="center">0</Table.Cell>
+            <Table.Cell textAlign="center">{calculateExponent()}</Table.Cell>
             <Table.Cell textAlign="center">
-                {/** TODO: implement card modal */}
-                <Button
-                    icon="info circle"
-                    size="mini"
-                    onClick={() => { }}
-                />
+                <CardModal data={skill} type="skill" />
                 <Button
                     className={general ? "" : "hidden"}
                     icon="delete"
@@ -91,7 +100,8 @@ const SkillRow = ({
 
 const mapStateToProps = state => ({
     skillPointsLeft: getSkillPointsLeft(state),
-    advancedSkills: state.editor.skills.advancedSkills
+    advancedSkills: state.editor.skills.advancedSkills,
+    selectedStats: state.editor.stats.selectedStats
 });
 
 

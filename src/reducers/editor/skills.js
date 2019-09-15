@@ -25,7 +25,7 @@ const advancedSkills = (state = [], action) => {
     }
 };
 
-const openedGeneralSkills = (state = ["Acting"], action) => {
+const openedGeneralSkills = (state = [], action) => {
     switch (action.type) {
         case types.OPEN_GENERAL_SKILL:
             return [
@@ -33,7 +33,7 @@ const openedGeneralSkills = (state = ["Acting"], action) => {
                 action.skill
             ];
         case types.REMOVE_GENERAL_SKILL:
-            return state.filter(skill => skill !== action.skill);
+            return state.filter(skill => skill.name !== action.skill);
         default:
             return state;
     }

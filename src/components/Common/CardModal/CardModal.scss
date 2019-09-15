@@ -1,0 +1,8 @@
+.ui.modal.CardModal {
+    background: none;
+    box-shadow: none;
+
+    & > .content {
+        background: none;
+    }
+}

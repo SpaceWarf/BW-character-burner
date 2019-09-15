@@ -1,5 +1,5 @@
 const { createSelector } = require('reselect');
-const { getLifepathDataSet } = require('./data-selectors.js');
+const { getLifepathDataSet, getSkillData } = require('./data-selectors.js');
 const { statPools } = require('./config/editor.config.js');
 const get = require('lodash/get');
 const { uniq } = require('./utilities.js');
@@ -133,11 +133,14 @@ export const getPhysicalPointsLeftToAssign = createSelector(
 export const getLifepathSkillsPool = createSelector(
     [getSelectedLifepaths], selectedLifepaths => {
         return selectedLifepaths.reduce((lifepathSkills, { lifepath }) => {
+            const skillName = get(lifepath, 'skills.from', []);
             return uniq([
                 ...lifepathSkills,
-                ...get(lifepath, 'skills.from', [])
+                ...skillName
             ]);
-        }, []);
+        }, [])
+            // TODO: remove { name } validator once all skills have been transcribed
+            .map(name => getSkillData(name) || { name });
     }
 );
 
@@ -149,13 +152,17 @@ export const getRequiredSkills = createSelector(
             return requiredSkill
                 ? [...requiredSkills, requiredSkill]
                 : requiredSkills;
-        }, []);
+        }, [])
+            // TODO: remove { name } validator once all skills have been transcribed
+            .map(name => getSkillData(name) || { name });
     }
 );
 
 export const getOptionalSkills = createSelector(
     [getLifepathSkillsPool, getRequiredSkills], (lifepathSkills, requiredSkills) => {
-        return lifepathSkills.filter(skill => !requiredSkills.includes(skill));
+        return lifepathSkills.filter(lifepathSkill => !requiredSkills
+            .find(requiredSkill => requiredSkill.name === lifepathSkill.name)
+        );
     }
 );
 

@@ -45,11 +45,14 @@ class StatsSelector extends React.Component {
             onUpdateSectionsLockState
         } = this.props;
 
-        // TODO: handle case where only 6 points are available which would auto-set one of the stats to 0.
-        if (stat === 'perception') {
-            onSelectStat('will', Math.min(6, mentalPool + appliedBonuses.mental - value));
-        } else if (stat === 'will') {
-            onSelectStat('perception', Math.min(6, mentalPool + appliedBonuses.mental - value));
+        if (['perception', 'will'].includes(stat)) {
+            const oppositeValue = Math.min(6, mentalPool + appliedBonuses.mental - value);
+            if (oppositeValue > 0) {
+                onSelectStat(
+                    stat === 'will' ? 'perception' : 'will',
+                    Math.min(6, mentalPool + appliedBonuses.mental - value)
+                );
+            }
         }
 
         onSelectStat(stat, value);
