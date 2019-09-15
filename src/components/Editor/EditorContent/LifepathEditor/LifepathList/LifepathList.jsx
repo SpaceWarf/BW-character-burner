@@ -3,8 +3,6 @@ import { connect } from 'react-redux';
 import { Header } from 'semantic-ui-react';
 import CardList from '#Components/Common/CardList/CardList.jsx';
 import {
-    selectBornLifepath,
-    unselectBornLifepath,
     addLifepath,
     removeLifepath,
     updateSectionsLockState
@@ -18,12 +16,9 @@ import './LifepathList.scss';
 
 const LifepathList = ({
     lifepathCount,
-    selectedBornLifepath,
     selectedLifepaths,
     bornLifepaths,
     lifepaths,
-    onSelectBornLifepath,
-    onUnselectBornLifepath,
     onAddLifepath,
     onRemoveLifepath,
     onUpdateSectionsLockState
@@ -81,16 +76,6 @@ const LifepathList = ({
         return filteredLifepaths;
     };
 
-    const handleSelectBornLifepath = lifepath => {
-        onSelectBornLifepath(lifepath)
-        onUpdateSectionsLockState();
-    }
-
-    const handleUnselectBornLifepath = () => {
-        onUnselectBornLifepath()
-        onUpdateSectionsLockState();
-    }
-
     const handleAddLifepath = (lifepath, index) => {
         onAddLifepath(lifepath, index)
         onUpdateSectionsLockState();
@@ -109,30 +94,28 @@ const LifepathList = ({
                     <Header as="h4" className="LifepathHeader">
                         {i === 0 ? 'Born lifepath' : `Lifepath ${i + 1}`}
                     </Header>
-                    {i === 0
-                        ? <CardList
-                            header="Select your character's born lifepath"
-                            type="lifepath"
-                            choices={filterBornLifepath()}
-                            items={selectedBornLifepath}
-                            maxCount={1}
-                            onSelect={lifepath => handleSelectBornLifepath(lifepath)}
-                            onRemove={() => handleUnselectBornLifepath()}
-                        />
-                        : <CardList
-                            header="Select a lifepath"
-                            type="lifepath"
-                            choices={getRestrictedLifepaths(i)}
-                            items={selectedLifepaths
-                                .filter(lifepath => lifepath.index === i)
-                                .map(lifepath => lifepath.lifepath)
-                            }
-                            maxCount={1}
-                            sections={getLifepathSettings()}
-                            onSelect={lifepath => handleAddLifepath(lifepath, i)}
-                            onRemove={() => handleRemoveLifepath(i)}
-                        />
-                    }
+                    <CardList
+                        header={i === 0
+                            ? "Select your character's born lifepath"
+                            : "Select a lifepath"
+                        }
+                        type="lifepath"
+                        choices={i === 0
+                            ? filterBornLifepath()
+                            : getRestrictedLifepaths()
+                        }
+                        items={selectedLifepaths
+                            .filter(lifepath => lifepath.index === i)
+                            .map(lifepath => lifepath.lifepath)
+                        }
+                        maxCount={1}
+                        sections={i === 0
+                            ? undefined
+                            : getLifepathSettings()
+                        }
+                        onSelect={lifepath => handleAddLifepath(lifepath, i)}
+                        onRemove={() => handleRemoveLifepath(i)}
+                    />
                 </React.Fragment>
             )
         }
@@ -150,14 +133,11 @@ const mapStateToProps = state => ({
     lifepathCount: state.editor.lifepaths.count,
     bornLifepaths: getBornLifepaths(state),
     lifepaths: getLifepaths(state),
-    selectedBornLifepath: state.editor.lifepaths.selectedBornLifepath,
     selectedLifepaths: state.editor.lifepaths.selectedLifepaths
 });
 
 
 const mapDispatchToProps = dispatch => ({
-    onSelectBornLifepath: lifepath => dispatch(selectBornLifepath(lifepath)),
-    onUnselectBornLifepath: () => dispatch(unselectBornLifepath()),
     onAddLifepath: (lifepath, index) => dispatch(addLifepath(lifepath, index)),
     onRemoveLifepath: index => dispatch(removeLifepath(index)),
     onUpdateSectionsLockState: () => dispatch(updateSectionsLockState())

@@ -25,15 +25,6 @@ export const selectLifepathCount = count => ({
     count
 });
 
-export const selectBornLifepath = lifepath => ({
-    type: types.SELECT_BORN_LIFEPATH,
-    lifepath
-});
-
-export const unselectBornLifepath = () => ({
-    type: types.UNSELECT_BORN_LIFEPATH
-});
-
 export const addLifepath = (lifepath, index) => ({
     type: types.ADD_LIFEPATH,
     lifepath,
