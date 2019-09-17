@@ -21,7 +21,7 @@ const selectedRace = (state = "", action) => {
     }
 };
 
-const activeSection = (state = sections[0], action) => {
+const activeSection = (state = sections[4], action) => {
     switch (action.type) {
         case types.SET_ACTIVE_SECTION:
             return action.section;

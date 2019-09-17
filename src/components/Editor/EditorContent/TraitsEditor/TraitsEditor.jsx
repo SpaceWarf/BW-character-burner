@@ -3,11 +3,13 @@ import { Header } from 'semantic-ui-react';
 import TraitsTable from './TraitsTable/TraitsTable.jsx';
 import './TraitsEditor.scss';
 
-const TraitsEditor = ({ lifepathTraits, traitPoints }) => {
+const TraitsEditor = () => {
     return (
         <div className="TraitsEditor">
             <Header className="section" as="h1">Select your character's traits</Header>
-            <TraitsTable />
+            <div className="content">
+                <TraitsTable />
+            </div>
         </div>
     );
 };

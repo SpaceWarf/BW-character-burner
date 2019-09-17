@@ -1,0 +1,10 @@
+.ModalQuestion {
+    display: flex;
+    margin: 10px 0;
+
+    & > .Question {
+        & > .ui.header {
+            margin: 0;
+        }
+    }
+}
