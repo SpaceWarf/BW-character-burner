@@ -98,19 +98,19 @@ class HealthModal extends React.Component {
                     />
                     <ModalQuestion
                         question="Is the character a Dwarf, Elf or Orc?"
-                        hint="Add 1 from the starting Health due to their mystical/immortal nature"
+                        hint="Add 1 to the starting Health due to their mystical/immortal nature"
                         checked={populatedAnswers.isNotMan}
                         onChange={(_, { checked }) => this.handleAnswerQuestion('isNotMan', checked)}
                     />
                     <ModalQuestion
                         question="Is the character athletic and active?"
-                        hint="Add 1 from the starting Health"
+                        hint="Add 1 to the starting Health"
                         checked={populatedAnswers.isAthletic}
                         onChange={(_, { checked }) => this.handleAnswerQuestion('isAthletic', checked)}
                     />
                     <ModalQuestion
                         question={`Does the character live in a really clean and happy place (like the hills from The Sound of Music)?`}
-                        hint="Add 1 from the starting Health"
+                        hint="Add 1 to the starting Health"
                         checked={populatedAnswers.liveInCleanPlace}
                         onChange={(_, { checked }) => this.handleAnswerQuestion('liveInCleanPlace', checked)}
                     />
@@ -119,13 +119,12 @@ class HealthModal extends React.Component {
                     <Header as="h2">Health score: {scoreString}</Header>
                     <div>
                         <Button
+                            onClick={this.handleClose}
+                        >Cancel</Button>
+                        <Button
                             onClick={this.handleConfirm}
                             positive
                         >Confirm</Button>
-                        <Button
-                            onClick={this.handleClose}
-                            negative
-                        >Cancel</Button>
                     </div>
                 </Modal.Actions>
             </Modal>

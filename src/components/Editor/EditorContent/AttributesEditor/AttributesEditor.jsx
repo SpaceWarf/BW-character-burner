@@ -2,7 +2,6 @@ import React from "react";
 import { connect } from 'react-redux';
 import { Header } from 'semantic-ui-react';
 import Attribute from './Attribute/Attribute.jsx';
-import { attributeDescriptions } from '#Utilities/config/editor.config.js';
 import {
     getHealthScore,
     getSteelScore,
@@ -10,6 +9,7 @@ import {
     getMortalWoundScore
 } from '#Utilities/redux-selectors.js';
 import HealthModal from './HealthModal/HealthModal.jsx';
+import SteelModal from './SteelModal/SteelModal.jsx';
 import './AttributesEditor.scss';
 
 const AttributesEditor = ({ healthScore, steelScore, reflexScore, mortalWoundScore }) => {
@@ -20,23 +20,24 @@ const AttributesEditor = ({ healthScore, steelScore, reflexScore, mortalWoundSco
                 <Attribute
                     name="Health"
                     value={healthScore}
-                    description={attributeDescriptions.health}
+                    description={"Health is the average of Will and Forte plus or minus the answers to the health questions."}
                     QuestionModal={HealthModal}
                 />
                 <Attribute
                     name="Steel"
                     value={steelScore}
-                    description={attributeDescriptions.steel}
+                    description={"Steel starts at 3 and the final result is determined by the answers to the Steel questions."}
+                    QuestionModal={SteelModal}
                 />
                 <Attribute
                     name="Reflexes"
                     value={reflexScore}
-                    description={attributeDescriptions.reflexes}
+                    description={"Reflexes is the average of Perception, Agility and Speed (rounded down)."}
                 />
                 <Attribute
                     name="Mortal Wound"
                     value={mortalWoundScore}
-                    description={attributeDescriptions.mortalWound}
+                    description={"Mortal Wound is the average of Power and Forte (rounded down) plus a base of 6."}
                 />
             </div>
         </div>

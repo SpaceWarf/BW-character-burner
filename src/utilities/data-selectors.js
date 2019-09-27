@@ -85,3 +85,37 @@ export const getHealthScoreBonusFromAnswers = answers => {
     }
     return appliedBonus;
 };
+
+export const getSteelScoreBonusFromAnswers = answers => {
+    let appliedBonus = 0;
+    if (answers.wasSoldier) {
+        appliedBonus++;
+    }
+    if (answers.wasWounded) {
+        if (answers.wasSoldier) {
+            appliedBonus++;
+        } else {
+            appliedBonus--;
+        }
+    }
+    if (answers.hasMurdered) {
+        appliedBonus++;
+    }
+    if (answers.wasTortured) {
+        // TODO: handle stat bonuses
+        appliedBonus++;
+    }
+    if (answers.wasSheltered) {
+        appliedBonus--;
+    }
+    if (answers.isCompetitive) {
+        appliedBonus++;
+    }
+    if (answers.gaveBirth) {
+        appliedBonus++;
+    }
+    if (answers.isGifted) {
+        appliedBonus++;
+    }
+    return appliedBonus;
+};

@@ -3,7 +3,8 @@ const {
     getLifepathDataSet,
     getSkillData,
     getTraitData,
-    getHealthScoreBonusFromAnswers
+    getHealthScoreBonusFromAnswers,
+    getSteelScoreBonusFromAnswers
 } = require('./data-selectors.js');
 const { statPools } = require('./config/editor.config.js');
 const get = require('lodash/get');
@@ -17,6 +18,7 @@ const getSelectedStats = state => state.editor.stats.selectedStats;
 const getAdvancedSkills = state => state.editor.skills.advancedSkills;
 const getBoughtTraits = state => state.editor.traits.boughtTraits;
 const getHealthAnswers = state => state.editor.attributes.healthAnswers;
+const getSteelAnswers = state => state.editor.attributes.steelAnswers;
 
 // Lifepaths
 export const getBornLifepaths = createSelector(
@@ -283,7 +285,7 @@ export const getHealthScoreBonus = createSelector(
 );
 
 export const getBaseHealthScore = createSelector(
-    [getSelectedStats, getHealthScoreBonus], (selectedStats, bonus) => {
+    [getSelectedStats], (selectedStats) => {
         return Math.floor((selectedStats.will + selectedStats.forte) / 2);
     }
 );
@@ -294,9 +296,15 @@ export const getHealthScore = createSelector(
     }
 );
 
+export const getSteelScoreBonus = createSelector(
+    [getSteelAnswers], steelAnswers => {
+        return getSteelScoreBonusFromAnswers(steelAnswers)
+    }
+);
+
 export const getSteelScore = createSelector(
-    [getSelectedStats], selectedStats => {
-        return 3
+    [getSteelScoreBonus], bonus => {
+        return 3 + bonus
     }
 );
 

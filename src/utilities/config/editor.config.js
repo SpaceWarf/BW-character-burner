@@ -148,10 +148,3 @@ export const statPools = [
         physical: 9
     },
 ];
-
-export const attributeDescriptions = {
-    health: "Health is the average of Will and Forte plus or minues the answers to the health questions.",
-    steel: "Steel starts at 3 and the final result is determined by the answers to the Steel questions.",
-    reflexes: "Reflexes is the average of Perception, Agility and Speed (rounded down).",
-    mortalWound: "Mortal Wound is the average of Power and Forte (rounded down) plus a base of 6."
-};
