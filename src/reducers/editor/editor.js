@@ -10,6 +10,7 @@ import lifepaths from './lifepaths.js';
 import stats from './stats';
 import skills from './skills';
 import traits from './traits';
+import attributes from './attributes';
 import * as types from "#Actions/types.js";
 
 const selectedRace = (state = "", action) => {
@@ -83,5 +84,6 @@ export default combineReducers({
     lifepaths,
     stats,
     skills,
-    traits
+    traits,
+    attributes
 });

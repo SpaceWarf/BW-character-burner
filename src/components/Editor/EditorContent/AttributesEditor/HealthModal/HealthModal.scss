@@ -1,0 +1,14 @@
+.HealthModal {
+    & > .actions {
+        display: flex;
+        justify-content: space-between;
+
+        & > .ui.header {
+            margin: 0;
+        }
+
+        & > div > button:first-child {
+            margin-right: 10px;
+        }
+    }
+}

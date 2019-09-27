@@ -20,7 +20,14 @@ const selectedStatBonuses = (state = { bonus: [], malus: [] }, action) => {
     }
 };
 
-const selectedStats = (state = {}, action) => {
+const selectedStats = (state = {
+    will: 4,
+    perception: 2,
+    forte: 4,
+    agility: 4,
+    power: 2,
+    speed: 3
+}, action) => {
     switch (action.type) {
         case types.SELECT_STAT:
             const newState = { ...state };

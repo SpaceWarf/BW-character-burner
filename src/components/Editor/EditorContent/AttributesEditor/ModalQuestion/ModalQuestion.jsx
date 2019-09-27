@@ -9,7 +9,12 @@ const ModalQuestion = ({ question, hint, checked, onChange }) => {
                 <Header as="h3">{question}</Header>
                 <i>{hint}</i>
             </div>
-            <Checkbox checked={checked} />
+            <Checkbox
+                checked={checked}
+                label="Yes"
+                onChange={onChange}
+                toggle
+            />
         </div>
     );
 };

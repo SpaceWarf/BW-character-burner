@@ -83,3 +83,14 @@ export const removeTrait = trait => ({
     type: types.REMOVE_TRAIT,
     trait
 });
+
+// Attributes editor
+export const answerHealthQuestions = answers => ({
+    type: types.ANSWER_HEALTH_QUESTIONS,
+    answers
+});
+
+export const answerSteelQuestions = answers => ({
+    type: types.ANSWER_STEEL_QUESTIONS,
+    answers
+});

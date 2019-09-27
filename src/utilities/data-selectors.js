@@ -59,3 +59,29 @@ export const getSkillData = name => {
 export const getTraitData = name => {
     return traits.find(trait => trait.name === name);
 };
+
+export const getHealthScoreBonusFromAnswers = answers => {
+    let appliedBonus = 0;
+    if (answers.liveInFilth) {
+        appliedBonus++;
+    }
+    if (answers.isFrail) {
+        appliedBonus++;
+    }
+    if (answers.isSeverelyWounded) {
+        appliedBonus++;
+    }
+    if (answers.wasTortured) {
+        appliedBonus++;
+    }
+    if (answers.isNotMan) {
+        appliedBonus--;
+    }
+    if (answers.isAthletic) {
+        appliedBonus--;
+    }
+    if (answers.liveInCleanPlace) {
+        appliedBonus--;
+    }
+    return appliedBonus;
+};
