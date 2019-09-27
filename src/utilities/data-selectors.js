@@ -63,25 +63,25 @@ export const getTraitData = name => {
 export const getHealthScoreBonusFromAnswers = answers => {
     let appliedBonus = 0;
     if (answers.liveInFilth) {
-        appliedBonus++;
+        appliedBonus--;
     }
     if (answers.isFrail) {
-        appliedBonus++;
+        appliedBonus--;
     }
     if (answers.isSeverelyWounded) {
-        appliedBonus++;
+        appliedBonus--;
     }
     if (answers.wasTortured) {
-        appliedBonus++;
+        appliedBonus--;
     }
     if (answers.isNotMan) {
-        appliedBonus--;
+        appliedBonus++;
     }
     if (answers.isAthletic) {
-        appliedBonus--;
+        appliedBonus++;
     }
     if (answers.liveInCleanPlace) {
-        appliedBonus--;
+        appliedBonus++;
     }
     return appliedBonus;
 };
