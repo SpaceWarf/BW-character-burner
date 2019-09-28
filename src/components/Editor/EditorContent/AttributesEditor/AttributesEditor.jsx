@@ -15,7 +15,7 @@ import './AttributesEditor.scss';
 const AttributesEditor = ({ healthScore, steelScore, reflexScore, mortalWoundScore }) => {
     return (
         <div className="AttributesEditor">
-            <Header className="section" as="h1">Attributes editor</Header>
+            <Header className="section" as="h1">Answer the attributes questions</Header>
             <div className="content">
                 <Attribute
                     name="Health"

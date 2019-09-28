@@ -86,7 +86,7 @@ export const getHealthScoreBonusFromAnswers = answers => {
     return appliedBonus;
 };
 
-export const getSteelScoreBonusFromAnswers = answers => {
+export const getSteelScoreBonusFromAnswers = (answers, stats) => {
     let appliedBonus = 0;
     if (answers.wasSoldier) {
         appliedBonus++;
@@ -102,8 +102,11 @@ export const getSteelScoreBonusFromAnswers = answers => {
         appliedBonus++;
     }
     if (answers.wasTortured) {
-        // TODO: handle stat bonuses
-        appliedBonus++;
+        if (stats.will >= 5) {
+            appliedBonus++;
+        } else if (stats.will <= 3) {
+            appliedBonus--;
+        }
     }
     if (answers.wasSheltered) {
         appliedBonus--;
@@ -115,6 +118,18 @@ export const getSteelScoreBonusFromAnswers = answers => {
         appliedBonus++;
     }
     if (answers.isGifted) {
+        appliedBonus++;
+    }
+    if (stats.perception >= 6) {
+        appliedBonus++;
+    }
+    if (stats.will >= 5) {
+        appliedBonus++;
+    }
+    if (stats.will >= 7) {
+        appliedBonus++;
+    }
+    if (stats.forte >= 6) {
         appliedBonus++;
     }
     return appliedBonus;

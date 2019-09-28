@@ -2,7 +2,7 @@ import React from "react";
 import { Header, Checkbox } from 'semantic-ui-react';
 import './ModalQuestion.scss';
 
-const ModalQuestion = ({ question, hint, checked, onChange }) => {
+const ModalQuestion = ({ question, hint, bonus, checked, disabled, onChange }) => {
     return (
         <div className="ModalQuestion">
             <div className="Question">
@@ -11,10 +11,12 @@ const ModalQuestion = ({ question, hint, checked, onChange }) => {
             </div>
             <Checkbox
                 checked={checked}
-                label="Yes"
+                label={`Yes`}
                 onChange={onChange}
+                disabled={disabled}
                 toggle
             />
+            {checked && <p>{bonus}</p>}
         </div>
     );
 };

@@ -75,48 +75,55 @@ class HealthModal extends React.Component {
                     <ModalQuestion
                         question="Does the character live in squalor and filth?"
                         hint="Substract 1 from the starting Health"
+                        bonus="-1"
                         checked={populatedAnswers.liveInFilth}
                         onChange={(_, { checked }) => this.handleAnswerQuestion('liveInFilth', checked)}
                     />
                     <ModalQuestion
                         question="Is the character frail or sickly?"
                         hint="Substract 1 from the starting Health"
+                        bonus="-1"
                         checked={populatedAnswers.isFrail}
                         onChange={(_, { checked }) => this.handleAnswerQuestion('isFrail', checked)}
                     />
                     <ModalQuestion
                         question="Was the character severely wounded in the past?"
                         hint="Substract 1 from the starting Health"
+                        bonus="-1"
                         checked={populatedAnswers.isSeverelyWounded}
                         onChange={(_, { checked }) => this.handleAnswerQuestion('isSeverelyWounded', checked)}
                     />
                     <ModalQuestion
                         question="Has the character been tortured or enslaved?"
                         hint="Substract 1 from the starting Health"
+                        bonus="-1"
                         checked={populatedAnswers.wasTortured}
                         onChange={(_, { checked }) => this.handleAnswerQuestion('wasTortured', checked)}
                     />
                     <ModalQuestion
                         question="Is the character a Dwarf, Elf or Orc?"
                         hint="Add 1 to the starting Health due to their mystical/immortal nature"
+                        bonus="+1"
                         checked={populatedAnswers.isNotMan}
                         onChange={(_, { checked }) => this.handleAnswerQuestion('isNotMan', checked)}
                     />
                     <ModalQuestion
                         question="Is the character athletic and active?"
                         hint="Add 1 to the starting Health"
+                        bonus="+1"
                         checked={populatedAnswers.isAthletic}
                         onChange={(_, { checked }) => this.handleAnswerQuestion('isAthletic', checked)}
                     />
                     <ModalQuestion
                         question={`Does the character live in a really clean and happy place (like the hills from The Sound of Music)?`}
                         hint="Add 1 to the starting Health"
+                        bonus="+1"
                         checked={populatedAnswers.liveInCleanPlace}
                         onChange={(_, { checked }) => this.handleAnswerQuestion('liveInCleanPlace', checked)}
                     />
                 </Modal.Content>
                 <Modal.Actions>
-                    <Header as="h2">Health score: {scoreString}</Header>
+                    <Header as="h3">Health score: {scoreString}</Header>
                     <div>
                         <Button
                             onClick={this.handleClose}

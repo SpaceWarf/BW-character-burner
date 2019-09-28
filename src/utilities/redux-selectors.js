@@ -297,8 +297,8 @@ export const getHealthScore = createSelector(
 );
 
 export const getSteelScoreBonus = createSelector(
-    [getSteelAnswers], steelAnswers => {
-        return getSteelScoreBonusFromAnswers(steelAnswers)
+    [getSteelAnswers, getSelectedStats], (steelAnswers, selectedStats) => {
+        return getSteelScoreBonusFromAnswers(steelAnswers, selectedStats)
     }
 );
 
