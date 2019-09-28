@@ -1,0 +1,25 @@
+@import "common";
+
+.Attribute.ui.card {
+    width: calc(calc(#{$content-width} / 2) - 40px);
+    margin: 5px 0 !important;
+
+    & > .content > .header {
+        display: flex;
+        border-bottom: 1px solid $secondary-font-color;
+
+        & > p > .ui.button {
+            background: none;
+            font-size: 15px;
+            padding-top: 0;
+        }
+
+        & > .left {
+            text-align: end;
+        }
+
+        & > .center {
+            text-align: center;
+        }
+    }
+}

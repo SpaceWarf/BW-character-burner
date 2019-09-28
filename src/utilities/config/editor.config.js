@@ -147,4 +147,4 @@ export const statPools = [
         mental: 6,
         physical: 9
     },
-]
+];

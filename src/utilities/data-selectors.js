@@ -59,3 +59,78 @@ export const getSkillData = name => {
 export const getTraitData = name => {
     return traits.find(trait => trait.name === name);
 };
+
+export const getHealthScoreBonusFromAnswers = answers => {
+    let appliedBonus = 0;
+    if (answers.liveInFilth) {
+        appliedBonus--;
+    }
+    if (answers.isFrail) {
+        appliedBonus--;
+    }
+    if (answers.isSeverelyWounded) {
+        appliedBonus--;
+    }
+    if (answers.wasTortured) {
+        appliedBonus--;
+    }
+    if (answers.isNotMan) {
+        appliedBonus++;
+    }
+    if (answers.isAthletic) {
+        appliedBonus++;
+    }
+    if (answers.liveInCleanPlace) {
+        appliedBonus++;
+    }
+    return appliedBonus;
+};
+
+export const getSteelScoreBonusFromAnswers = (answers, stats) => {
+    let appliedBonus = 0;
+    if (answers.wasSoldier) {
+        appliedBonus++;
+    }
+    if (answers.wasWounded) {
+        if (answers.wasSoldier) {
+            appliedBonus++;
+        } else {
+            appliedBonus--;
+        }
+    }
+    if (answers.hasMurdered) {
+        appliedBonus++;
+    }
+    if (answers.wasTortured) {
+        if (stats.will >= 5) {
+            appliedBonus++;
+        } else if (stats.will <= 3) {
+            appliedBonus--;
+        }
+    }
+    if (answers.wasSheltered) {
+        appliedBonus--;
+    }
+    if (answers.isCompetitive) {
+        appliedBonus++;
+    }
+    if (answers.gaveBirth) {
+        appliedBonus++;
+    }
+    if (answers.isGifted) {
+        appliedBonus++;
+    }
+    if (stats.perception >= 6) {
+        appliedBonus++;
+    }
+    if (stats.will >= 5) {
+        appliedBonus++;
+    }
+    if (stats.will >= 7) {
+        appliedBonus++;
+    }
+    if (stats.forte >= 6) {
+        appliedBonus++;
+    }
+    return appliedBonus;
+};

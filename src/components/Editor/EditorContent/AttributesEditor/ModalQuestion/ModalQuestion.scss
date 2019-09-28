@@ -1,0 +1,21 @@
+.ModalQuestion {
+    display: flex;
+    margin-bottom: 30px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    & > .Question {
+        width: 600px;
+        margin-right: 50px;
+
+        & > .ui.header {
+            margin: 0;
+        }
+    }
+
+    & > p {
+        padding-left: 20px;
+    }
+}

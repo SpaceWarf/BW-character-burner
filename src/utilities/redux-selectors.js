@@ -2,7 +2,9 @@ const { createSelector } = require('reselect');
 const {
     getLifepathDataSet,
     getSkillData,
-    getTraitData
+    getTraitData,
+    getHealthScoreBonusFromAnswers,
+    getSteelScoreBonusFromAnswers
 } = require('./data-selectors.js');
 const { statPools } = require('./config/editor.config.js');
 const get = require('lodash/get');
@@ -15,6 +17,8 @@ const getSelectedStatBonuses = state => state.editor.stats.selectedStatBonuses;
 const getSelectedStats = state => state.editor.stats.selectedStats;
 const getAdvancedSkills = state => state.editor.skills.advancedSkills;
 const getBoughtTraits = state => state.editor.traits.boughtTraits;
+const getHealthAnswers = state => state.editor.attributes.healthAnswers;
+const getSteelAnswers = state => state.editor.attributes.steelAnswers;
 
 // Lifepaths
 export const getBornLifepaths = createSelector(
@@ -270,5 +274,50 @@ export const getTraitPointsLeft = createSelector(
             return total + trait.cost;
         }, 0);
         return traitPoints - requiredTraits.length - spentPoints;
+    }
+);
+
+// Attributes
+export const getHealthScoreBonus = createSelector(
+    [getHealthAnswers], healthAnswers => {
+        return getHealthScoreBonusFromAnswers(healthAnswers)
+    }
+);
+
+export const getBaseHealthScore = createSelector(
+    [getSelectedStats], (selectedStats) => {
+        return Math.floor((selectedStats.will + selectedStats.forte) / 2);
+    }
+);
+
+export const getHealthScore = createSelector(
+    [getBaseHealthScore, getHealthScoreBonus], (baseHealthScore, bonus) => {
+        return baseHealthScore + bonus;
+    }
+);
+
+export const getSteelScoreBonus = createSelector(
+    [getSteelAnswers, getSelectedStats], (steelAnswers, selectedStats) => {
+        return getSteelScoreBonusFromAnswers(steelAnswers, selectedStats)
+    }
+);
+
+export const getSteelScore = createSelector(
+    [getSteelScoreBonus], bonus => {
+        return 3 + bonus
+    }
+);
+
+export const getReflexScore = createSelector(
+    [getSelectedStats], selectedStats => {
+        return Math.floor(
+            (selectedStats.perception + selectedStats.agility + selectedStats.speed) / 3
+        )
+    }
+);
+
+export const getMortalWoundScore = createSelector(
+    [getSelectedStats], selectedStats => {
+        return 6 + Math.floor((selectedStats.power + selectedStats.forte) / 2)
     }
 );

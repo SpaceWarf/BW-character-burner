@@ -10,6 +10,7 @@ import lifepaths from './lifepaths.js';
 import stats from './stats';
 import skills from './skills';
 import traits from './traits';
+import attributes from './attributes';
 import * as types from "#Actions/types.js";
 
 const selectedRace = (state = "", action) => {
@@ -33,44 +34,38 @@ const activeSection = (state = sections[0], action) => {
 const lockedSections = (state = sections.slice(1), action) => {
     switch (action.type) {
         case types.UPDATE_SECTIONS_LOCK_STATE:
-            const newState = [];
             const editorState = action.state.editor;
 
-            // Lifepath section lock conditions
+            // Stats section lock conditions
             if (editorState.lifepaths.selectedLifepaths.length !== editorState.lifepaths.count) {
                 return sections.slice(1);
             }
 
-            // Stats section lock conditions
+            // Skills section lock conditions
             const mentalPointsLeft = getMentalPointsLeftToAssign(action.state);
             const physicalPointsLeft = getPhysicalPointsLeftToAssign(action.state);
             if (mentalPointsLeft !== 0 || physicalPointsLeft !== 0) {
                 return sections.slice(2);
             }
 
-            // Skills section lock conditions
+            // Traits section lock conditions
             const skillPointsLeft = getSkillPointsLeft(action.state);
             if (skillPointsLeft.lifepath !== 0 || skillPointsLeft.general !== 0) {
                 return sections.slice(3);
             }
 
-            // Traits section lock conditions
+            // Attributes & Resources section lock conditions
             const traitPointsLeft = getTraitPointsLeft(action.state);
             if (traitPointsLeft !== 0) {
                 return sections.slice(4);
             }
 
-            // Attributes section lock conditions
-            if (true) {
-                return sections.slice(5);
-            }
-
-            // Resources section lock conditions
+            // Finalize section lock conditions
             if (true) {
                 return sections.slice(6);
             }
 
-            return newState;
+            return [];
         default:
             return state;
     }
@@ -83,5 +78,6 @@ export default combineReducers({
     lifepaths,
     stats,
     skills,
-    traits
+    traits,
+    attributes
 });

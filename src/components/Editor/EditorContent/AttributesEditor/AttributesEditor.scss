@@ -1,11 +1,14 @@
-@import 'common';
+@import "common";
 
-.TraitsEditor {
+.AttributesEditor {
     padding: $section-padding;
     height: 100%;
     width: $content-width;
 
     & > .content {
         padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
     }
 }
