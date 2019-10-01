@@ -1,0 +1,29 @@
+.ui.vertical.menu .item>.header.MainHeader:not(.ui) {
+    font-size: 25px;
+}
+
+.EditorSidebarSummary {
+    
+    & > .SectionHeader {
+        color: white;
+        
+        &:before, &:after {
+            color: white;
+        }
+    }
+
+    & > p {
+        font-size: 17px;
+        text-align: center;
+    }
+
+    & > .block {
+        display: flex;
+        flex-wrap: wrap;
+
+        & > p {
+            font-size: 17px;
+            text-align: center;
+        }
+    }
+}
