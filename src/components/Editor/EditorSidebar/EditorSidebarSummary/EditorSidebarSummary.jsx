@@ -58,12 +58,12 @@ const EditorSidebarSummary = ({
                     <p className="value">{stats.perception || 0}</p>
                 </div>
                 <div className="thirds">
-                    <p className="label">Forte :</p>
-                    <p className="value">{stats.forte || 0}</p>
+                    <p className="label">Power :</p>
+                    <p className="value">{stats.power || 0}</p>
                 </div>
                 <div className="thirds">
-                    <p className="label">Speed :</p>
-                    <p className="value">{stats.power || 0}</p>
+                    <p className="label">Forte :</p>
+                    <p className="value">{stats.forte || 0}</p>
                 </div>
                 <div className="thirds">
                     <p className="label">Agility :</p>
