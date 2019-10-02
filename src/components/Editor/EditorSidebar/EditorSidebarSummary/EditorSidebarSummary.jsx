@@ -1,7 +1,8 @@
 import React from "react";
 import { connect } from 'react-redux';
-import { Menu } from 'semantic-ui-react';
+import { Menu, Header } from 'semantic-ui-react';
 import {
+    getAge,
     getAllSkills,
     getAllTraits,
     getHealthScore,
@@ -9,12 +10,14 @@ import {
     getReflexScore,
     getMortalWoundScore
 } from '#Utilities/redux-selectors.js';
+import CardListModal from '#Components/Common/CardListModal/CardListModal.jsx';
 import './EditorSidebarSummary.scss';
 
 const EditorSidebarSummary = ({
-    selectedRace,
-    selectedLifepaths,
-    selectedStats,
+    race,
+    lifepaths,
+    stats,
+    age,
     skills,
     traits,
     healthScore,
@@ -24,40 +27,102 @@ const EditorSidebarSummary = ({
 }) => {
     return (
         <Menu.Item className="EditorSidebarSummary">
-            <Menu.Header className="MainHeader">Character Summary</Menu.Header>
+            <Header as="h2" className="MainHeader">Character Summary</Header>
             <div className="block StockAge">
-                <p className="halfs">Stock: {selectedRace || "—"}</p>
-                <p className="halfs">Age: {false || 0}</p>
+                <div className="thirds">
+                    <p className="label">Stock :</p>
+                    <p className="value">{race || "—"}</p>
+                </div>
+                <div className="thirds">
+                    <p className="label">Age :</p>
+                    <p className="value">{age || 0}</p>
+                </div>
+                <div className="thirds">
+                    <p className="label">Lifepaths :</p>
+                    <p className="value">{lifepaths.length || 0}</p>
+                    {lifepaths.length > 0 && <CardListModal
+                        header="Character lifepaths"
+                        data={lifepaths.map(lifepath => lifepath.lifepath)}
+                        type="lifepath"
+                    />}
+                </div>
             </div>
-            <p>Lifepaths: {selectedLifepaths.length || 0}</p>
-            <Menu.Header className="SectionHeader">Stats</Menu.Header>
-            <div className="block MentalStats">
-                <p className="halfs">Will: {selectedStats.will || 0}</p>
-                <p className="halfs">Perception: {selectedStats.perception || 0}</p>
+            <Header as="h3" className="SectionHeader">Stats</Header>
+            <div className="block Stats">
+                <div className="thirds">
+                    <p className="label">Will :</p>
+                    <p className="value">{stats.will || 0}</p>
+                </div>
+                <div className="thirds">
+                    <p className="label">Perception :</p>
+                    <p className="value">{stats.perception || 0}</p>
+                </div>
+                <div className="thirds">
+                    <p className="label">Forte :</p>
+                    <p className="value">{stats.forte || 0}</p>
+                </div>
+                <div className="thirds">
+                    <p className="label">Speed :</p>
+                    <p className="value">{stats.power || 0}</p>
+                </div>
+                <div className="thirds">
+                    <p className="label">Agility :</p>
+                    <p className="value">{stats.agility || 0}</p>
+                </div>
+                <div className="thirds">
+                    <p className="label">Speed :</p>
+                    <p className="value">{stats.speed || 0}</p>
+                </div>
             </div>
-            <div className="block PhysicalStats">
-                <p className="halfs">Forte: {selectedStats.forte || 0}</p>
-                <p className="halfs">Power: {selectedStats.power || 0}</p>
-                <p className="halfs">Agility: {selectedStats.agility || 0}</p>
-                <p className="halfs">Speed: {selectedStats.speed || 0}</p>
+            <Header as="h3" className="SectionHeader">Skills & Traits</Header>
+            <div className="block SkillsTraits">
+                <div>
+                    <p className="label">Skills :</p>
+                    <p className="value">{skills.length || 0}</p>
+                    {skills.length > 0 && <CardListModal
+                        header="Character skills"
+                        data={skills}
+                        type="skill"
+                    />}
+                </div>
+                <div>
+                    <p className="label">Traits :</p>
+                    <p className="value">{traits.length || 0}</p>
+                    {traits.length > 0 && <CardListModal
+                        header="Character traits"
+                        data={traits}
+                        type="trait"
+                    />}
+                </div>
             </div>
-            <p>Skills: {skills.length || 0}</p>
-            <p>Traits: {traits.length || 0}</p>
-            <Menu.Header className="SectionHeader">Attributes</Menu.Header>
+            <Header as="h3" className="SectionHeader">Attributes</Header>
             <div className="block Attributes">
-                <p className="halfs">Health: {healthScore || 0}</p>
-                <p className="halfs">Steel: {steelScore || 0}</p>
-                <p className="halfs">Reflexes: {reflexScore || 0}</p>
-                <p className="halfs">Mortal Wound: {mortalWoundScore || 0}</p>
+                <div className="halfs">
+                    <p className="label">Health :</p>
+                    <p className="value">{healthScore || 0}</p>
+                </div>
+                <div className="halfs">
+                    <p className="label">Steel :</p>
+                    <p className="value">{steelScore || 0}</p>
+                </div>
+                <div className="halfs">
+                    <p className="label">Reflexes :</p>
+                    <p className="value">{reflexScore || 0}</p>
+                </div>
+                <div className="halfs">
+                    <p className="label">Mortal Wound :</p>
+                    <p className="value">{mortalWoundScore || 0}</p>
+                </div>
             </div>
         </Menu.Item>
     );
 };
 
 const mapStateToProps = state => ({
-    selectedRace: state.editor.selectedRace,
-    selectedLifepaths: state.editor.lifepaths.selectedLifepaths,
-    selectedStats: state.editor.stats.selectedStats,
+    race: state.editor.selectedRace,
+    lifepaths: state.editor.lifepaths.selectedLifepaths,
+    stats: state.editor.stats.selectedStats,
+    age: getAge(state),
     skills: getAllSkills(state),
     traits: getAllTraits(state),
     healthScore: getHealthScore(state),

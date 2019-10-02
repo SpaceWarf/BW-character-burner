@@ -7,7 +7,7 @@ import {
     getTraitPointsLeft
 } from '#Utilities/redux-selectors.js';
 import { buyTrait, removeTrait, updateSectionsLockState } from '#Actions/editor.js';
-import CardModal from '#Components/Common/CardModal/CardModal.jsx';
+import CardListModal from '#Components/Common/CardListModal/CardListModal.jsx';
 import './TraitRow.scss';
 
 const TraitRow = ({
@@ -58,7 +58,7 @@ const TraitRow = ({
                 />
             </Table.Cell>
             <Table.Cell textAlign="center">
-                <CardModal data={trait} type="trait" />
+                <CardListModal data={[trait]} type="trait" simple />
                 <Button
                     className={general ? "" : "hidden"}
                     icon="delete"

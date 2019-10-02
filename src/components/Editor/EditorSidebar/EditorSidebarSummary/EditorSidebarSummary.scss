@@ -1,29 +1,46 @@
-.ui.vertical.menu .item>.header.MainHeader:not(.ui) {
-    font-size: 25px;
-}
-
 .EditorSidebarSummary {
-    
-    & > .SectionHeader {
+
+    & > .ui.header.MainHeader {
         color: white;
-        
-        &:before, &:after {
-            color: white;
-        }
+    }
+    
+    & > .ui.header.SectionHeader {
+        color: white;
+        margin: 5px 0 5px 0;
     }
 
     & > p {
-        font-size: 17px;
+        font-size: 13px;
         text-align: center;
     }
 
     & > .block {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 10px 0;
 
-        & > p {
-            font-size: 17px;
+        & > div {
+            display: flex;
+            justify-content: center;
+            font-size: 13px;
             text-align: center;
+            margin: 0 0 10px 0;
+            
+            & > .ui.button {
+                color: white;
+                background: none;
+                padding: 0 0 0 5px;
+            }
+
+            & > .label {
+                margin: 0;
+            }
+
+            & > .value {
+                padding-left: 7px;
+                margin: 0;
+            }
         }
     }
 }
