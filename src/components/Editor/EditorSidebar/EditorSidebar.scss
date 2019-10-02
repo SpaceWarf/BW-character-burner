@@ -9,6 +9,7 @@
         height: inherit;
         border-radius: 0;
         width: $sidebar-width;
+        padding-bottom: $editor-footer-height;
 
         .item {
             font-size: 20px;
@@ -18,6 +19,10 @@
             &.disabled {
                 color: $secondary-font-color !important;
             }
+        }
+
+        &::after {
+            display: none;
         }
     }
 }
