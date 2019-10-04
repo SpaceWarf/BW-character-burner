@@ -20,6 +20,9 @@ const advancedSkills = (state = [], action) => {
             ];
         case types.REMOVE_GENERAL_SKILL:
             return state.filter(skill => skill.name !== action.skill);
+        case types.REMOVE_LIFEPATH:
+        case types.SELECT_LIFEPATH_COUNT:
+            return [];
         default:
             return state;
     }
@@ -34,6 +37,9 @@ const openedGeneralSkills = (state = [], action) => {
             ];
         case types.REMOVE_GENERAL_SKILL:
             return state.filter(skill => skill.name !== action.skill);
+        case types.REMOVE_LIFEPATH:
+        case types.SELECT_LIFEPATH_COUNT:
+            return [];
         default:
             return state;
     }

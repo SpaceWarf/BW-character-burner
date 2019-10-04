@@ -217,6 +217,21 @@ export const getSkillPointsLeft = createSelector(
     }
 );
 
+export const getAllSkills = createSelector(
+    [getRequiredSkills, getAdvancedSkills], (requiredSkills, advancedSkills) => {
+        const nonZeroAdvancedSkills = advancedSkills.reduce((skills, nextSkill) => {
+            if (nextSkill.general > 0 || nextSkill.lifepath > 0) {
+                return [...skills, nextSkill];
+            }
+            return skills;
+        }, [])
+        return [
+            ...requiredSkills,
+            ...nonZeroAdvancedSkills
+        ];
+    }
+);
+
 // Traits
 export const getLifepathTraitsPool = createSelector(
     [getSelectedLifepaths], selectedLifepaths => {
@@ -274,6 +289,15 @@ export const getTraitPointsLeft = createSelector(
             return total + trait.cost;
         }, 0);
         return traitPoints - requiredTraits.length - spentPoints;
+    }
+);
+
+export const getAllTraits = createSelector(
+    [getRequiredTraits, getBoughtTraits], (requiredTraits, boughtTraits) => {
+        return [
+            ...requiredTraits,
+            ...boughtTraits
+        ];
     }
 );
 

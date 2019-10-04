@@ -1,0 +1,46 @@
+.EditorSidebarSummary {
+
+    & > .ui.header.MainHeader {
+        color: white;
+    }
+    
+    & > .ui.header.SectionHeader {
+        color: white;
+        margin: 5px 0 5px 0;
+    }
+
+    & > p {
+        font-size: 13px;
+        text-align: center;
+    }
+
+    & > .block {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 10px 0;
+
+        & > div {
+            display: flex;
+            justify-content: center;
+            font-size: 13px;
+            text-align: center;
+            margin: 0 0 10px 0;
+            
+            & > .ui.button {
+                color: white;
+                background: none;
+                padding: 0 0 0 5px;
+            }
+
+            & > .label {
+                margin: 0;
+            }
+
+            & > .value {
+                padding-left: 7px;
+                margin: 0;
+            }
+        }
+    }
+}

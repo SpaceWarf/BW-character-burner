@@ -10,6 +10,9 @@ const boughtTraits = (state = [], action) => {
             return [...state, action.trait];
         case types.REMOVE_TRAIT:
             return state.filter(trait => trait.name !== action.trait.name);
+        case types.REMOVE_LIFEPATH:
+        case types.SELECT_LIFEPATH_COUNT:
+            return [];
         default:
             return state;
     }
@@ -24,6 +27,9 @@ const addedTraits = (state = [], action) => {
             ];
         case types.REMOVE_TRAIT:
             return state.filter(trait => trait.name !== action.trait.name);
+        case types.REMOVE_LIFEPATH:
+        case types.SELECT_LIFEPATH_COUNT:
+            return [];
         default:
             return state;
     }
