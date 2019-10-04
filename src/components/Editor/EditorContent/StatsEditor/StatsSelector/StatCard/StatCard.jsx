@@ -19,7 +19,7 @@ const StatCard = ({ stat, value, onChange }) => {
                     />
                 </Card.Header>
             </Card.Content>
-        </Card >
+        </Card>
     );
 };
 
