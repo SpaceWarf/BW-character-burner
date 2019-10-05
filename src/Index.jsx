@@ -6,6 +6,12 @@ import store from './store.js';
 import App from '#Components/App/App.jsx';
 import './Index.scss';
 
+window.onbeforeunload = () => {
+  if (window.location.pathname === '/editor') {
+    return "";
+  }
+};
+
 const Index = () => {
   return (
     <Provider store={store}>
