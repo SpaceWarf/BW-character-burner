@@ -9,11 +9,13 @@ class AddModal extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            open: false,
             filter: "",
             activeSectionIndex: 0
         };
         this.handleFilterChange = this.handleFilterChange.bind(this);
         this.handleClose = this.handleClose.bind(this);
+        this.handleSelect = this.handleSelect.bind(this);
     }
 
     handleFilterChange({ target }) {
@@ -41,13 +43,20 @@ class AddModal extends React.Component {
 
     handleClose() {
         this.setState({
+            open: false,
             filter: "",
             activeSectionIndex: 0
         });
     }
 
+    handleSelect(choice) {
+        const { onSelect } = this.props;
+        onSelect(choice);
+        this.handleClose();
+    }
+
     getItemComponents(choices) {
-        const { type, onSelect } = this.props;
+        const { type } = this.props;
 
         const components = choices.map(choice => {
             switch (type) {
@@ -55,19 +64,19 @@ class AddModal extends React.Component {
                     return <Lifepath
                         key={`${choice.setting}-${choice.name}`}
                         lifepath={choice}
-                        onClick={() => onSelect(choice)}
+                        onClick={() => this.handleSelect(choice)}
                     />;
                 case 'skill':
                     return <Skill
                         key={choice.name}
                         skill={choice}
-                        onClick={() => onSelect(choice)}
+                        onClick={() => this.handleSelect(choice)}
                     />;
                 case 'trait':
                     return <Trait
                         key={choice.name}
                         trait={choice}
-                        onClick={() => onSelect(choice)}
+                        onClick={() => this.handleSelect(choice)}
                     />;
                 default:
                     <p>No component for item type</p>
@@ -92,6 +101,7 @@ class AddModal extends React.Component {
             choices
         } = this.props;
         const {
+            open,
             filter,
             activeSectionIndex
         } = this.state;
@@ -109,8 +119,12 @@ class AddModal extends React.Component {
         return (
             <Modal
                 className="AddModal"
+                open={open}
                 trigger={
-                    <div className="AddModalButton">
+                    <div
+                        className="AddModalButton"
+                        onClick={() => this.setState({ open: true })}
+                    >
                         <Button
                             icon="add"
                             size="mini"
@@ -121,6 +135,7 @@ class AddModal extends React.Component {
                 }
                 size="large"
                 onClose={this.handleClose}
+                closeIcon
             >
                 <Modal.Header>{header}</Modal.Header>
                 <Modal.Content scrolling>

@@ -78,6 +78,7 @@ class SteelModal extends React.Component {
                 open={open}
                 onClose={this.handleClose}
                 className={"SteelModal"}
+                closeIcon
             >
                 <Modal.Header>Steel Questions</Modal.Header>
                 <Modal.Content scrolling>
