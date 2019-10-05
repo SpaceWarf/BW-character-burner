@@ -102,7 +102,7 @@ const LifepathList = ({
                         type="lifepath"
                         choices={i === 0
                             ? filterBornLifepath()
-                            : getRestrictedLifepaths()
+                            : getRestrictedLifepaths(i)
                         }
                         items={selectedLifepaths
                             .filter(lifepath => lifepath.index === i)
