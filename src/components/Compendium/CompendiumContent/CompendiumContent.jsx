@@ -34,23 +34,22 @@ const getComponentForCategory = (type, data) => {
     }
 };
 
-const CompendiumContent = ({ id, header, categoryType, categorySubType, lifepaths, nested }) => {
+const CompendiumContent = ({ id, header, type, data, nested }) => {
     return (
         <Menu.Item id={id}>
             <Header className="section" as="h1">{header}</Header>
-            {lifepaths.map(lifepath => (
-                nested ?
-                    <CompendiumContent
-                        key={lifepath}
-                        id={lifepath.name}
-                        header={lifepath}
-                        categoryType={categoryType}
-                        categorySubType={categorySubType}
-                        lifepaths={
-                            getLifepaths(categorySubType, lifepath)
+            {data.map(item => (
+                nested
+                    ? <CompendiumContent
+                        key={item}
+                        id={item.name}
+                        header={item}
+                        type={type}
+                        data={
+                            getLifepaths(undefined, item)
                         }
                     />
-                    : getComponentForCategory(categoryType, lifepath)
+                    : getComponentForCategory(type, item)
             ))}
         </Menu.Item>
     );

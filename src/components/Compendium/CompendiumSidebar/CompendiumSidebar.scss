@@ -1,26 +1,21 @@
 @import 'common';
 
-.Menu {
-    height: inherit;
-
-    .ui.vertical.menu {
-        height: inherit;
+.CompendiumSidebar {
+    & > .ui.vertical.menu {
         overflow-y: scroll;
-        border-radius: 0;
-        width: $sidebar-width;
-
-        .input {
-            margin: 10px;
-            width: calc(#{$sidebar-width} - 30px);
-        }
-
-        .item {
+        
+        & > .item {
             padding-bottom: 0;
             padding-left: 8px;
             
             &.header {
                 padding-bottom: 0;
             }
+        }
+
+        & > .input {
+            margin: 10px;
+            width: calc(#{$sidebar-width} - 30px);
         }
     }
 }

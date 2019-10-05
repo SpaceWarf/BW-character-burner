@@ -1,0 +1,60 @@
+@import "common";
+
+.CollapsableSidebar {
+    height: inherit;
+
+    & > .ui.vertical.menu {
+        height: inherit;
+        border-radius: 0;
+        width: $sidebar-width;
+        margin: 0;
+
+        &.Collapsed {
+            display: none;
+        }
+    }
+
+    & > .Collapse {
+        position: absolute;
+        top: $header-height;
+        left: $sidebar-width;
+        width: 20px;
+        height: calc(100% - #{$header-height} - #{$editor-footer-height});
+
+        &.Collapsed {
+            left: 0;
+
+            & > i.icon.circular {
+                left: -7px;
+            }
+        }
+
+        & > i.icon.circular {
+            position: relative;
+            top: 16px;
+            left: -11px;
+            box-shadow: none;
+            cursor: pointer;
+            visibility: hidden;
+        }
+
+        &:hover {
+            cursor: pointer;
+            border-left: 2px solid rgba($color: #000000, $alpha: 0.4);
+
+            & > i.icon.circular {
+                visibility: visible;
+                color: $main-font-color;
+                background-color: white;
+                border: 1px solid rgba($color: #000000, $alpha: 0.2);
+
+                &:hover {
+                    color: white;
+                    background-color: $main-font-color;
+                }
+            }
+        }
+
+        
+    }
+}
