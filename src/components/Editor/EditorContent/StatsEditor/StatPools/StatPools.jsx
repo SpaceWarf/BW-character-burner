@@ -7,28 +7,30 @@ import {
     getAppliedBonuses
 } from '#Utilities/redux-selectors.js';
 import { Header } from "semantic-ui-react";
+import PoolCard from './PoolCard/PoolCard.jsx';
 import './StatPools.scss';
 
 const StatPools = ({ statBonuses, physicalPool, mentalPool, appliedBonuses }) => {
     return (
         <div className="StatPools">
-            <div className="Pools">
-                <div className="Mental Pool">
-                    <Header as='h3'>
-                        Mental Pool: {`${mentalPool} ${appliedBonuses.mental >= 0 ? '+' : '-'} ${Math.abs(appliedBonuses.mental)}`}
-                    </Header>
-                    <p>({mentalPool - statBonuses.mental} {statBonuses.mental + appliedBonuses.mental >= 0 ? '+' : '-'} {Math.abs(statBonuses.mental + appliedBonuses.mental)})</p>
-                </div>
-                <div className="Physical Pool">
-                    <Header as='h3'>
-                        Physical Pool: {`${physicalPool} ${appliedBonuses.physical >= 0 ? '+' : '-'} ${Math.abs(appliedBonuses.physical)}`}
-                    </Header>
-                    <p>({physicalPool - statBonuses.physical} {statBonuses.physical + appliedBonuses.physical >= 0 ? '+' : '-'} {Math.abs(statBonuses.physical + appliedBonuses.physical)})</p>
-                </div>
+            <div className="BlockHeader">
+                <Header as="h3">Stat Pools</Header>
+                <i className="hint">
+                    Base stat pools are determined according to the chart on the right.
+                </i>
             </div>
-            <i className="hint">
-                Your base stat pools are determined according to the chart on the right.
-            </i>
+            <div className="Pools">
+                <PoolCard
+                    header="Mental"
+                    pool={mentalPool}
+                    bonus={appliedBonuses.mental + statBonuses.mental}
+                />
+                <PoolCard
+                    header="Physical"
+                    pool={physicalPool}
+                    bonus={appliedBonuses.physical + statBonuses.physical}
+                />
+            </div>
         </div>
     );
 };

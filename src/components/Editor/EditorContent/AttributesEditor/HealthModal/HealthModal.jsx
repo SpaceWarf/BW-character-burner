@@ -69,6 +69,7 @@ class HealthModal extends React.Component {
                 open={open}
                 onClose={this.handleClose}
                 className={"HealthModal"}
+                closeIcon
             >
                 <Modal.Header>Health Questions</Modal.Header>
                 <Modal.Content>

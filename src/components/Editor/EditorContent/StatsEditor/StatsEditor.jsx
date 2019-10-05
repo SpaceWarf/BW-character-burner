@@ -37,8 +37,8 @@ const StatsEditor = ({ age, statBonuses, selectedStatBonuses }) => {
                     <Table.Header>
                         <Table.Row>
                             <Table.HeaderCell>Starting Age</Table.HeaderCell>
-                            <Table.HeaderCell>Mental Pool</Table.HeaderCell>
-                            <Table.HeaderCell>Physical Pool</Table.HeaderCell>
+                            <Table.HeaderCell textAlign="center">Mental Pool</Table.HeaderCell>
+                            <Table.HeaderCell textAlign="center">Physical Pool</Table.HeaderCell>
                         </Table.Row>
                     </Table.Header>
                     <Table.Body>
@@ -50,8 +50,8 @@ const StatsEditor = ({ age, statBonuses, selectedStatBonuses }) => {
                                     ? <Label ribbon>{`${pool.minAge} - ${pool.maxAge} years`}</Label>
                                     : `${pool.minAge} - ${pool.maxAge} years`
                                 }</Table.Cell>
-                                <Table.Cell>{`${pool.mental} pts`}</Table.Cell>
-                                <Table.Cell>{`${pool.physical} pts`}</Table.Cell>
+                                <Table.Cell textAlign="center">{`${pool.mental} pts`}</Table.Cell>
+                                <Table.Cell textAlign="center">{`${pool.physical} pts`}</Table.Cell>
                             </Table.Row>
                         ))}
                     </Table.Body>

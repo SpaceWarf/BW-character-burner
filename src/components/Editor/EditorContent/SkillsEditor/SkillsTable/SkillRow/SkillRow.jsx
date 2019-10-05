@@ -4,7 +4,7 @@ import { Table, Label, Button } from "semantic-ui-react";
 import { getSkillPointsLeft } from '#Utilities/redux-selectors.js';
 import { advanceSkill, removeGeneralSkill, updateSectionsLockState } from '#Actions/editor.js';
 import PointCounter from '#Components/Common/PointCounter/PointCounter.jsx';
-import CardModal from '#Components/Common/CardModal/CardModal.jsx';
+import CardListModal from '#Components/Common/CardListModal/CardListModal.jsx';
 import './SkillRow.scss';
 
 const SkillRow = ({
@@ -85,7 +85,7 @@ const SkillRow = ({
             </Table.Cell>
             <Table.Cell textAlign="center">{calculateExponent()}</Table.Cell>
             <Table.Cell textAlign="center">
-                <CardModal data={skill} type="skill" />
+                <CardListModal data={[skill]} type="skill" simple />
                 <Button
                     className={general ? "" : "hidden"}
                     icon="delete"

@@ -1,0 +1,14 @@
+.StatCard.ui.card, .StatCard.ui.card:last-child {
+    width: 225px;
+    margin: 0 10px 10px 0;
+
+    & > .content > .header:not(.ui) {
+        display: flex;
+        justify-content: space-between;
+        margin: auto 0;
+
+        & > p {
+            margin: auto 0;
+        }
+    }
+}

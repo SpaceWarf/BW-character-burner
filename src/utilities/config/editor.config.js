@@ -40,7 +40,7 @@ export const lifepathCounts = [
         key: "2",
         text: "2",
         value: 2,
-        hint: "Novice character. Two lifepath characters are challenging to play and not recommended for first time players."
+        hint: "Two lifepath characters are challenging to play and not recommended for first time players."
     },
     {
         key: "3",

@@ -1,3 +1,5 @@
+import { create } from 'domain';
+
 const { createSelector } = require('reselect');
 const {
     getLifepathDataSet,
@@ -86,19 +88,23 @@ export const getAge = createSelector(
     }
 );
 
-export const getMentalPool = createSelector(
-    [getAge, getStatBonuses], (age, bonuses) => {
+export const getAgePools = createSelector(
+    [getAge], age => {
         return statPools
             .find(pool => pool.minAge <= age && pool.maxAge >= age)
-            .mental + bonuses.mental;
+            || { mental: 0, physical: 0 };
+    }
+)
+
+export const getMentalPool = createSelector(
+    [getAgePools, getStatBonuses], (agePool, bonuses) => {
+        return agePool.mental + bonuses.mental;
     }
 );
 
 export const getPhysicalPool = createSelector(
-    [getAge, getStatBonuses], (age, bonuses) => {
-        return statPools
-            .find(pool => pool.minAge <= age && pool.maxAge >= age)
-            .physical + bonuses.physical;
+    [getAgePools, getStatBonuses], (agePool, bonuses) => {
+        return agePool.physical + bonuses.physical;
     }
 );
 
@@ -124,15 +130,15 @@ export const getAppliedBonuses = createSelector(
 );
 
 export const getMentalPointsLeftToAssign = createSelector(
-    [getMentalPool, getAppliedBonuses, getSelectedStats], (mentalPool, appliedBonuses, selectedStats) => {
-        const totalPool = mentalPool + appliedBonuses.mental;
+    [getMentalPool, getAppliedBonuses, getStatBonuses, getSelectedStats], (mentalPool, appliedBonuses, statBonuses, selectedStats) => {
+        const totalPool = mentalPool + appliedBonuses.mental + statBonuses.mental;
         return totalPool - (selectedStats.will || 0) - (selectedStats.perception || 0);
     }
 );
 
 export const getPhysicalPointsLeftToAssign = createSelector(
-    [getPhysicalPool, getAppliedBonuses, getSelectedStats], (physicalPool, appliedBonuses, selectedStats) => {
-        const totalPool = physicalPool + appliedBonuses.physical;
+    [getPhysicalPool, getAppliedBonuses, getStatBonuses, getSelectedStats], (physicalPool, appliedBonuses, statBonuses, selectedStats) => {
+        const totalPool = physicalPool + appliedBonuses.physical + statBonuses.physical;
         return totalPool - (selectedStats.power || 0) - (selectedStats.forte || 0)
             - (selectedStats.agility || 0) - (selectedStats.speed || 0);
     }
@@ -217,6 +223,21 @@ export const getSkillPointsLeft = createSelector(
     }
 );
 
+export const getAllSkills = createSelector(
+    [getRequiredSkills, getAdvancedSkills], (requiredSkills, advancedSkills) => {
+        const nonZeroAdvancedSkills = advancedSkills.reduce((skills, nextSkill) => {
+            if (nextSkill.general > 0 || nextSkill.lifepath > 0) {
+                return [...skills, nextSkill];
+            }
+            return skills;
+        }, [])
+        return [
+            ...requiredSkills,
+            ...nonZeroAdvancedSkills
+        ];
+    }
+);
+
 // Traits
 export const getLifepathTraitsPool = createSelector(
     [getSelectedLifepaths], selectedLifepaths => {
@@ -274,6 +295,15 @@ export const getTraitPointsLeft = createSelector(
             return total + trait.cost;
         }, 0);
         return traitPoints - requiredTraits.length - spentPoints;
+    }
+);
+
+export const getAllTraits = createSelector(
+    [getRequiredTraits, getBoughtTraits], (requiredTraits, boughtTraits) => {
+        return [
+            ...requiredTraits,
+            ...boughtTraits
+        ];
     }
 );
 
