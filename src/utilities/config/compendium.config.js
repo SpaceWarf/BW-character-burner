@@ -1,34 +1,30 @@
-export const sections = [
-    {
+export const sections = {
+    "lifepaths-men": {
         name: "Lifepaths of Men",
         type: "lifepaths",
-        subType: "men",
-        nested: true
+        subType: "men"
     },
-    {
+    "lifepaths-elves": {
         name: "Lifepaths of Elves",
         type: "lifepaths",
-        subType: "elves",
-        nested: true
+        subType: "elves"
     },
-    {
+    "lifepaths-dwarves": {
         name: "Lifepaths of Dwarves",
         type: "lifepaths",
-        subType: "dwarves",
-        nested: true
+        subType: "dwarves"
     },
-    {
+    "lifepaths-orcs": {
         name: "Lifepaths of Orcs",
         type: "lifepaths",
-        subType: "orcs",
-        nested: true
+        subType: "orcs"
     },
-    {
+    "skills": {
         name: "Skills",
         type: "skills"
     },
-    {
+    "traits": {
         name: "Traits",
         type: "traits"
     }
-];
+};

@@ -40,17 +40,9 @@ class CompendiumSidebarContent extends React.Component {
     }
 
     render() {
-        const {
-            header,
-            lifepathCategory,
-            lifepaths = [],
-            nested = false,
-            filter = ""
-        } = this.props;
-        const {
-            closedHeaders
-        } = this.state;
-        const filteredData = this.getFilteredData(lifepaths);
+        const { header, data = [] } = this.props;
+        const { closedHeaders } = this.state;
+        const filteredData = this.getFilteredData(data);
 
         return filteredData.length > 0 && (
             <Menu.Item>
@@ -66,22 +58,14 @@ class CompendiumSidebarContent extends React.Component {
                 </Menu.Header>
                 <div className="Content">
                     {!closedHeaders.includes(header) && filteredData.map(item => (
-                        nested ?
-                            <CompendiumSidebarContent
-                                key={item}
-                                header={item}
-                                subCategory={lifepathCategory}
-                                lifepaths={getLifepaths(lifepathCategory, item)}
-                                filter={filter}
-                            />
-                            : <Menu.Item
-                                key={item.name}
-                                className="sidebar child"
-                                as="a"
-                                href={`#${item.name.replace(/\s/g, '')}`}
-                            >
-                                {item.name}
-                            </Menu.Item>
+                        <Menu.Item
+                            key={item.name}
+                            className="sidebar child"
+                            as="a"
+                            href={`#${item.name.replace(/\s/g, '')}`}
+                        >
+                            {item.name}
+                        </Menu.Item>
                     ))}
                 </div>
             </Menu.Item>

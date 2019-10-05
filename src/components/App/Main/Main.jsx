@@ -10,7 +10,13 @@ const Main = () => {
         <div className="Main">
             <Route exact path="/" component={LandingPage} />
             <Route path="/editor" component={Editor} />
-            <Route path="/compendium" component={Compendium} />
+            <Route exact path="/compendium" render={(props) => <Compendium {...props} content="lifepaths-men" />} />
+            <Route path="/compendium/lifepaths-men" render={(props) => <Compendium {...props} content="lifepaths-men" />} />
+            <Route path="/compendium/lifepaths-elves" render={(props) => <Compendium {...props} content="lifepaths-elves" />} />
+            <Route path="/compendium/lifepaths-dwarves" render={(props) => <Compendium {...props} content="lifepaths-dwarves" />} />
+            <Route path="/compendium/lifepaths-orcs" render={(props) => <Compendium {...props} content="lifepaths-orcs" />} />
+            <Route path="/compendium/skills" render={(props) => <Compendium {...props} content="skills" />} />
+            <Route path="/compendium/traits" render={(props) => <Compendium {...props} content="traits" />} />
         </div>
     );
 };

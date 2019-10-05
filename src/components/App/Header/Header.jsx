@@ -37,7 +37,7 @@ const Header = () => {
                                 : <Dropdown.Item
                                     key={item.text}
                                     text={item.text}
-                                    onClick={e => handleClick(e, `/compendium#${item.link}`)}
+                                    onClick={e => handleClick(e, `/compendium/${item.link}`)}
                                     disabled={item.disabled}
                                 />
                         ))}

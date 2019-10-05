@@ -6,27 +6,30 @@ import { getDataSetForSection } from '#Utilities/data-selectors.js';
 import { sections } from '#Utilities/config/compendium.config.js';
 import './Compendium.scss';
 
-const Compendium = () => {
+const Compendium = ({ content }) => {
+
+    const getCompendiumComponent = () => {
+        const section = sections[content];
+        const dataSet = getDataSetForSection(section.type, section.subType);
+        return dataSet.length > 0 && <CompendiumContent
+            key={section.name}
+            id={section.subType
+                ? `${section.type}-${section.subType}`
+                : section.type
+            }
+            header={section.name}
+            type={section.type}
+            data={dataSet}
+            nested={section.type === "lifepaths"}
+        />;
+    };
+
     return (
         <div className="Compendium">
-            <CompendiumSidebar />
+            <CompendiumSidebar content={content} />
             <div className="CompendiumContent">
                 <Menu vertical>
-                    {sections.map(section => {
-                        const dataSet = getDataSetForSection(section.type, section.subType);
-                        return dataSet.length > 0 && <CompendiumContent
-                            key={section.name}
-                            id={section.subType
-                                ? `${section.type}-${section.subType}`
-                                : section.type
-                            }
-                            header={section.name}
-                            categoryType={section.type}
-                            categorySubType={section.subType}
-                            lifepaths={dataSet}
-                            nested={section.nested}
-                        />
-                    })}
+                    {getCompendiumComponent()}
                 </Menu>
             </div>
         </div>
