@@ -44,7 +44,12 @@ const lockedSections = (state = sections.slice(1), action) => {
             // Skills section lock conditions
             const mentalPointsLeft = getMentalPointsLeftToAssign(action.state);
             const physicalPointsLeft = getPhysicalPointsLeftToAssign(action.state);
-            if (mentalPointsLeft !== 0 || physicalPointsLeft !== 0) {
+            const stats = action.state.editor.stats.selectedStats;
+            if (
+                mentalPointsLeft !== 0
+                || physicalPointsLeft !== 0
+                || Object.values(stats).some(stat => stat === 0)
+            ) {
                 return sections.slice(2);
             }
 

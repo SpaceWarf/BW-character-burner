@@ -14,14 +14,14 @@ const PointCounter = ({
         <div className="PointCounter">
             <Button
                 icon="minus"
-                disabled={value === min}
+                disabled={value <= min}
                 onClick={onDecrease}
                 circular
             />
             <p>{value}</p>
             <Button
                 icon="add"
-                disabled={!canIncrease || value === max}
+                disabled={!canIncrease || value >= max}
                 onClick={onIncrease}
                 circular
             />

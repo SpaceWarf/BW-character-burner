@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import {
     getMentalPointsLeftToAssign,
     getPhysicalPointsLeftToAssign,
+    getStatBonuses,
     getAppliedBonuses,
     getMentalPool
 } from '#Utilities/redux-selectors.js';
@@ -31,16 +32,17 @@ class StatsSelector extends React.Component {
         const {
             onSelectStat,
             appliedBonuses,
+            statBonuses,
             mentalPool,
             onUpdateSectionsLockState
         } = this.props;
 
         if (['perception', 'will'].includes(stat)) {
-            const oppositeValue = Math.min(6, mentalPool + appliedBonuses.mental - value);
+            const oppositeValue = Math.min(6, mentalPool + appliedBonuses.mental + statBonuses.mental - value);
             if (oppositeValue > 0) {
                 onSelectStat(
                     stat === 'will' ? 'perception' : 'will',
-                    Math.min(6, mentalPool + appliedBonuses.mental - value)
+                    Math.min(6, mentalPool + appliedBonuses.mental + statBonuses.mental - value)
                 );
             }
         }
@@ -65,12 +67,12 @@ class StatsSelector extends React.Component {
                     <div className="StatsBloc">
                         <StatCard
                             stat="Will"
-                            value={selectedStats.will || 0}
+                            value={selectedStats.will}
                             onChange={value => this.onHandleChange('will', value)}
                         />
                         <StatCard
                             stat="Perception"
-                            value={selectedStats.perception || 0}
+                            value={selectedStats.perception}
                             onChange={value => this.onHandleChange('perception', value)}
                         />
                     </div>
@@ -83,22 +85,22 @@ class StatsSelector extends React.Component {
                     <div className="StatsBloc">
                         <StatCard
                             stat="Power"
-                            value={selectedStats.power || 0}
+                            value={selectedStats.power}
                             onChange={value => this.onHandleChange('power', value)}
                         />
                         <StatCard
                             stat="Forte"
-                            value={selectedStats.forte || 0}
+                            value={selectedStats.forte}
                             onChange={value => this.onHandleChange('forte', value)}
                         />
                         <StatCard
                             stat="Agility"
-                            value={selectedStats.agility || 0}
+                            value={selectedStats.agility}
                             onChange={value => this.onHandleChange('agility', value)}
                         />
                         <StatCard
                             stat="Speed"
-                            value={selectedStats.speed || 0}
+                            value={selectedStats.speed}
                             onChange={value => this.onHandleChange('speed', value)}
                         />
                     </div>
@@ -113,6 +115,7 @@ const mapStateToProps = state => ({
     mentalPointsLeftToAssign: getMentalPointsLeftToAssign(state),
     physicalPointsLeftToAssign: getPhysicalPointsLeftToAssign(state),
     mentalPool: getMentalPool(state),
+    statBonuses: getStatBonuses(state),
     appliedBonuses: getAppliedBonuses(state)
 });
 

@@ -36,6 +36,7 @@ const CardListModal = ({ header, data, type, simple }) => {
             className={`CardListModal ${simple ? "Single" : ""}`}
             trigger={<Button icon="info circle" size="mini" />}
             size="small"
+            closeIcon
         >
             {header && !simple &&
                 <Modal.Header>

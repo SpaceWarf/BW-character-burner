@@ -11,7 +11,7 @@ const StatCard = ({ stat, value, onChange }) => {
                     <p>{stat}</p>
                     <PointCounter
                         value={value}
-                        min={0}
+                        min={1}
                         max={6}
                         onIncrease={() => onChange(value + 1)}
                         onDecrease={() => onChange(value - 1)}
