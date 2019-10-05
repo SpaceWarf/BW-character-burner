@@ -3,6 +3,7 @@ import { Menu, Input } from 'semantic-ui-react';
 import { getDataSetForSection } from '#Utilities/data-selectors.js';
 import { sections } from '#Utilities/config/compendium.config.js';
 import { getLifepaths } from '#Utilities/data-selectors.js';
+import CollapsableSidebar from '#Components/Common/CollapsableSidebar/CollapsableSidebar.jsx';
 import CompendiumSidebarContent from './CompendiumSidebarContent/CompendiumSidebarContent.jsx';
 import './CompendiumSidebar.scss';
 
@@ -48,17 +49,15 @@ class CompendiumSidebar extends React.Component {
         const dataSet = getDataSetForSection(section.type, section.subType);
 
         return (
-            <div className="Menu">
-                <Menu vertical inverted>
-                    <Input
-                        icon='search'
-                        placeholder='Search...'
-                        text={filter}
-                        onChange={this.handleFilterChange}
-                    />
-                    {this.getContentComponents(section, dataSet)}
-                </Menu>
-            </div>
+            <CollapsableSidebar className="CompendiumSidebar">
+                <Input
+                    icon='search'
+                    placeholder='Search...'
+                    text={filter}
+                    onChange={this.handleFilterChange}
+                />
+                {this.getContentComponents(section, dataSet)}
+            </CollapsableSidebar>
         );
     }
 };
