@@ -10,7 +10,7 @@ const PoolCard = ({ header, pool, bonus }) => {
                     <Header as='h3'>
                         {header}
                     </Header>
-                    <p>{`${pool + bonus} (${pool} + ${bonus})`}</p>
+                    <p>{`${pool + bonus} (${pool} ${bonus >= 0 ? `+ ${bonus}` : `- ${Math.abs(bonus)}`})`}</p>
                 </Card.Header>
             </Card.Content>
         </Card>

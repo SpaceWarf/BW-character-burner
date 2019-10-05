@@ -130,15 +130,15 @@ export const getAppliedBonuses = createSelector(
 );
 
 export const getMentalPointsLeftToAssign = createSelector(
-    [getMentalPool, getAppliedBonuses, getSelectedStats], (mentalPool, appliedBonuses, selectedStats) => {
-        const totalPool = mentalPool + appliedBonuses.mental;
+    [getMentalPool, getAppliedBonuses, getStatBonuses, getSelectedStats], (mentalPool, appliedBonuses, statBonuses, selectedStats) => {
+        const totalPool = mentalPool + appliedBonuses.mental + statBonuses.mental;
         return totalPool - (selectedStats.will || 0) - (selectedStats.perception || 0);
     }
 );
 
 export const getPhysicalPointsLeftToAssign = createSelector(
-    [getPhysicalPool, getAppliedBonuses, getSelectedStats], (physicalPool, appliedBonuses, selectedStats) => {
-        const totalPool = physicalPool + appliedBonuses.physical;
+    [getPhysicalPool, getAppliedBonuses, getStatBonuses, getSelectedStats], (physicalPool, appliedBonuses, statBonuses, selectedStats) => {
+        const totalPool = physicalPool + appliedBonuses.physical + statBonuses.physical;
         return totalPool - (selectedStats.power || 0) - (selectedStats.forte || 0)
             - (selectedStats.agility || 0) - (selectedStats.speed || 0);
     }
