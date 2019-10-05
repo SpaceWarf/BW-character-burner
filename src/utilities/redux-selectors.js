@@ -225,12 +225,18 @@ export const getSkillPointsLeft = createSelector(
 
 export const getAllSkills = createSelector(
     [getRequiredSkills, getAdvancedSkills], (requiredSkills, advancedSkills) => {
-        const nonZeroAdvancedSkills = advancedSkills.reduce((skills, nextSkill) => {
-            if (nextSkill.general > 0 || nextSkill.lifepath > 0) {
-                return [...skills, nextSkill];
-            }
-            return skills;
-        }, [])
+        const nonZeroAdvancedSkills = advancedSkills
+            .reduce((skills, nextSkill) => {
+                if (nextSkill.general > 0 || nextSkill.lifepath > 0) {
+                    return [...skills, nextSkill];
+                }
+                return skills;
+            }, [])
+            .filter(skill => (
+                !requiredSkills.some(requiredSkill => (
+                    requiredSkill.name === skill.name
+                ))
+            ));
         return [
             ...requiredSkills,
             ...nonZeroAdvancedSkills
