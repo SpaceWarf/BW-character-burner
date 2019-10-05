@@ -232,11 +232,9 @@ export const getAllSkills = createSelector(
                 }
                 return skills;
             }, [])
-            .filter(skill => (
-                !requiredSkills.some(requiredSkill => (
-                    requiredSkill.name === skill.name
-                ))
-            ));
+            .filter(skill => !requiredSkills
+                .find(requiredSkill => requiredSkill.name === skill.name)
+            );
         return [
             ...requiredSkills,
             ...nonZeroAdvancedSkills
@@ -274,7 +272,9 @@ export const getRequiredTraits = createSelector(
 
 export const getOptionalTraits = createSelector(
     [getLifepathTraitsPool, getRequiredTraits], (lifepathTraits, requiredTraits) => {
-        return lifepathTraits.filter(trait => !requiredTraits.includes(trait));
+        return lifepathTraits.filter(trait => !requiredTraits
+            .find(requiredTrait => requiredTrait.name === trait.name)
+        );
     }
 );
 
