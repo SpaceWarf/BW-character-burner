@@ -4,4 +4,9 @@
     & > .ui.header.LifepathHeader {
         margin: 10px 0;
     }
+
+    & > .CardList > .ListContent > .Card {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }

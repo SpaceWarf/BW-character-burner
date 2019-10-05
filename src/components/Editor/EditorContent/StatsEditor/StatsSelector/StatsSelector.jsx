@@ -7,20 +7,10 @@ import {
     getMentalPool
 } from '#Utilities/redux-selectors.js';
 import { selectStat, updateSectionsLockState } from '#Actions/editor.js'
-import { Header, Dropdown } from 'semantic-ui-react';
+import { Header } from 'semantic-ui-react';
+import StatCard from './StatCard/StatCard.jsx';
 import './StatsSelector.scss';
 
-const getDropdownOptions = count => {
-    const options = [];
-    for (let i = 1; i <= count; i++) {
-        options.push({
-            key: i,
-            text: i,
-            value: i
-        });
-    }
-    return options;
-};
 
 const getStatsError = pointsLeftToAssign => {
     if (pointsLeftToAssign < 0) {
@@ -68,70 +58,50 @@ class StatsSelector extends React.Component {
         return (
             <div className="StatsSelector">
                 <div className="Mental Stats">
-                    <Header as='h3'>Divide the mental pool</Header>
-                    <div className="StatsBloc">
-                        <div className="Will Stat">
-                            <b>Will</b>
-                            <Dropdown
-                                options={getDropdownOptions(6)}
-                                value={selectedStats.will}
-                                placeholder="-"
-                                onChange={(_, { value }) => this.onHandleChange('will', value)}
-                            />
-                        </div>
-                        <div className="Perception Stat">
-                            <b>Perception</b>
-                            <Dropdown
-                                options={getDropdownOptions(6)}
-                                value={selectedStats.perception}
-                                placeholder="-"
-                                onChange={(_, { value }) => this.onHandleChange('perception', value)}
-                            />
-                        </div>
+                    <div className="BlockHeader">
+                        <Header as='h3'>Mental Stats</Header>
+                        {getStatsError(mentalPointsLeftToAssign)}
                     </div>
-                    {getStatsError(mentalPointsLeftToAssign)}
+                    <div className="StatsBloc">
+                        <StatCard
+                            stat="Will"
+                            value={selectedStats.will || 0}
+                            onChange={value => this.onHandleChange('will', value)}
+                        />
+                        <StatCard
+                            stat="Perception"
+                            value={selectedStats.perception || 0}
+                            onChange={value => this.onHandleChange('perception', value)}
+                        />
+                    </div>
                 </div>
                 <div className="Physical Stats">
-                    <Header as='h3'>Divide the physical pool</Header>
-                    <div className="StatsBloc">
-                        <div className="Power Stat">
-                            <b>Power</b>
-                            <Dropdown
-                                options={getDropdownOptions(6)}
-                                value={selectedStats.power}
-                                placeholder="-"
-                                onChange={(_, { value }) => this.onHandleChange('power', value)}
-                            />
-                        </div>
-                        <div className="Forte Stat">
-                            <b>Forte</b>
-                            <Dropdown
-                                options={getDropdownOptions(6)}
-                                value={selectedStats.forte}
-                                placeholder="-"
-                                onChange={(_, { value }) => this.onHandleChange('forte', value)}
-                            />
-                        </div>
-                        <div className="Agility Stat">
-                            <b>Agility</b>
-                            <Dropdown
-                                options={getDropdownOptions(6)}
-                                value={selectedStats.agility}
-                                placeholder="-"
-                                onChange={(_, { value }) => this.onHandleChange('agility', value)}
-                            />
-                        </div>
-                        <div className="Speed Stat">
-                            <b>Speed</b>
-                            <Dropdown
-                                options={getDropdownOptions(6)}
-                                value={selectedStats.speed}
-                                placeholder="-"
-                                onChange={(_, { value }) => this.onHandleChange('speed', value)}
-                            />
-                        </div>
+                    <div className="BlockHeader">
+                        <Header as='h3'>Physical Stats</Header>
+                        {getStatsError(physicalPointsLeftToAssign)}
                     </div>
-                    {getStatsError(physicalPointsLeftToAssign)}
+                    <div className="StatsBloc">
+                        <StatCard
+                            stat="Power"
+                            value={selectedStats.power || 0}
+                            onChange={value => this.onHandleChange('power', value)}
+                        />
+                        <StatCard
+                            stat="Forte"
+                            value={selectedStats.forte || 0}
+                            onChange={value => this.onHandleChange('forte', value)}
+                        />
+                        <StatCard
+                            stat="Agility"
+                            value={selectedStats.agility || 0}
+                            onChange={value => this.onHandleChange('agility', value)}
+                        />
+                        <StatCard
+                            stat="Speed"
+                            value={selectedStats.speed || 0}
+                            onChange={value => this.onHandleChange('speed', value)}
+                        />
+                    </div>
                 </div>
             </div>
         );

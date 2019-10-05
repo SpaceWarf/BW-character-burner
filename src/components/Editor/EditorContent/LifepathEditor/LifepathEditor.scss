@@ -40,6 +40,27 @@
                 .ui.dropdown {
                     padding-left: 10px;
                 }
+
+                & > .count > .LifepathCountCard {
+                    width: 300px;
+
+                    & > .content {
+
+                        & > .description {
+                            height: 40px;
+                        }
+
+                        & > .header:not(.ui) {
+                            display: flex;
+                            justify-content: space-between;
+                            margin: auto 0;
+
+                            & > p {
+                                margin: auto 0;
+                            }
+                        }
+                    }
+                }
             }
         }
     }

@@ -1,3 +1,5 @@
+import { create } from 'domain';
+
 const { createSelector } = require('reselect');
 const {
     getLifepathDataSet,
@@ -86,19 +88,23 @@ export const getAge = createSelector(
     }
 );
 
-export const getMentalPool = createSelector(
-    [getAge, getStatBonuses], (age, bonuses) => {
+export const getAgePools = createSelector(
+    [getAge], age => {
         return statPools
             .find(pool => pool.minAge <= age && pool.maxAge >= age)
-            .mental + bonuses.mental;
+            || { mental: 0, physical: 0 };
+    }
+)
+
+export const getMentalPool = createSelector(
+    [getAgePools, getStatBonuses], (agePool, bonuses) => {
+        return agePool.mental + bonuses.mental;
     }
 );
 
 export const getPhysicalPool = createSelector(
-    [getAge, getStatBonuses], (age, bonuses) => {
-        return statPools
-            .find(pool => pool.minAge <= age && pool.maxAge >= age)
-            .physical + bonuses.physical;
+    [getAgePools, getStatBonuses], (agePool, bonuses) => {
+        return agePool.physical + bonuses.physical;
     }
 );
 

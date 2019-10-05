@@ -109,7 +109,16 @@ class AddModal extends React.Component {
         return (
             <Modal
                 className="AddModal"
-                trigger={<Button icon="add" size="mini" positive circular />}
+                trigger={
+                    <div className="AddModalButton">
+                        <Button
+                            icon="add"
+                            size="mini"
+                            positive
+                            circular
+                        />
+                    </div>
+                }
                 size="large"
                 onClose={this.handleClose}
             >

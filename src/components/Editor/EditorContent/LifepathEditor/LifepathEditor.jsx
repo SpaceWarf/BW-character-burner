@@ -1,12 +1,18 @@
 import React from "react";
 import { connect } from 'react-redux';
-import { Header, Dropdown, Button, Image } from 'semantic-ui-react';
+import {
+    Header,
+    Button,
+    Image,
+    Card
+} from 'semantic-ui-react';
 import {
     selectRace,
     selectLifepathCount,
     updateSectionsLockState
 } from '#Actions/editor.js';
 import { races, lifepathCounts } from '#Utilities/config/editor.config.js';
+import PointCounter from '#Components/Common/PointCounter/PointCounter.jsx';
 import LifepathList from './LifepathList/LifepathList.jsx';
 import './LifepathEditor.scss';
 
@@ -60,24 +66,28 @@ const LifepathEditor = ({
                             experiences have been prosperous and fruitful, miserable and painful, or a mix of both is up to you.
                         </p>
                         <div className="count">
-                            <Header as="h3">
-                                Your character will have
-                                <Dropdown
-                                    placeholder="0"
-                                    options={lifepathCounts}
-                                    value={lifepathCount}
-                                    onChange={(_, { value }) => handleSelectLifepathCount(value)}
-                                    inline
-                                />
-                                lifepaths
-                            </Header>
-                            {lifepathCount &&
-                                <i className="hint">
-                                    {lifepathCounts
-                                        .find(count => count.value === lifepathCount).hint
-                                    }
-                                </i>
-                            }
+                            <Card className="LifepathCountCard">
+                                <Card.Content>
+                                    <Card.Header>
+                                        <p>Lifepath Count</p>
+                                        <PointCounter
+                                            value={lifepathCount}
+                                            min={2}
+                                            max={8}
+                                            onIncrease={() => handleSelectLifepathCount(lifepathCount + 1)}
+                                            onDecrease={() => handleSelectLifepathCount(lifepathCount - 1)}
+                                            canIncrease
+                                        />
+                                    </Card.Header>
+                                    {lifepathCount && <Card.Description>
+                                        <i className="hint">
+                                            {lifepathCounts
+                                                .find(count => count.value === lifepathCount).hint
+                                            }
+                                        </i>
+                                    </Card.Description>}
+                                </Card.Content>
+                            </Card>
                         </div >
                         {lifepathCount && <LifepathList />}
                     </div >
