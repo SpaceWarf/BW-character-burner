@@ -38,11 +38,11 @@ class StatsSelector extends React.Component {
         } = this.props;
 
         if (['perception', 'will'].includes(stat)) {
-            const oppositeValue = Math.min(6, mentalPool + appliedBonuses.mental + statBonuses.mental - value);
+            const oppositeValue = Math.min(6, mentalPool + appliedBonuses.mental - value);
             if (oppositeValue > 0) {
                 onSelectStat(
                     stat === 'will' ? 'perception' : 'will',
-                    Math.min(6, mentalPool + appliedBonuses.mental + statBonuses.mental - value)
+                    Math.min(6, mentalPool + appliedBonuses.mental - value)
                 );
             }
         }
