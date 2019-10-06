@@ -14,7 +14,7 @@ class LandingPage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            imageIndex: Math.round(Math.random() * (images.length - 1))
+            imageIndex: 0
         };
         this.interval = window.setInterval(() => {
             const { imageIndex } = this.state;
@@ -43,18 +43,18 @@ class LandingPage extends React.Component {
                 <div className="content">
                     <Header className="title" as="h1">Welcome to Cynder</Header>
                     <Header className="subtitle" as="h3">A Burning Wheel character burner</Header>
-                    <p className="tag">
+                    <div className="tag">
                         Forget hours and hours of character burning while going over hundreds of pages of rules. <b>Cynder</b> is the most efficient character burner available. Head over to the <b><a href="/editor">Editor</a></b> to start working on your next character or check out the <b><a href="/Compendium">Compendium</a></b> if you need data references.
                         <div>
                             <Button
                                 icon="edit"
-                                content="Start Creating"
+                                content="Start Burning"
                                 labelPosition="left"
                                 onClick={() => window.location = "/editor"}
                                 positive
                             />
                         </div>
-                    </p>
+                    </div>
                     <div className="socials">
                         <Button.Group vertical>
                             <Button
