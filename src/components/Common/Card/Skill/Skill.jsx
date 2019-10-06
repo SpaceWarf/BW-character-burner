@@ -1,45 +1,48 @@
 import React from "react";
-import { Card, Icon } from 'semantic-ui-react';
+import { Card, Icon, Menu } from 'semantic-ui-react';
+import CustomCard from '../Card.jsx';
 import '../Card.scss';
-import { Menu } from "semantic-ui-react";
 
-const Skill = ({ skill, centered, linkable, onClick }) => {
+const Skill = ({ skill, centered, linkable, positive, onClick }) => {
     return (
-        <Menu.Item className="Card Skill" id={skill.name.replace(/\s/g, '')}>
-            <Card className={centered ? 'centered' : ''} onClick={onClick}>
-                <Card.Content>
-                    <Card.Header className={!skill.isWiseSkill ? 'with-description' : ''}>
-                        {linkable && <Icon
-                            name='linkify'
-                            onClick={() => window.location.href = `#${skill.name.replace(/\s/g, '')}`}
-                            link
-                        />}
-                        <div className='header-content'>
-                            <p className='halfs'>{skill.name}</p>
-                            {skill.skillType && <p className='halfs centered'>{skill.skillType}</p>}
-                        </div>
-                        <p className='left content'>{(skill.roots || []).join(', ')}</p>
-                    </Card.Header>
-                    {!skill.isWiseSkill && <Card.Description>
-                        {skill.description &&
-                            <p>{skill.description}</p>
-                        }
-                        {skill.FoRKs &&
-                            <p><b>FoRKs</b>: {skill.FoRKs.join(', ')}</p>
-                        }
-                        {skill.tools &&
-                            <p><b>Tools</b>: Yes.
+        <CustomCard
+            item={skill}
+            centered={centered}
+            onClick={onClick}
+            positive={positive}
+        >
+            <Card.Content>
+                <Card.Header className={!skill.isWiseSkill ? 'with-description' : ''}>
+                    {linkable && <Icon
+                        name='linkify'
+                        onClick={() => window.location.href = `#${skill.name.replace(/\s/g, '')}`}
+                        link
+                    />}
+                    <div className='header-content'>
+                        <p className='halfs'>{skill.name}</p>
+                        {skill.skillType && <p className='halfs centered'>{skill.skillType}</p>}
+                    </div>
+                    <p className='left content'>{(skill.roots || []).join(', ')}</p>
+                </Card.Header>
+                {!skill.isWiseSkill && <Card.Description>
+                    {skill.description &&
+                        <p>{skill.description}</p>
+                    }
+                    {skill.FoRKs &&
+                        <p><b>FoRKs</b>: {skill.FoRKs.join(', ')}</p>
+                    }
+                    {skill.tools &&
+                        <p><b>Tools</b>: Yes.
                             {skill.tools.expendable &&
-                                    ' Expendable.'
-                                }
-                                {skill.tools.type &&
-                                    ` ${skill.tools.type}.`
-                                }</p>
-                        }
-                    </Card.Description>}
-                </Card.Content>
-            </Card>
-        </Menu.Item>
+                                ' Expendable.'
+                            }
+                            {skill.tools.type &&
+                                ` ${skill.tools.type}.`
+                            }</p>
+                    }
+                </Card.Description>}
+            </Card.Content>
+        </CustomCard>
     );
 };
 
