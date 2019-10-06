@@ -23,12 +23,12 @@ const StatPools = ({ statBonuses, physicalPool, mentalPool, appliedBonuses }) =>
                 <PoolCard
                     header="Mental"
                     pool={mentalPool}
-                    bonus={appliedBonuses.mental + statBonuses.mental}
+                    bonus={{ applied: appliedBonuses.mental, stat: statBonuses.mental }}
                 />
                 <PoolCard
                     header="Physical"
                     pool={physicalPool}
-                    bonus={appliedBonuses.physical + statBonuses.physical}
+                    bonus={{ applied: appliedBonuses.physical, stat: statBonuses.physical }}
                 />
             </div>
         </div>

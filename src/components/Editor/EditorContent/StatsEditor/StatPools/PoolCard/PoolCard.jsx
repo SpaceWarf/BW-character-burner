@@ -3,6 +3,8 @@ import { Card, Header } from 'semantic-ui-react';
 import './PoolCard.scss';
 
 const PoolCard = ({ header, pool, bonus }) => {
+    const totalBonus = bonus.applied + bonus.stat;
+    const bonusString = totalBonus >= 0 ? `+ ${totalBonus}` : `- ${Math.abs(totalBonus)}`;
     return (
         <Card className="Pool">
             <Card.Content>
@@ -10,7 +12,7 @@ const PoolCard = ({ header, pool, bonus }) => {
                     <Header as='h3'>
                         {header}
                     </Header>
-                    <p>{`${pool + bonus} (${pool} ${bonus >= 0 ? `+ ${bonus}` : `- ${Math.abs(bonus)}`})`}</p>
+                    <p>{`${pool + bonus.applied} (${pool - bonus.stat} ${bonusString})`}</p>
                 </Card.Header>
             </Card.Content>
         </Card>
