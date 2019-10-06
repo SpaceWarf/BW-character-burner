@@ -3,12 +3,13 @@ import { Card, Icon, Menu } from 'semantic-ui-react';
 import CustomCard from '../Card.jsx';
 import '../Card.scss';
 
-const Trait = ({ trait, centered, linkable, onClick }) => {
+const Trait = ({ trait, centered, linkable, positive, onClick }) => {
     return (
         <CustomCard
             item={trait}
             centered={centered}
             onClick={onClick}
+            positive={positive}
         >
             <Card.Content>
                 <Card.Header className={trait.description ? 'with-description' : ''}>

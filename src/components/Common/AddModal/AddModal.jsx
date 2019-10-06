@@ -65,18 +65,21 @@ class AddModal extends React.Component {
                         key={`${choice.setting}-${choice.name}`}
                         lifepath={choice}
                         onClick={() => this.handleSelect(choice)}
+                        positive
                     />;
                 case 'skill':
                     return <Skill
                         key={choice.name}
                         skill={choice}
                         onClick={() => this.handleSelect(choice)}
+                        positive
                     />;
                 case 'trait':
                     return <Trait
                         key={choice.name}
                         trait={choice}
                         onClick={() => this.handleSelect(choice)}
+                        positive
                     />;
                 default:
                     <p>No component for item type</p>

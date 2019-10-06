@@ -3,12 +3,13 @@ import { Card, Icon, Menu } from 'semantic-ui-react';
 import CustomCard from '../Card.jsx';
 import '../Card.scss';
 
-const Skill = ({ skill, centered, linkable, onClick }) => {
+const Skill = ({ skill, centered, linkable, positive, onClick }) => {
     return (
         <CustomCard
             item={skill}
             centered={centered}
             onClick={onClick}
+            positive={positive}
         >
             <Card.Content>
                 <Card.Header className={!skill.isWiseSkill ? 'with-description' : ''}>

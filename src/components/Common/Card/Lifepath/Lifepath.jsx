@@ -3,12 +3,13 @@ import { Card, Icon } from 'semantic-ui-react';
 import CustomCard from '../Card.jsx';
 import '../Card.scss';
 
-const Lifepath = ({ lifepath, centered, linkable, showSetting, onClick }) => {
+const Lifepath = ({ lifepath, centered, linkable, showSetting, positive, onClick }) => {
     return (
         <CustomCard
             item={lifepath}
             centered={centered}
             onClick={onClick}
+            positive={positive}
         >
             <Card.Content>
                 <Card.Header className='with-description'>
