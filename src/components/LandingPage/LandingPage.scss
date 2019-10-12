@@ -1,82 +1,68 @@
 @import 'common';
 
 .LandingPage {
-    display: flex;
     padding: 15px;
     height: 100%;
 
     & > .content {
-        width: 50%;
-        height: 100%;
 
-        & > .title {
-            margin: 0;
-            font-size: 45px;
-        }
+        & > .MainHeader {
+            display: flex;
+            justify-content: center;
 
-        & > .subtitle {
-            margin: 0 0 20px 5px;
-        }
-
-        & > .tag {
-            text-align: justify;
-            padding-left: 5px;
-            font-size: $main-font-size;
-            color: $main-font-color;
-            width: 80%;
-            margin-bottom: 20px;
-
-            & > b > a {
-                color: $main-font-color;
+            & > .ui.image {
+                width: 60px;
+                height: 60px;
+                margin-right: 7px;
             }
 
-            & > div {
-                display: flex;
-                justify-content: center;
-                width: 100%;
-                margin-top: 30px;
-            }
-        }
+            & > .Title {
 
-        & > .socials {
-            position: absolute;
-            bottom: 15px;
+                & > .title {
+                    margin: 0;
+                    font-size: 45px;
+                }
 
-            & > .buttons > .ui.button {
-                background: none;
-                text-align: left;
-                padding-left: 40px;
-
-                & > i {
-                    font-size: 20px;
-                    background: none;
+                & > .subtitle {
+                    margin: 0 0 0 5px;
                 }
             }
         }
-    }
 
-    & > .image {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: space-between;
-        width: 50%;
-        height: 90%;
+        & > .tag > p {
+            text-align: justify;
+            padding: 0 25%;
+            font-size: $main-font-size;
+            color: $main-font-color;
+            margin: 20px 0 25px 0;
 
-        & > .pagination.ui.menu {
-            margin: 0 auto;
-
-            & .item {
-                display: inline;
+            & > a {
+                color: $main-font-color;
+                cursor: pointer;
+                font-weight: bold;
+                text-decoration: underline;
             }
         }
 
-        & > .ui.image {
-            height: auto;
-            max-height: 93%;
-            width: auto;
-            margin: 0 auto;
-            border: 3px solid $main-font-color;
+        & > .button {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    & > .socials {
+        position: absolute;
+        bottom: 15px;
+
+        & > .buttons > .ui.button {
+            background: none;
+            text-align: left;
+            padding-left: 40px;
+
+            & > i {
+                font-size: 20px;
+                background: none;
+            }
         }
     }
 }

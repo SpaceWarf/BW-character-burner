@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import {
     getMentalPointsLeftToAssign,
     getPhysicalPointsLeftToAssign,
-    getStatBonuses,
     getAppliedBonuses,
     getMentalPool
 } from '#Utilities/redux-selectors.js';
@@ -32,7 +31,6 @@ class StatsSelector extends React.Component {
         const {
             onSelectStat,
             appliedBonuses,
-            statBonuses,
             mentalPool,
             onUpdateSectionsLockState
         } = this.props;
@@ -115,7 +113,6 @@ const mapStateToProps = state => ({
     mentalPointsLeftToAssign: getMentalPointsLeftToAssign(state),
     physicalPointsLeftToAssign: getPhysicalPointsLeftToAssign(state),
     mentalPool: getMentalPool(state),
-    statBonuses: getStatBonuses(state),
     appliedBonuses: getAppliedBonuses(state)
 });
 
