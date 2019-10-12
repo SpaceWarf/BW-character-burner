@@ -1,0 +1,29 @@
+.SimpleEditor {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    & > .ui.card {
+        width: 48%;
+
+        &:first-child {
+            margin-top: 1em;
+        }
+
+        & > .content {
+
+            & > .header {
+                display: flex;
+                justify-content: space-between;
+
+                & > p {
+                    font-size: 15px;
+                }
+            }
+
+            & > .description {
+                text-align: justify;
+            }
+        }
+    }
+}

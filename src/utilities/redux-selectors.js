@@ -357,3 +357,12 @@ export const getMortalWoundScore = createSelector(
         return 6 + Math.floor((selectedStats.power + selectedStats.forte) / 2)
     }
 );
+
+// Resources
+export const getResourcePoints = createSelector(
+    [getSelectedLifepaths], lifepaths => {
+        return lifepaths.reduce((resourcePoints, { lifepath }) => {
+            return resourcePoints + lifepath.res;
+        }, 0);
+    }
+);
