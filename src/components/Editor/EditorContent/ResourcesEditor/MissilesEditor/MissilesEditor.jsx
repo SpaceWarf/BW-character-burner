@@ -62,10 +62,12 @@ class MissilesEditor extends React.Component {
     handleAddAddon() {
         const { addons, selectedAddon } = this.state;
 
-        this.setState({
-            addons: [...addons, selectedAddon],
-            selectedAddon: ""
-        });
+        if (selectedAddon !== "") {
+            this.setState({
+                addons: [...addons, selectedAddon],
+                selectedAddon: ""
+            });
+        }
     }
 
     handleRemoveAddon(item) {
@@ -159,7 +161,7 @@ class MissilesEditor extends React.Component {
                             ))}
                         </Form>
                     </div>
-                    {selectedQuality.name && selectedType.addon && <div className="Addons thirds">
+                    {selectedQuality.name && selectedType.addon && <div className="Addons">
                         <Header>Special {`${selectedType.addon[0].toUpperCase()}${selectedType.addon.slice(1)}`} - 1 rps</Header>
                         <List bulleted verticalAlign="middle">
                             {addons.map(addon => (
@@ -176,7 +178,7 @@ class MissilesEditor extends React.Component {
                             ))}
                         </List>
                         <Dropdown
-                            placeholder="Special type..."
+                            placeholder="Select type..."
                             options={this.getAddonOptions()}
                             value={selectedAddon}
                             onChange={(_, { value }) => this.setState({ selectedAddon: value })}
