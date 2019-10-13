@@ -12,53 +12,46 @@ import { getResourcePointsLeft } from '#Utilities/redux-selectors.js';
 import { armor } from '#Resources/Resources/mannish_resources.js';
 import './PartsEditor.scss';
 
-const typeOptions = armor.types.map(type => ({
-    key: type.name,
-    value: type,
-    text: `${type.name} - ${type.price} rps`
-}));
-
-const qualityOptions = armor.qualities.map(quality => ({
-    key: quality.name,
-    value: quality,
-    text: `${quality.name} - ${quality.modifier}x rps`
-}));
-
 class PartsEditor extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            parts: {
-                head: { type: "", quality: "" },
-                chest: { type: "", quality: "" },
-                arms: { type: "", quality: "" },
-                legs: { type: "", quality: "" }
-            },
+            selectedParts: {},
             note: ""
         };
         this.handleConfirm = this.handleConfirm.bind(this);
         this.getTotalCost = this.getTotalCost.bind(this);
-        this.handlePartQuality = this.handlePartQuality.bind(this);
-        this.handlePartType = this.handlePartType.bind(this);
+        this.handleSelectPartQuality = this.handleSelectPartQuality.bind(this);
+        this.handleSelectPartType = this.handleSelectPartType.bind(this);
         this.getPartCost = this.getPartCost.bind(this);
         this.getTotalCost = this.getTotalCost.bind(this);
         this.canBuy = this.canBuy.bind(this);
     }
 
-    handlePartType(part, type) {
-        const { parts } = this.state;
-        const newParts = { ...parts };
-        newParts[part].type = type;
+    handleSelectPartType(part, type) {
+        const { selectedParts } = this.state;
+        const newParts = { ...selectedParts };
 
-        this.setState({ newParts });
+        if (newParts[part]) {
+            newParts[part].type = type;
+        } else {
+            newParts[part] = { type };
+        }
+
+        this.setState({ selectedParts: newParts });
     }
 
-    handlePartQuality(part, quality) {
-        const { parts } = this.state;
-        const newParts = { ...parts };
-        newParts[part].quality = quality;
+    handleSelectPartQuality(part, quality) {
+        const { selectedParts } = this.state;
+        const newParts = { ...selectedParts };
 
-        this.setState({ newParts });
+        if (newParts[part]) {
+            newParts[part].quality = quality;
+        } else {
+            newParts[part] = { quality };
+        }
+
+        this.setState({ selectedParts: newParts });
 
     }
 
@@ -73,51 +66,72 @@ class PartsEditor extends React.Component {
 
     handleConfirm() {
         const { onBuyResource } = this.props;
-        const { parts, note } = this.state;
+        const { selectedParts, note } = this.state;
 
         onBuyResource({
             category: "partsArmor",
-            parts,
+            selectedParts,
             price: this.getTotalCost(),
             note
         });
         this.setState({
-            parts: {
-                head: { type: "", quality: "" },
-                chest: { type: "", quality: "" },
-                arms: { type: "", quality: "" },
-                legs: { type: "", quality: "" }
-            },
+            selectedParts: {},
             note: ""
         });
     }
 
-    getPartCost(part) {
-        const { parts } = this.state;
+    getTypeOptions(part) {
+        return armor.types.map(type => {
+            const price = Math.ceil(type.price * part.modifier);
 
-        if (parts[part].type && parts[part].quality) {
-            return Math.ceil(parts[part].type.price * parts[part].quality.modifier);
+            return {
+                key: type.name,
+                value: type,
+                text: `${type.name} - ${price} rps`
+            }
+        });
+    }
+
+    getQualityOptions() {
+        return armor.qualities.map(quality => ({
+            key: quality.name,
+            value: quality,
+            text: `${quality.name} - ${quality.modifier}x rps`
+        }));
+    }
+
+    getPartCost(part) {
+        const { selectedParts } = this.state;
+
+        if (
+            selectedParts[part.name]
+            && selectedParts[part.name].type
+            && selectedParts[part.name].quality
+        ) {
+            const typePrice = selectedParts[part.name].type.price * part.modifier;
+            return Math.ceil(typePrice * selectedParts[part.name].quality.modifier);
         }
         return 0;
     }
 
     getTotalCost() {
-        const { parts } = this.state;
-
-        return Object.keys(parts).reduce((totalCost, part) => {
+        return armor.parts.reduce((totalCost, part) => {
             return totalCost + this.getPartCost(part);
         }, 0);
     }
 
     canBuy() {
-        const { parts } = this.state;
+        const { selectedParts } = this.state;
 
-        return Object.values(parts).every(part => part.type && part.quality);
+        return Object.values(armor.parts).every(({ name }) => selectedParts[name]
+            && selectedParts[name].type
+            && selectedParts[name].quality
+        );
     }
 
     render() {
         const { resourcePointsLeft } = this.props;
-        const { parts, note } = this.state;
+        const { selectedParts, note } = this.state;
 
         return (
             <div className="PartsEditor">
@@ -133,28 +147,28 @@ class PartsEditor extends React.Component {
                         </Table.Header>
 
                         <Table.Body>
-                            {Object.keys(parts).map(key => (
-                                <Table.Row key={key}>
-                                    <Table.Cell>{`${key[0].toUpperCase()}${key.slice(1)}`}</Table.Cell>
+                            {armor.parts.map(part => (
+                                <Table.Row key={part.name}>
+                                    <Table.Cell>{`${part.name[0].toUpperCase()}${part.name.slice(1)}`}</Table.Cell>
                                     <Table.Cell colSpan="2">
                                         <Dropdown
                                             placeholder="Select type..."
-                                            options={typeOptions}
-                                            value={parts[key].type}
-                                            onChange={(_, { value }) => this.handlePartType(key, value)}
+                                            options={this.getTypeOptions(part)}
+                                            value={(selectedParts[part.name] || {}).type || ""}
+                                            onChange={(_, { value }) => this.handleSelectPartType(part.name, value)}
                                             selection
                                         />
                                     </Table.Cell>
                                     <Table.Cell colSpan="2">
                                         <Dropdown
                                             placeholder="Select quality..."
-                                            options={qualityOptions}
-                                            value={parts[key].quality}
-                                            onChange={(_, { value }) => this.handlePartQuality(key, value)}
+                                            options={this.getQualityOptions()}
+                                            value={(selectedParts[part.name] || {}).quality || ""}
+                                            onChange={(_, { value }) => this.handleSelectPartQuality(part.name, value)}
                                             selection
                                         />
                                     </Table.Cell>
-                                    <Table.Cell>{this.getPartCost(key)} rps</Table.Cell>
+                                    <Table.Cell>{this.getPartCost(part)} rps</Table.Cell>
                                 </Table.Row>
                             ))}
                         </Table.Body>
