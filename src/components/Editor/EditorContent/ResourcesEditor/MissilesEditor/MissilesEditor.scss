@@ -1,0 +1,32 @@
+.MissilesEditor {
+
+    & > .Editor {
+
+        & > .Quality {
+
+            & > .ui.form > .field > i {
+                margin-left: 25px;
+            }
+        }
+
+        & > .Addons {
+
+            & > .ui.list > .item > .content > i {
+                cursor: pointer;
+            }
+
+            & > .ui.dropdown {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    & > .Confirm {
+        margin-top: 20px;
+
+        & > .ui.input {
+            width: 300px;
+            margin-right: 5px;
+        }
+    }
+}

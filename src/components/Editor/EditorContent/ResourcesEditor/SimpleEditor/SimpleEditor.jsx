@@ -30,7 +30,7 @@ class SimpleEditor extends React.Component {
         const { onBuyResource } = this.props;
 
         onBuyResource({
-            type: "simple",
+            category: "simple",
             name: item.name,
             price: item.price,
             note

@@ -106,24 +106,28 @@ export const missiles = {
     name: "Missiles",
     types: [
         {
-            name: "Throwing Weapons",
+            name: "Throwing Weapon",
             price: 3
         },
         {
             name: "Hunting Bow",
-            price: 5
+            price: 5,
+            addon: "arrows"
         },
         {
             name: "Great Bow",
-            price: 10
+            price: 10,
+            addon: "arrows"
         },
         {
             name: "Crossbow",
-            price: 7
+            price: 7,
+            addon: "bolts"
         },
         {
             name: "Heavy Crossbow",
-            price: 12
+            price: 12,
+            addon: "bolts"
         },
         {
             name: "Pistol",
@@ -134,7 +138,7 @@ export const missiles = {
             price: 20
         },
     ],
-    quality: [
+    qualities: [
         {
             name: "Poor Quality Missiles",
             modifier: 0.5,
@@ -146,6 +150,8 @@ export const missiles = {
             description: "+1D bonus balance die"
         }
     ],
+    arrows: ["Bodking Head", "Leaf Head", "Frog Crotch", "Blunt Head", "Barbed Tip"],
+    bolts: ["Mallet Head", "Fisted Bolt", "Spear Tip"],
     description: ""
 };
 

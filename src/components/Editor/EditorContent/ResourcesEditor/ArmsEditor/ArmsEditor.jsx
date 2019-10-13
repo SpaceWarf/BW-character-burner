@@ -39,7 +39,7 @@ class ArmsEditor extends React.Component {
         const { selectedQuality, note, modifications } = this.state;
 
         onBuyResource({
-            type: "arms",
+            category: "arm",
             quality: selectedQuality,
             modifications,
             price: this.getTotalCost(),
@@ -93,7 +93,7 @@ class ArmsEditor extends React.Component {
                         <Header>Quality</Header>
                         <Form>
                             {arms.qualities.map(quality => (
-                                <Form.Field>
+                                <Form.Field key={quality.name}>
                                     <Radio
                                         label={`${quality.name} - ${quality.price} rps`}
                                         name='ArmsTypeGroup'
@@ -138,7 +138,7 @@ class ArmsEditor extends React.Component {
                                 </List.Item>
                             ))}
                         </List>
-                        {resourcePointsLeft > this.getTotalCost() && <Input
+                        <Input
                             value={modifNote}
                             placeholder="Modification..."
                             label={
@@ -151,7 +151,7 @@ class ArmsEditor extends React.Component {
                             labelPosition="right"
                             onKeyUp={e => this.handleKeyUp(e, this.handleAddModification)}
                             onChange={(_, { value }) => this.setState({ modifNote: value })}
-                        />}
+                        />
                     </div>}
                 </div>
             </div>
