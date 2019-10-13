@@ -30,19 +30,6 @@
                 text-align: justify;
                 font-size: 12px;
             }
-
-            & > .CardInput {
-                position: absolute;
-                display: flex;
-                align-items: center;
-                top: 50%;
-                width: calc(100% - 28px);
-
-                & > .ui.input {
-                    margin-right: 5px;
-                    width: calc(100% - 80px);
-                }
-            }
         }
     }
 }
