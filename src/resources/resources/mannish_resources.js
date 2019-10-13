@@ -78,21 +78,24 @@ export const simple = [
 
 export const arms = {
     name: "Arms",
-    types: [
+    qualities: [
         {
-            name: "Poor Quality Arms",
+            name: "Poor",
             price: 3,
-            description: "Base Ob 2 to use."
+            description: "Base Ob 2 to use",
+            modificationCost: 1
         },
         {
-            name: "Run of the Mill Quality Arms",
+            name: "Run of the Mill",
             price: 5,
-            description: "Base Ob 1 to use."
+            description: "Base Ob 1 to use",
+            modificationCost: 1
         },
         {
-            name: "Superior Quality Arms",
+            name: "Superior",
             price: 20,
-            description: "Base Ob 1 to use."
+            description: "Base Ob 1 to use",
+            modificationCost: 4
         }
     ],
     description: "Arms covers the necessary hand weaponry to suit a character's idiom. Arms for a knight would consist of a sword, lance and dirk. For a foot soldier, perhaps an axe and dagger. Whatever it is, just take what you need. Players may purchase beaks, spikes and weights for their character's weapons at +1 rp per modification per weapon, +4 rps per modification per weapon of superior quality.",
