@@ -140,12 +140,17 @@ export const missiles = {
     ],
     qualities: [
         {
-            name: "Poor Quality Missiles",
+            name: "Poor",
             modifier: 0.5,
             description: "+1 Ob to hit"
         },
         {
-            name: "Superior Quality Missiles",
+            name: "Run of the Mill",
+            modifier: 1,
+            description: ""
+        },
+        {
+            name: "Superior",
             modifier: 3,
             description: "+1D bonus balance die"
         }
@@ -167,7 +172,7 @@ export const armor = {
             price: 6
         },
         {
-            name: "Light Mai",
+            name: "Light Mail",
             price: 10
         },
         {
@@ -183,16 +188,39 @@ export const armor = {
             price: 50
         }
     ],
-    quality: [
+    qualities: [
         {
-            name: "Poor Quality Armor",
+            name: "Poor",
             modifier: 0.5,
             description: "All 1s count for losing armor dice."
         },
         {
-            name: "Superior Quality Armor",
+            name: "Run of the Mill",
+            modifier: 1,
+            description: "Only the first 1 counts."
+        },
+        {
+            name: "Superior",
             modifier: 4,
-            description: "Only the first 1 counts, which is rerolled; if that die comes up 1 again, an armor die is lost."
+            description: "Only the first 1 counts, which is rerolled; if it's 1 again, lose an armor die."
+        }
+    ],
+    parts: [
+        {
+            name: "helmet",
+            modifier: 0.5
+        },
+        {
+            name: "breastplate",
+            modifier: 0.5
+        },
+        {
+            name: "arms",
+            modifier: 1 / 3
+        },
+        {
+            name: "legs",
+            modifier: 1 / 3
         }
     ],
     description: ""

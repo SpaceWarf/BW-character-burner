@@ -133,7 +133,7 @@ class MissilesEditor extends React.Component {
                                 <Form.Field key={type.name}>
                                     <Radio
                                         label={`${type.name} - ${type.price} rps`}
-                                        name='ArmsTypeGroup'
+                                        name='MissilesTypeGroup'
                                         value={type}
                                         checked={selectedType.name === type.name}
                                         onChange={() => this.handleTypeChange(type)}
@@ -150,13 +150,13 @@ class MissilesEditor extends React.Component {
                                 <Form.Field key={quality.name}>
                                     <Radio
                                         label={`${quality.name} - ${quality.modifier}x rps`}
-                                        name='ArmsTypeGroup'
+                                        name='MissilesTypeGroup'
                                         value={quality}
                                         checked={selectedQuality.name === quality.name}
                                         onChange={() => this.setState({ selectedQuality: quality })}
                                     />
                                     <br />
-                                    <i>{quality.description}</i>
+                                    {quality.description && <i>{quality.description}</i>}
                                 </Form.Field>
                             ))}
                         </Form>
