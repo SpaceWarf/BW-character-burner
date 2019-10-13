@@ -6,7 +6,7 @@ import './PropertyEditor.scss';
 const PropertyEditor = () => {
     return (
         <div className="PropertyEditor">
-            <Button>Buy Property</Button>
+            <Button basic>Buy Property</Button>
         </div>
     );
 };

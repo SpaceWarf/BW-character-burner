@@ -6,7 +6,7 @@ import './ArmorEditor.scss';
 const ArmorEditor = () => {
     return (
         <div className="ArmorEditor">
-            <Button>Buy Armor</Button>
+            <Button basic>Buy Armor</Button>
         </div>
     );
 };

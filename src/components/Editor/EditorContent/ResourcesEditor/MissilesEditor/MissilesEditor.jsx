@@ -6,7 +6,7 @@ import './MissilesEditor.scss';
 const MissilesEditor = () => {
     return (
         <div className="MissilesEditor">
-            <Button>Buy Missiles</Button>
+            <Button basic>Buy Missiles</Button>
         </div>
     );
 };
