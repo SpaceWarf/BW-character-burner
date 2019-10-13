@@ -10,7 +10,7 @@ const count = (state = 2, action) => {
     }
 };
 
-const selectedLifepaths = (state = [], action) => {
+const selectedLifepaths = (state = [{ lifepath: { res: 23 } }], action) => {
     switch (action.type) {
         case types.ADD_LIFEPATH:
             return [

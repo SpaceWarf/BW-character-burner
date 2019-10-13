@@ -7,7 +7,7 @@ import MissilesEditor from './MissilesEditor/MissilesEditor.jsx';
 import ArmorEditor from './ArmorEditor/ArmorEditor.jsx';
 import PropertyEditor from './PropertyEditor/PropertyEditor.jsx';
 import RelationshipEditor from './RelationshipEditor/RelationshipEditor.jsx';
-import { getResourcePoints } from '#Utilities/redux-selectors.js';
+import { getResourcePoints, getResourcePointsLeft } from '#Utilities/redux-selectors.js';
 import './ResourcesEditor.scss';
 
 const panes = [
@@ -19,7 +19,7 @@ const panes = [
     { menuItem: 'Relationships', render: () => <Tab.Pane><RelationshipEditor /></Tab.Pane> }
 ];
 
-const ResourcesEditor = ({ resourcePoints }) => {
+const ResourcesEditor = ({ resourcePoints, resourcePointsLeft }) => {
     return (
         <div className="ResourcesEditor">
             <Header className="section" as="h1">Select your character's resources</Header>
@@ -29,7 +29,7 @@ const ResourcesEditor = ({ resourcePoints }) => {
                         <Card.Content>
                             <Card.Header>
                                 <p>Ressource Points</p>
-                                <p>0/{resourcePoints}</p>
+                                <p>{resourcePointsLeft}/{resourcePoints}</p>
                             </Card.Header>
                         </Card.Content>
                     </Card>
@@ -41,7 +41,8 @@ const ResourcesEditor = ({ resourcePoints }) => {
 };
 
 const mapStateToProps = state => ({
-    resourcePoints: getResourcePoints(state)
+    resourcePoints: getResourcePoints(state),
+    resourcePointsLeft: getResourcePointsLeft(state)
 });
 
 

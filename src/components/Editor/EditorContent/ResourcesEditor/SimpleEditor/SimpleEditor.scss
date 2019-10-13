@@ -7,6 +7,10 @@
         width: 48%;
         height: 125px;
 
+        &.disabled {
+            background-color: lightgray;
+        }
+
         &:first-child {
             margin-top: 1em;
         }

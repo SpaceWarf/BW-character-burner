@@ -1,30 +1,11 @@
-import React, { createRef } from "react";
-import { Card, Input, Button } from 'semantic-ui-react';
+import React from "react";
+import { connect } from 'react-redux';
+import { Card } from 'semantic-ui-react';
+import { buyResource } from '#Actions/editor.js';
 import { simple } from '#Resources/Resources/mannish_resources.js';
+import { getResourcePointsLeft } from '#Utilities/redux-selectors.js';
+import CardInput from './CardInput/CardInput.jsx';
 import './SimpleEditor.scss';
-
-class CardInput extends React.Component {
-    constructor(props) {
-        super(props);
-        this.inputRef = createRef();
-    }
-
-    componentDidMount() {
-        this.inputRef.current.focus();
-    }
-
-    render() {
-        const { onConfirm, onCancel } = this.props;
-
-        return (
-            <div className="CardInput" onClick={e => e.stopPropagation()}>
-                <Input ref={this.inputRef} placeholder="Notes..." />
-                <Button icon="check" onClick={onConfirm} positive />
-                <Button icon="cancel" onClick={onCancel} negative />
-            </div>
-        );
-    }
-}
 
 class SimpleEditor extends React.Component {
     constructor(props) {
@@ -45,7 +26,14 @@ class SimpleEditor extends React.Component {
         });
     }
 
-    handleConfirm() {
+    handleConfirm(item, note) {
+        const { onBuyResource } = this.props;
+
+        onBuyResource({
+            name: item.name,
+            price: item.price,
+            note
+        });
         this.setState({
             active: ""
         });
@@ -58,19 +46,24 @@ class SimpleEditor extends React.Component {
     }
 
     render() {
+        const { resourcePointsLeft } = this.props;
         const { active } = this.state;
 
         return (
             <div className="SimpleEditor">
                 {simple.map(item => (
-                    <Card key={item.name} onClick={() => this.handleClick(item.name)}>
+                    <Card
+                        key={item.name}
+                        className={resourcePointsLeft < item.price ? "disabled" : ""}
+                        onClick={resourcePointsLeft < item.price ? null : () => this.handleClick(item.name)}
+                    >
                         <Card.Content>
                             <Card.Header>
                                 <p>{item.name}</p>
                                 <p>{item.price} rps</p>
                             </Card.Header>
                             {active === item.name
-                                ? <CardInput onConfirm={this.handleConfirm} onCancel={this.handleCancel} />
+                                ? <CardInput onConfirm={note => this.handleConfirm(item, note)} onCancel={this.handleCancel} />
                                 : <Card.Description>{item.description}</Card.Description>
                             }
                         </Card.Content>
@@ -81,4 +74,14 @@ class SimpleEditor extends React.Component {
     }
 }
 
-export default SimpleEditor;
+
+const mapStateToProps = state => ({
+    resourcePointsLeft: getResourcePointsLeft(state)
+});
+
+
+const mapDispatchToProps = dispatch => ({
+    onBuyResource: resource => dispatch(buyResource(resource))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(SimpleEditor);

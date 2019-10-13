@@ -21,6 +21,7 @@ const getAdvancedSkills = state => state.editor.skills.advancedSkills;
 const getBoughtTraits = state => state.editor.traits.boughtTraits;
 const getHealthAnswers = state => state.editor.attributes.healthAnswers;
 const getSteelAnswers = state => state.editor.attributes.steelAnswers;
+const getBoughtResources = state => state.editor.resources.boughtResources;
 
 // Lifepaths
 export const getBornLifepaths = createSelector(
@@ -363,6 +364,14 @@ export const getResourcePoints = createSelector(
     [getSelectedLifepaths], lifepaths => {
         return lifepaths.reduce((resourcePoints, { lifepath }) => {
             return resourcePoints + lifepath.res;
+        }, 0);
+    }
+);
+
+export const getResourcePointsLeft = createSelector(
+    [getResourcePoints, getBoughtResources], (resourcePoints, boughtResources) => {
+        return resourcePoints - boughtResources.reduce((spentPoints, { price }) => {
+            return spentPoints + price;
         }, 0);
     }
 );

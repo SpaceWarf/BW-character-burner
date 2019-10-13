@@ -94,3 +94,14 @@ export const answerSteelQuestions = answers => ({
     type: types.ANSWER_STEEL_QUESTIONS,
     answers
 });
+
+// Resources editor
+export const buyResource = resource => ({
+    type: types.BUY_RESOURCE,
+    resource
+});
+
+export const removeResource = resource => ({
+    type: types.REMOVE_RESOURCE,
+    resource
+});

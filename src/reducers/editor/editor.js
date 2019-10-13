@@ -11,6 +11,7 @@ import stats from './stats';
 import skills from './skills';
 import traits from './traits';
 import attributes from './attributes';
+import resources from './resources';
 import * as types from "#Actions/types.js";
 
 const selectedRace = (state = "", action) => {
@@ -84,5 +85,6 @@ export default combineReducers({
     stats,
     skills,
     traits,
-    attributes
+    attributes,
+    resources
 });

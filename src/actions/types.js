@@ -25,3 +25,7 @@ export const REMOVE_TRAIT = "REMOVE_TRAIT";
 // Attributes editor
 export const ANSWER_HEALTH_QUESTIONS = "ANSWER_HEALTH_QUESTIONS";
 export const ANSWER_STEEL_QUESTIONS = "ANSWER_STEEL_QUESTIONS";
+
+// Resources editor
+export const BUY_RESOURCE = "BUY_RESOURCE";
+export const REMOVE_RESOURCE = "REMOVE_RESOURCE";
