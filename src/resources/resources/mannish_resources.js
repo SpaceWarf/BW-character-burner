@@ -77,7 +77,6 @@ export const simple = [
 ];
 
 export const arms = {
-    name: "Arms",
     qualities: [
         {
             name: "Poor",
@@ -103,7 +102,6 @@ export const arms = {
 };
 
 export const missiles = {
-    name: "Missiles",
     types: [
         {
             name: "Throwing Weapon",
@@ -161,7 +159,6 @@ export const missiles = {
 };
 
 export const armor = {
-    name: "Armor",
     types: [
         {
             name: "Gambeson",
@@ -227,7 +224,6 @@ export const armor = {
 };
 
 export const property = {
-    name: "Property",
     types: [
         {
             name: "Leaky Shack",
@@ -242,7 +238,7 @@ export const property = {
             price: 10
         },
         {
-            name: "Vailla, Farm, Knight's fee",
+            name: "Vailla, Farm or Knight's fee",
             price: 15
         },
         {
@@ -254,7 +250,7 @@ export const property = {
             price: 30
         },
         {
-            name: "Manor, Estate, Urban Hotel",
+            name: "Manor, Estate or Urban Hotel",
             price: 40
         },
         {
@@ -262,23 +258,23 @@ export const property = {
             price: 45
         },
         {
-            name: "Successful Small Business, Large Business, Keep",
+            name: "Successful Small Business, Large Business or Keep",
             price: 60
         },
         {
-            name: "Fortress, Moderate Estate",
+            name: "Fortress or Moderate Estate",
             price: 75
         },
         {
-            name: "Castle with Attendant Town, Large Estate",
+            name: "Castle with Attendant Town or Large Estate",
             price: 90
         },
         {
-            name: "Palace, Government Position",
+            name: "Palace or Government Position",
             price: 105
         },
         {
-            name: "Rowboat, Skiff",
+            name: "Rowboat or Skiff",
             price: 5
         },
         {
