@@ -14,7 +14,7 @@ class ArmorEditor extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            fullSuit: false
+            fullSuit: true
         }
     }
 

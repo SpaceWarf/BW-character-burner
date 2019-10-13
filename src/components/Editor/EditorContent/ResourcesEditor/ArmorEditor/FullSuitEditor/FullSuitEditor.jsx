@@ -38,7 +38,7 @@ class FullSuitEditor extends React.Component {
         const { selectedType, selectedQuality, note } = this.state;
 
         onBuyResource({
-            category: "armor",
+            category: "fullArmor",
             type: selectedType,
             quality: selectedQuality,
             price: this.getTotalCost(),

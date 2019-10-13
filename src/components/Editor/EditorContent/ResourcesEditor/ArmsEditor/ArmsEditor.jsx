@@ -89,7 +89,7 @@ class ArmsEditor extends React.Component {
             <div className="ArmsEditor">
                 <div className="Description">{arms.description}</div>
                 <div className="Editor">
-                    <div className="Quality thirds">
+                    <div className="Quality halfs">
                         <Header>Quality</Header>
                         <Form>
                             {arms.qualities.map(quality => (

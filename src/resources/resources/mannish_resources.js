@@ -207,11 +207,11 @@ export const armor = {
     ],
     parts: [
         {
-            name: "helmet",
+            name: "head",
             modifier: 0.5
         },
         {
-            name: "breastplate",
+            name: "chest",
             modifier: 0.5
         },
         {
