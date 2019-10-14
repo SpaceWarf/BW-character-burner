@@ -352,3 +352,33 @@ export const relationship = {
     ],
     description: ""
 };
+
+export const affiliations = [
+    {
+        name: "1D, A small, local or specialized group",
+        price: 10
+    },
+    {
+        name: "2D, A large, regional or expansive group",
+        price: 25
+    },
+    {
+        name: "3D, A national, powerful or ruling group",
+        price: 50
+    }
+];
+
+export const reputations = [
+    {
+        name: "1D, Local or minor reputation",
+        price: 7
+    },
+    {
+        name: "2D, Regional or notable reputation",
+        price: 25
+    },
+    {
+        name: "3D, National or major reputation",
+        price: 45
+    }
+];

@@ -4,7 +4,7 @@ import { Card } from 'semantic-ui-react';
 import { buyResource } from '#Actions/editor.js';
 import { simple } from '#Resources/Resources/mannish_resources.js';
 import { getResourcePointsLeft } from '#Utilities/redux-selectors.js';
-import CardInput from './CardInput/CardInput.jsx';
+import ResourceCard from '../ResourceCard/ResourceCard.jsx';
 import './SimpleEditor.scss';
 
 class SimpleEditor extends React.Component {
@@ -13,17 +13,7 @@ class SimpleEditor extends React.Component {
         this.state = {
             active: ""
         }
-        this.handleClick = this.handleClick.bind(this);
         this.handleConfirm = this.handleConfirm.bind(this);
-        this.handleCancel = this.handleCancel.bind(this);
-    }
-
-    handleClick(name) {
-        const { active } = this.state;
-
-        this.setState({
-            active: active === name ? "" : name
-        });
     }
 
     handleConfirm(item, note) {
@@ -40,12 +30,6 @@ class SimpleEditor extends React.Component {
         });
     }
 
-    handleCancel() {
-        this.setState({
-            active: ""
-        });
-    }
-
     render() {
         const { resourcePointsLeft } = this.props;
         const { active } = this.state;
@@ -53,22 +37,14 @@ class SimpleEditor extends React.Component {
         return (
             <div className="SimpleEditor">
                 {simple.map(item => (
-                    <Card
-                        key={item.name}
-                        className={resourcePointsLeft < item.price ? "disabled" : ""}
-                        onClick={resourcePointsLeft < item.price ? null : () => this.handleClick(item.name)}
-                    >
-                        <Card.Content>
-                            <Card.Header>
-                                <p>{item.name}</p>
-                                <p>{item.price} rps</p>
-                            </Card.Header>
-                            {active === item.name
-                                ? <CardInput onConfirm={note => this.handleConfirm(item, note)} onCancel={this.handleCancel} />
-                                : <Card.Description>{item.description}</Card.Description>
-                            }
-                        </Card.Content>
-                    </Card>
+                    <ResourceCard
+                        item={item}
+                        active={item.name === active}
+                        disabled={resourcePointsLeft < item.price}
+                        onClick={() => this.setState({ active: active === item.name ? "" : item.name })}
+                        onConfirm={note => this.handleConfirm(item, note)}
+                        onCancel={() => this.setState({ active: "" })}
+                    />
                 ))}
             </div>
         );

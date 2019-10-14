@@ -1,0 +1,29 @@
+.ResourceCard.ui.card {
+    width: 80%;
+    height: 90px;
+
+    &.disabled {
+        background-color: lightgray;
+    }
+
+    &:first-child {
+        margin-top: 1em;
+    }
+
+    & > .content {
+
+        & > .header {
+            display: flex;
+            justify-content: space-between;
+
+            & > p {
+                font-size: 15px;
+            }
+        }
+
+        & > .description {
+            text-align: justify;
+            font-size: 12px;
+        }
+    }
+}
