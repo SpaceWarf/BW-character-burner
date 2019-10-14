@@ -18,15 +18,19 @@
                     font-style: italic;
                     max-width: 75%;
                 }
-            }
-        }
-        
-        & > .Confirm {
-            margin-top: 20px;
 
-            & > .ui.input {
-                width: 300px;
-                margin-right: 5px;
+                & > .Confirm {
+                    margin-top: 20px;
+
+                    & > .ui.header {
+                        margin-bottom: 5px;
+                    }
+
+                    & > .ui.input {
+                        width: 300px;
+                        margin-right: 5px;
+                    }
+                }
             }
         }
     }

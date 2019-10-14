@@ -15,6 +15,10 @@
     & > .Confirm {
         margin-top: 20px;
 
+        & > .ui.header {
+            margin-bottom: 5px;
+        }
+
         & > .ui.input {
             width: 300px;
             margin-right: 5px;

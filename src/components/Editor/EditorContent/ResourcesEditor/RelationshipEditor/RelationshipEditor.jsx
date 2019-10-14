@@ -147,6 +147,21 @@ class RelationshipEditor extends React.Component {
                                     </Form.Field>
                                 ))}
                             </Form>
+                            {selectedType.name && <div className="Confirm">
+                                <Header>Total Cost: {this.getTotalCost()} rps</Header>
+                                <Input
+                                    value={note}
+                                    placeholder="Notes..."
+                                    onKeyUp={e => this.handleKeyUp(e, this.handleRelationshipConfirm)}
+                                    onChange={(_, { value }) => this.setState({ note: value })}
+                                />
+                                <Button
+                                    content="buy"
+                                    disabled={resourcePointsLeft < this.getTotalCost()}
+                                    onClick={this.handleRelationshipConfirm}
+                                    positive
+                                />
+                            </div>}
                         </div>
                         <div className="Modifiers halfs">
                             <Header>Modifiers</Header>
@@ -167,21 +182,6 @@ class RelationshipEditor extends React.Component {
                             </Form>
                         </div>
                     </div>
-                    {selectedType.name && <div className="Confirm">
-                        <Header>Total Cost: {this.getTotalCost()} rps</Header>
-                        <Input
-                            value={note}
-                            placeholder="Notes..."
-                            onKeyUp={e => this.handleKeyUp(e, this.handleRelationshipConfirm)}
-                            onChange={(_, { value }) => this.setState({ note: value })}
-                        />
-                        <Button
-                            content="buy"
-                            disabled={resourcePointsLeft < this.getTotalCost()}
-                            onClick={this.handleRelationshipConfirm}
-                            positive
-                        />
-                    </div>}
                 </div>
                 <Divider />
                 <div className="AffiliationReputation Section">
