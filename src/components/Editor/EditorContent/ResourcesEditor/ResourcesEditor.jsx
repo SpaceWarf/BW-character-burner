@@ -34,7 +34,7 @@ const ResourcesEditor = ({ resourcePoints, resourcePointsLeft }) => {
                         </Card.Content>
                     </Card>
                 </div>
-                <Tab panes={panes} activeIndex={4} />
+                <Tab panes={panes} />
             </div>
         </div>
     );

@@ -35,15 +35,11 @@ class PropertyEditor extends React.Component {
             price: item.price,
             note
         });
-        this.setState({
-            active: ""
-        });
+        this.setState({ active: "" });
     }
 
     handleCancel() {
-        this.setState({
-            active: ""
-        });
+        this.setState({ active: "" });
     }
 
     render() {

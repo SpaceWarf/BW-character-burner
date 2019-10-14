@@ -102,7 +102,7 @@ class ArmsEditor extends React.Component {
                                         onChange={() => this.setState({ selectedQuality: quality })}
                                     />
                                     <br />
-                                    <i>{quality.description}</i>
+                                    <p>{quality.description}</p>
                                 </Form.Field>
                             ))}
                         </Form>

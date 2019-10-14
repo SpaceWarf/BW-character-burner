@@ -94,7 +94,7 @@ class FullSuitEditor extends React.Component {
                                         onChange={() => this.setState({ selectedQuality: quality })}
                                     />
                                     <br />
-                                    {quality.description && <i>{quality.description}</i>}
+                                    {quality.description && <p>{quality.description}</p>}
                                 </Form.Field>
                             ))}
                         </Form>

@@ -302,5 +302,53 @@ export const property = {
             price: 105
         }
     ],
-    description: "Only Noble Born characters or characters with the Minister, Town Official, Merchant, Magnate, Steward, Master of Horse, Master of Hounds, Bailiff, Justicar, Coroner, Constable, Treasurer, Bishop or Abbot lifepaths may spend more than 40 rps on property. Other charcters simply may not own that degree of property."
+    description: "Only Noble Born characters or characters with the Minister, Town Official, Merchant, Magnate, Steward, Master of Horse, Master of Hounds, Bailiff, Justicar, Coroner, Constable, Treasurer, Bishop or Abbot lifepaths may spend more than 40 rps on property. Other characters simply may not own that degree of property."
+};
+
+export const relationship = {
+    types: [
+        {
+            name: "Minor",
+            description: "A character who plays a minor role in the setting or situation",
+            price: 5
+        },
+        {
+            name: "Important",
+            description: "A character who is considered important or significant or important to the game setting",
+            price: 10
+        },
+        {
+            name: "Powerful",
+            description: "A character who is considered powerful and who plays a large role in the game setting",
+            price: 15
+        }
+    ],
+    modifiers: [
+        {
+            name: "Immediate Family",
+            description: "Immediate family relationship",
+            modifier: -2
+        },
+        {
+            name: "Other Family",
+            description: "Other family relationship (cousins, aunts, etc.)",
+            modifier: -1
+        },
+        {
+            name: "Romantic",
+            description: "Relationships involving bonds of romantic love",
+            modifier: -1
+        },
+        {
+            name: "Forbidden",
+            description: "Forbidden relationships",
+            modifier: -1
+        },
+        {
+            name: "Hateful",
+            description: "Relationships that are hateful, are rivals or are extremely unfriendly to the character",
+            modifier: -2
+        }
+    ],
+    description: ""
 };
