@@ -9,7 +9,7 @@ import {
 } from 'semantic-ui-react';
 import { buyResource } from '#Actions/editor.js';
 import { getResourcePointsLeft } from '#Utilities/redux-selectors.js';
-import { armor } from '#Resources/Resources/mannish_resources.js';
+import { armor } from '#Resources/resources/mannish_resources.js';
 import './PartsEditor.scss';
 
 class PartsEditor extends React.Component {
