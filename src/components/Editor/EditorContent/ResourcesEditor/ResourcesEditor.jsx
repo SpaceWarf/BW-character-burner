@@ -38,7 +38,7 @@ class ResourcesEditor extends React.Component {
                 <Header className="section" as="h1">Select your character's resources</Header>
                 <div className="content">
                     <div className="Points">
-                        <Card className="StatCard">
+                        <Card className="ResourceCard">
                             <Card.Content>
                                 <Card.Header>
                                     <p>Ressource Points</p>
