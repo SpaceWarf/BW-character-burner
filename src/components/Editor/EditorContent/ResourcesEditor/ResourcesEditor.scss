@@ -6,9 +6,24 @@
     width: $content-width;
 
     & > .content {
+        padding: 0 20px 15px 20px;
 
         & > .Points {
+            display: flex;
             margin-bottom: 30px;
+
+            & > .ui.card.StatCard {
+                width: 25%;
+                margin-bottom: 0;
+            }
+
+            & > .AllResources {
+                margin: auto 0;
+            }
+        }
+
+        & > div > .ui.menu > .item:last-child {
+            display: none;
         }
     }
 }

@@ -1,6 +1,5 @@
 import React from "react";
 import { connect } from 'react-redux';
-import { Card } from 'semantic-ui-react';
 import { buyResource } from '#Actions/editor.js';
 import { simple } from '#Resources/Resources/mannish_resources.js';
 import { getResourcePointsLeft } from '#Utilities/redux-selectors.js';

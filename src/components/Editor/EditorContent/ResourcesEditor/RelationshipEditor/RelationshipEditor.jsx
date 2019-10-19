@@ -7,14 +7,15 @@ import {
     Checkbox,
     Input,
     Button,
-    Divider,
-    Card
+    Divider
 } from 'semantic-ui-react';
 import { buyResource } from '#Actions/editor.js';
 import { getResourcePointsLeft } from '#Utilities/redux-selectors.js';
 import { relationship, affiliations, reputations } from '#Resources/Resources/mannish_resources.js';
 import ResourceCard from '../ResourceCard/ResourceCard.jsx';
 import './RelationshipEditor.scss';
+
+const MIN_RELATIONSHIP_PRICE = 1;
 
 class RelationshipEditor extends React.Component {
     constructor(props) {
@@ -57,7 +58,7 @@ class RelationshipEditor extends React.Component {
         const modifiers = selectedModifiers.reduce((total, modifier) => {
             return total + modifier.modifier;
         }, 0);
-        return selectedType.price + modifiers;
+        return Math.max(selectedType.price + modifiers, MIN_RELATIONSHIP_PRICE);
     }
 
     handleRelationshipConfirm() {
