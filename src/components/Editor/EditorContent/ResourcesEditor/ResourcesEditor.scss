@@ -12,9 +12,18 @@
             display: flex;
             margin-bottom: 30px;
 
-            & > .ui.card.ResourceCard {
+            & > .ui.card.ResourcePointsCard {
                 width: 27%;
-                margin-bottom: 0;
+                margin: 0 20px 0 0;
+
+                & > .content > .header {
+                    display: flex;
+                    justify-content: space-between;
+
+                    & > p {
+                        margin: auto 0;
+                    }
+                }
             }
 
             & > .AllResources {

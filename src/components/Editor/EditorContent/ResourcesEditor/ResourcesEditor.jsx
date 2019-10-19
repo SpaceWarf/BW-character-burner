@@ -25,7 +25,7 @@ class ResourcesEditor extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            activeIndex: 6
+            activeIndex: 0
         };
     }
 
@@ -38,7 +38,7 @@ class ResourcesEditor extends React.Component {
                 <Header className="section" as="h1">Select your character's resources</Header>
                 <div className="content">
                     <div className="Points">
-                        <Card className="ResourceCard">
+                        <Card className="ResourcePointsCard">
                             <Card.Content>
                                 <Card.Header>
                                     <p>Ressource Points</p>
@@ -47,7 +47,7 @@ class ResourcesEditor extends React.Component {
                             </Card.Content>
                         </Card>
                         <div className="AllResources">
-                            <Button onClick={() => this.setState({ activeIndex: 6 })}>
+                            <Button onClick={() => this.setState({ activeIndex: 6 })} basic>
                                 Purchased Resources
                             </Button>
                         </div>
