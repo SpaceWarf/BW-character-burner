@@ -28,9 +28,12 @@ const AllResourcesList = ({ boughtResources, onRemoveResource }) => {
 
     return (
         <div className="AllResourcesList">
-            {boughtResources.map(resource => (
-                getResourceComponent(resource)
-            ))}
+            {boughtResources.length > 0
+                ? boughtResources.map(resource => (
+                    getResourceComponent(resource)
+                ))
+                : <p>Nothing here yet...</p>
+            }
         </div>
     );
 };
