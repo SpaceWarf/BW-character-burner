@@ -1,0 +1,42 @@
+.RelationshipEditor {
+
+    & > .Section {
+        margin: 30px 0 0 0;
+    }
+
+    & > .Relationship {
+        & > .Description {
+            text-align: justify;
+        }
+
+        & > .Editor {
+
+            & > .Type, .Modifiers {
+
+                & > .ui.form > .field > p {
+                    margin-left: 25px;
+                    font-style: italic;
+                    max-width: 75%;
+                }
+
+                & > .Confirm {
+                    margin-top: 20px;
+
+                    & > .ui.header {
+                        margin-bottom: 5px;
+                    }
+
+                    & > .ui.input {
+                        width: 300px;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    & > .AffiliationReputation {
+        display: flex;
+        width: 100%;
+    }
+}

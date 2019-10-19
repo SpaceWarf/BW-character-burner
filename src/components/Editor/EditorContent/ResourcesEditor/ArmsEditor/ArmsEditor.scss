@@ -1,0 +1,43 @@
+.ArmsEditor {
+
+    & > .Description {
+        text-align: justify;
+    }
+
+    & > .Editor {
+        display: flex;
+        margin: 30px 0 0 0;
+
+        & > .Quality {
+
+            & > .ui.form > .field > p {
+                margin-left: 25px;
+                font-style: italic;
+            }
+
+            & > .Confirm {
+                margin-top: 20px;
+
+                & > .ui.header {
+                    margin-bottom: 5px;
+                }
+
+                & > .ui.input {
+                    width: 300px;
+                    margin-right: 5px;
+                }
+            }
+        }
+
+        & > .Modifications {
+
+            & > .ui.list > .item > .content > i {
+                cursor: pointer;
+            }
+
+            & > .ui.input {
+                width: 100%;
+            }
+        }
+    }
+}

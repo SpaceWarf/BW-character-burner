@@ -1,0 +1,47 @@
+.AllResourcesList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    & > .ResourceItem {
+        display: flex;
+        justify-content: space-between;
+        width: 40%;
+        margin-right: 10px;
+
+        & > .children {
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            margin-bottom: 30px;
+
+            & > .header {
+                display: flex;
+                justify-content: space-between;
+
+                & > .ui.header {
+                    margin: 0;
+
+                    &:last-child {
+                        width: 60px;
+                        text-align: right;
+                    }
+                }
+            }
+
+            & > .Note {
+                margin-bottom: 5px;
+            }
+
+            & > .ui.list {
+                margin-top: 0;
+                padding-left: 10px;
+            }
+        }
+
+        & > i.icon {
+            cursor: pointer;
+            margin: 3px 0 0 10px;
+        }
+    }
+}

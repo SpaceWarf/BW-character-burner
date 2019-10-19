@@ -1,0 +1,35 @@
+.SimpleEditor {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    & > .ui.card {
+        width: 48%;
+        height: 125px;
+
+        &.disabled {
+            background-color: lightgray;
+        }
+
+        &:first-child {
+            margin-top: 1em;
+        }
+
+        & > .content {
+
+            & > .header {
+                display: flex;
+                justify-content: space-between;
+
+                & > p {
+                    font-size: 15px;
+                }
+            }
+
+            & > .description {
+                text-align: justify;
+                font-size: 12px;
+            }
+        }
+    }
+}

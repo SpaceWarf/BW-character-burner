@@ -15,21 +15,21 @@ export const sections = [
 
 export const races = [
     {
-        name: "men",
+        name: "Men",
         icon: humanIcon
     },
     {
-        name: "elves",
+        name: "Elves",
         icon: elfIcon,
         disabled: true
     },
     {
-        name: "dwarves",
+        name: "Dwarves",
         icon: dwarfIcon,
         disabled: true
     },
     {
-        name: "orcs",
+        name: "Orcs",
         icon: orcIcon,
         disabled: true
     }

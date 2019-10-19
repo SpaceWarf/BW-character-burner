@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from 'react-redux';
 import { getAge, getStatBonuses } from '#Utilities/redux-selectors.js';
-import { Header, Table, Label } from "semantic-ui-react";
+import { Header, Table, Label, Card } from "semantic-ui-react";
 import BonusSelector from './BonusSelector/BonusSelector.jsx';
 import StatPools from './StatPools/StatPools.jsx';
 import StatsSelector from './StatsSelector/StatsSelector.jsx';
@@ -20,7 +20,14 @@ const StatsEditor = ({ age, statBonuses, selectedStatBonuses }) => {
             <div className="content">
                 <div className="StatsContent">
                     <div className="Age Section">
-                        <Header as='h3'>Starting Age: {age}</Header>
+                        <Card className="AgeCard">
+                            <Card.Content>
+                                <Card.Header>
+                                    <p>Starting Age</p>
+                                    <p>{age}</p>
+                                </Card.Header>
+                            </Card.Content>
+                        </Card>
                         <i className="hint">
                             Remember: your character's age increases by one everytime you use a lead to change setting.
                     </i>
