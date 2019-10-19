@@ -11,7 +11,7 @@ import {
 } from 'semantic-ui-react';
 import { buyResource } from '#Actions/editor.js';
 import { getResourcePointsLeft } from '#Utilities/redux-selectors.js';
-import { relationship, affiliations, reputations } from '#Resources/Resources/mannish_resources.js';
+import { relationship, affiliations, reputations } from '#Resources/resources/mannish_resources.js';
 import ResourceCard from '../ResourceCard/ResourceCard.jsx';
 import './RelationshipEditor.scss';
 

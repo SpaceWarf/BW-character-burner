@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from 'react-redux';
 import { Card } from 'semantic-ui-react';
 import { buyResource } from '#Actions/editor.js';
-import { property } from '#Resources/Resources/mannish_resources.js';
+import { property } from '#Resources/resources/mannish_resources.js';
 import { getResourcePointsLeft } from '#Utilities/redux-selectors.js';
 import ResourceCard from '../ResourceCard/ResourceCard.jsx';
 import './PropertyEditor.scss';
