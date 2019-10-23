@@ -57,9 +57,9 @@ class CompendiumSidebarContent extends React.Component {
                     {header}
                 </Menu.Header>
                 <div className="Content">
-                    {!closedHeaders.includes(header) && filteredData.map(item => (
+                    {!closedHeaders.includes(header) && filteredData.map((item, index) => (
                         <Menu.Item
-                            key={item.name}
+                            key={`${item.name}-${index}`}
                             className="sidebar child"
                             as="a"
                             href={`#${item.name.replace(/\s/g, '')}`}

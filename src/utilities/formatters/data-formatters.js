@@ -1,8 +1,8 @@
 export const getFormatedSkills = dataSet => {
     return dataSet.map(skill => {
         const formattedSkill = { ...skill };
-        // formattedSkill.roots = formattedSkill.roots.split(",");
-        // formattedSkill.restrictions = formattedSkill.restrictions.split(",");
+        formattedSkill.roots = formattedSkill.roots.split(",");
+        formattedSkill.restrictions = formattedSkill.restrictions.split(",");
 
         if (formattedSkill.tools) {
 
