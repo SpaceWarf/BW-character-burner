@@ -5,18 +5,15 @@ export const headerDropdownItems = [
     },
     {
         text: 'Elves',
-        link: 'lifepaths-elves',
-        disabled: true
+        link: 'lifepaths-elves'
     },
     {
         text: 'Dwarves',
-        link: 'lifepaths-dwarves',
-        disabled: true
+        link: 'lifepaths-dwarves'
     },
     {
         text: 'Orcs',
-        link: 'lifepaths-orcs',
-        disabled: true
+        link: 'lifepaths-orcs'
     },
     {
         isDivider: true
