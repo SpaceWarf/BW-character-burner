@@ -1,7 +1,10 @@
 import { combineReducers } from 'redux';
 import * as types from "#Actions/types.js";
 
-const healthAnswers = (state = {}, action) => {
+import defaultState from '#Utilities/config/default-state.js';
+import mockState from '#Utilities/config/mock-state.js';
+
+const healthAnswers = (state = mockState.attributes.healthAnswers, action) => {
     switch (action.type) {
         case types.ANSWER_HEALTH_QUESTIONS:
             const newState = { ...state };
@@ -14,7 +17,7 @@ const healthAnswers = (state = {}, action) => {
     }
 };
 
-const steelAnswers = (state = {}, action) => {
+const steelAnswers = (state = mockState.attributes.steelAnswers, action) => {
     switch (action.type) {
         case types.ANSWER_STEEL_QUESTIONS:
             const newState = { ...state };

@@ -1,7 +1,10 @@
 import { combineReducers } from 'redux';
 import * as types from "#Actions/types.js";
 
-const selectedStatBonuses = (state = { bonus: [], malus: [] }, action) => {
+import defaultState from '#Utilities/config/default-state.js';
+import mockState from '#Utilities/config/mock-state.js';
+
+const selectedStatBonuses = (state = mockState.stats.selectedStatBonuses, action) => {
     switch (action.type) {
         case types.SELECT_STAT_BONUS:
             const newState = { bonus: [...state.bonus], malus: [...state.malus] };
@@ -20,14 +23,7 @@ const selectedStatBonuses = (state = { bonus: [], malus: [] }, action) => {
     }
 };
 
-const selectedStats = (state = {
-    will: 0,
-    perception: 0,
-    power: 0,
-    forte: 0,
-    agility: 0,
-    speed: 0
-}, action) => {
+const selectedStats = (state = mockState.stats.selectedStats, action) => {
     switch (action.type) {
         case types.SELECT_STAT:
             const newState = { ...state };

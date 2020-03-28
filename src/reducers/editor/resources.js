@@ -1,7 +1,10 @@
 import { combineReducers } from 'redux';
 import * as types from "#Actions/types.js";
 
-const boughtResources = (state = [], action) => {
+import defaultState from '#Utilities/config/default-state.js';
+import mockState from '#Utilities/config/mock-state.js';
+
+const boughtResources = (state = mockState.resources.boughtResources, action) => {
     switch (action.type) {
         case types.BUY_RESOURCE:
             return [...state, action.resource];

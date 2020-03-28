@@ -14,7 +14,10 @@ import attributes from './attributes';
 import resources from './resources';
 import * as types from "#Actions/types.js";
 
-const selectedRace = (state = "", action) => {
+import defaultState from '#Utilities/config/default-state.js';
+import mockState from '#Utilities/config/mock-state.js';
+
+const selectedRace = (state = mockState.editor.selectedRace, action) => {
     switch (action.type) {
         case types.SELECT_RACE:
             return action.race;
@@ -23,7 +26,7 @@ const selectedRace = (state = "", action) => {
     }
 };
 
-const activeSection = (state = sections[0], action) => {
+const activeSection = (state = mockState.editor.activeSection, action) => {
     switch (action.type) {
         case types.SET_ACTIVE_SECTION:
             return action.section;
@@ -32,7 +35,7 @@ const activeSection = (state = sections[0], action) => {
     }
 };
 
-const lockedSections = (state = sections.slice(1), action) => {
+const lockedSections = (state = mockState.editor.lockedSections, action) => {
     switch (action.type) {
         case types.UPDATE_SECTIONS_LOCK_STATE:
             const editorState = action.state.editor;
