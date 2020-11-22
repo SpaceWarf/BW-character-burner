@@ -4,7 +4,7 @@ import * as types from "#Actions/types.js";
 import defaultState from '#Utilities/config/default-state.js';
 import mockState from '#Utilities/config/mock-state.js';
 
-const advancedSkills = (state = mockState.skills.advancedSkills, action) => {
+const advancedSkills = (state = defaultState.skills.advancedSkills, action) => {
     switch (action.type) {
         case types.ADVANCE_SKILL:
             const advancedSkill = state.find(skill => skill.name === action.skill)
@@ -31,7 +31,7 @@ const advancedSkills = (state = mockState.skills.advancedSkills, action) => {
     }
 };
 
-const openedGeneralSkills = (state = mockState.skills.openedGeneralSkills, action) => {
+const openedGeneralSkills = (state = defaultState.skills.openedGeneralSkills, action) => {
     switch (action.type) {
         case types.OPEN_GENERAL_SKILL:
             return [

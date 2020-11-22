@@ -1,0 +1,8 @@
+.CustomInput {
+    display: flex;
+    align-items: center;
+
+    & > .ui.input {
+        margin-right: 5px;
+    }
+}

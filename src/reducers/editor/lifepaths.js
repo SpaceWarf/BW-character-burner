@@ -4,7 +4,7 @@ import * as types from "#Actions/types.js";
 import defaultState from '#Utilities/config/default-state.js';
 import mockState from '#Utilities/config/mock-state.js';
 
-const count = (state = mockState.lifepaths.count, action) => {
+const count = (state = defaultState.lifepaths.count, action) => {
     switch (action.type) {
         case types.SELECT_LIFEPATH_COUNT:
             return action.count;
@@ -13,7 +13,7 @@ const count = (state = mockState.lifepaths.count, action) => {
     }
 };
 
-const selectedLifepaths = (state = mockState.lifepaths.selectedLifepaths, action) => {
+const selectedLifepaths = (state = defaultState.lifepaths.selectedLifepaths, action) => {
     switch (action.type) {
         case types.ADD_LIFEPATH:
             return [

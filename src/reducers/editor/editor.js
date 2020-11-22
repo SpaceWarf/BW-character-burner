@@ -4,7 +4,8 @@ import {
     getSkillPointsLeft,
     getPhysicalPointsLeftToAssign,
     getMentalPointsLeftToAssign,
-    getTraitPointsLeft
+    getTraitPointsLeft,
+    getResourcePointsLeft
 } from '#Utilities/redux-selectors.js';
 import lifepaths from './lifepaths.js';
 import stats from './stats';
@@ -17,7 +18,16 @@ import * as types from "#Actions/types.js";
 import defaultState from '#Utilities/config/default-state.js';
 import mockState from '#Utilities/config/mock-state.js';
 
-const selectedRace = (state = mockState.editor.selectedRace, action) => {
+const characterName = (state = "", action) => {
+    switch (action.type) {
+        case types.SET_CHARACTER_NAME:
+            return action.name;
+        default:
+            return state;
+    }
+}
+
+const selectedRace = (state = defaultState.editor.selectedRace, action) => {
     switch (action.type) {
         case types.SELECT_RACE:
             return action.race;
@@ -26,7 +36,7 @@ const selectedRace = (state = mockState.editor.selectedRace, action) => {
     }
 };
 
-const activeSection = (state = mockState.editor.activeSection, action) => {
+const activeSection = (state = defaultState.editor.activeSection, action) => {
     switch (action.type) {
         case types.SET_ACTIVE_SECTION:
             return action.section;
@@ -35,7 +45,7 @@ const activeSection = (state = mockState.editor.activeSection, action) => {
     }
 };
 
-const lockedSections = (state = mockState.editor.lockedSections, action) => {
+const lockedSections = (state = defaultState.editor.lockedSections, action) => {
     switch (action.type) {
         case types.UPDATE_SECTIONS_LOCK_STATE:
             const editorState = action.state.editor;
@@ -70,7 +80,8 @@ const lockedSections = (state = mockState.editor.lockedSections, action) => {
             }
 
             // Finalize section lock conditions
-            if (true) {
+            const resourcePointsLeft = getResourcePointsLeft(action.state);
+            if (resourcePointsLeft !== 0) {
                 return sections.slice(6);
             }
 
@@ -81,6 +92,7 @@ const lockedSections = (state = mockState.editor.lockedSections, action) => {
 };
 
 export default combineReducers({
+    characterName,
     selectedRace,
     activeSection,
     lockedSections,

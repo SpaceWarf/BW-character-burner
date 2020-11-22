@@ -1,28 +1,33 @@
 import React from "react";
 import { connect } from 'react-redux';
 import { Icon, Header, List } from 'semantic-ui-react';
-import { removeResource } from '#Actions/editor.js';
+import { removeResource, updateSectionsLockState } from '#Actions/editor.js';
 import './AllResourcesList.scss';
 
-const AllResourcesList = ({ boughtResources, onRemoveResource }) => {
+const AllResourcesList = ({ boughtResources, onRemoveResource, onUpdateSectionsLockState }) => {
+    const removeResource = item => {
+        onRemoveResource(item);
+        onUpdateSectionsLockState();
+    };
+
     const getResourceComponent = item => {
         switch (item.category) {
             case 'arm':
-                return <ArmResource item={item} onRemove={onRemoveResource} />
+                return <ArmResource item={item} onRemove={removeResource} />
             case 'missile':
-                return <MissileResource item={item} onRemove={onRemoveResource} />
+                return <MissileResource item={item} onRemove={removeResource} />
             case 'fullArmor':
-                return <FullArmorResource item={item} onRemove={onRemoveResource} />
+                return <FullArmorResource item={item} onRemove={removeResource} />
             case 'partsArmor':
-                return <PartsArmorResource item={item} onRemove={onRemoveResource} />
+                return <PartsArmorResource item={item} onRemove={removeResource} />
             case 'relationship':
-                return <RelationshipResource item={item} onRemove={onRemoveResource} />
+                return <RelationshipResource item={item} onRemove={removeResource} />
             case 'simple':
             case 'property':
             case 'reputation':
             case 'affiliation':
             default:
-                return <SimpleResource item={item} onRemove={onRemoveResource} />;
+                return <SimpleResource item={item} onRemove={removeResource} />;
         }
     };
 
@@ -161,7 +166,8 @@ const mapStateToProps = state => ({
 
 
 const mapDispatchToProps = dispatch => ({
-    onRemoveResource: item => dispatch(removeResource(item))
+    onRemoveResource: item => dispatch(removeResource(item)),
+    onUpdateSectionsLockState: () => dispatch(updateSectionsLockState())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(AllResourcesList);

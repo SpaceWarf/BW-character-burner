@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from 'react-redux';
 import { Card } from 'semantic-ui-react';
-import { buyResource } from '#Actions/editor.js';
+import { buyResource, updateSectionsLockState} from '#Actions/editor.js';
 import { property } from '#Resources/resources/mannish_resources.js';
 import { getResourcePointsLeft } from '#Utilities/redux-selectors.js';
 import ResourceCard from '../ResourceCard/ResourceCard.jsx';
@@ -17,7 +17,7 @@ class PropertyEditor extends React.Component {
     }
 
     handleConfirm(item, note) {
-        const { onBuyResource } = this.props;
+        const { onBuyResource, onUpdateSectionsLockState  } = this.props;
 
         onBuyResource({
             category: "property",
@@ -25,6 +25,7 @@ class PropertyEditor extends React.Component {
             price: item.price,
             note
         });
+        onUpdateSectionsLockState();
         this.setState({ active: "" });
     }
 
@@ -58,7 +59,8 @@ const mapStateToProps = state => ({
 
 
 const mapDispatchToProps = dispatch => ({
-    onBuyResource: resource => dispatch(buyResource(resource))
+    onBuyResource: resource => dispatch(buyResource(resource)),
+    onUpdateSectionsLockState: () => dispatch(updateSectionsLockState())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(PropertyEditor);

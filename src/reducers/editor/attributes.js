@@ -4,7 +4,7 @@ import * as types from "#Actions/types.js";
 import defaultState from '#Utilities/config/default-state.js';
 import mockState from '#Utilities/config/mock-state.js';
 
-const healthAnswers = (state = mockState.attributes.healthAnswers, action) => {
+const healthAnswers = (state = defaultState.attributes.healthAnswers, action) => {
     switch (action.type) {
         case types.ANSWER_HEALTH_QUESTIONS:
             const newState = { ...state };
@@ -17,7 +17,7 @@ const healthAnswers = (state = mockState.attributes.healthAnswers, action) => {
     }
 };
 
-const steelAnswers = (state = mockState.attributes.steelAnswers, action) => {
+const steelAnswers = (state = defaultState.attributes.steelAnswers, action) => {
     switch (action.type) {
         case types.ANSWER_STEEL_QUESTIONS:
             const newState = { ...state };

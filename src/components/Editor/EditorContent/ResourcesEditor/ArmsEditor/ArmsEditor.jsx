@@ -9,7 +9,7 @@ import {
     List,
     Icon
 } from 'semantic-ui-react';
-import { buyResource } from '#Actions/editor.js';
+import { buyResource, updateSectionsLockState } from '#Actions/editor.js';
 import { getResourcePointsLeft } from '#Utilities/redux-selectors.js';
 import { arms } from '#Resources/resources/mannish_resources.js';
 import './ArmsEditor.scss';
@@ -35,7 +35,7 @@ class ArmsEditor extends React.Component {
     }
 
     handleConfirm() {
-        const { onBuyResource } = this.props;
+        const { onBuyResource, onUpdateSectionsLockState  } = this.props;
         const { selectedQuality, note, modifications } = this.state;
 
         onBuyResource({
@@ -45,6 +45,7 @@ class ArmsEditor extends React.Component {
             price: this.getTotalCost(),
             note
         });
+        onUpdateSectionsLockState();
         this.setState({
             selectedQuality: {},
             note: "",
@@ -165,7 +166,8 @@ const mapStateToProps = state => ({
 
 
 const mapDispatchToProps = dispatch => ({
-    onBuyResource: resource => dispatch(buyResource(resource))
+    onBuyResource: resource => dispatch(buyResource(resource)),
+    onUpdateSectionsLockState: () => dispatch(updateSectionsLockState())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ArmsEditor);

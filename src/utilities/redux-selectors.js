@@ -1,5 +1,3 @@
-import { create } from 'domain';
-
 const { createSelector } = require('reselect');
 const {
     getLifepathDataSet,
@@ -375,3 +373,35 @@ export const getResourcePointsLeft = createSelector(
         }, 0);
     }
 );
+
+export const getResourcesScore = createSelector(
+    [getBoughtResources], (boughtResources) => {
+        const spent = boughtResources.reduce((resourcesScore, resource) => {
+            return ["property", "reputation", "affiliation"].includes(resource.category)
+                ? resource.price + resourcesScore
+                : resourcesScore;
+        }, 0);
+        return Math.floor(spent / 15);
+    }
+);
+
+export const getCirclesScore = createSelector(
+    [getBoughtResources, getSelectedStats], (boughtResources, selectedStats) => {
+        const baseScore = Math.max(1, Math.floor(selectedStats.will / 2));
+        const spent = boughtResources.reduce((resourcesScore, resource) => {
+            return ["property", "relationship"].includes(resource.category)
+                ? resource.price + resourcesScore
+                : resourcesScore;
+        }, 0);
+        return spent >= 50
+            ? baseScore + 1
+            : baseScore;
+    }
+);
+
+// Physical tolerances
+export const getSuperficialTolerance = createSelector(
+    [getSelectedStats], (selectedStats) => {
+        return Math.floor(selectedStats.forte / 2) + 1;
+    }
+)

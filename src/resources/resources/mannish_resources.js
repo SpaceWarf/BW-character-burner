@@ -314,7 +314,7 @@ export const relationship = {
         },
         {
             name: "Important",
-            description: "A character who is considered important or significant or important to the game setting",
+            description: "A character who is considered important or significant to the game setting",
             price: 10
         },
         {

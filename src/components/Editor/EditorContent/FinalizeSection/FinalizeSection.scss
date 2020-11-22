@@ -1,0 +1,95 @@
+@import 'common';
+
+.FinalizeSection {
+    padding: $section-padding;
+    height: 100%;
+    width: $content-width;
+
+    .DetailsCard.ui.card {
+        .Name, .Race, .Age {
+            b {
+                color: rgba(0, 0, 0, .85);
+                font-size: 1.3rem;
+                margin-right: 10px;
+                margin-bottom: 0.5em;
+            }
+            
+            & > div {
+                display: flex;
+            }
+
+            .ui.input {
+                width: 50%;
+            }
+        }
+    }
+
+    & > .content {
+        padding: 0 20px 15px 20px;
+
+        .ContentRow {
+            display: flex;
+            margin-bottom: 20px;
+
+            & > div {
+                margin: 0 10px;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+
+            .card {
+                width: 100%;
+
+                &.flex .description {
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+            }
+        }
+
+        .stat, .attribute {
+            display: flex;
+            margin-bottom: 10px;
+
+            p {
+                margin: 0;
+            
+                &:first-child {
+                    width: 70%;
+                }
+
+                &:last-child {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+
+        .resource {
+            margin-bottom: 10px;
+            
+            .ui.list {
+                margin-top: 0;
+                margin-left: 2em;
+            }
+        }
+
+        .ui.card {
+            p, p:last-child {
+                margin-bottom: 5px;
+            }
+        }
+
+        a {
+            color: #1B1C1D;
+            cursor: pointer;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    }
+}

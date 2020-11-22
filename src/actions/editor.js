@@ -105,3 +105,9 @@ export const removeResource = resource => ({
     type: types.REMOVE_RESOURCE,
     resource
 });
+
+// Finalize
+export const setCharacterName = name => ({
+    type: types.SET_CHARACTER_NAME,
+    name
+})

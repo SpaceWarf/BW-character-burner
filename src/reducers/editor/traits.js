@@ -4,7 +4,7 @@ import * as types from "#Actions/types.js";
 import defaultState from '#Utilities/config/default-state.js';
 import mockState from '#Utilities/config/mock-state.js';
 
-const boughtTraits = (state = mockState.traits.boughtTraits, action) => {
+const boughtTraits = (state = defaultState.traits.boughtTraits, action) => {
     switch (action.type) {
         case types.BUY_TRAIT:
             if (state.includes(action.trait)) {
@@ -21,7 +21,7 @@ const boughtTraits = (state = mockState.traits.boughtTraits, action) => {
     }
 };
 
-const addedTraits = (state = mockState.traits.addedTraits, action) => {
+const addedTraits = (state = defaultState.traits.addedTraits, action) => {
     switch (action.type) {
         case types.ADD_TRAIT:
             return [

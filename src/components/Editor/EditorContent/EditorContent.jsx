@@ -6,6 +6,7 @@ import SkillsEditor from './SkillsEditor/SkillsEditor.jsx';
 import TraitsEditor from './TraitsEditor/TraitsEditor.jsx';
 import ResourcesEditor from './ResourcesEditor/ResourcesEditor.jsx';
 import AttributesEditor from './AttributesEditor/AttributesEditor.jsx';
+import FinalizeSection from './FinalizeSection/FinalizeSection.jsx';
 import './EditorContent.scss';
 
 const EditorContent = ({ activeSection }) => {
@@ -17,6 +18,7 @@ const EditorContent = ({ activeSection }) => {
             {activeSection === 'Traits' && <TraitsEditor />}
             {activeSection === 'Resources' && <ResourcesEditor />}
             {activeSection === 'Attributes' && <AttributesEditor />}
+            {activeSection === 'Finalize' && <FinalizeSection />}
         </div>
     );
 };

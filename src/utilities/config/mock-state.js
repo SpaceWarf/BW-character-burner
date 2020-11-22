@@ -231,6 +231,106 @@ export default {
                 ],
                 price: 2,
                 note: 'My aunt'
+            },
+            {
+                category: 'arm',
+                quality: {
+                    name: 'Poor',
+                    price: 3,
+                    description: 'Base Ob 2 to use',
+                    modificationCost: 1
+                },
+                modifications: [
+                    'hooks and blades',
+                    'light',
+                    'cursed'
+                ],
+                price: 6,
+                note: 'A big hammer'
+            },
+            {
+                category: 'missile',
+                type: {
+                    name: 'Throwing Weapon',
+                    price: 3
+                },
+                quality: {
+                    name: 'Run of the Mill',
+                    modifier: 1,
+                    description: ''
+                },
+                addons: [],
+                price: 3,
+                note: 'Kunais'
+            },
+            {
+                category: 'partsArmor',
+                selectedParts: {
+                    head: {
+                        type: {
+                            name: 'Gambeson',
+                            price: 3
+                        },
+                        quality: {
+                            name: 'Poor',
+                            modifier: 0.5,
+                            description: 'All 1s count for losing armor dice.'
+                        }
+                    },
+                    chest: {
+                        type: {
+                            name: 'Reinforced Leather',
+                            price: 6
+                        },
+                        quality: {
+                            name: 'Run of the Mill',
+                            modifier: 1,
+                            description: 'Only the first 1 counts.'
+                        }
+                    },
+                    arms: {
+                        type: {
+                            name: 'Light Mail',
+                            price: 10
+                        },
+                        quality: {
+                            name: 'Poor',
+                            modifier: 0.5,
+                            description: 'All 1s count for losing armor dice.'
+                        }
+                    },
+                    legs: {
+                        type: {
+                            name: 'Heavy Mail',
+                            price: 15
+                        },
+                        quality: {
+                            name: 'Poor',
+                            modifier: 0.5,
+                            description: 'All 1s count for losing armor dice.'
+                        }
+                    }
+                },
+                price: 9,
+                note: 'My pop\'s armour'
+            },
+            {
+                category: 'property',
+                name: 'House',
+                price: 72,
+                note: 'asd'
+            },
+            {
+                category: "affiliation",
+                name: "1D, A small, local or specialized group",
+                price: 10,
+                note: "aaaaa"
+            },
+            {
+                category: 'reputation',
+                name: '1D, Local or minor reputation',
+                price: 7,
+                note: 'aawww'
             }
         ]
     }

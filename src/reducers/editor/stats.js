@@ -4,7 +4,7 @@ import * as types from "#Actions/types.js";
 import defaultState from '#Utilities/config/default-state.js';
 import mockState from '#Utilities/config/mock-state.js';
 
-const selectedStatBonuses = (state = mockState.stats.selectedStatBonuses, action) => {
+const selectedStatBonuses = (state = defaultState.stats.selectedStatBonuses, action) => {
     switch (action.type) {
         case types.SELECT_STAT_BONUS:
             const newState = { bonus: [...state.bonus], malus: [...state.malus] };
@@ -23,7 +23,7 @@ const selectedStatBonuses = (state = mockState.stats.selectedStatBonuses, action
     }
 };
 
-const selectedStats = (state = mockState.stats.selectedStats, action) => {
+const selectedStats = (state = defaultState.stats.selectedStats, action) => {
     switch (action.type) {
         case types.SELECT_STAT:
             const newState = { ...state };
