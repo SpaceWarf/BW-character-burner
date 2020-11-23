@@ -1,7 +1,7 @@
-import humanIcon from '#Assets/images/human.png';
-import elfIcon from '#Assets/images/elf.png';
-import dwarfIcon from '#Assets/images/dwarf.png';
-import orcIcon from '#Assets/images/orc.png';
+import humanIcon from 'Assets/images/human.png';
+import elfIcon from 'Assets/images/elf.png';
+import dwarfIcon from 'Assets/images/dwarf.png';
+import orcIcon from 'Assets/images/orc.png';
 
 export const sections = [
     'Lifepaths',

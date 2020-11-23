@@ -7,9 +7,9 @@ import {
     Input,
     Button
 } from 'semantic-ui-react';
-import { buyResource, updateSectionsLockState } from '#Actions/editor.js';
-import { getResourcePointsLeft } from '#Utilities/redux-selectors.js';
-import { armor } from '#Resources/resources/mannish_resources.js';
+import { buyResource, updateSectionsLockState } from 'Actions/editor.js';
+import { getResourcePointsLeft } from 'Utilities/redux-selectors.js';
+import { armor } from 'Resources/resources/mannish_resources.js';
 import './FullSuitEditor.scss';
 
 class FullSuitEditor extends React.Component {

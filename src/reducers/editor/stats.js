@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import * as types from "#Actions/types.js";
+import * as types from "Actions/types.js";
 
-import defaultState from '#Utilities/config/default-state.js';
-import mockState from '#Utilities/config/mock-state.js';
+import defaultState from 'Utilities/config/default-state.js';
+import mockState from 'Utilities/config/mock-state.js';
 
 const selectedStatBonuses = (state = defaultState.stats.selectedStatBonuses, action) => {
     switch (action.type) {

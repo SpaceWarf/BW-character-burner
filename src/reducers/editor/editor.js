@@ -1,22 +1,22 @@
 import { combineReducers } from 'redux';
-import { sections } from '#Utilities/config/editor.config.js';
+import { sections } from 'Utilities/config/editor.config.js';
 import {
     getSkillPointsLeft,
     getPhysicalPointsLeftToAssign,
     getMentalPointsLeftToAssign,
     getTraitPointsLeft,
     getResourcePointsLeft
-} from '#Utilities/redux-selectors.js';
+} from 'Utilities/redux-selectors.js';
 import lifepaths from './lifepaths.js';
 import stats from './stats';
 import skills from './skills';
 import traits from './traits';
 import attributes from './attributes';
 import resources from './resources';
-import * as types from "#Actions/types.js";
+import * as types from "Actions/types.js";
 
-import defaultState from '#Utilities/config/default-state.js';
-import mockState from '#Utilities/config/mock-state.js';
+import defaultState from 'Utilities/config/default-state.js';
+import mockState from 'Utilities/config/mock-state.js';
 
 const characterName = (state = "", action) => {
     switch (action.type) {

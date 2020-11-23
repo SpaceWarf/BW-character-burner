@@ -5,9 +5,9 @@ import {
     getLifepathTraits,
     getTraitPoints,
     getTraitPointsLeft
-} from '#Utilities/redux-selectors.js';
-import { buyTrait, removeTrait, updateSectionsLockState } from '#Actions/editor.js';
-import CardListModal from '#Components/Common/CardListModal/CardListModal.jsx';
+} from 'Utilities/redux-selectors.js';
+import { buyTrait, removeTrait, updateSectionsLockState } from 'Actions/editor.js';
+import CardListModal from 'Components/Common/CardListModal/CardListModal.jsx';
 import './TraitRow.scss';
 
 const TraitRow = ({

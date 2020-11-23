@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import * as types from "#Actions/types.js";
+import * as types from "Actions/types.js";
 
-import defaultState from '#Utilities/config/default-state.js';
-import mockState from '#Utilities/config/mock-state.js';
+import defaultState from 'Utilities/config/default-state.js';
+import mockState from 'Utilities/config/mock-state.js';
 
 const advancedSkills = (state = defaultState.skills.advancedSkills, action) => {
     switch (action.type) {

@@ -1,8 +1,8 @@
 import React from "react";
 import { connect } from 'react-redux';
-import { buyResource, updateSectionsLockState } from '#Actions/editor.js';
-import { simple } from '#Resources/resources/mannish_resources.js';
-import { getResourcePointsLeft } from '#Utilities/redux-selectors.js';
+import { buyResource, updateSectionsLockState } from 'Actions/editor.js';
+import { simple } from 'Resources/resources/mannish_resources.js';
+import { getResourcePointsLeft } from 'Utilities/redux-selectors.js';
 import ResourceCard from '../ResourceCard/ResourceCard.jsx';
 import './SimpleEditor.scss';
 

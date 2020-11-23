@@ -1,10 +1,10 @@
 import React from "react";
 import { connect } from 'react-redux';
 import { Table, Label, Button } from "semantic-ui-react";
-import { getSkillPointsLeft } from '#Utilities/redux-selectors.js';
-import { advanceSkill, removeGeneralSkill, updateSectionsLockState } from '#Actions/editor.js';
-import PointCounter from '#Components/Common/PointCounter/PointCounter.jsx';
-import CardListModal from '#Components/Common/CardListModal/CardListModal.jsx';
+import { getSkillPointsLeft } from 'Utilities/redux-selectors.js';
+import { advanceSkill, removeGeneralSkill, updateSectionsLockState } from 'Actions/editor.js';
+import PointCounter from 'Components/Common/PointCounter/PointCounter.jsx';
+import CardListModal from 'Components/Common/CardListModal/CardListModal.jsx';
 import './SkillRow.scss';
 
 const SkillRow = ({

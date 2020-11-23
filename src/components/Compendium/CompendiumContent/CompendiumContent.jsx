@@ -1,9 +1,9 @@
 import React from "react";
 import { Header, Menu } from 'semantic-ui-react';
-import Lifepath from '#Components/Common/Card/Lifepath/Lifepath.jsx';
-import Skill from '#Components/Common/Card/Skill/Skill.jsx';
-import Trait from '#Components/Common/Card/Trait/Trait.jsx';
-import { getLifepaths } from '#Utilities/data-selectors.js';
+import Lifepath from 'Components/Common/Card/Lifepath/Lifepath.jsx';
+import Skill from 'Components/Common/Card/Skill/Skill.jsx';
+import Trait from 'Components/Common/Card/Trait/Trait.jsx';
+import { getLifepaths } from 'Utilities/data-selectors.js';
 import './CompendiumContent.scss';
 
 const getComponentForCategory = (type, data, index) => {

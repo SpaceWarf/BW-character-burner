@@ -1,10 +1,10 @@
 import React from "react";
 import { connect } from 'react-redux';
 import { Menu } from 'semantic-ui-react';
-import { setActiveSection } from '#Actions/editor.js';
-import CollapsableSidebar from '#Components/Common/CollapsableSidebar/CollapsableSidebar.jsx';
+import { setActiveSection } from 'Actions/editor.js';
+import CollapsableSidebar from 'Components/Common/CollapsableSidebar/CollapsableSidebar.jsx';
 import EditorSidebarSummary from './EditorSidebarSummary/EditorSidebarSummary.jsx';
-import { sections } from '#Utilities/config/editor.config.js';
+import { sections } from 'Utilities/config/editor.config.js';
 import './EditorSidebar.scss';
 
 const EditorSidebar = ({ activeSection, lockedSections, onSetActiveSection }) => {

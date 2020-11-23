@@ -8,7 +8,7 @@ import ArmorEditor from './ArmorEditor/ArmorEditor.jsx';
 import PropertyEditor from './PropertyEditor/PropertyEditor.jsx';
 import RelationshipEditor from './RelationshipEditor/RelationshipEditor.jsx';
 import AllResourcesList from './AllResourcesList/AllResourcesList.jsx';
-import { getResourcePoints, getResourcePointsLeft } from '#Utilities/redux-selectors.js';
+import { getResourcePoints, getResourcePointsLeft } from 'Utilities/redux-selectors.js';
 import './ResourcesEditor.scss';
 
 const panes = [

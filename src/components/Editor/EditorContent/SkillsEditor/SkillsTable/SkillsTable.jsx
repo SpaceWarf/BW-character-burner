@@ -5,10 +5,10 @@ import {
     getLifepathSkills,
     getSkillPoints,
     getSkillPointsLeft
-} from '#Utilities/redux-selectors.js';
-import { getDataSetForSection } from '#Utilities/data-selectors.js';
-import { advanceSkill, openGeneralSkill, updateSectionsLockState } from '#Actions/editor.js';
-import AddModal from '#Components/Common/AddModal/AddModal.jsx';
+} from 'Utilities/redux-selectors.js';
+import { getDataSetForSection } from 'Utilities/data-selectors.js';
+import { advanceSkill, openGeneralSkill, updateSectionsLockState } from 'Actions/editor.js';
+import AddModal from 'Components/Common/AddModal/AddModal.jsx';
 import SkillRow from './SkillRow/SkillRow.jsx';
 import './SkillsTable.scss';
 

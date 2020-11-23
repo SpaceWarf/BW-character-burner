@@ -11,9 +11,9 @@ import {
     getMortalWoundScore,
     getResourcesScore,
     getCirclesScore
-} from '#Utilities/redux-selectors.js';
-import { setCharacterName } from '#Actions/editor.js';
-import CustomInput from '#Components/Common/CustomInput/CustomInput.jsx';
+} from 'Utilities/redux-selectors.js';
+import { setCharacterName } from 'Actions/editor.js';
+import CustomInput from 'Components/Common/CustomInput/CustomInput.jsx';
 import PhysicalTolerancesTable from "./PhysicalTolerancesTable/PhysicalTolerancesTable";
 import './FinalizeSection.scss';
 

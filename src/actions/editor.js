@@ -1,4 +1,4 @@
-import * as types from "#Actions/types.js";
+import * as types from "Actions/types.js";
 
 // App
 export const setActiveSection = section => ({

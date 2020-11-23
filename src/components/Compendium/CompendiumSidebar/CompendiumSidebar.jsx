@@ -1,9 +1,9 @@
 import React from "react";
 import { Menu, Input } from 'semantic-ui-react';
-import { getDataSetForSection } from '#Utilities/data-selectors.js';
-import { sections } from '#Utilities/config/compendium.config.js';
-import { getLifepaths } from '#Utilities/data-selectors.js';
-import CollapsableSidebar from '#Components/Common/CollapsableSidebar/CollapsableSidebar.jsx';
+import { getDataSetForSection } from 'Utilities/data-selectors.js';
+import { sections } from 'Utilities/config/compendium.config.js';
+import { getLifepaths } from 'Utilities/data-selectors.js';
+import CollapsableSidebar from 'Components/Common/CollapsableSidebar/CollapsableSidebar.jsx';
 import CompendiumSidebarContent from './CompendiumSidebarContent/CompendiumSidebarContent.jsx';
 import './CompendiumSidebar.scss';
 

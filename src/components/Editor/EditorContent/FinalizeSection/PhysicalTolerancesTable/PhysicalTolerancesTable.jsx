@@ -4,7 +4,7 @@ import { Table } from 'semantic-ui-react';
 import {
   getSuperficialTolerance,
   getMortalWoundScore
-} from '#Utilities/redux-selectors.js';
+} from 'Utilities/redux-selectors.js';
 
 class PhysicalTolerancesTable extends React.Component {
   constructor(props) {

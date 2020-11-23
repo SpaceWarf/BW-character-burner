@@ -5,11 +5,11 @@ import {
     getLifepathTraits,
     getTraitPoints,
     getTraitPointsLeft
-} from '#Utilities/redux-selectors.js';
-import { getDataSetForSection } from '#Utilities/data-selectors.js';
-import { buyTrait, addTrait, updateSectionsLockState } from '#Actions/editor.js';
+} from 'Utilities/redux-selectors.js';
+import { getDataSetForSection } from 'Utilities/data-selectors.js';
+import { buyTrait, addTrait, updateSectionsLockState } from 'Actions/editor.js';
 import TraitRow from './TraitRow/TraitRow.jsx';
-import AddModal from '#Components/Common/AddModal/AddModal.jsx';
+import AddModal from 'Components/Common/AddModal/AddModal.jsx';
 import './TraitsTable.scss';
 
 const TraitsTable = ({

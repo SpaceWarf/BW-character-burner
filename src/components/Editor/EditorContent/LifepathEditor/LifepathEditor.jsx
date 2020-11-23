@@ -10,9 +10,9 @@ import {
     selectRace,
     selectLifepathCount,
     updateSectionsLockState
-} from '#Actions/editor.js';
-import { races, lifepathCounts } from '#Utilities/config/editor.config.js';
-import PointCounter from '#Components/Common/PointCounter/PointCounter.jsx';
+} from 'Actions/editor.js';
+import { races, lifepathCounts } from 'Utilities/config/editor.config.js';
+import PointCounter from 'Components/Common/PointCounter/PointCounter.jsx';
 import LifepathList from './LifepathList/LifepathList.jsx';
 import './LifepathEditor.scss';
 

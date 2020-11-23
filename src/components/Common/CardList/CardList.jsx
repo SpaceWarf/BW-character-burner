@@ -1,8 +1,8 @@
 import React from "react";
-import AddModal from '#Components/Common/AddModal/AddModal.jsx';
-import Lifepath from '#Components/Common/Card/Lifepath/Lifepath.jsx';
-import Skill from '#Components/Common/Card/Skill/Skill.jsx';
-import Trait from '#Components/Common/Card/Trait/Trait.jsx';
+import AddModal from 'Components/Common/AddModal/AddModal.jsx';
+import Lifepath from 'Components/Common/Card/Lifepath/Lifepath.jsx';
+import Skill from 'Components/Common/Card/Skill/Skill.jsx';
+import Trait from 'Components/Common/Card/Trait/Trait.jsx';
 import './CardList.scss';
 
 const CardList = ({ header, items, type, choices, maxCount, sections, onSelect, onRemove }) => {

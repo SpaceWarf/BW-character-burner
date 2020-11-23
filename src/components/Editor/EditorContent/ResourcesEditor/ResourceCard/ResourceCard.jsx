@@ -1,6 +1,6 @@
 import React from "react";
 import { Card } from 'semantic-ui-react';
-import CustomInput from '#Components/Common/CustomInput/CustomInput.jsx';
+import CustomInput from 'Components/Common/CustomInput/CustomInput.jsx';
 import './ResourceCard.scss';
 
 const ResourceCard = ({ item, active, disabled, onClick, onConfirm, onCancel }) => {

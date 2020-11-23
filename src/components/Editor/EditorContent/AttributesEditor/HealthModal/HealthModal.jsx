@@ -2,9 +2,9 @@ import React from "react";
 import { connect } from 'react-redux';
 import { Modal, Button, Header } from 'semantic-ui-react';
 import ModalQuestion from '../ModalQuestion/ModalQuestion.jsx';
-import { answerHealthQuestions } from '#Actions/editor.js';
-import { getBaseHealthScore } from '#Utilities/redux-selectors.js';
-import { getHealthScoreBonusFromAnswers } from '#Utilities/data-selectors.js';
+import { answerHealthQuestions } from 'Actions/editor.js';
+import { getBaseHealthScore } from 'Utilities/redux-selectors.js';
+import { getHealthScoreBonusFromAnswers } from 'Utilities/data-selectors.js';
 import './HealthModal.scss';
 
 class HealthModal extends React.Component {

@@ -1,7 +1,7 @@
 import React from "react";
 import { Menu, Image, Dropdown } from "semantic-ui-react";
-import { headerDropdownItems } from '#Utilities/config/app.config.js';
-import logo from '#Assets/images/logo.webp';
+import { headerDropdownItems } from 'Utilities/config/app.config.js';
+import logo from 'Assets/images/logo.webp';
 import './Header.scss';
 
 const handleClick = (e, route) => {

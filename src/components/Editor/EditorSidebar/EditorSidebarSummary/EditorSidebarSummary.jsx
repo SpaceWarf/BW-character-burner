@@ -9,8 +9,8 @@ import {
     getSteelScore,
     getReflexScore,
     getMortalWoundScore
-} from '#Utilities/redux-selectors.js';
-import CardListModal from '#Components/Common/CardListModal/CardListModal.jsx';
+} from 'Utilities/redux-selectors.js';
+import CardListModal from 'Components/Common/CardListModal/CardListModal.jsx';
 import './EditorSidebarSummary.scss';
 
 const EditorSidebarSummary = ({

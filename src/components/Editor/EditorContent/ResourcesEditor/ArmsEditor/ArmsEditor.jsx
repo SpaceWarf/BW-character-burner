@@ -9,9 +9,9 @@ import {
     List,
     Icon
 } from 'semantic-ui-react';
-import { buyResource, updateSectionsLockState } from '#Actions/editor.js';
-import { getResourcePointsLeft } from '#Utilities/redux-selectors.js';
-import { arms } from '#Resources/resources/mannish_resources.js';
+import { buyResource, updateSectionsLockState } from 'Actions/editor.js';
+import { getResourcePointsLeft } from 'Utilities/redux-selectors.js';
+import { arms } from 'Resources/resources/mannish_resources.js';
 import './ArmsEditor.scss';
 
 class ArmsEditor extends React.Component {

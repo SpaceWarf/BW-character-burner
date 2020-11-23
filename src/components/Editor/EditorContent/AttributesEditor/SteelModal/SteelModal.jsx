@@ -2,8 +2,8 @@ import React from "react";
 import { connect } from 'react-redux';
 import { Modal, Button, Header } from 'semantic-ui-react';
 import ModalQuestion from '../ModalQuestion/ModalQuestion.jsx';
-import { answerSteelQuestions } from '#Actions/editor.js';
-import { getSteelScoreBonusFromAnswers } from '#Utilities/data-selectors.js';
+import { answerSteelQuestions } from 'Actions/editor.js';
+import { getSteelScoreBonusFromAnswers } from 'Utilities/data-selectors.js';
 import './SteelModal.scss';
 
 class SteelModal extends React.Component {

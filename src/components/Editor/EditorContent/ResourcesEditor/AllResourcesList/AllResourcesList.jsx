@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from 'react-redux';
 import { Icon, Header, List } from 'semantic-ui-react';
-import { removeResource, updateSectionsLockState } from '#Actions/editor.js';
+import { removeResource, updateSectionsLockState } from 'Actions/editor.js';
 import './AllResourcesList.scss';
 
 const AllResourcesList = ({ boughtResources, onRemoveResource, onUpdateSectionsLockState }) => {

@@ -10,9 +10,9 @@ import {
     Dropdown,
     Input
 } from 'semantic-ui-react';
-import { buyResource, updateSectionsLockState } from '#Actions/editor.js';
-import { getResourcePointsLeft } from '#Utilities/redux-selectors.js';
-import { missiles } from '#Resources/resources/mannish_resources.js';
+import { buyResource, updateSectionsLockState } from 'Actions/editor.js';
+import { getResourcePointsLeft } from 'Utilities/redux-selectors.js';
+import { missiles } from 'Resources/resources/mannish_resources.js';
 import './MissilesEditor.scss';
 
 class MissilesEditor extends React.Component {
