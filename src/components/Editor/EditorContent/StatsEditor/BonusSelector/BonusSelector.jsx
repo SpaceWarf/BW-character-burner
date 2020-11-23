@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from 'react-redux';
-import { selectStatBonus, updateSectionsLockState } from '#Actions/editor.js';
-import { getStatBonuses } from '#Utilities/redux-selectors.js';
+import { selectStatBonus, updateSectionsLockState } from 'Actions/editor.js';
+import { getStatBonuses } from 'Utilities/redux-selectors.js';
 import { Header, Button } from "semantic-ui-react";
 import './BonusSelector.scss';
 

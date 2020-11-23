@@ -1,8 +1,8 @@
 import React from "react";
 import { Route } from 'react-router-dom';
-import LandingPage from '#Components/LandingPage/LandingPage.jsx';
-import Editor from '#Components/Editor/Editor.jsx';
-import Compendium from '#Components/Compendium/Compendium.jsx';
+import LandingPage from 'Components/LandingPage/LandingPage.jsx';
+import Editor from 'Components/Editor/Editor.jsx';
+import Compendium from 'Components/Compendium/Compendium.jsx';
 import './Main.scss';
 
 const Main = () => {

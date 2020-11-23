@@ -11,12 +11,12 @@ module.exports = {
   resolve: {
     extensions: ['*', '.js', '.jsx', '.json', '.scss', '.css'],
     alias: {
-      '#Actions': path.resolve(path.join(__dirname, './src/actions')),
-      '#Assets': path.resolve(path.join(__dirname, './src/assets')),
-      '#Components': path.resolve(path.join(__dirname, './src/components')),
-      '#Reducers': path.resolve(path.join(__dirname, './src/reducers')),
-      '#Resources': path.resolve(path.join(__dirname, './src/resources')),
-      '#Utilities': path.resolve(path.join(__dirname, './src/utilities'))
+      'Actions': path.resolve(path.join(__dirname, './src/actions')),
+      'Assets': path.resolve(path.join(__dirname, './src/assets')),
+      'Components': path.resolve(path.join(__dirname, './src/components')),
+      'Reducers': path.resolve(path.join(__dirname, './src/reducers')),
+      'Resources': path.resolve(path.join(__dirname, './src/resources')),
+      'Utilities': path.resolve(path.join(__dirname, './src/utilities'))
     }
   },
   module: {
@@ -37,35 +37,28 @@ module.exports = {
         ]
       },
       {
-        test: /\.s?css$/,
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.s[ac]ss$/i,
         use: [
-          {
-            loader: 'style-loader'
-          },
-          {
-            loader: 'css-loader'
-          },
-          {
-            loader: 'sass-loader',
-            options: {
-              includePaths: [
-                path.resolve(path.join(__dirname, './src/assets/scss'))
-              ]
-            }
-          }
-        ]
+          "style-loader",
+          "css-loader",
+          "sass-loader",
+        ],
       },
       {
         test: /\.(jpe?g|png|webp)$/i,
-        loaders: [
-          'file-loader',
-          'webp-loader'
+        use: [
+          "file-loader",
+          "webp-loader"
         ]
       }
     ]
   },
   devServer: {
-    historyApiFallback: true,
+    historyApiFallback: true
   },
   devtool: 'source-map',
   plugins: [

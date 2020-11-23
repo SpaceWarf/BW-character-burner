@@ -1,8 +1,8 @@
 import React from "react";
 import { Modal, Button, Input, Header, Dropdown } from 'semantic-ui-react';
-import Lifepath from '#Components/Common/Card/Lifepath/Lifepath.jsx';
-import Skill from '#Components/Common/Card/Skill/Skill.jsx';
-import Trait from '#Components/Common/Card/Trait/Trait.jsx';
+import Lifepath from 'Components/Common/Card/Lifepath/Lifepath.jsx';
+import Skill from 'Components/Common/Card/Skill/Skill.jsx';
+import Trait from 'Components/Common/Card/Trait/Trait.jsx';
 import './AddModal.scss';
 
 class AddModal extends React.Component {

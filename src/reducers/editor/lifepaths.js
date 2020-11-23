@@ -1,7 +1,10 @@
 import { combineReducers } from 'redux';
-import * as types from "#Actions/types.js";
+import * as types from "Actions/types.js";
 
-const count = (state = 2, action) => {
+import defaultState from 'Utilities/config/default-state.js';
+import mockState from 'Utilities/config/mock-state.js';
+
+const count = (state = defaultState.lifepaths.count, action) => {
     switch (action.type) {
         case types.SELECT_LIFEPATH_COUNT:
             return action.count;
@@ -10,7 +13,7 @@ const count = (state = 2, action) => {
     }
 };
 
-const selectedLifepaths = (state = [], action) => {
+const selectedLifepaths = (state = defaultState.lifepaths.selectedLifepaths, action) => {
     switch (action.type) {
         case types.ADD_LIFEPATH:
             return [

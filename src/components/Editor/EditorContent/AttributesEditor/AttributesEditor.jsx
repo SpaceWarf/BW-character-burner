@@ -7,7 +7,7 @@ import {
     getSteelScore,
     getReflexScore,
     getMortalWoundScore
-} from '#Utilities/redux-selectors.js';
+} from 'Utilities/redux-selectors.js';
 import HealthModal from './HealthModal/HealthModal.jsx';
 import SteelModal from './SteelModal/SteelModal.jsx';
 import './AttributesEditor.scss';

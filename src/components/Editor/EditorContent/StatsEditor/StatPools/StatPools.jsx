@@ -5,7 +5,7 @@ import {
     getPhysicalPool,
     getStatBonuses,
     getAppliedBonuses
-} from '#Utilities/redux-selectors.js';
+} from 'Utilities/redux-selectors.js';
 import { Header } from "semantic-ui-react";
 import PoolCard from './PoolCard/PoolCard.jsx';
 import './StatPools.scss';

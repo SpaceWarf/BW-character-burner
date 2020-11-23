@@ -1,4 +1,4 @@
-@import 'config';
+@import './config';
 
 * {
     box-sizing: border-box;
@@ -26,6 +26,10 @@
 
 .halfs {
     width: 50%;
+}
+
+.full {
+    width: 100%;
 }
 
 .ui.section.header, .SectionHeader {

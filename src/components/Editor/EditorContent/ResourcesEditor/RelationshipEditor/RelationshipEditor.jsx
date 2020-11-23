@@ -9,9 +9,9 @@ import {
     Button,
     Divider
 } from 'semantic-ui-react';
-import { buyResource } from '#Actions/editor.js';
-import { getResourcePointsLeft } from '#Utilities/redux-selectors.js';
-import { relationship, affiliations, reputations } from '#Resources/resources/mannish_resources.js';
+import { buyResource, updateSectionsLockState } from 'Actions/editor.js';
+import { getResourcePointsLeft } from 'Utilities/redux-selectors.js';
+import { relationship, affiliations, reputations } from 'Resources/resources/mannish_resources.js';
 import ResourceCard from '../ResourceCard/ResourceCard.jsx';
 import './RelationshipEditor.scss';
 
@@ -62,7 +62,7 @@ class RelationshipEditor extends React.Component {
     }
 
     handleRelationshipConfirm() {
-        const { onBuyResource } = this.props;
+        const { onBuyResource, onUpdateSectionsLockState  } = this.props;
         const { selectedType, selectedModifiers, note } = this.state;
 
         onBuyResource({
@@ -72,6 +72,7 @@ class RelationshipEditor extends React.Component {
             price: this.getTotalCost(),
             note
         });
+        onUpdateSectionsLockState();
         this.setState({
             selectedType: {},
             selectedModifiers: [],
@@ -80,7 +81,7 @@ class RelationshipEditor extends React.Component {
     }
 
     handleAffiliationConfirm(item, note) {
-        const { onBuyResource } = this.props;
+        const { onBuyResource, onUpdateSectionsLockState  } = this.props;
 
         onBuyResource({
             category: "affiliation",
@@ -88,13 +89,14 @@ class RelationshipEditor extends React.Component {
             price: item.price,
             note
         });
+        onUpdateSectionsLockState();
         this.setState({
             active: ""
         });
     }
 
     handleReputationConfirm(item, note) {
-        const { onBuyResource } = this.props;
+        const { onBuyResource, onUpdateSectionsLockState  } = this.props;
 
         onBuyResource({
             category: "reputation",
@@ -102,6 +104,7 @@ class RelationshipEditor extends React.Component {
             price: item.price,
             note
         });
+        onUpdateSectionsLockState();
         this.setState({
             active: ""
         });
@@ -224,7 +227,8 @@ const mapStateToProps = state => ({
 
 
 const mapDispatchToProps = dispatch => ({
-    onBuyResource: resource => dispatch(buyResource(resource))
+    onBuyResource: resource => dispatch(buyResource(resource)),
+    onUpdateSectionsLockState: () => dispatch(updateSectionsLockState())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(RelationshipEditor);

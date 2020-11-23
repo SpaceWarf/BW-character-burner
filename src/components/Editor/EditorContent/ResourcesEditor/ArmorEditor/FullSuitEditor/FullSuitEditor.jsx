@@ -7,9 +7,9 @@ import {
     Input,
     Button
 } from 'semantic-ui-react';
-import { buyResource } from '#Actions/editor.js';
-import { getResourcePointsLeft } from '#Utilities/redux-selectors.js';
-import { armor } from '#Resources/resources/mannish_resources.js';
+import { buyResource, updateSectionsLockState } from 'Actions/editor.js';
+import { getResourcePointsLeft } from 'Utilities/redux-selectors.js';
+import { armor } from 'Resources/resources/mannish_resources.js';
 import './FullSuitEditor.scss';
 
 class FullSuitEditor extends React.Component {
@@ -34,7 +34,7 @@ class FullSuitEditor extends React.Component {
     }
 
     handleConfirm() {
-        const { onBuyResource } = this.props;
+        const { onBuyResource, onUpdateSectionsLockState  } = this.props;
         const { selectedType, selectedQuality, note } = this.state;
 
         onBuyResource({
@@ -44,6 +44,7 @@ class FullSuitEditor extends React.Component {
             price: this.getTotalCost(),
             note
         });
+        onUpdateSectionsLockState();
         this.setState({
             selectedType: "",
             selectedQuality: "",
@@ -126,7 +127,8 @@ const mapStateToProps = state => ({
 
 
 const mapDispatchToProps = dispatch => ({
-    onBuyResource: resource => dispatch(buyResource(resource))
+    onBuyResource: resource => dispatch(buyResource(resource)),
+    onUpdateSectionsLockState: () => dispatch(updateSectionsLockState())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(FullSuitEditor);

@@ -5,8 +5,8 @@ import {
     getPhysicalPointsLeftToAssign,
     getAppliedBonuses,
     getMentalPool
-} from '#Utilities/redux-selectors.js';
-import { selectStat, updateSectionsLockState } from '#Actions/editor.js'
+} from 'Utilities/redux-selectors.js';
+import { selectStat, updateSectionsLockState } from 'Actions/editor.js'
 import { Header } from 'semantic-ui-react';
 import StatCard from './StatCard/StatCard.jsx';
 import './StatsSelector.scss';

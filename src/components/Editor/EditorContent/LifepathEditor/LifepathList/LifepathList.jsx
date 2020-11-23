@@ -1,17 +1,17 @@
 import React from "react";
 import { connect } from 'react-redux';
 import { Header } from 'semantic-ui-react';
-import CardList from '#Components/Common/CardList/CardList.jsx';
+import CardList from 'Components/Common/CardList/CardList.jsx';
 import {
     addLifepath,
     removeLifepath,
     updateSectionsLockState
-} from '#Actions/editor.js';
-import { getLifepathSettings } from '#Utilities/data-selectors.js';
+} from 'Actions/editor.js';
+import { getLifepathSettings } from 'Utilities/data-selectors.js';
 import {
     getBornLifepaths,
     getLifepaths
-} from '#Utilities/redux-selectors.js';
+} from 'Utilities/redux-selectors.js';
 import './LifepathList.scss';
 
 const LifepathList = ({

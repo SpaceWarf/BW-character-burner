@@ -3,9 +3,8 @@ import { connect } from 'react-redux';
 import {
     Checkbox,
 } from 'semantic-ui-react';
-import { buyResource } from '#Actions/editor.js';
-import { getResourcePointsLeft } from '#Utilities/redux-selectors.js';
-import { armor } from '#Resources/resources/mannish_resources.js';
+import { getResourcePointsLeft } from 'Utilities/redux-selectors.js';
+import { armor } from 'Resources/resources/mannish_resources.js';
 import FullSuitEditor from './FullSuitEditor/FullSuitEditor.jsx';
 import PartsEditor from './PartsEditor/PartsEditor.jsx';
 import './ArmorEditor.scss';
@@ -45,7 +44,6 @@ const mapStateToProps = state => ({
 
 
 const mapDispatchToProps = dispatch => ({
-    onBuyResource: resource => dispatch(buyResource(resource))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ArmorEditor);

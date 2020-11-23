@@ -1,9 +1,9 @@
-import lifepaths_men from '#Resources/lifepaths/lifepaths_men.js';
-import lifepaths_elves from '#Resources/lifepaths/lifepaths_elves.js';
-import lifepaths_dwarves from '#Resources/lifepaths/lifepaths_dwarves.js';
-import lifepaths_orcs from '#Resources/lifepaths/lifepaths_orcs.js';
-import skills from '#Resources/skills/skills.js';
-import traits from '#Resources/traits/traits.js';
+import lifepaths_men from 'Resources/lifepaths/lifepaths_men.js';
+import lifepaths_elves from 'Resources/lifepaths/lifepaths_elves.js';
+import lifepaths_dwarves from 'Resources/lifepaths/lifepaths_dwarves.js';
+import lifepaths_orcs from 'Resources/lifepaths/lifepaths_orcs.js';
+import skills from 'Resources/skills/skills.js';
+import traits from 'Resources/traits/traits.js';
 
 export const getLifepathDataSet = lifepathCategory => {
     switch (lifepathCategory) {

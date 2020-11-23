@@ -2,8 +2,8 @@ import React from "react";
 import { Menu } from 'semantic-ui-react';
 import CompendiumSidebar from './CompendiumSidebar/CompendiumSidebar.jsx';
 import CompendiumContent from './CompendiumContent/CompendiumContent.jsx';
-import { getDataSetForSection } from '#Utilities/data-selectors.js';
-import { sections } from '#Utilities/config/compendium.config.js';
+import { getDataSetForSection } from 'Utilities/data-selectors.js';
+import { sections } from 'Utilities/config/compendium.config.js';
 import './Compendium.scss';
 
 const Compendium = ({ content }) => {

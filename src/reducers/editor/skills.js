@@ -1,7 +1,10 @@
 import { combineReducers } from 'redux';
-import * as types from "#Actions/types.js";
+import * as types from "Actions/types.js";
 
-const advancedSkills = (state = [], action) => {
+import defaultState from 'Utilities/config/default-state.js';
+import mockState from 'Utilities/config/mock-state.js';
+
+const advancedSkills = (state = defaultState.skills.advancedSkills, action) => {
     switch (action.type) {
         case types.ADVANCE_SKILL:
             const advancedSkill = state.find(skill => skill.name === action.skill)
@@ -28,7 +31,7 @@ const advancedSkills = (state = [], action) => {
     }
 };
 
-const openedGeneralSkills = (state = [], action) => {
+const openedGeneralSkills = (state = defaultState.skills.openedGeneralSkills, action) => {
     switch (action.type) {
         case types.OPEN_GENERAL_SKILL:
             return [

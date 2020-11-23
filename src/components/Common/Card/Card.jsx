@@ -2,9 +2,9 @@ import React from "react";
 import { Card, Menu, Icon } from 'semantic-ui-react';
 import './Card.scss';
 
-const Lifepath = ({ item, centered, children, positive, onClick }) => {
+const CustomCard = ({ item, centered, children, positive, onClick }) => {
     return (
-        <Menu.Item className="Card Lifepath" id={item.name.replace(/\s/g, '')}>
+        <Menu.Item className="Card" id={item.name.replace(/\s/g, '')}>
             <Card className={centered ? 'center' : ''} onClick={onClick}>
                 {children}
                 {onClick && <div className={positive ? "overlay positive" : "overlay negative"}>
@@ -19,4 +19,4 @@ const Lifepath = ({ item, centered, children, positive, onClick }) => {
     );
 };
 
-export default Lifepath;
+export default CustomCard;

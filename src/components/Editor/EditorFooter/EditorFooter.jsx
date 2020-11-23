@@ -1,9 +1,9 @@
 import React from "react";
 import { connect } from 'react-redux';
 import { Menu } from 'semantic-ui-react';
-import SectionChanger from '#Components/Common/SectionChanger/SectionChanger.jsx';
-import { setActiveSection } from '#Actions/editor.js';
-import { sections } from '#Utilities/config/editor.config.js';
+import SectionChanger from 'Components/Common/SectionChanger/SectionChanger.jsx';
+import { setActiveSection } from 'Actions/editor.js';
+import { sections } from 'Utilities/config/editor.config.js';
 import './EditorFooter.scss';
 
 const EditorFooter = ({ activeSection, lockedSections, onSetActiveSection }) => {

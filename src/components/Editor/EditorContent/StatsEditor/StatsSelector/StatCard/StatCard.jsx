@@ -1,6 +1,6 @@
 import React from "react";
 import { Card } from 'semantic-ui-react';
-import PointCounter from '#Components/Common/PointCounter/PointCounter.jsx';
+import PointCounter from 'Components/Common/PointCounter/PointCounter.jsx';
 import './StatCard.scss';
 
 const StatCard = ({ stat, value, onChange }) => {

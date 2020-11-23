@@ -1,20 +1,33 @@
 import { combineReducers } from 'redux';
-import { sections } from '#Utilities/config/editor.config.js';
+import { sections } from 'Utilities/config/editor.config.js';
 import {
     getSkillPointsLeft,
     getPhysicalPointsLeftToAssign,
     getMentalPointsLeftToAssign,
-    getTraitPointsLeft
-} from '#Utilities/redux-selectors.js';
+    getTraitPointsLeft,
+    getResourcePointsLeft
+} from 'Utilities/redux-selectors.js';
 import lifepaths from './lifepaths.js';
 import stats from './stats';
 import skills from './skills';
 import traits from './traits';
 import attributes from './attributes';
 import resources from './resources';
-import * as types from "#Actions/types.js";
+import * as types from "Actions/types.js";
 
-const selectedRace = (state = "", action) => {
+import defaultState from 'Utilities/config/default-state.js';
+import mockState from 'Utilities/config/mock-state.js';
+
+const characterName = (state = "", action) => {
+    switch (action.type) {
+        case types.SET_CHARACTER_NAME:
+            return action.name;
+        default:
+            return state;
+    }
+}
+
+const selectedRace = (state = defaultState.editor.selectedRace, action) => {
     switch (action.type) {
         case types.SELECT_RACE:
             return action.race;
@@ -23,7 +36,7 @@ const selectedRace = (state = "", action) => {
     }
 };
 
-const activeSection = (state = sections[0], action) => {
+const activeSection = (state = defaultState.editor.activeSection, action) => {
     switch (action.type) {
         case types.SET_ACTIVE_SECTION:
             return action.section;
@@ -32,7 +45,7 @@ const activeSection = (state = sections[0], action) => {
     }
 };
 
-const lockedSections = (state = sections.slice(1), action) => {
+const lockedSections = (state = defaultState.editor.lockedSections, action) => {
     switch (action.type) {
         case types.UPDATE_SECTIONS_LOCK_STATE:
             const editorState = action.state.editor;
@@ -67,7 +80,8 @@ const lockedSections = (state = sections.slice(1), action) => {
             }
 
             // Finalize section lock conditions
-            if (true) {
+            const resourcePointsLeft = getResourcePointsLeft(action.state);
+            if (resourcePointsLeft !== 0) {
                 return sections.slice(6);
             }
 
@@ -78,6 +92,7 @@ const lockedSections = (state = sections.slice(1), action) => {
 };
 
 export default combineReducers({
+    characterName,
     selectedRace,
     activeSection,
     lockedSections,

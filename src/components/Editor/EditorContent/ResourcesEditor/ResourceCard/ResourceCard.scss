@@ -21,6 +21,16 @@
             }
         }
 
+        & > .CustomInput {
+            position: absolute;
+            top: 50%;
+            width: calc(100% - 28px);
+        
+            & > .ui.input {
+                width: calc(100% - 80px);
+            }
+        }
+
         & > .description {
             text-align: justify;
             font-size: 12px;

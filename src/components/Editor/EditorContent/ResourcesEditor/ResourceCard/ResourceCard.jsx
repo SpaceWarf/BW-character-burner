@@ -1,6 +1,6 @@
 import React from "react";
 import { Card } from 'semantic-ui-react';
-import CardInput from './CardInput/CardInput.jsx';
+import CustomInput from 'Components/Common/CustomInput/CustomInput.jsx';
 import './ResourceCard.scss';
 
 const ResourceCard = ({ item, active, disabled, onClick, onConfirm, onCancel }) => {
@@ -16,7 +16,7 @@ const ResourceCard = ({ item, active, disabled, onClick, onConfirm, onCancel }) 
                     <p>{item.price} rps</p>
                 </Card.Header>
                 {active
-                    ? <CardInput onConfirm={note => onConfirm(note)} onCancel={onCancel} />
+                    ? <CustomInput placeholder="Notes..." onConfirm={note => onConfirm(note)} onCancel={onCancel} />
                     : <Card.Description>{item.description}</Card.Description>
                 }
             </Card.Content>

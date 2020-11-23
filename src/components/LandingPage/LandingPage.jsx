@@ -1,6 +1,6 @@
 import React from "react";
 import { Header, Button, Image } from 'semantic-ui-react';
-import logo from '#Assets/images/logo.webp';
+import logo from 'Assets/images/logo.webp';
 import './LandingPage.scss';
 
 const LandingPage = () => {

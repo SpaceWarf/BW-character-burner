@@ -1,11 +1,11 @@
 import React from "react";
 import { connect } from 'react-redux';
-import { getAge, getStatBonuses } from '#Utilities/redux-selectors.js';
+import { getAge, getStatBonuses } from 'Utilities/redux-selectors.js';
 import { Header, Table, Label, Card } from "semantic-ui-react";
 import BonusSelector from './BonusSelector/BonusSelector.jsx';
 import StatPools from './StatPools/StatPools.jsx';
 import StatsSelector from './StatsSelector/StatsSelector.jsx';
-import { statPools } from '#Utilities/config/editor.config.js';
+import { statPools } from 'Utilities/config/editor.config.js';
 import './StatsEditor.scss';
 
 const StatsEditor = ({ age, statBonuses, selectedStatBonuses }) => {

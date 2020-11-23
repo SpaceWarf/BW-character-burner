@@ -1,4 +1,4 @@
-import * as types from "#Actions/types.js";
+import * as types from "Actions/types.js";
 
 // App
 export const setActiveSection = section => ({
@@ -105,3 +105,9 @@ export const removeResource = resource => ({
     type: types.REMOVE_RESOURCE,
     resource
 });
+
+// Finalize
+export const setCharacterName = name => ({
+    type: types.SET_CHARACTER_NAME,
+    name
+})
